@@ -1,0 +1,36 @@
+<ion-content>
+    <div class="fixed-content">
+                
+        <ion-slides>
+            <ion-slide>
+                <page-receita-fornecedor></page-receita-fornecedor>
+            </ion-slide>
+            <ion-slide>
+                <page-receitas-foto></page-receitas-foto>
+                <div class="img">
+                    <img class="image" src="{{fotoReceitas}}" />
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <!-- {{this.ReceitasQnt.valida()}} -->
+                <page-receitas-qnt></page-receitas-qnt>
+        </ion-slide>
+        </ion-slides>
+
+        <ion-fab right bottom>
+            <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()" >
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+            </button>
+        </ion-fab>
+        <ion-fab>
+                <button *ngIf="cameraButton" class="button-camera" ion-button outline color = "tijuca">
+                    <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>
+                </button>
+            </ion-fab>
+        <ion-fab left bottom>
+            <button ion-fab color="tijuca" (click)="toBack()">
+                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-fab>
+    </div>
+</ion-content>

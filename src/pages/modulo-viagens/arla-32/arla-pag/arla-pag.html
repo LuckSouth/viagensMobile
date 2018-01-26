@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color = "tijuca">
+    <ion-title padding>Dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label floating>Litros</ion-label>
+    <ion-input type="number" min="0" [(ngModel)]="storageProvider.arla.litrosArla" (ngModelChange)="valida()"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Litro(R$)</ion-label>
+    <ion-input type="number" [(ngModel)]="storageProvider.arla.litrosPrecoArla" (ngModelChange)="valida()"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Total(R$)</ion-label>
+    <ion-input type="number" disabled=""></ion-input><!-- [(ngModel)]="total" (ngModelChange)="valida()" -->
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Forma Pagamento</ion-label>
+    <ion-select [(ngModel)]="storageProvider.arla.selectArla" (click)="valida()">
+      <ion-option value="ext">Boleto Bancário</ion-option>
+      <ion-option value="cre">Cartão de Crédito</ion-option>
+      <ion-option value="deb">Cartão de Débito</ion-option>
+      <ion-option value="che">Cheque</ion-option>
+<!--  <ion-option value="ter">Cheque Terceiro</ion-option> -->
+<!--  <ion-option value="cob">Cobrança em Carteira</ion-option> 
+      <ion-option value="dep">Depósito Bancário</ion-option>
+      <ion-option value="des">Despesa</ion-option>
+      <ion-option value="desv">Despesav</ion-option>-->
+      <ion-option value="din">Dinheiro</ion-option>
+<!--  <ion-option value="moe">Moedas</ion-option> -->
+    </ion-select>
+  </ion-item>
+</ion-list>

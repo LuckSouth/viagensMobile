@@ -1,0 +1,11 @@
+<ion-header>
+
+  <ion-toolbar color = "tijuca">
+    <ion-title padding>Ôdometro</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+ <ion-item>
+    <ion-label floating>Km</ion-label>
+    <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>
+  </ion-item> 

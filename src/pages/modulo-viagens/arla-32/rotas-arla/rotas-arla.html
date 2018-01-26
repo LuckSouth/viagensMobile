@@ -1,0 +1,26 @@
+<ion-content>
+ <div class="fixed-content">
+
+    <ion-slides pager>
+        <ion-slide>
+            <arla-pag-page></arla-pag-page>
+        </ion-slide>
+        <ion-slide>
+            <arla-posto-page></arla-posto-page>
+        </ion-slide>
+    </ion-slides>
+
+    <ion-fab right bottom>
+        <button ion-fab color="tijuca" (click)="toGo()" [disabled]="!ngAfterViewInit()" >
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+        </button>
+    </ion-fab>
+
+    <ion-fab left bottom>
+        <button ion-fab color="tijuca" (click)="toBack()">
+            <ion-icon color="warning" name="ios-arrow-back"></ion-icon>
+        </button>
+    </ion-fab>
+
+</div>
+</ion-content>
