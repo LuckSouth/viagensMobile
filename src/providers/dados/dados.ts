@@ -144,7 +144,6 @@ export class DadosProvider {
           this.storage.delete(this.storage.chaveArla);
           this.storage.listaArla = [];
         } else {
-          console.log('tratar erros');
 
           if (opcional != true) {
             this.storage.adicionarArla()
@@ -152,7 +151,6 @@ export class DadosProvider {
         }
       });
   }
-
 
 
 
