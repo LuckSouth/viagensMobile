@@ -32,12 +32,13 @@ export class EnviarProvider {
           this.despesas[index].dataDespesas,
           this.despesas[index].valorDespesas,
           true
-
         )
 
+        // this.storageProvider.listaDespesas = [];
 
       }
-      this.storageProvider.delete(this.storageProvider.despesas)
+      // this.storage.delete(this.storage.chaveDespesas)
+
 
     }
 

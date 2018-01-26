@@ -4,10 +4,12 @@ import 'rxjs/add/operator/map';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { StorageProvider } from "../../providers/storage/storage";
+
 @Injectable()
 export class DadosProvider {
 
-  constructor(public http: HttpClient, public storage: StorageProvider) {
+  constructor(public http: HttpClient, 
+      public storage: StorageProvider) {
     console.log('Hello DadosProvider Provider');
   }
 
@@ -49,6 +51,8 @@ export class DadosProvider {
 
           if (error.statusText == "OK") {
             console.log("fazer nada")
+            this.storage.delete(this.storage.chaveDespesas);
+            this.storage.listaDespesas = [];
           } else {
             console.log('tratar erros');
 

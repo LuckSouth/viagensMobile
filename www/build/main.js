@@ -1565,8 +1565,9 @@ var EnviarProvider = (function () {
                 console.log('enviar arquivos no cache');
                 this.despesas = this.storageProvider.listaDespesas;
                 this.dados.despesa(this.despesas[index].motorista, this.despesas[index].despesas, this.despesas[index].dataDespesas, this.despesas[index].valorDespesas, true);
+                // this.storageProvider.listaDespesas = [];
             }
-            this.storageProvider.delete(this.storageProvider.despesas);
+            // this.storage.delete(this.storage.chaveDespesas)
         }
         //Abastecimento
         if (this.storageProvider.tamanhoAbastecimento() > 0) {
@@ -1842,6 +1843,8 @@ var DadosProvider = (function () {
                 // console.log(error.statusText);
                 if (error.statusText == "OK") {
                     console.log("fazer nada");
+                    _this.storage.delete(_this.storage.chaveDespesas);
+                    _this.storage.listaDespesas = [];
                 }
                 else {
                     console.log('tratar erros');
