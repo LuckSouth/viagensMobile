@@ -34,10 +34,8 @@ export class EnviarProvider {
           true
         )
 
-        // this.storageProvider.listaDespesas = [];
 
       }
-      // this.storage.delete(this.storage.chaveDespesas)
 
 
     }
@@ -71,8 +69,6 @@ export class EnviarProvider {
         )
 
       }
-
-      this.storageProvider.delete(this.storageProvider.abastecimento)
 
     }
 

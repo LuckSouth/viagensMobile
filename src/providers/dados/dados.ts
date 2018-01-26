@@ -8,31 +8,16 @@ import { StorageProvider } from "../../providers/storage/storage";
 @Injectable()
 export class DadosProvider {
 
-  constructor(public http: HttpClient, 
-      public storage: StorageProvider) {
+  constructor(public http: HttpClient,
+    public storage: StorageProvider) {
     console.log('Hello DadosProvider Provider');
   }
 
   private baseURI: string = "http://earhbstfdjygt.tk/";
   public hideForm: boolean = false;
 
-  createEntry(name: string, description: string): void {
-    let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = { "key": "create", "name": name, "description": description },
-      url: any = this.baseURI + "manage-data.php";
 
-    this.http.post(url, JSON.stringify(options), headers)
-      .subscribe((data: any) => {
-        console.log(data)
-        // If the request was successful notify the user
-        this.hideForm = true;
-      },
-      (error: any) => {
-        console.log("erro no createEntry")
-      });
-  }
-
-  despesa(motorista: string, despesa: string, data: string, valor: string, opcional?:boolean): void {
+  despesa(motorista: string, despesa: string, data: string, valor: string, opcional?: boolean): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = { "key": "despesa", "despesa": despesa, "motorista": motorista, "data": data, "valor": valor },
       url: any = this.baseURI + "manage-data.php";
@@ -56,8 +41,7 @@ export class DadosProvider {
           } else {
             console.log('tratar erros');
 
-            if(opcional != true){
-              console.log('1')
+            if (opcional != true) {
               this.storage.adicionarDespesas()
             }
           }
@@ -81,7 +65,7 @@ export class DadosProvider {
     precoBomba1: string,
     litrosBomba2: string,
     precoBomba2: string,
-    opcional?:boolean
+    opcional?: boolean
 
   ): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -109,10 +93,12 @@ export class DadosProvider {
       (error: any) => {
         if (error.statusText == "OK") {
           console.log("fazer nada")
+          this.storage.delete(this.storage.chaveAbastecimento);
+          this.storage.listaAbastecimento = [];
         } else {
           console.log('tratar erros');
-          
-          if(opcional != true){
+
+          if (opcional != true) {
             this.storage.adicionarAbastecimento()
           }
         }
@@ -128,7 +114,7 @@ export class DadosProvider {
     km: string,
     litros: string,
     preco: string,
-    opcional?:boolean
+    opcional?: boolean
 
   ): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -155,9 +141,14 @@ export class DadosProvider {
       (error: any) => {
         if (error.statusText == "OK") {
           console.log("fazer nada")
+          this.storage.delete(this.storage.chaveArla);
+          this.storage.listaArla = [];
         } else {
           console.log('tratar erros');
-          this.storage.adicionarArla()
+
+          if (opcional != true) {
+            this.storage.adicionarArla()
+          }
         }
       });
   }
@@ -176,7 +167,7 @@ export class DadosProvider {
     qntDescarregado: string,
     valorUnitario: string,
     idSubUnidade: string,
-    opcional?:boolean
+    opcional?: boolean
   ): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
@@ -204,9 +195,13 @@ export class DadosProvider {
       (error: any) => {
         if (error.statusText == "OK") {
           console.log("fazer nada")
+          this.storage.delete(this.storage.chaveReceitas);
+          this.storage.listaReceitas = [];
         } else {
           console.log('tratar erros');
-          this.storage.adicionarReceitas()
+          if (opcional != true) {
+            this.storage.adicionarReceitas()
+          }
         }
       });
   }
