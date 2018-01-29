@@ -37,13 +37,13 @@ export class MyApp {
     // public navCtrl: NavController
   ) {
 
+    this.googlePlus.trySilentLogin({}).then(
+      () => this.rootPage = PrincipalPage
+    ).catch(err => console.error(err));
     
     
     platform.ready().then(() => {
       
-      this.googlePlus.trySilentLogin({}).then(
-        res => this.rootPage = PrincipalPage
-      ).catch(err => console.error(err));
       // this.storage.ready().then(() => {
       //   this.storage.get("Auth").then((registros) => {
       //     this.listaAuth = registros;
