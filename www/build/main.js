@@ -1449,11 +1449,11 @@ var map = {
 		15
 	],
 	"../pages/modulo-viagens/despesas/despesas/despesas.module": [
-		475,
+		474,
 		14
 	],
 	"../pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.module": [
-		474,
+		475,
 		13
 	],
 	"../pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.module": [
@@ -2114,8 +2114,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/modulo-viagens/arla-32/arla-pag/arla-pag.module#ArlaPagModule', name: 'ArlaPagPage', segment: 'arla-pag', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/arla-32/arla-posto/arla-posto.module#ArlaPostoModule', name: 'ArlaPostoPage', segment: 'arla-posto', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.module#RotasArlaPageModule', name: 'RotasArlaPage', segment: 'rotas-arla', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.module#GeralDadosMotoristaModule', name: 'GeralDadosMotoristaPage', segment: 'geral-dados-motorista', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/despesas/despesas/despesas.module#DespesasPageModule', name: 'DespesasPage', segment: 'despesas', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.module#GeralDadosMotoristaModule', name: 'GeralDadosMotoristaPage', segment: 'geral-dados-motorista', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.module#GeralDadosViagemModule', name: 'GeralDadosViagemPage', segment: 'geral-dados-viagem', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/geral/geral-page/geral-page.module#GeralPageModule', name: 'GeralPage', segment: 'geral-page', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.module#ReceitasFornecedorPageModule', name: 'ReceitasFornecedorPage', segment: 'receita-fornecedor', priority: 'low', defaultHistory: [] },
@@ -2202,6 +2202,7 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_google_plus__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2221,37 +2222,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen, screenOrientation, storageProvider, storage
+    function MyApp(platform, statusBar, splashScreen, screenOrientation, storageProvider, storage, googlePlus
         // public navCtrl: NavController
     ) {
         var _this = this;
         this.screenOrientation = screenOrientation;
         this.storageProvider = storageProvider;
         this.storage = storage;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_principal_principal_principal__["a" /* PrincipalPage */];
+        this.googlePlus = googlePlus;
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */];
         this.chaveAuth = "Auth";
         this.listaDespesas = {};
         platform.ready().then(function () {
-            _this.storage.ready().then(function () {
-                _this.storage.get("Auth").then(function (registros) {
-                    _this.listaAuth = registros;
-                    console.log(_this.listaAuth.isLoggedIn);
-                    if (_this.listaAuth.isLoggedIn) {
-                        _this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_principal_principal_principal__["a" /* PrincipalPage */];
-                    }
-                    else {
-                        _this.rootPage = __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */];
-                    }
-                    // if (registros) {
-                    //   this.listaAuth = registros;
-                    //   console.log(this.listaAuth);
-                    // } else {
-                    //   this.listaAuth = [];
-                    //   // console.log(this.listaAuth);
-                    // }
-                });
-            });
+            _this.googlePlus.trySilentLogin({}).then(function (res) { return _this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_principal_principal_principal__["a" /* PrincipalPage */]; }).catch(function (err) { return console.error(err); });
+            // this.storage.ready().then(() => {
+            //   this.storage.get("Auth").then((registros) => {
+            //     this.listaAuth = registros;
+            //     console.log(this.listaAuth.isLoggedIn);
+            //     if(this.listaAuth.isLoggedIn){
+            //       this.rootPage = PrincipalPage;
+            //     }
+            //     if(this.listaAuth.isLoggedIn == undefined){
+            //       this.rootPage = LoginPage;
+            //     }
+            //   })
+            // })
             _this.screenOrientation.lock(screenOrientation.ORIENTATIONS.PORTRAIT);
             statusBar.styleDefault();
             splashScreen.hide();
@@ -2262,16 +2259,10 @@ var MyApp = (function () {
 MyApp = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/estagio-11/viagens/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/estagio-11/viagens/src/app/app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
-        __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-        __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__["a" /* ScreenOrientation */],
-        __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__["a" /* StorageProvider */],
-        __WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */]
-        // public navCtrl: NavController
-    ])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__["a" /* ScreenOrientation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__["a" /* ScreenOrientation */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__["a" /* StorageProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__["a" /* StorageProvider */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_9__ionic_native_google_plus__["a" /* GooglePlus */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__ionic_native_google_plus__["a" /* GooglePlus */]) === "function" && _g || Object])
 ], MyApp);
 
+var _a, _b, _c, _d, _e, _f, _g;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),

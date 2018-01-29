@@ -11,6 +11,7 @@ import { DespesasPage } from '../pages/modulo-viagens/despesas/despesas/despesas
 import { LoginPage } from '../pages/login/login';
 import { InicioPage } from '../pages/inicio/inicio';
 import { Storage } from '@ionic/storage';
+import { GooglePlus } from '@ionic-native/google-plus';
 
 
 @Component({
@@ -18,7 +19,7 @@ import { Storage } from '@ionic/storage';
 })
 export class MyApp {
   
-  rootPage: any = PrincipalPage;
+  rootPage: any = LoginPage;
   storages: any;
   listaAuth;
   chaveAuth: string = "Auth"; 
@@ -31,31 +32,31 @@ export class MyApp {
     splashScreen: SplashScreen,
     private screenOrientation: ScreenOrientation,
     public storageProvider: StorageProvider,
-    public storage: Storage
+    public storage: Storage,
+    public googlePlus: GooglePlus
     // public navCtrl: NavController
   ) {
+
     
     
     platform.ready().then(() => {
-
-      this.storage.ready().then(() => {
-        this.storage.get("Auth").then((registros) => {
-          this.listaAuth = registros;
-          console.log(this.listaAuth.isLoggedIn);
-          if(this.listaAuth.isLoggedIn){
-            this.rootPage = PrincipalPage;
-          }else{
-            this.rootPage = LoginPage;
-          }
-          // if (registros) {
-            //   this.listaAuth = registros;
-          //   console.log(this.listaAuth);
-          // } else {
-            //   this.listaAuth = [];
-          //   // console.log(this.listaAuth);
-          // }
-        })
-      })
+      
+      this.googlePlus.trySilentLogin({}).then(
+        res => this.rootPage = PrincipalPage
+      ).catch(err => console.error(err));
+      // this.storage.ready().then(() => {
+      //   this.storage.get("Auth").then((registros) => {
+      //     this.listaAuth = registros;
+      //     console.log(this.listaAuth.isLoggedIn);
+      //     if(this.listaAuth.isLoggedIn){
+      //       this.rootPage = PrincipalPage;
+      //     }
+      //     if(this.listaAuth.isLoggedIn == undefined){
+      //       this.rootPage = LoginPage;
+      //     }
+         
+      //   })
+      // })
 
 
       this.screenOrientation.lock(screenOrientation.ORIENTATIONS.PORTRAIT);
