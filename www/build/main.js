@@ -54,7 +54,7 @@ FotoServicoProvider = __decorate([
 
 /***/ }),
 
-/***/ 133:
+/***/ 132:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,10 +62,10 @@ FotoServicoProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_foto_servico_foto_servico__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__abastecimento_pagamento_abastecimento_pagamento__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__abastecimento_odometro_abastecimento_odometro__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__abastecimento_bomba_1_abastecimento_bomba_1__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__abastecimento_bomba_2_abastecimento_bomba_2__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__abastecimento_pagamento_abastecimento_pagamento__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__abastecimento_odometro_abastecimento_odometro__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__abastecimento_bomba_1_abastecimento_bomba_1__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__abastecimento_bomba_2_abastecimento_bomba_2__ = __webpack_require__(136);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_storage_storage__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_dados_dados__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -214,7 +214,7 @@ __decorate([
 ], RotasAbastecimentoPage.prototype, "abastecimentoBomba2", void 0);
 RotasAbastecimentoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-rotas-abastecimento',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.html"*/'<ion-content>\n\n    <div class="fixed-content">\n\n        <!-- Início de slides -->\n        <ion-slides>\n\n            <ion-slide>\n                <page-abastecimento-pagamento class="a"></page-abastecimento-pagamento>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-odometro></page-abastecimento-odometro>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-foto-odometro></page-abastecimento-foto-odometro>\n                <div class="img">\n                    <img class="image" src="{{fotoOdometro}}" />\n                </div>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-bomba-1></page-abastecimento-bomba-1>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-foto-bomba-1></page-abastecimento-foto-bomba-1>\n                <div class="img2">\n                    <img class="image" src="{{fotoBomba1}}" />\n                </div>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-bomba-2></page-abastecimento-bomba-2>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-foto-bomba-2></page-abastecimento-foto-bomba-2>\n                <div class="img3">\n                    <img class="image" src="{{fotoBomba2}}" /> \n                </div>\n            </ion-slide>\n        </ion-slides>\n        <!-- fim de slides -->\n\n\n        <!-- Botão passar -->\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()">\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <!-- Botão câmera -->\n        <ion-fab>\n            <button *ngIf="cameraButton" class="button-camera" color = "tijuca" ion-button outline>\n                <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <!-- Botão voltar -->\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n    </div>\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.html"*/,
+        selector: 'page-rotas-abastecimento',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.html"*/'<ion-content>\n\n    <div class="fixed-content">\n\n        <!-- Início de slides -->\n        <ion-slides>\n\n            <ion-slide>\n                <page-abastecimento-pagamento class="a"></page-abastecimento-pagamento>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-odometro></page-abastecimento-odometro>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-foto-odometro></page-abastecimento-foto-odometro>\n                <div class="img">\n                    <img class="image" src="{{fotoOdometro}}" />\n                </div>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-bomba-1></page-abastecimento-bomba-1>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-foto-bomba-1></page-abastecimento-foto-bomba-1>\n                <div class="img2">\n                    <img class="image" src="{{fotoBomba1}}" />\n                </div>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-bomba-2></page-abastecimento-bomba-2>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-foto-bomba-2></page-abastecimento-foto-bomba-2>\n                <div class="img3">\n                    <img class="image" src="{{fotoBomba2}}" /> \n                </div>\n            </ion-slide>\n        </ion-slides>\n        <!-- fim de slides -->\n\n\n        <!-- Botão passar -->\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()">\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <!-- Botão câmera -->\n        <ion-fab>\n            <button *ngIf="cameraButton" class="button-camera" color = "tijuca" ion-button outline>\n                <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <!-- Botão voltar -->\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n    </div>\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -228,7 +228,7 @@ RotasAbastecimentoPage = __decorate([
 
 /***/ }),
 
-/***/ 134:
+/***/ 133:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -265,7 +265,7 @@ var AbastecimentoPagamentoPage = (function () {
 }());
 AbastecimentoPagamentoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-pagamento',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/'<ion-header>\n  <ion-toolbar color="tijuca">\n    <ion-title padding>Pagamento</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-list>\n  <ion-item>\n    <ion-label>Tipo</ion-label>\n    <ion-select [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()">\n      <ion-option value="externo">Externo</ion-option>\n      <ion-option value="int">Interno</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Posto</ion-label>\n    <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label>Data</ion-label>\n    <ion-input type="date" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label>Tipo de pagamento</ion-label>\n    <ion-select [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()">\n      <ion-option value="Dinheiro">Dinheiro</ion-option>\n      <ion-option value="crédito">Crédito</ion-option>\n      <ion-option value="Débito"> Débito</ion-option>\n      <ion-option value="Cheque">Cheque</ion-option>\n    </ion-select>\n  </ion-item>\n\n\n</ion-list>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/,
+        selector: 'page-abastecimento-pagamento',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/'<ion-header>\n  <ion-toolbar color="tijuca">\n    <ion-title padding>Pagamento</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-list>\n  <ion-item>\n    <ion-label>Tipo</ion-label>\n    <ion-select [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()">\n      <ion-option value="externo">Externo</ion-option>\n      <ion-option value="int">Interno</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Posto</ion-label>\n    <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label>Data</ion-label>\n    <ion-input type="date" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label>Tipo de pagamento</ion-label>\n    <ion-select [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()">\n      <ion-option value="Dinheiro">Dinheiro</ion-option>\n      <ion-option value="crédito">Crédito</ion-option>\n      <ion-option value="Débito"> Débito</ion-option>\n      <ion-option value="Cheque">Cheque</ion-option>\n    </ion-select>\n  </ion-item>\n\n\n</ion-list>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]])
@@ -275,7 +275,7 @@ AbastecimentoPagamentoPage = __decorate([
 
 /***/ }),
 
-/***/ 135:
+/***/ 134:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -312,7 +312,7 @@ var AbastecimentoOdometroPage = (function () {
 }());
 AbastecimentoOdometroPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-odometro',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-odometro/abastecimento-odometro.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title padding>Ôdometro</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n <ion-item>\n    <ion-label floating>Km</ion-label>\n    <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>\n  </ion-item> '/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-odometro/abastecimento-odometro.html"*/,
+        selector: 'page-abastecimento-odometro',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-odometro/abastecimento-odometro.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title padding>Ôdometro</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n <ion-item>\n    <ion-label floating>Km</ion-label>\n    <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>\n  </ion-item> '/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-odometro/abastecimento-odometro.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]])
@@ -322,7 +322,7 @@ AbastecimentoOdometroPage = __decorate([
 
 /***/ }),
 
-/***/ 136:
+/***/ 135:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -360,7 +360,7 @@ var AbastecimentoBomba1Page = (function () {
 }());
 AbastecimentoBomba1Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-bomba-1',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1.html"*/'<ion-header>\n    <ion-toolbar color = "tijuca">\n        <ion-title padding color = "tijuca">Bomba 1</ion-title>\n    </ion-toolbar>\n</ion-header>\n<ion-item>\n    <ion-label floating>Litros</ion-label>\n    <ion-input type="number" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n    <ion-label floating>Preço/L</ion-label>\n    <ion-input type="number" min = "0"[(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1.html"*/,
+        selector: 'page-abastecimento-bomba-1',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1.html"*/'<ion-header>\n    <ion-toolbar color = "tijuca">\n        <ion-title padding color = "tijuca">Bomba 1</ion-title>\n    </ion-toolbar>\n</ion-header>\n<ion-item>\n    <ion-label floating>Litros</ion-label>\n    <ion-input type="number" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n    <ion-label floating>Preço/L</ion-label>\n    <ion-input type="number" min = "0"[(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -371,7 +371,7 @@ AbastecimentoBomba1Page = __decorate([
 
 /***/ }),
 
-/***/ 137:
+/***/ 136:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -412,7 +412,7 @@ var AbastecimentoBomba2Page = (function () {
 }());
 AbastecimentoBomba2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-bomba-2',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/'<ion-header>\n\n    <ion-toolbar color = "tijuca">\n        <ion-title padding>Bomba 2</ion-title>\n    </ion-toolbar>\n\n</ion-header>\n<ion-item>\n    <ion-label floating>Litros</ion-label>\n    <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n    <ion-label floating>Preço/L</ion-label>\n    <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/,
+        selector: 'page-abastecimento-bomba-2',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/'<ion-header>\n\n    <ion-toolbar color = "tijuca">\n        <ion-title padding>Bomba 2</ion-title>\n    </ion-toolbar>\n\n</ion-header>\n<ion-item>\n    <ion-label floating>Litros</ion-label>\n    <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n    <ion-label floating>Preço/L</ion-label>\n    <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -425,15 +425,15 @@ AbastecimentoBomba2Page = __decorate([
 
 /***/ }),
 
-/***/ 138:
+/***/ 137:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeralPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__geral_dados_viagem_geral_dados_viagem__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__geral_dados_motorista_geral_dados_motorista__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__geral_dados_viagem_geral_dados_viagem__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__geral_dados_motorista_geral_dados_motorista__ = __webpack_require__(139);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -459,7 +459,7 @@ var GeralPage = (function () {
 }());
 GeralPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'geral-page',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/geral/geral-page/geral-page.html"*/'<ion-header>\n  <ion-navbar color = "tijuca"> \n      <ion-title>\n        Dados Gerais \n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-tabs  color = "tijuca">\n    <ion-tab [root]="geralDadosViagem" tabTitle="Viagem" tabIcon="ios-compass"></ion-tab>\n    <ion-tab [root]="geralDadosMotorista" tabTitle="Motorista" tabIcon="ios-contact"></ion-tab>\n  </ion-tabs>\n\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/geral/geral-page/geral-page.html"*/,
+        selector: 'geral-page',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/geral/geral-page/geral-page.html"*/'<ion-header>\n  <ion-navbar color = "tijuca"> \n      <ion-title>\n        Dados Gerais \n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-tabs  color = "tijuca">\n    <ion-tab [root]="geralDadosViagem" tabTitle="Viagem" tabIcon="ios-compass"></ion-tab>\n    <ion-tab [root]="geralDadosMotorista" tabTitle="Motorista" tabIcon="ios-contact"></ion-tab>\n  </ion-tabs>\n\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/geral/geral-page/geral-page.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -470,7 +470,7 @@ GeralPage = __decorate([
 
 /***/ }),
 
-/***/ 139:
+/***/ 138:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -497,7 +497,7 @@ var GeralDadosViagemPage = (function () {
 }());
 GeralDadosViagemPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'geral-dados-viagem',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.html"*/'<ion-content padding>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Veículo principal</ion-label>\n      <ion-input type="text" [(ngModel)]="vei" disabled="" value="AFG-3301"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>N. da Viagem</ion-label>\n      <ion-input type="number" [(ngModel)]="via" disabled="" value="1"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Km Saída</ion-label>\n      <ion-input type="text" [(ngModel)]="km" disabled="" value="12560 Km"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Data Saída</ion-label>\n      <ion-input type="date" [(ngModel)]="data" disabled="" value="0"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Observações</ion-label>\n      <ion-input type="text" [(ngModel)]="obs" disabled=""></ion-input>\n    </ion-item>\n\n    \n  </ion-list>\n  \n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.html"*/,
+        selector: 'geral-dados-viagem',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.html"*/'<ion-content padding>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Veículo principal</ion-label>\n      <ion-input type="text" [(ngModel)]="vei" disabled="" value="AFG-3301"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>N. da Viagem</ion-label>\n      <ion-input type="number" [(ngModel)]="via" disabled="" value="1"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Km Saída</ion-label>\n      <ion-input type="text" [(ngModel)]="km" disabled="" value="12560 Km"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Data Saída</ion-label>\n      <ion-input type="date" [(ngModel)]="data" disabled="" value="0"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Observações</ion-label>\n      <ion-input type="text" [(ngModel)]="obs" disabled=""></ion-input>\n    </ion-item>\n\n    \n  </ion-list>\n  \n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], GeralDadosViagemPage);
@@ -506,7 +506,7 @@ GeralDadosViagemPage = __decorate([
 
 /***/ }),
 
-/***/ 140:
+/***/ 139:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -533,7 +533,7 @@ var GeralDadosMotoristaPage = (function () {
 }());
 GeralDadosMotoristaPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'geral-dados-motorista',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.html"*/'<ion-content padding>\n    <ion-list>\n\n  <ion-item>\n    <ion-label floating>Motorista</ion-label>\n    <ion-input type="text" [(ngModel)]="mot" disabled="" value="Cleber"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Receitas R$</ion-label>\n    <ion-input type="text" [(ngModel)]="outr" disabled="" value="R$ 100"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Despesas R$</ion-label>\n    <ion-input type="text" [(ngModel)]="out" disabled="" value="R$ 1000"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Adiantamento Comissão</ion-label>\n    <ion-input type="text" [(ngModel)]="adi" disabled="" value="R$ 1000"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Comissão Gerencial</ion-label>\n    <ion-input type="text" [(ngModel)]="com" disabled="" value="10%"></ion-input>\n  </ion-item>\n  \n  <ion-item>\n    <ion-label floating>Valor do Vale</ion-label>\n    <ion-input type="text" [(ngModel)]="val" disabled="" value="R$ 150"></ion-input>\n  </ion-item>\n\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.html"*/,
+        selector: 'geral-dados-motorista',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.html"*/'<ion-content padding>\n    <ion-list>\n\n  <ion-item>\n    <ion-label floating>Motorista</ion-label>\n    <ion-input type="text" [(ngModel)]="mot" disabled="" value="Cleber"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Receitas R$</ion-label>\n    <ion-input type="text" [(ngModel)]="outr" disabled="" value="R$ 100"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Despesas R$</ion-label>\n    <ion-input type="text" [(ngModel)]="out" disabled="" value="R$ 1000"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Adiantamento Comissão</ion-label>\n    <ion-input type="text" [(ngModel)]="adi" disabled="" value="R$ 1000"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Comissão Gerencial</ion-label>\n    <ion-input type="text" [(ngModel)]="com" disabled="" value="10%"></ion-input>\n  </ion-item>\n  \n  <ion-item>\n    <ion-label floating>Valor do Vale</ion-label>\n    <ion-input type="text" [(ngModel)]="val" disabled="" value="R$ 150"></ion-input>\n  </ion-item>\n\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], GeralDadosMotoristaPage);
@@ -542,7 +542,7 @@ GeralDadosMotoristaPage = __decorate([
 
 /***/ }),
 
-/***/ 141:
+/***/ 140:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -551,7 +551,7 @@ GeralDadosMotoristaPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_dados_dados__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__viagens_viagens__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__viagens_viagens__ = __webpack_require__(74);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -563,6 +563,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+// import {Directive} from 'ionic2-text-mask';
 
 
 
@@ -578,6 +579,9 @@ var DespesasPage = (function () {
     }
     DespesasPage.prototype.viagens = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__viagens_viagens__["a" /* ViagensPage */]);
+    };
+    DespesasPage.prototype.amountChange = function () {
+        this.storageProvider.despesas.valorDespesas = this.storageProvider.detectAmount(this.storageProvider.despesas.valorDespesas);
     };
     DespesasPage.prototype.valida = function () {
         if (this.storageProvider.despesas.despesas == "" || this.storageProvider.despesas.dataDespesas == "" || this.storageProvider.despesas.valorDespesas == "") {
@@ -603,7 +607,7 @@ var DespesasPage = (function () {
 }());
 DespesasPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-despesas',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/despesas/despesas/despesas.html"*/'<ion-header>\n  <ion-navbar color = "tijuca">\n    <ion-title>Despesas da Viagem</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    \n      <ion-item>\n        <ion-label floating>Despesas</ion-label>\n        <ion-select [(ngModel)]="storageProvider.despesas.despesas" required #iptDespesa="ngModel">\n          <ion-option value="Lanche">Lanche</ion-option>\n          <ion-option value="Almoço">Almoço</ion-option>\n          <ion-option value="Jantar">Jantar</ion-option>\n          <!-- <ion-option value="4">Almoçado</ion-option> \n          <ion-option value="5">Borracharia</ion-option>\n          <ion-option value="6">Corrente</ion-option>\n          <ion-option value="7">Lavagem de veículos</ion-option>\n          <ion-option value="8">Conserto de pneu</ion-option>\n          <ion-option value="9">Carga/Descarga</ion-option>\n          <ion-option value="10">Moto taxi</ion-option> -->\n        </ion-select>\n      </ion-item>\n    \n  <ion-item>\n        <ion-label>Data</ion-label>\n        <ion-input type="date" [(ngModel)]="storageProvider.despesas.dataDespesas" required #iptData="ngModel"></ion-input>\n      </ion-item> \n      <ion-item>\n        <ion-label floating>Valor</ion-label>\n        <ion-input type="float" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>\n      </ion-item> \n  </ion-list> \n  <button ion-button full (click)="salvar()" [disabled]="!valida()" color = "tijuca" >Adicionar</button>\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/despesas/despesas/despesas.html"*/,
+        selector: 'page-despesas',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/despesas/despesas/despesas.html"*/'<ion-header>\n  <ion-navbar color = "tijuca">\n    <ion-title>Despesas da Viagem</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    \n      <ion-item>\n        <ion-label floating>Despesas</ion-label>\n        <ion-select [(ngModel)]="storageProvider.despesas.despesas" required #iptDespesa="ngModel">\n          <ion-option value="Lanche">Lanche</ion-option>\n          <ion-option value="Almoço">Almoço</ion-option>\n          <ion-option value="Jantar">Jantar</ion-option>\n          <!-- <ion-option value="4">Almoçado</ion-option> \n          <ion-option value="5">Borracharia</ion-option>\n          <ion-option value="6">Corrente</ion-option>\n          <ion-option value="7">Lavagem de veículos</ion-option>\n          <ion-option value="8">Conserto de pneu</ion-option>\n          <ion-option value="9">Carga/Descarga</ion-option>\n          <ion-option value="10">Moto taxi</ion-option> -->\n        </ion-select>\n      </ion-item>\n    \n  <ion-item>\n        <ion-label>Data</ion-label>\n        <ion-input type="date" [(ngModel)]="storageProvider.despesas.dataDespesas" required #iptData="ngModel"></ion-input>\n      </ion-item> \n      <ion-item>\n        <ion-label floating>Valor</ion-label>\n        <ion-input type="number" (keyup)="amountChange()" placeholder="0.00" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>\n      </ion-item> \n  </ion-list> \n  <button ion-button full (click)="salvar()" [disabled]="!valida()" color = "tijuca" >Adicionar</button>\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/despesas/despesas/despesas.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -616,15 +620,15 @@ DespesasPage = __decorate([
 
 /***/ }),
 
-/***/ 142:
+/***/ 141:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RotasArlaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__arla_pag_arla_pag__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__arla_posto_arla_posto__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__arla_pag_arla_pag__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__arla_posto_arla_posto__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_storage_storage__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_dados_dados__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -707,7 +711,7 @@ __decorate([
 ], RotasArlaPage.prototype, "arlaPostoPage", void 0);
 RotasArlaPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-rotas-arla',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.html"*/'<ion-content>\n <div class="fixed-content">\n\n    <ion-slides pager>\n        <ion-slide>\n            <arla-pag-page></arla-pag-page>\n        </ion-slide>\n        <ion-slide>\n            <arla-posto-page></arla-posto-page>\n        </ion-slide>\n    </ion-slides>\n\n    <ion-fab right bottom>\n        <button ion-fab color="tijuca" (click)="toGo()" [disabled]="!ngAfterViewInit()" >\n            <ion-icon name="ios-arrow-forward"></ion-icon>\n        </button>\n    </ion-fab>\n\n    <ion-fab left bottom>\n        <button ion-fab color="tijuca" (click)="toBack()">\n            <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n        </button>\n    </ion-fab>\n\n</div>\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.html"*/,
+        selector: 'page-rotas-arla',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.html"*/'<ion-content>\n <div class="fixed-content">\n\n    <ion-slides pager>\n        <ion-slide>\n            <arla-pag-page></arla-pag-page>\n        </ion-slide>\n        <ion-slide>\n            <arla-posto-page></arla-posto-page>\n        </ion-slide>\n    </ion-slides>\n\n    <ion-fab right bottom>\n        <button ion-fab color="tijuca" (click)="toGo()" [disabled]="!ngAfterViewInit()" >\n            <ion-icon name="ios-arrow-forward"></ion-icon>\n        </button>\n    </ion-fab>\n\n    <ion-fab left bottom>\n        <button ion-fab color="tijuca" (click)="toBack()">\n            <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n        </button>\n    </ion-fab>\n\n</div>\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -720,7 +724,7 @@ RotasArlaPage = __decorate([
 
 /***/ }),
 
-/***/ 143:
+/***/ 142:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -768,7 +772,7 @@ var ArlaPagPage = (function () {
 }());
 ArlaPagPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'arla-pag-page',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/arla-32/arla-pag/arla-pag.html"*/'<ion-header>\n  <ion-toolbar color = "tijuca">\n    <ion-title padding>Dados</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-list>\n\n  <ion-item>\n    <ion-label floating>Litros</ion-label>\n    <ion-input type="number" min="0" [(ngModel)]="storageProvider.arla.litrosArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Litro(R$)</ion-label>\n    <ion-input type="number" [(ngModel)]="storageProvider.arla.litrosPrecoArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Total(R$)</ion-label>\n    <ion-input type="number" disabled=""></ion-input><!-- [(ngModel)]="total" (ngModelChange)="valida()" -->\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Forma Pagamento</ion-label>\n    <ion-select [(ngModel)]="storageProvider.arla.selectArla" (click)="valida()">\n      <ion-option value="ext">Boleto Bancário</ion-option>\n      <ion-option value="cre">Cartão de Crédito</ion-option>\n      <ion-option value="deb">Cartão de Débito</ion-option>\n      <ion-option value="che">Cheque</ion-option>\n<!--  <ion-option value="ter">Cheque Terceiro</ion-option> -->\n<!--  <ion-option value="cob">Cobrança em Carteira</ion-option> \n      <ion-option value="dep">Depósito Bancário</ion-option>\n      <ion-option value="des">Despesa</ion-option>\n      <ion-option value="desv">Despesav</ion-option>-->\n      <ion-option value="din">Dinheiro</ion-option>\n<!--  <ion-option value="moe">Moedas</ion-option> -->\n    </ion-select>\n  </ion-item>\n</ion-list>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/arla-32/arla-pag/arla-pag.html"*/,
+        selector: 'arla-pag-page',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/arla-32/arla-pag/arla-pag.html"*/'<ion-header>\n  <ion-toolbar color = "tijuca">\n    <ion-title padding>Dados</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-list>\n\n  <ion-item>\n    <ion-label floating>Litros</ion-label>\n    <ion-input type="number" min="0" [(ngModel)]="storageProvider.arla.litrosArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Litro(R$)</ion-label>\n    <ion-input type="number" [(ngModel)]="storageProvider.arla.litrosPrecoArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Total(R$)</ion-label>\n    <ion-input type="number" disabled=""></ion-input><!-- [(ngModel)]="total" (ngModelChange)="valida()" -->\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Forma Pagamento</ion-label>\n    <ion-select [(ngModel)]="storageProvider.arla.selectArla" (click)="valida()">\n      <ion-option value="ext">Boleto Bancário</ion-option>\n      <ion-option value="cre">Cartão de Crédito</ion-option>\n      <ion-option value="deb">Cartão de Débito</ion-option>\n      <ion-option value="che">Cheque</ion-option>\n<!--  <ion-option value="ter">Cheque Terceiro</ion-option> -->\n<!--  <ion-option value="cob">Cobrança em Carteira</ion-option> \n      <ion-option value="dep">Depósito Bancário</ion-option>\n      <ion-option value="des">Despesa</ion-option>\n      <ion-option value="desv">Despesav</ion-option>-->\n      <ion-option value="din">Dinheiro</ion-option>\n<!--  <ion-option value="moe">Moedas</ion-option> -->\n    </ion-select>\n  </ion-item>\n</ion-list>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/arla-32/arla-pag/arla-pag.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -780,7 +784,7 @@ ArlaPagPage = __decorate([
 
 /***/ }),
 
-/***/ 144:
+/***/ 143:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -817,7 +821,7 @@ var ArlaPostoPage = (function () {
 }());
 ArlaPostoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'arla-posto-page',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/arla-32/arla-posto/arla-posto.html"*/'<ion-header>\n  <ion-toolbar color = "tijuca">\n    <ion-title padding>Arla 32</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-list>\n\n  <ion-item>\n    <ion-label floating>Tipo Abastecimento</ion-label>\n    <ion-select [(ngModel)]="storageProvider.arla.tipoArla" (ngModelChange)="valida()">\n      <ion-option value="ext">Externo</ion-option>\n      <ion-option value="int">Interno</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Posto Combustivel</ion-label>\n    <ion-input type="text" [(ngModel)]="storageProvider.arla.postoArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label>Data</ion-label>\n    <ion-input type="date" [(ngModel)]="storageProvider.arla.dataArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n  \n  <ion-item>\n    <ion-label floating>Km</ion-label>\n    <ion-input type="number" min="0"  [(ngModel)]="storageProvider.arla.km" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n</ion-list>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/arla-32/arla-posto/arla-posto.html"*/,
+        selector: 'arla-posto-page',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/arla-32/arla-posto/arla-posto.html"*/'<ion-header>\n  <ion-toolbar color = "tijuca">\n    <ion-title padding>Arla 32</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-list>\n\n  <ion-item>\n    <ion-label floating>Tipo Abastecimento</ion-label>\n    <ion-select [(ngModel)]="storageProvider.arla.tipoArla" (ngModelChange)="valida()">\n      <ion-option value="ext">Externo</ion-option>\n      <ion-option value="int">Interno</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Posto Combustivel</ion-label>\n    <ion-input type="text" [(ngModel)]="storageProvider.arla.postoArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label>Data</ion-label>\n    <ion-input type="date" [(ngModel)]="storageProvider.arla.dataArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n  \n  <ion-item>\n    <ion-label floating>Km</ion-label>\n    <ion-input type="number" min="0"  [(ngModel)]="storageProvider.arla.km" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n</ion-list>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/arla-32/arla-posto/arla-posto.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -828,7 +832,7 @@ ArlaPostoPage = __decorate([
 
 /***/ }),
 
-/***/ 145:
+/***/ 144:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -836,9 +840,9 @@ ArlaPostoPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_foto_servico_foto_servico__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__receita_fornecedor_receita_fornecedor__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__receitas_foto_receitas_foto__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__receitas_qnt_receitas_qnt__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__receita_fornecedor_receita_fornecedor__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__receitas_foto_receitas_foto__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__receitas_qnt_receitas_qnt__ = __webpack_require__(147);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_dados_dados__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -958,7 +962,7 @@ __decorate([
 ], RotasReceitasPage.prototype, "ReceitasQnt", void 0);
 RotasReceitasPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-rotas-receitas',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.html"*/'<ion-content>\n    <div class="fixed-content">\n                \n        <ion-slides>\n            <ion-slide>\n                <page-receita-fornecedor></page-receita-fornecedor>\n            </ion-slide>\n            <ion-slide>\n                <page-receitas-foto></page-receitas-foto>\n                <div class="img">\n                    <img class="image" src="{{fotoReceitas}}" />\n                </div>\n            </ion-slide>\n            <ion-slide>\n                <!-- {{this.ReceitasQnt.valida()}} -->\n                <page-receitas-qnt></page-receitas-qnt>\n        </ion-slide>\n        </ion-slides>\n\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()" >\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n        <ion-fab>\n                <button *ngIf="cameraButton" class="button-camera" ion-button outline color = "tijuca">\n                    <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n                </button>\n            </ion-fab>\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.html"*/,
+        selector: 'page-rotas-receitas',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.html"*/'<ion-content>\n    <div class="fixed-content">\n                \n        <ion-slides>\n            <ion-slide>\n                <page-receita-fornecedor></page-receita-fornecedor>\n            </ion-slide>\n            <ion-slide>\n                <page-receitas-foto></page-receitas-foto>\n                <div class="img">\n                    <img class="image" src="{{fotoReceitas}}" />\n                </div>\n            </ion-slide>\n            <ion-slide>\n                <!-- {{this.ReceitasQnt.valida()}} -->\n                <page-receitas-qnt></page-receitas-qnt>\n        </ion-slide>\n        </ion-slides>\n\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()" >\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n        <ion-fab>\n                <button *ngIf="cameraButton" class="button-camera" ion-button outline color = "tijuca">\n                    <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n                </button>\n            </ion-fab>\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -972,7 +976,7 @@ RotasReceitasPage = __decorate([
 
 /***/ }),
 
-/***/ 146:
+/***/ 145:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1010,7 +1014,7 @@ var ReceitasFornecedorPage = (function () {
 }());
 ReceitasFornecedorPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-receita-fornecedor',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.html"*/'<ion-header color = "tijuca">\n  \n  <ion-toolbar color = "tijuca">\n    <ion-title padding color = "tijuca">Fornecedor</ion-title>\n</ion-toolbar>\n\n\n</ion-header>\n\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating>Fornecedor / Origem</ion-label>\n      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Fornecedor / Destino</ion-label>\n      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorDestino" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Produto</ion-label>\n      <ion-input type="text" name="produto" [(ngModel)]="storageProvider.receitas.produto" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Tipo de Pagamento</ion-label>\n      <ion-select [(ngModel)]="storageProvider.receitas.tipoPagmt" (click)="valida()">\n        <ion-option value="proprio">Próprio</ion-option>\n        <ion-option value="tercerizado">Tercerizado</ion-option>\n        <ion-option value="quarterizado">Quarterizado</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.html"*/,
+        selector: 'page-receita-fornecedor',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.html"*/'<ion-header color = "tijuca">\n  \n  <ion-toolbar color = "tijuca">\n    <ion-title padding color = "tijuca">Fornecedor</ion-title>\n</ion-toolbar>\n\n\n</ion-header>\n\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating>Fornecedor / Origem</ion-label>\n      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Fornecedor / Destino</ion-label>\n      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorDestino" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Produto</ion-label>\n      <ion-input type="text" name="produto" [(ngModel)]="storageProvider.receitas.produto" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Tipo de Pagamento</ion-label>\n      <ion-select [(ngModel)]="storageProvider.receitas.tipoPagmt" (click)="valida()">\n        <ion-option value="proprio">Próprio</ion-option>\n        <ion-option value="tercerizado">Tercerizado</ion-option>\n        <ion-option value="quarterizado">Quarterizado</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1021,7 +1025,7 @@ ReceitasFornecedorPage = __decorate([
 
 /***/ }),
 
-/***/ 147:
+/***/ 146:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1057,7 +1061,7 @@ var ReceitasFotoPage = (function () {
 }());
 ReceitasFotoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-receitas-foto',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/receitas/receitas-foto/receitas-foto.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title padding color = "tijuca">Foto</ion-title>\n</ion-toolbar>\n</ion-header>\n '/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/receitas/receitas-foto/receitas-foto.html"*/,
+        selector: 'page-receitas-foto',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/receitas/receitas-foto/receitas-foto.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title padding color = "tijuca">Foto</ion-title>\n</ion-toolbar>\n</ion-header>\n '/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/receitas/receitas-foto/receitas-foto.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
@@ -1067,7 +1071,7 @@ ReceitasFotoPage = __decorate([
 
 /***/ }),
 
-/***/ 148:
+/***/ 147:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1131,7 +1135,7 @@ var ReceitasQntPage = (function () {
 }());
 ReceitasQntPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-receitas-qnt',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/receitas/receitas-qnt/receitas-qnt.html"*/'<ion-header>\n  <ion-toolbar color = "tijuca">\n  <ion-title padding>Quantidade</ion-title>\n</ion-toolbar>\n</ion-header>\n\n<ion-list>\n  <ion-item>\n    <ion-label floating>Unidade de medida</ion-label>\n    <ion-select [(ngModel)]="storageProvider.receitas.idUnidadeMedida" (click)="valida()">\n      <ion-option value="bd">BD - Bandeja</ion-option>\n      <ion-option value="cx">CX - Caixa</ion-option>\n      <ion-option value="20">DZ - Duzia</ion-option>\n      <ion-option value="22">Gal - Galao 3.7</ion-option>\n      <ion-option value="1">KG - Kilo</ion-option>\n      <ion-option value="2">L - Litros</ion-option>\n      <ion-option value="8">M - Metro</ion-option>\n      <ion-option value="3">ML - Mililitro</ion-option>\n      <ion-option value="24">PC - Pacote (C/50)</ion-option>\n      <ion-option value="23">PC - Pacote (C/100)</ion-option>\n      <ion-option value="25">PC - Peca </ion-option>\n      <ion-option value="21">SC - Saca</ion-option>\n      <ion-option value="7">TN - Tonelada</ion-option>\n      <ion-option value="4">UN - Unidade</ion-option>\n    </ion-select>\n  </ion-item>\n</ion-list>\n\n<div *ngIf="apareceBandeja()">\n  <ion-item>\n    <ion-label floating>Bandeja</ion-label>\n    <ion-select [(ngModel)]="storageProvider.receitas.idSubUnidade" (click)="valida()">  \n      <ion-option value="5">BD - Bandeja</ion-option>\n      <ion-option value="11">B1 - Bandeja c/12</ion-option>\n      <ion-option value="9">B2 - Bandeja c/20</ion-option>\n      <ion-option value="13">B3 - Bandeja c/18</ion-option>\n      <ion-option value="12">B5 - Bandeja c/15</ion-option>\n      <ion-option value="10">B6 - Bandeja c/6</ion-option>\n    </ion-select>\n  </ion-item>\n</div>\n\n<div *ngIf="apareceCaixa()">\n  <ion-item>\n    <ion-label floating>Caixa</ion-label>\n    <ion-select [(ngModel)]="storageProvider.receitas.idSubUnidade" (click)="valida()"> \n      <ion-option value="6">CX - Caixa </ion-option>\n      <ion-option value="14">CC - Caixa 06 BD / 30 Ovos</ion-option>\n      <ion-option value="15">C1 - Caixa 10 BD / 20 Ovos</ion-option>\n      <ion-option value="19">CA - Caixa 12 BD / 30 Ovos</ion-option>\n      <ion-option value="18">C2 - Caixa 30 BD / 6 Ovos</ion-option>\n      <ion-option value="16">C3 - Caixa 30 BD / 12 Ovos</ion-option>\n      <ion-option value="17">C6 - Caixa 60 BD / 6 Ovos</ion-option>\n    </ion-select>\n  </ion-item>\n</div>\n\n<ion-item>\n  <ion-label floating>Qnt Faturado (Numeros)</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.receitas.qntFaturado" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label floating>Qnt Descarregado (Numeros)</ion-label>\n  <ion-input [(ngModel)]="storageProvider.receitas.qntDescarregado" type="number" min="0" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label floating>Valor Unitário</ion-label>\n  <ion-input [(ngModel)]="storageProvider.receitas.valorUnitario" type="number" min="0" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<!-- <ion-item>\n  <ion-label floating>Valor Total</ion-label>\n  <ion-input type="number" disabled="" [(ngModel)]="valorTotal"></ion-input>\n</ion-item> -->'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/receitas/receitas-qnt/receitas-qnt.html"*/,
+        selector: 'page-receitas-qnt',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/receitas/receitas-qnt/receitas-qnt.html"*/'<ion-header>\n  <ion-toolbar color = "tijuca">\n  <ion-title padding>Quantidade</ion-title>\n</ion-toolbar>\n</ion-header>\n\n<ion-list>\n  <ion-item>\n    <ion-label floating>Unidade de medida</ion-label>\n    <ion-select [(ngModel)]="storageProvider.receitas.idUnidadeMedida" (click)="valida()">\n      <ion-option value="bd">BD - Bandeja</ion-option>\n      <ion-option value="cx">CX - Caixa</ion-option>\n      <ion-option value="20">DZ - Duzia</ion-option>\n      <ion-option value="22">Gal - Galao 3.7</ion-option>\n      <ion-option value="1">KG - Kilo</ion-option>\n      <ion-option value="2">L - Litros</ion-option>\n      <ion-option value="8">M - Metro</ion-option>\n      <ion-option value="3">ML - Mililitro</ion-option>\n      <ion-option value="24">PC - Pacote (C/50)</ion-option>\n      <ion-option value="23">PC - Pacote (C/100)</ion-option>\n      <ion-option value="25">PC - Peca </ion-option>\n      <ion-option value="21">SC - Saca</ion-option>\n      <ion-option value="7">TN - Tonelada</ion-option>\n      <ion-option value="4">UN - Unidade</ion-option>\n    </ion-select>\n  </ion-item>\n</ion-list>\n\n<div *ngIf="apareceBandeja()">\n  <ion-item>\n    <ion-label floating>Bandeja</ion-label>\n    <ion-select [(ngModel)]="storageProvider.receitas.idSubUnidade" (click)="valida()">  \n      <ion-option value="5">BD - Bandeja</ion-option>\n      <ion-option value="11">B1 - Bandeja c/12</ion-option>\n      <ion-option value="9">B2 - Bandeja c/20</ion-option>\n      <ion-option value="13">B3 - Bandeja c/18</ion-option>\n      <ion-option value="12">B5 - Bandeja c/15</ion-option>\n      <ion-option value="10">B6 - Bandeja c/6</ion-option>\n    </ion-select>\n  </ion-item>\n</div>\n\n<div *ngIf="apareceCaixa()">\n  <ion-item>\n    <ion-label floating>Caixa</ion-label>\n    <ion-select [(ngModel)]="storageProvider.receitas.idSubUnidade" (click)="valida()"> \n      <ion-option value="6">CX - Caixa </ion-option>\n      <ion-option value="14">CC - Caixa 06 BD / 30 Ovos</ion-option>\n      <ion-option value="15">C1 - Caixa 10 BD / 20 Ovos</ion-option>\n      <ion-option value="19">CA - Caixa 12 BD / 30 Ovos</ion-option>\n      <ion-option value="18">C2 - Caixa 30 BD / 6 Ovos</ion-option>\n      <ion-option value="16">C3 - Caixa 30 BD / 12 Ovos</ion-option>\n      <ion-option value="17">C6 - Caixa 60 BD / 6 Ovos</ion-option>\n    </ion-select>\n  </ion-item>\n</div>\n\n<ion-item>\n  <ion-label floating>Qnt Faturado (Numeros)</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.receitas.qntFaturado" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label floating>Qnt Descarregado (Numeros)</ion-label>\n  <ion-input [(ngModel)]="storageProvider.receitas.qntDescarregado" type="number" min="0" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label floating>Valor Unitário</ion-label>\n  <ion-input [(ngModel)]="storageProvider.receitas.valorUnitario" type="number" min="0" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<!-- <ion-item>\n  <ion-label floating>Valor Total</ion-label>\n  <ion-input type="number" disabled="" [(ngModel)]="valorTotal"></ion-input>\n</ion-item> -->'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/receitas/receitas-qnt/receitas-qnt.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]])
 ], ReceitasQntPage);
@@ -1140,17 +1144,17 @@ ReceitasQntPage = __decorate([
 
 /***/ }),
 
-/***/ 149:
+/***/ 148:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RelatoriosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__despesas_relatorios_despesas_relatorios__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__receitas_relatorios_receitas_relatorios__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__arla_relatorios_arla_relatorios__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__abastecimento_relatorios_abastecimento_relatorios__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__despesas_relatorios_despesas_relatorios__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__receitas_relatorios_receitas_relatorios__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__arla_relatorios_arla_relatorios__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__abastecimento_relatorios_abastecimento_relatorios__ = __webpack_require__(152);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1179,7 +1183,7 @@ var RelatoriosPage = (function () {
 }());
 RelatoriosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-relatorios',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/relatorios/relatorios-page/relatorios.html"*/'<ion-header>\n\n  <ion-navbar color="tijuca">\n    <ion-title>Relatórios</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n\n  <ion-tabs color="tijuca">\n    <ion-tab [root]="relatoriosDespesas" tabTitle="Despesas" tabIcon="md-cash"></ion-tab>\n    <ion-tab [root]="relatoriosReceitas" tabTitle="Receitas" tabIcon="md-clipboard"></ion-tab>\n    <ion-tab [root]="relatoriosArla" tabTitle="Arla" tabIcon="ios-leaf"></ion-tab>\n    <ion-tab [root]="relatoriosAbastecimento" tabTitle="Abastecimento" tabIcon="ios-water"></ion-tab>\n  </ion-tabs>\n\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/relatorios/relatorios-page/relatorios.html"*/,
+        selector: 'page-relatorios',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/relatorios/relatorios-page/relatorios.html"*/'<ion-header>\n\n  <ion-navbar color="tijuca">\n    <ion-title>Relatórios</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n\n  <ion-tabs color="tijuca">\n    <ion-tab [root]="relatoriosDespesas" tabTitle="Despesas" tabIcon="md-cash"></ion-tab>\n    <ion-tab [root]="relatoriosReceitas" tabTitle="Receitas" tabIcon="md-clipboard"></ion-tab>\n    <ion-tab [root]="relatoriosArla" tabTitle="Arla" tabIcon="ios-leaf"></ion-tab>\n    <ion-tab [root]="relatoriosAbastecimento" tabTitle="Abastecimento" tabIcon="ios-water"></ion-tab>\n  </ion-tabs>\n\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/relatorios/relatorios-page/relatorios.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -1189,7 +1193,7 @@ RelatoriosPage = __decorate([
 
 /***/ }),
 
-/***/ 150:
+/***/ 149:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1226,7 +1230,7 @@ var DespesasRelatoriosPage = (function () {
 }());
 DespesasRelatoriosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-despesas-relatorios',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.html"*/'<ion-content padding>\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n  \n    <ion-card *ngFor="let storage of storages">\n        <ion-card-header>\n          <span id="titulo">Despesas</span>\n          <br>\n  \n        </ion-card-header>\n  \n        <ion-card-content>\n          <span id="local">{{storage.despesas}}</span>\n          <br>\n          <span id="valor">{{storage.dataDespesas}}</span>\n          <br>\n          <span id="horario">{{storage.valorDespesas}}</span>\n          <br>\n         \n        </ion-card-content>\n    </ion-card>\n  \n  </ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.html"*/,
+        selector: 'page-despesas-relatorios',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.html"*/'<ion-content padding>\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n  \n    <ion-card *ngFor="let storage of storages">\n        <ion-card-header>\n          <span id="titulo">Despesas</span>\n          <br>\n  \n        </ion-card-header>\n  \n        <ion-card-content>\n          <span id="local">{{storage.despesas}}</span>\n          <br>\n          <span id="valor">{{storage.dataDespesas}}</span>\n          <br>\n          <span id="horario">{{storage.valorDespesas}}</span>\n          <br>\n         \n        </ion-card-content>\n    </ion-card>\n  \n  </ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1237,7 +1241,7 @@ DespesasRelatoriosPage = __decorate([
 
 /***/ }),
 
-/***/ 151:
+/***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1272,7 +1276,7 @@ var ReceitasRelatoriosPage = (function () {
 }());
 ReceitasRelatoriosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-receitas-relatorios',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.html"*/'<ion-content padding>\n\n  <span *ngIf="tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n\n\n  <ion-card *ngFor="let storage of storages">\n    <ion-card-header>\n      <span id="titulo">Receitas</span>\n      <br>\n\n    </ion-card-header>\n\n    <ion-card-content>\n      <span id="local">{{storage.fornecedorOrigem}}</span>\n      <br>\n      <span id="valor">{{storage.fornecedorDestino}} </span>\n      <br>\n      <span id="horario">{{storage.produto}}</span>\n      <br>\n      <span id="local">{{storage.tipoPagmt}}</span>\n      <br>\n      <span id="valor">{{storage.idUnidadeMedida}} </span>\n      <br>\n      <span id="horario">{{storage.idUnidadeBandeja}}</span>\n      <br>\n      <span id="local">{{storage.caixa}}</span>\n      <br>\n      <span id="valor">{{storage.qntFaturado}} </span>\n      <br>\n      <span id="horario">{{storage.qntDescarregado}}</span>\n      <br>\n      <span id="local">{{storage.valorUnitario}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.html"*/,
+        selector: 'page-receitas-relatorios',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.html"*/'<ion-content padding>\n\n  <span *ngIf="tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n\n\n  <ion-card *ngFor="let storage of storages">\n    <ion-card-header>\n      <span id="titulo">Receitas</span>\n      <br>\n\n    </ion-card-header>\n\n    <ion-card-content>\n      <span id="local">{{storage.fornecedorOrigem}}</span>\n      <br>\n      <span id="valor">{{storage.fornecedorDestino}} </span>\n      <br>\n      <span id="horario">{{storage.produto}}</span>\n      <br>\n      <span id="local">{{storage.tipoPagmt}}</span>\n      <br>\n      <span id="valor">{{storage.idUnidadeMedida}} </span>\n      <br>\n      <span id="horario">{{storage.idUnidadeBandeja}}</span>\n      <br>\n      <span id="local">{{storage.caixa}}</span>\n      <br>\n      <span id="valor">{{storage.qntFaturado}} </span>\n      <br>\n      <span id="horario">{{storage.qntDescarregado}}</span>\n      <br>\n      <span id="local">{{storage.valorUnitario}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1283,7 +1287,7 @@ ReceitasRelatoriosPage = __decorate([
 
 /***/ }),
 
-/***/ 152:
+/***/ 151:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1318,7 +1322,7 @@ var ArlaRelatoriosPage = (function () {
 }());
 ArlaRelatoriosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-arla-relatorios',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.html"*/'<ion-content padding>\n\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n\n      <ion-card *ngFor="let storage of storages">\n      <ion-card-header>\n        <span id="titulo">Arla</span>\n        <br>\n\n        </ion-card-header>\n\n\n        <ion-card-content>\n          <span id="local">{{storage.dataArla}}</span>\n          <br>\n          <span id="valor">{{storage.postoArla}} </span>\n          <br>\n          <span id="horario">{{storage.tipoArla}}</span>\n          <br>\n          <span id="local">{{storage.km}}</span>\n          <br>\n          <span id="valor">{{storage.litrosArla}} </span>\n          <br>\n          <span id="horario">{{storage.litrosPrecoArla}}</span>\n          <br>\n          <span id="horario">{{storage.selectArla}}</span>\n          <br>\n        </ion-card-content>\n      </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.html"*/,
+        selector: 'page-arla-relatorios',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.html"*/'<ion-content padding>\n\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n\n      <ion-card *ngFor="let storage of storages">\n      <ion-card-header>\n        <span id="titulo">Arla</span>\n        <br>\n\n        </ion-card-header>\n\n\n        <ion-card-content>\n          <span id="local">{{storage.dataArla}}</span>\n          <br>\n          <span id="valor">{{storage.postoArla}} </span>\n          <br>\n          <span id="horario">{{storage.tipoArla}}</span>\n          <br>\n          <span id="local">{{storage.km}}</span>\n          <br>\n          <span id="valor">{{storage.litrosArla}} </span>\n          <br>\n          <span id="horario">{{storage.litrosPrecoArla}}</span>\n          <br>\n          <span id="horario">{{storage.selectArla}}</span>\n          <br>\n        </ion-card-content>\n      </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1329,7 +1333,7 @@ ArlaRelatoriosPage = __decorate([
 
 /***/ }),
 
-/***/ 153:
+/***/ 152:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1364,7 +1368,7 @@ var AbastecimentoRelatoriosPage = (function () {
 }());
 AbastecimentoRelatoriosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-relatorios',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.html"*/'<ion-content padding>\n\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n  \n\n  <ion-card *ngFor="let storage of storages">\n      <ion-card-header>\n        <span id="titulo">Abastecimento</span>\n        <br>\n\n      </ion-card-header>\n\n\n      <ion-card-content>\n        <span id="local">{{storage.tipoAbastecimento}}</span>\n        <br>\n        <span id="valor">{{storage.postoAbastecimento}} </span>\n        <br>\n        <span id="horario">{{storage.dataAbastecimento}}</span>\n        <br>\n        <span id="local">{{storage.tipoPagmtAbastecimento}}</span>\n        <br>\n        <span id="valor">{{storage.odometro}} </span>\n        <br>\n        <span id="horario">{{storage.litrosBomb1}}</span>\n        <br>\n        <span id="horario">{{storage.precoBomb1}}</span>\n        <br>\n        <span id="horario">{{storage.litrosBomb2}}</span>\n        <br>\n        <span id="horario">{{storage.precoBomb2}}</span>\n        <br>\n      </ion-card-content>\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.html"*/,
+        selector: 'page-abastecimento-relatorios',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.html"*/'<ion-content padding>\n\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n  \n\n  <ion-card *ngFor="let storage of storages">\n      <ion-card-header>\n        <span id="titulo">Abastecimento</span>\n        <br>\n\n      </ion-card-header>\n\n\n      <ion-card-content>\n        <span id="local">{{storage.tipoAbastecimento}}</span>\n        <br>\n        <span id="valor">{{storage.postoAbastecimento}} </span>\n        <br>\n        <span id="horario">{{storage.dataAbastecimento}}</span>\n        <br>\n        <span id="local">{{storage.tipoPagmtAbastecimento}}</span>\n        <br>\n        <span id="valor">{{storage.odometro}} </span>\n        <br>\n        <span id="horario">{{storage.litrosBomb1}}</span>\n        <br>\n        <span id="horario">{{storage.precoBomb1}}</span>\n        <br>\n        <span id="horario">{{storage.litrosBomb2}}</span>\n        <br>\n        <span id="horario">{{storage.precoBomb2}}</span>\n        <br>\n      </ion-card-content>\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1372,6 +1376,104 @@ AbastecimentoRelatoriosPage = __decorate([
 ], AbastecimentoRelatoriosPage);
 
 //# sourceMappingURL=abastecimento-relatorios.js.map
+
+/***/ }),
+
+/***/ 153:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_nav_controller__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_plus__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage_es2015_storage__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__principal_principal_principal__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__ = __webpack_require__(8);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var LoginPage = LoginPage_1 = (function () {
+    function LoginPage(navParams, navCtrl, googlePlus, storageProvider, storage) {
+        var _this = this;
+        this.navParams = navParams;
+        this.navCtrl = navCtrl;
+        this.googlePlus = googlePlus;
+        this.storageProvider = storageProvider;
+        this.storage = storage;
+        this.isLoggedIn = false;
+        this.listaAuth = ["123"];
+        this.chaveAuth = "Auth";
+        this.storage.ready().then(function () {
+            _this.storage.get(_this.chaveAuth).then(function (registros) {
+                if (registros) {
+                    _this.listaAuth = registros;
+                }
+                else {
+                    _this.listaAuth = ["123"];
+                }
+            });
+        });
+    }
+    LoginPage.prototype.ionViewDidEnter = function () {
+    };
+    LoginPage.prototype.login = function () {
+        var _this = this;
+        this.storageProvider.login.isLoggedIn = true;
+        this.storageProvider.atualizar("Auth");
+        this.googlePlus.login({})
+            .then(function (res) {
+            _this.storageProvider.login.name = res.name;
+            _this.storageProvider.login.email = res.email;
+            // this.familyName = res.familyName;
+            // this.givenName = res.givenName;
+            // this.userId = res.userId;
+            // this.imageUrl = res.imageUrl;
+        })
+            .then(function (res) { return _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__principal_principal_principal__["a" /* PrincipalPage */]); })
+            .catch(function (err) { return console.error(err); });
+    };
+    LoginPage.prototype.logout = function () {
+        var _this = this;
+        this.storageProvider.login.isLoggedIn = false;
+        this.storageProvider.atualizar("Auth");
+        this.googlePlus.logout()
+            .then(function (res) {
+            _this.storageProvider.login.name = "";
+            _this.storageProvider.login.email = "";
+        })
+            .then(function (res) { return _this.navCtrl.push(LoginPage_1); })
+            .catch(function (err) { return console.error(err); });
+    };
+    return LoginPage;
+}());
+LoginPage = LoginPage_1 = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-login',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/login/login.html"*/'<!-- <ion-header>\n\n  <ion-toolbar>\n    <ion-title>login</ion-title>\n  </ion-toolbar>\n\n</ion-header> -->\n\n<ion-content padding>\n  <button ion-button (click)="logout()">Logout Gmail</button>\n\n  <button ion-button (click)="login()">Login Gmail</button>\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/login/login.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_nav_controller__["a" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_plus__["a" /* GooglePlus */],
+        __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__["a" /* StorageProvider */],
+        __WEBPACK_IMPORTED_MODULE_4__ionic_storage_es2015_storage__["a" /* Storage */]])
+], LoginPage);
+
+var LoginPage_1;
+//# sourceMappingURL=login.js.map
 
 /***/ }),
 
@@ -1645,7 +1747,7 @@ var InicioPage = (function () {
 }());
 InicioPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-inicio',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/inicio/inicio.html"*/'<ion-content padding>\n  <!-- <page-login></page-login> -->\n  <!-- <page-principal></page-principal> -->\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/inicio/inicio.html"*/,
+        selector: 'page-inicio',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/inicio/inicio.html"*/'<ion-content padding>\n  <!-- <page-login></page-login> -->\n  <!-- <page-principal></page-principal> -->\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/inicio/inicio.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1683,7 +1785,7 @@ var AbastecimentoFotoBomba_1Page = (function () {
 }());
 AbastecimentoFotoBomba_1Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-foto-bomba-1',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-1/abastecimento-foto-bomba-1.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title>Foto</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-1/abastecimento-foto-bomba-1.html"*/,
+        selector: 'page-abastecimento-foto-bomba-1',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-1/abastecimento-foto-bomba-1.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title>Foto</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-1/abastecimento-foto-bomba-1.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], AbastecimentoFotoBomba_1Page);
@@ -1722,7 +1824,7 @@ var AbastecimentoFotoBomba_2Page = (function () {
 }());
 AbastecimentoFotoBomba_2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-foto-bomba-2',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title>Foto</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.html"*/,
+        selector: 'page-abastecimento-foto-bomba-2',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title>Foto</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], AbastecimentoFotoBomba_2Page);
@@ -1761,7 +1863,7 @@ var AbastecimentoFotoOdometroPage = (function () {
 }());
 AbastecimentoFotoOdometroPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-foto-odometro',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title>Foto</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro.html"*/,
+        selector: 'page-abastecimento-foto-odometro',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title>Foto</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], AbastecimentoFotoOdometroPage);
@@ -1811,7 +1913,7 @@ var DadosProvider = (function () {
     function DadosProvider(http, storage) {
         this.http = http;
         this.storage = storage;
-        this.baseURI = "http://earhbstfdjygt.tk/";
+        this.baseURI = "http://192.168.10.160/";
         this.hideForm = false;
         console.log('Hello DadosProvider Provider');
     }
@@ -1973,39 +2075,39 @@ DadosProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(460);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_inicio_inicio__ = __webpack_require__(293);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_principal_principal_principal__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_modulo_viagens_viagens_viagens__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_modulo_viagens_receitas_receita_fornecedor_receita_fornecedor__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_modulo_viagens_receitas_receitas_qnt_receitas_qnt__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_modulo_viagens_receitas_receitas_foto_receitas_foto__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_modulo_viagens_geral_geral_page_geral_page__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_modulo_viagens_geral_geral_dados_viagem_geral_dados_viagem__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_modulo_viagens_geral_geral_dados_motorista_geral_dados_motorista__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_modulo_viagens_despesas_despesas_despesas__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_modulo_viagens_abastecimento_abastecimento_pagamento_abastecimento_pagamento__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_modulo_viagens_abastecimento_abastecimento_odometro_abastecimento_odometro__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_modulo_viagens_abastecimento_abastecimento_bomba_1_abastecimento_bomba_1__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_modulo_viagens_abastecimento_abastecimento_bomba_2_abastecimento_bomba_2__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_modulo_viagens_abastecimento_rotas_abastecimento_rotas_abastecimento__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_modulo_viagens_viagens_viagens__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_modulo_viagens_receitas_receita_fornecedor_receita_fornecedor__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_modulo_viagens_receitas_receitas_qnt_receitas_qnt__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_modulo_viagens_receitas_receitas_foto_receitas_foto__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_modulo_viagens_geral_geral_page_geral_page__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_modulo_viagens_geral_geral_dados_viagem_geral_dados_viagem__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_modulo_viagens_geral_geral_dados_motorista_geral_dados_motorista__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_modulo_viagens_despesas_despesas_despesas__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_modulo_viagens_abastecimento_abastecimento_pagamento_abastecimento_pagamento__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_modulo_viagens_abastecimento_abastecimento_odometro_abastecimento_odometro__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_modulo_viagens_abastecimento_abastecimento_bomba_1_abastecimento_bomba_1__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_modulo_viagens_abastecimento_abastecimento_bomba_2_abastecimento_bomba_2__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_modulo_viagens_abastecimento_rotas_abastecimento_rotas_abastecimento__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_modulo_viagens_abastecimento_abastecimento_foto_bomba_1_abastecimento_foto_bomba_1__ = __webpack_require__(294);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_modulo_viagens_abastecimento_abastecimento_foto_bomba_2_abastecimento_foto_bomba_2__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_modulo_viagens_abastecimento_abastecimento_foto_odometro_abastecimento_foto_odometro__ = __webpack_require__(296);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_modulo_viagens_arla_32_rotas_arla_rotas_arla__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_modulo_viagens_receitas_rotas_receitas_rotas_receitas__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_modulo_viagens_relatorios_relatorios_page_relatorios__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_modulo_viagens_relatorios_receitas_relatorios_receitas_relatorios__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_modulo_viagens_relatorios_despesas_relatorios_despesas_relatorios__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_modulo_viagens_relatorios_abastecimento_relatorios_abastecimento_relatorios__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_modulo_viagens_relatorios_arla_relatorios_arla_relatorios__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_modulo_viagens_arla_32_arla_pag_arla_pag__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_modulo_viagens_arla_32_arla_posto_arla_posto__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_modulo_viagens_arla_32_rotas_arla_rotas_arla__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_modulo_viagens_receitas_rotas_receitas_rotas_receitas__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_modulo_viagens_relatorios_relatorios_page_relatorios__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_modulo_viagens_relatorios_receitas_relatorios_receitas_relatorios__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_modulo_viagens_relatorios_despesas_relatorios_despesas_relatorios__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_modulo_viagens_relatorios_abastecimento_relatorios_abastecimento_relatorios__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_modulo_viagens_relatorios_arla_relatorios_arla_relatorios__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_modulo_viagens_arla_32_arla_pag_arla_pag__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_modulo_viagens_arla_32_arla_posto_arla_posto__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__ionic_native_camera__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__providers_foto_servico_foto_servico__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__ionic_storage__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__providers_storage_storage__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__providers_dados_dados__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__angular_common_http__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_login_login__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__ionic_native_google_plus__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_login_login__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__ionic_native_google_plus__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__providers_enviar_enviar__ = __webpack_require__(208);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2200,9 +2302,8 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_principal_principal_principal__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__ = __webpack_require__(250);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_google_plus__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_storage__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_google_plus__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2222,7 +2323,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var MyApp = (function () {
     function MyApp(platform, statusBar, splashScreen, screenOrientation, storageProvider, storage, googlePlus
         // public navCtrl: NavController
@@ -2232,37 +2332,34 @@ var MyApp = (function () {
         this.storageProvider = storageProvider;
         this.storage = storage;
         this.googlePlus = googlePlus;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_principal_principal_principal__["a" /* PrincipalPage */];
         this.chaveAuth = "Auth";
         this.listaDespesas = {};
         platform.ready().then(function () {
-            _this.googlePlus.trySilentLogin({}).then(function (res) { return _this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_principal_principal_principal__["a" /* PrincipalPage */]; }).catch(function (err) { return console.error(err); });
-            // this.storage.ready().then(() => {
-            //   this.storage.get("Auth").then((registros) => {
-            //     this.listaAuth = registros;
-            //     console.log(this.listaAuth.isLoggedIn);
-            //     if(this.listaAuth.isLoggedIn){
-            //       this.rootPage = PrincipalPage;
-            //     }
-            //     if(this.listaAuth.isLoggedIn == undefined){
-            //       this.rootPage = LoginPage;
-            //     }
-            //   })
-            // })
             _this.screenOrientation.lock(screenOrientation.ORIENTATIONS.PORTRAIT);
             statusBar.styleDefault();
             splashScreen.hide();
+            // this.googlePlus.trySilentLogin({}).then(
+            //   () => this.rootPage = PrincipalPage
+            // ).catch(res => this.rootPage = LoginPage);
         });
     }
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/estagio-11/viagens/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/estagio-11/viagens/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/henrique/viagensMobile/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/henrique/viagensMobile/src/app/app.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__["a" /* ScreenOrientation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__["a" /* ScreenOrientation */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__["a" /* StorageProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__["a" /* StorageProvider */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_9__ionic_native_google_plus__["a" /* GooglePlus */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__ionic_native_google_plus__["a" /* GooglePlus */]) === "function" && _g || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+        __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+        __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__["a" /* ScreenOrientation */],
+        __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__["a" /* StorageProvider */],
+        __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */],
+        __WEBPACK_IMPORTED_MODULE_8__ionic_native_google_plus__["a" /* GooglePlus */]
+        // public navCtrl: NavController
+    ])
 ], MyApp);
 
-var _a, _b, _c, _d, _e, _f, _g;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
@@ -2274,10 +2371,10 @@ var _a, _b, _c, _d, _e, _f, _g;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrincipalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modulo_viagens_viagens_viagens__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modulo_viagens_viagens_viagens__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_storage_storage__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_google_plus__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_google_plus__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(153);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2323,7 +2420,7 @@ var PrincipalPage = (function () {
 }());
 PrincipalPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-principal',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/principal/principal/principal.html"*/'<!-- <page-login></page-login> -->\n\n<span>\n\n  <ion-header>\n\n    <ion-toolbar color="tijuca">\n      <ion-title style="text-align: center">Principal</ion-title>\n    </ion-toolbar>\n\n  </ion-header>\n  <div class="fixed-content">\n    <ion-content class="card-background-page">\n\n      <div class="grid">\n        <div class="row">\n          <div class="column" (click)="linkViagens()">Viagens\n            <div class="interna">\n              <img src="assets/images/frotas.png" />\n            </div>\n          </div>\n          <div class="column">Caixa\n            <div class="interna">\n              <img src="assets/images/caixa.png" />\n            </div>\n          </div>\n        </div>\n        <div class="row">\n          <div class="column">Vendas\n            <div class="interna">\n              <img class="imagem" src="assets/images/vendas.png" />\n            </div>\n          </div>\n          <div class="column">Cheque\n            <div class="interna">\n              <img class="imagem" src="assets/images/cheque.png" />\n            </div>\n          </div>\n        </div>\n        <div class="row">\n          <div class="column">Fábrica\n            <div class="interna">\n              <img class="imagem" src="assets/images/fabrica.png" />\n            </div>\n          </div>\n          <div class="column">Suporte\n            <div class="interna">\n              <img class="imagem" src="assets/images/suporte.png" />\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <button ion-button color="tijuca" full (click)="logout()">Logout</button>\n    </ion-content>\n  </div>\n\n  Nome: {{name}} Email: {{email}} Family Name: {{familyName}} Given Name: {{givenName}} User ID: {{userId}}\n\n</span>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/principal/principal/principal.html"*/,
+        selector: 'page-principal',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/principal/principal/principal.html"*/'<!-- <page-login></page-login> -->\n\n<span>\n\n  <ion-header>\n\n    <ion-toolbar color="tijuca">\n      <ion-title style="text-align: center">Principal</ion-title>\n    </ion-toolbar>\n\n  </ion-header>\n  <div class="fixed-content">\n    <ion-content class="card-background-page">\n\n      <div class="grid">\n        <div class="row">\n          <div class="column" (click)="linkViagens()">Viagens\n            <div class="interna">\n              <img src="assets/images/frotas.png" />\n            </div>\n          </div>\n          <div class="column">Caixa\n            <div class="interna">\n              <img src="assets/images/caixa.png" />\n            </div>\n          </div>\n        </div>\n        <div class="row">\n          <div class="column">Vendas\n            <div class="interna">\n              <img class="imagem" src="assets/images/vendas.png" />\n            </div>\n          </div>\n          <div class="column">Cheque\n            <div class="interna">\n              <img class="imagem" src="assets/images/cheque.png" />\n            </div>\n          </div>\n        </div>\n        <div class="row">\n          <div class="column">Fábrica\n            <div class="interna">\n              <img class="imagem" src="assets/images/fabrica.png" />\n            </div>\n          </div>\n          <div class="column">Suporte\n            <div class="interna">\n              <img class="imagem" src="assets/images/suporte.png" />\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <button ion-button color="tijuca" full (click)="logout()">Logout</button>\n    </ion-content>\n  </div>\n\n  Nome: {{name}} Email: {{email}} Family Name: {{familyName}} Given Name: {{givenName}} User ID: {{userId}}\n\n</span>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/principal/principal/principal.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -2335,22 +2432,22 @@ PrincipalPage = __decorate([
 
 /***/ }),
 
-/***/ 73:
+/***/ 74:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViagensPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abastecimento_rotas_abastecimento_rotas_abastecimento__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__geral_geral_page_geral_page__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__despesas_despesas_despesas__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__arla_32_rotas_arla_rotas_arla__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__receitas_rotas_receitas_rotas_receitas__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abastecimento_rotas_abastecimento_rotas_abastecimento__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__geral_geral_page_geral_page__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__despesas_despesas_despesas__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__arla_32_rotas_arla_rotas_arla__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__receitas_rotas_receitas_rotas_receitas__ = __webpack_require__(144);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_dados_dados__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_storage_storage__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__relatorios_relatorios_page_relatorios__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__relatorios_relatorios_page_relatorios__ = __webpack_require__(148);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_enviar_enviar__ = __webpack_require__(208);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2429,7 +2526,7 @@ var ViagensPage = (function () {
 }());
 ViagensPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-viagens',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/modulo-viagens/viagens/viagens.html"*/'<ion-header>\n\n  <ion-navbar color="tijuca">\n    <ion-title>Viagens</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<div class="fixed-content">\n\n  <ion-content class="card-background-page">\n    <div class="grid">\n\n      <div class="row">\n        <div class="column" (click)="linkAbastecimento()">Abastecer\n          <button ion-fab class="fab" *ngIf = "abastecimentoPendente > 0">{{abastecimentoPendente}}</button>\n          <img class="imagem" src="assets/images/abastecimento.svg" />\n        </div>\n\n        <div class="column" (click)="linkGeral()">Geral\n          <img class="imagem" src="assets/images/geral.svg" />\n        </div>\n      </div>\n\n      <div class="row">\n        <div class="column" (click)="linkArla32()">Arla 32\n          <button ion-fab class="fab" *ngIf = "arlaPendente > 0">{{arlaPendente}}</button>\n          <img class="imagem" src="assets/images/arla.svg" />\n        </div>\n\n        <div class="column" (click)="linkDespesas()">Gastos\n          <button ion-fab class="fab" *ngIf = "despesasPendente > 0">{{despesasPendente}}</button>\n          <img class="imagem" src="assets/images/gastos.svg" />\n        </div>\n\n      </div>\n\n\n      <div class="row">\n        <div class="column" (click)="linkReceitas()">Receitas\n          <button ion-fab class="fab" *ngIf = "receitasPendente > 0">{{receitasPendente}}</button>\n          <img class="imagem" src="assets/images/receitas.svg" />\n        </div>\n\n        <div class="column" (click)="linkRelatorios()">Relatórios\n          <img class="imagem" src="assets/images/relatorios.svg" />\n        </div>\n\n      </div>\n\n    </div>\n\n\n  </ion-content>\n</div>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/modulo-viagens/viagens/viagens.html"*/,
+        selector: 'page-viagens',template:/*ion-inline-start:"/home/henrique/viagensMobile/src/pages/modulo-viagens/viagens/viagens.html"*/'<ion-header>\n\n  <ion-navbar color="tijuca">\n    <ion-title>Viagens</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<div class="fixed-content">\n\n  <ion-content class="card-background-page">\n    <div class="grid">\n\n      <div class="row">\n        <div class="column" (click)="linkAbastecimento()">Abastecer\n          <button ion-fab class="fab" *ngIf = "abastecimentoPendente > 0">{{abastecimentoPendente}}</button>\n          <img class="imagem" src="assets/images/abastecimento.svg" />\n        </div>\n\n        <div class="column" (click)="linkGeral()">Geral\n          <img class="imagem" src="assets/images/geral.svg" />\n        </div>\n      </div>\n\n      <div class="row">\n        <div class="column" (click)="linkArla32()">Arla 32\n          <button ion-fab class="fab" *ngIf = "arlaPendente > 0">{{arlaPendente}}</button>\n          <img class="imagem" src="assets/images/arla.svg" />\n        </div>\n\n        <div class="column" (click)="linkDespesas()">Gastos\n          <button ion-fab class="fab" *ngIf = "despesasPendente > 0">{{despesasPendente}}</button>\n          <img class="imagem" src="assets/images/gastos.svg" />\n        </div>\n\n      </div>\n\n\n      <div class="row">\n        <div class="column" (click)="linkReceitas()">Receitas\n          <button ion-fab class="fab" *ngIf = "receitasPendente > 0">{{receitasPendente}}</button>\n          <img class="imagem" src="assets/images/receitas.svg" />\n        </div>\n\n        <div class="column" (click)="linkRelatorios()">Relatórios\n          <img class="imagem" src="assets/images/relatorios.svg" />\n        </div>\n\n      </div>\n\n    </div>\n\n\n  </ion-content>\n</div>'/*ion-inline-end:"/home/henrique/viagensMobile/src/pages/modulo-viagens/viagens/viagens.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -2440,104 +2537,6 @@ ViagensPage = __decorate([
 ], ViagensPage);
 
 //# sourceMappingURL=viagens.js.map
-
-/***/ }),
-
-/***/ 74:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_nav_controller__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_plus__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage_es2015_storage__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__principal_principal_principal__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__ = __webpack_require__(8);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var LoginPage = LoginPage_1 = (function () {
-    function LoginPage(navParams, navCtrl, googlePlus, storageProvider, storage) {
-        var _this = this;
-        this.navParams = navParams;
-        this.navCtrl = navCtrl;
-        this.googlePlus = googlePlus;
-        this.storageProvider = storageProvider;
-        this.storage = storage;
-        this.isLoggedIn = false;
-        this.listaAuth = ["123"];
-        this.chaveAuth = "Auth";
-        this.storage.ready().then(function () {
-            _this.storage.get(_this.chaveAuth).then(function (registros) {
-                if (registros) {
-                    _this.listaAuth = registros;
-                }
-                else {
-                    _this.listaAuth = ["123"];
-                }
-            });
-        });
-    }
-    LoginPage.prototype.ionViewDidEnter = function () {
-    };
-    LoginPage.prototype.login = function () {
-        var _this = this;
-        this.storageProvider.login.isLoggedIn = true;
-        this.storageProvider.atualizar("Auth");
-        this.googlePlus.login({})
-            .then(function (res) {
-            _this.storageProvider.login.name = res.name;
-            _this.storageProvider.login.email = res.email;
-            // this.familyName = res.familyName;
-            // this.givenName = res.givenName;
-            // this.userId = res.userId;
-            // this.imageUrl = res.imageUrl;
-        })
-            .then(function (res) { return _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__principal_principal_principal__["a" /* PrincipalPage */]); })
-            .catch(function (err) { return console.error(err); });
-    };
-    LoginPage.prototype.logout = function () {
-        var _this = this;
-        this.storageProvider.login.isLoggedIn = false;
-        this.storageProvider.atualizar("Auth");
-        this.googlePlus.logout()
-            .then(function (res) {
-            _this.storageProvider.login.name = "";
-            _this.storageProvider.login.email = "";
-        })
-            .then(function (res) { return _this.navCtrl.push(LoginPage_1); })
-            .catch(function (err) { return console.error(err); });
-    };
-    return LoginPage;
-}());
-LoginPage = LoginPage_1 = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-login',template:/*ion-inline-start:"/home/estagio-11/viagens/src/pages/login/login.html"*/'<!-- <ion-header>\n\n  <ion-toolbar>\n    <ion-title>login</ion-title>\n  </ion-toolbar>\n\n</ion-header> -->\n\n\n<ion-content padding>\n  <button ion-button (click)="logout()">Logout Gmail</button>\n\n  <button ion-button (click)="login()">Login Gmail</button>\n</ion-content>'/*ion-inline-end:"/home/estagio-11/viagens/src/pages/login/login.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_nav_controller__["a" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_plus__["a" /* GooglePlus */],
-        __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__["a" /* StorageProvider */],
-        __WEBPACK_IMPORTED_MODULE_4__ionic_storage_es2015_storage__["a" /* Storage */]])
-], LoginPage);
-
-var LoginPage_1;
-//# sourceMappingURL=login.js.map
 
 /***/ }),
 
@@ -2578,7 +2577,7 @@ var StorageProvider = (function () {
             id: 1,
             despesas: "",
             dataDespesas: "",
-            valorDespesas: ""
+            valorDespesas: 0
         };
         //Dados Receitas
         this.receitas = {
@@ -2788,13 +2787,44 @@ var StorageProvider = (function () {
         return this.storage.remove(id).
             then(function () { return true; });
     };
+    StorageProvider.prototype.detectAmount = function (v) {
+        if (v) {
+            this.n = v[v.length - 1];
+            if (isNaN(this.n)) {
+                v = v.substring(0, v.length - 1);
+                return v;
+            }
+            v = this.fixAmount(v);
+            return v;
+        }
+    };
+    StorageProvider.prototype.fixAmount = function (a) {
+        var period = a.indexOf(".");
+        if (period > -1) {
+            a = a.substring(0, period) + a.substring(period + 1);
+        }
+        this.len = a.length;
+        while (this.len < 3) {
+            a = "0" + a;
+            this.len = a.length;
+        }
+        a = a.substring(0, this.len - 2) + "." + a.substring(this.len - 2, this.len);
+        while (a.length > 4 && (a[0] == '0')) {
+            a = a.substring(1);
+        }
+        if (a[0] == ".") {
+            a = "0" + a;
+        }
+        return (a);
+    };
     return StorageProvider;
 }());
 StorageProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */]) === "function" && _a || Object])
 ], StorageProvider);
 
+var _a;
 //# sourceMappingURL=storage.js.map
 
 /***/ })

@@ -19,7 +19,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
 })
 export class MyApp {
 
-  rootPage: any;
+  rootPage: any = PrincipalPage;
   storages: any;
   listaAuth;
   chaveAuth: string = "Auth";
@@ -44,9 +44,9 @@ export class MyApp {
       splashScreen.hide();
 
       
-      this.googlePlus.trySilentLogin({}).then(
-        () => this.rootPage = PrincipalPage
-      ).catch(res => this.rootPage = LoginPage);
+      // this.googlePlus.trySilentLogin({}).then(
+      //   () => this.rootPage = PrincipalPage
+      // ).catch(res => this.rootPage = LoginPage);
     });
 
   }

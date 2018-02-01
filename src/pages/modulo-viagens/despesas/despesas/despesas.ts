@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
+// import {Directive} from 'ionic2-text-mask';
+
 import { StorageProvider } from '../../../../providers/storage/storage';
 import { DadosProvider } from "../../../../providers/dados/dados";
 import { ViagensPage } from "../../viagens/viagens";
@@ -13,9 +15,9 @@ import { ViagensPage } from "../../viagens/viagens";
 })
 export class DespesasPage {
 
+
   despesa="";
   motorista = "bino"
-
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -28,6 +30,11 @@ export class DespesasPage {
   viagens() {
     this.navCtrl.push(ViagensPage);
   }
+
+  amountChange() {
+    this.storageProvider.despesas.valorDespesas = this.storageProvider.detectAmount(this.storageProvider.despesas.valorDespesas);
+  }
+
 
   valida() {
     if (this.storageProvider.despesas.despesas == "" || this.storageProvider.despesas.dataDespesas == "" || this.storageProvider.despesas.valorDespesas == "") {

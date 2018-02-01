@@ -9,6 +9,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { FormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation';
 
+
 import { MyApp } from './app.component';
 
 import { InicioPage } from '../pages/inicio/inicio';
@@ -100,6 +101,7 @@ import { EnviarProvider } from '../providers/enviar/enviar';
     FormsModule,
     IonicStorageModule.forRoot(),
     HttpClientModule
+  
   ],
   bootstrap: [IonicApp],
   entryComponents: [
