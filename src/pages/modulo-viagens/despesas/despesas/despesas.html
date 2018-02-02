@@ -29,7 +29,7 @@
       </ion-item> 
       <ion-item>
         <ion-label floating>Valor</ion-label>
-        <ion-input type="number" (keyup)="amountChange()" placeholder="0.00" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>
+        <ion-input type="text" [numberMask]="{mask: mask}" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>
       </ion-item> 
   </ion-list> 
   <button ion-button full (click)="salvar()" [disabled]="!valida()" color = "tijuca" >Adicionar</button>

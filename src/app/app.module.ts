@@ -60,6 +60,12 @@ import { NavParams } from 'ionic-angular/navigation/nav-params';
 import { NavController } from 'ionic-angular/navigation/nav-controller';
 import { EnviarProvider } from '../providers/enviar/enviar';
 
+import { BrMaskerModule } from 'brmasker-ionic-3';
+import {Ionic2MaskDirective} from "ionic2-mask-directive";
+import { TextMaskModule } from 'angular2-text-mask';
+
+
+
 
 
 @NgModule({
@@ -92,7 +98,8 @@ import { EnviarProvider } from '../providers/enviar/enviar';
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
     AbastecimentoRelatoriosPage,
-    InicioPage
+    InicioPage,
+    Ionic2MaskDirective
   ],
   imports: [
     BrowserModule,
@@ -100,7 +107,9 @@ import { EnviarProvider } from '../providers/enviar/enviar';
     CustomFormsModule,
     FormsModule,
     IonicStorageModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    BrMaskerModule,
+    TextMaskModule
   
   ],
   bootstrap: [IonicApp],

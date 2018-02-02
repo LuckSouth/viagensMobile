@@ -6,18 +6,33 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { StorageProvider } from '../../../../providers/storage/storage';
 import { DadosProvider } from "../../../../providers/dados/dados";
 import { ViagensPage } from "../../viagens/viagens";
+import { BrModel } from 'brmasker-ionic-3';
+import createNumberMask from 'text-mask-addons/dist/createNumberMask'
 
+// import {Directive} from 'ionic2-text-mask';
+
+const numberMask = createNumberMask({
+  prefix: '',
+  suffix: ' $' // This will put the dollar sign at the end, with a space.
+})
 
 @IonicPage()
 @Component({
   selector: 'page-despesas',
   templateUrl: 'despesas.html',
 })
+
+
 export class DespesasPage {
+    
 
 
-  despesa="";
-  motorista = "bino"
+  despesa = "";
+  motorista = "bino";
+  public mask = ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+
+
+
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -38,11 +53,11 @@ export class DespesasPage {
 
   valida() {
     if (this.storageProvider.despesas.despesas == "" || this.storageProvider.despesas.dataDespesas == "" || this.storageProvider.despesas.valorDespesas == "") {
-        return false
-      } else {
-        return true
-      }
+      return false
+    } else {
+      return true
     }
+  }
 
 
   showAlert() {
@@ -57,8 +72,8 @@ export class DespesasPage {
   }
 
 
-  salvar(){
-    this.dados.despesa(this.storageProvider.despesas.motorista,this.storageProvider.despesas.despesas,this.storageProvider.despesas.dataDespesas, this.storageProvider.despesas.valorDespesas);
+  salvar() {
+    this.dados.despesa(this.storageProvider.despesas.motorista, this.storageProvider.despesas.despesas, this.storageProvider.despesas.dataDespesas, this.storageProvider.despesas.valorDespesas);
     this.navCtrl.pop();
 
   }

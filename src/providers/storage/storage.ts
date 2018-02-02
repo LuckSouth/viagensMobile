@@ -25,7 +25,7 @@ export class StorageProvider {
     id: 1,
     despesas: "",
     dataDespesas: "",
-    valorDespesas: 0
+    valorDespesas: ""
   }
 
   //Dados Receitas
@@ -281,6 +281,9 @@ export class StorageProvider {
   }
 
 
+
+
+  //Máscara dos valores
   private n: any;
   private len: any;
 
@@ -289,6 +292,7 @@ export class StorageProvider {
       this.n = v[v.length - 1];
       if (isNaN(this.n)) {
         v = v.substring(0, v.length - 1);
+        console.log(v)
         return v;
       }
       v = this.fixAmount(v);
@@ -298,6 +302,7 @@ export class StorageProvider {
 
   private fixAmount(a): string {
     let period = a.indexOf(".");
+    // console.log(a)
     if (period > -1) {
       a = a.substring(0, period) + a.substring(period + 1);
     }
