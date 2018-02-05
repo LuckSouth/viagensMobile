@@ -61,8 +61,7 @@ import { NavController } from 'ionic-angular/navigation/nav-controller';
 import { EnviarProvider } from '../providers/enviar/enviar';
 
 import { BrMaskerModule } from 'brmasker-ionic-3';
-import {Ionic2MaskDirective} from "ionic2-mask-directive";
-import { TextMaskModule } from 'angular2-text-mask';
+
 
 
 
@@ -98,8 +97,7 @@ import { TextMaskModule } from 'angular2-text-mask';
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
     AbastecimentoRelatoriosPage,
-    InicioPage,
-    Ionic2MaskDirective
+    InicioPage
   ],
   imports: [
     BrowserModule,
@@ -108,9 +106,8 @@ import { TextMaskModule } from 'angular2-text-mask';
     FormsModule,
     IonicStorageModule.forRoot(),
     HttpClientModule,
-    BrMaskerModule,
-    TextMaskModule
-  
+    BrMaskerModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [

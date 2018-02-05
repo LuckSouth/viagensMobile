@@ -6,26 +6,22 @@
 <ion-list>
 
   <ion-item>
-    <ion-label floating>Tipo Abastecimento</ion-label>
-    <ion-select [(ngModel)]="storageProvider.arla.tipoArla" (ngModelChange)="valida()">
+        <ion-select palceholder="Tipo Abastecimento" [(ngModel)]="storageProvider.arla.tipoArla" (ngModelChange)="valida()">
       <ion-option value="ext">Externo</ion-option>
       <ion-option value="int">Interno</ion-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
-    <ion-label floating>Posto Combustivel</ion-label>
-    <ion-input type="text" [(ngModel)]="storageProvider.arla.postoArla" (ngModelChange)="valida()"></ion-input>
+    <ion-input type="text" placeholder="Posto Combustivel" [(ngModel)]="storageProvider.arla.postoArla" (ngModelChange)="valida()"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label>Data</ion-label>
-    <ion-input type="date" [(ngModel)]="storageProvider.arla.dataArla" (ngModelChange)="valida()"></ion-input>
+    <ion-input type="date" placeholder="Data" [(ngModel)]="storageProvider.arla.dataArla" (ngModelChange)="valida()"></ion-input>
   </ion-item>
   
   <ion-item>
-    <ion-label floating>Km</ion-label>
-    <ion-input type="number" min="0"  [(ngModel)]="storageProvider.arla.km" (ngModelChange)="valida()"></ion-input>
+    <ion-input type="number" min="0" placeholder="Kilometragem"  [(ngModel)]="storageProvider.arla.km" (ngModelChange)="valida()"></ion-input>
   </ion-item>
 
 </ion-list>

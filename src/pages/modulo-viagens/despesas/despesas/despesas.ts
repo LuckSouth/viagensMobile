@@ -1,20 +1,13 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
-// import {Directive} from 'ionic2-text-mask';
-
 import { StorageProvider } from '../../../../providers/storage/storage';
 import { DadosProvider } from "../../../../providers/dados/dados";
 import { ViagensPage } from "../../viagens/viagens";
-import { BrModel } from 'brmasker-ionic-3';
-import createNumberMask from 'text-mask-addons/dist/createNumberMask'
 
-// import {Directive} from 'ionic2-text-mask';
 
-const numberMask = createNumberMask({
-  prefix: '',
-  suffix: ' $' // This will put the dollar sign at the end, with a space.
-})
+
+
 
 @IonicPage()
 @Component({
@@ -29,7 +22,6 @@ export class DespesasPage {
 
   despesa = "";
   motorista = "bino";
-  public mask = ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
 
 
 
