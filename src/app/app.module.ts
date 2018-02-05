@@ -55,9 +55,6 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
 
 
 
-
-
-
 @NgModule({
   declarations: [
     MyApp, 
@@ -85,8 +82,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
-    AbastecimentoRelatoriosPage,
-    InicioPage
+    AbastecimentoRelatoriosPage 
   ],
   imports: [
     BrowserModule,
@@ -125,8 +121,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
-    AbastecimentoRelatoriosPage,
-    InicioPage
+    AbastecimentoRelatoriosPage
   ],
   providers: [
     StatusBar,
