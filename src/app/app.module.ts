@@ -45,7 +45,8 @@ import { ArlaRelatoriosPage } from '../pages/modulo-viagens/relatorios/arla-rela
 
 import { ArlaPagPage } from '../pages/modulo-viagens/arla-32/arla-pag/arla-pag';
 import { ArlaPostoPage } from '../pages/modulo-viagens/arla-32/arla-posto/arla-posto';
-
+import { FotoarlaPage } from '../pages/modulo-viagens/arla-32/fotoarla/fotoarla';
+ 
 import { Camera } from "@ionic-native/camera";
 import { FotoServicoProvider } from '../providers/foto-servico/foto-servico';
 import { IonicStorageModule } from '@ionic/storage';
@@ -97,7 +98,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
     AbastecimentoRelatoriosPage,
-    InicioPage
+    InicioPage,
+    FotoarlaPage
   ],
   imports: [
     BrowserModule,
@@ -139,7 +141,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
     AbastecimentoRelatoriosPage,
-    InicioPage
+    InicioPage,
+    FotoarlaPage
   ],
   providers: [
     StatusBar,

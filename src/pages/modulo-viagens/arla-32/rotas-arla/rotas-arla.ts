@@ -20,6 +20,9 @@ export class RotasArlaPage {
 
 
   contador: number = 1;
+  fotoArla: string = "dsfsdf";
+  cameraButton: boolean;
+
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -56,6 +59,12 @@ export class RotasArlaPage {
     }
 
     if (this.contador == 2) {
+      if (this.fotoArla != undefined) {
+        return true;
+      }    
+    }
+
+    if (this.contador == 3) {
       return this.arlaPostoPage.valida();
     }
   }
@@ -64,10 +73,18 @@ export class RotasArlaPage {
   toBack() {
     this.slides.lockSwipes(false);
     this.contador -= 1;
-    this.slides.slidePrev(400)
+    this.slides.slidePrev(400);
+
+    if (this.contador == 2) {
+      this.cameraButton = true;
+    } else {
+      this.cameraButton = false;
+    }
+
     if (this.contador == 0) {
       this.navCtrl.pop();
     }
+
     this.slides.lockSwipes(true);
   }
 
@@ -75,7 +92,8 @@ export class RotasArlaPage {
     this.slides.lockSwipes(false);
     this.slides.slideTo(this.contador, 400)
     this.contador += 1;
-    if (this.contador == 3) {
+
+    if (this.contador == 4) {
       this.salvar()
       //Armazenar no Storage
       // this.storageProvider.adicionarArla();
@@ -85,10 +103,17 @@ export class RotasArlaPage {
         duration: 2000
       });
       toast.present();
-
+      
       this.navCtrl.pop();
     }
+    
+    if (this.contador == 2) {
+      this.cameraButton = true;
+    } else {
+      this.cameraButton = false;
+    }
+    
     this.slides.lockSwipes(true);
   }
-
+  
 }

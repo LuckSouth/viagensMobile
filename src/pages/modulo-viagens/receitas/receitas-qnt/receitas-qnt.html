@@ -56,12 +56,12 @@
 </div>
 
 <ion-item>
-  <ion-label floating>Qnt Faturado (Numeros)</ion-label>
+  <ion-label stacked >Qnt Faturado (Numeros)</ion-label>
   <ion-input type="text" min="0" [brmasker]="{mask:'(00) 00000-0000', len:15}" [(ngModel)]="storageProvider.receitas.qntFaturado" (ngModelChange)="valida()"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label floating>Qnt Descarregado (Numeros)</ion-label>
+  <ion-label stacked >Qnt Descarregado (Numeros)</ion-label>
   <ion-input [(ngModel)]="storageProvider.receitas.qntDescarregado" type="number" min="0" (ngModelChange)="valida()"></ion-input>
 </ion-item>
 

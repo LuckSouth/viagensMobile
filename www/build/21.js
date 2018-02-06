@@ -5,10 +5,10 @@ webpackJsonp([21],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbastecimentoFotoOdometroPageModule", function() { return AbastecimentoFotoOdometroPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbastecimentoOdometroPageModule", function() { return AbastecimentoOdometroPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abastecimento_foto_odometro__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abastecimento_odometro__ = __webpack_require__(134);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AbastecimentoFotoOdometroPageModule = (function () {
-    function AbastecimentoFotoOdometroPageModule() {
+var AbastecimentoOdometroPageModule = (function () {
+    function AbastecimentoOdometroPageModule() {
     }
-    return AbastecimentoFotoOdometroPageModule;
+    return AbastecimentoOdometroPageModule;
 }());
-AbastecimentoFotoOdometroPageModule = __decorate([
+AbastecimentoOdometroPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__abastecimento_foto_odometro__["a" /* AbastecimentoFotoOdometroPage */],
+            __WEBPACK_IMPORTED_MODULE_2__abastecimento_odometro__["a" /* AbastecimentoOdometroPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__abastecimento_foto_odometro__["a" /* AbastecimentoFotoOdometroPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__abastecimento_odometro__["a" /* AbastecimentoOdometroPage */]),
         ],
     })
-], AbastecimentoFotoOdometroPageModule);
+], AbastecimentoOdometroPageModule);
 
-//# sourceMappingURL=abastecimento-foto-odometro.module.js.map
+//# sourceMappingURL=abastecimento-odometro.module.js.map
 
 /***/ })
 

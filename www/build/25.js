@@ -5,10 +5,10 @@ webpackJsonp([25],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbastecimentoBomba1PageModule", function() { return AbastecimentoBomba1PageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbastecimentoBomba2PageModule", function() { return AbastecimentoBomba2PageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abastecimento_bomba_1__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abastecimento_bomba_2__ = __webpack_require__(136);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AbastecimentoBomba1PageModule = (function () {
-    function AbastecimentoBomba1PageModule() {
+var AbastecimentoBomba2PageModule = (function () {
+    function AbastecimentoBomba2PageModule() {
     }
-    return AbastecimentoBomba1PageModule;
+    return AbastecimentoBomba2PageModule;
 }());
-AbastecimentoBomba1PageModule = __decorate([
+AbastecimentoBomba2PageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__abastecimento_bomba_1__["a" /* AbastecimentoBomba1Page */],
+            __WEBPACK_IMPORTED_MODULE_2__abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__abastecimento_bomba_1__["a" /* AbastecimentoBomba1Page */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */]),
         ],
     })
-], AbastecimentoBomba1PageModule);
+], AbastecimentoBomba2PageModule);
 
-//# sourceMappingURL=abastecimento-bomba-1.module.js.map
+//# sourceMappingURL=abastecimento-bomba-2.module.js.map
 
 /***/ })
 
