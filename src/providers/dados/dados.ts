@@ -8,12 +8,11 @@ export class DadosProvider {
 
   constructor(public http: HttpClient,
     public storage: StorageProvider) {
-    console.log('Hello DadosProvider Provider');
+    console.log('Hello DadosProvider Provider'); 
   }
 
   private baseURI: string = "http://192.168.10.160/";
   public hideForm: boolean = false;
-
 
   despesa(motorista: string, despesa: string, data: string, valor: string, opcional?: boolean): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
