@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 463:
+/***/ 461:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(487);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,16 +38,16 @@ LoginPageModule = __decorate([
 
 /***/ }),
 
-/***/ 491:
+/***/ 487:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_nav_controller__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_plus__ = __webpack_require__(492);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage_es2015_storage__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_plus__ = __webpack_require__(488);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage_es2015_storage__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__principal_principal_principal__ = __webpack_require__(130);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__ = __webpack_require__(10);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -122,7 +122,7 @@ var LoginPage = LoginPage_1 = (function () {
 }());
 LoginPage = LoginPage_1 = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-login',template:/*ion-inline-start:"/home/fernando/viagensMobile/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar color="tijuca">\n    <ion-title padding>Login</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n  \n  <img src="../assets/images/tijuca-logo.png" class="img">\n  <br>\n  <ion-item>\n    <ion-label stacked><span class="input">Usuário</span></ion-label>\n    <ion-input type="text"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label stacked><span class="input">Senha</span></ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n  <br>\n\n  \n  <button ion-button full color="tijuca">Login</button>\n\n</ion-content>'/*ion-inline-end:"/home/fernando/viagensMobile/src/pages/login/login.html"*/
+        selector: 'page-login',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar color="tijuca">\n    <ion-title padding>Login</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n  \n  <img src="../assets/images/tijuca-logo.png" class="img">\n  <br>\n  <ion-item>\n    <ion-label stacked><span class="input">Usuário</span></ion-label>\n    <ion-input type="text"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label stacked><span class="input">Senha</span></ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n  <br>\n\n  \n  <button ion-button full color="tijuca">Login</button>\n\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/login/login.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_nav_controller__["a" /* NavController */],
@@ -136,7 +136,7 @@ var LoginPage_1;
 
 /***/ }),
 
-/***/ 492:
+/***/ 488:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

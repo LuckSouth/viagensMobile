@@ -25,7 +25,6 @@ import { AbastecimentoBomba1Page } from '../pages/modulo-viagens/abastecimento/a
 import { AbastecimentoBomba2Page } from '../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2';
 import { RotasAbastecimentoPage } from '../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento';
 import { AbastecimentoFotoBomba_2Page } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2';
-import { AbastecimentoFotoOdometroPage } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro';
 
 import { RotasArlaPage } from '../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla';
 import { RotasReceitasPage } from '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas';
@@ -50,6 +49,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { EnviarProvider } from '../providers/enviar/enviar';
 
 import { BrMaskerModule } from 'brmasker-ionic-3';
+import { AbastecimentoFotoOdometroPage } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro';
 
 
 
