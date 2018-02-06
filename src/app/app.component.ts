@@ -1,18 +1,12 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { SplashScreen } from '@ionic-native/splash-screen'; 
+import { ScreenOrientation } from '@ionic-native/screen-orientation'; 
+
+import { StorageProvider } from '../providers/storage/storage';  
+import { Storage } from '@ionic/storage';  
 import { PrincipalPage } from '../pages/principal/principal/principal';
-import { ScreenOrientation } from '@ionic-native/screen-orientation';
-// import { NavController } from 'ionic-angular/navigation/nav-controller';
-
-import { StorageProvider } from '../providers/storage/storage';
-import { DespesasPage } from '../pages/modulo-viagens/despesas/despesas/despesas';
-import { LoginPage } from '../pages/login/login';
-import { InicioPage } from '../pages/inicio/inicio';
-import { Storage } from '@ionic/storage';
-import { GooglePlus } from '@ionic-native/google-plus';
-
 
 @Component({
   templateUrl: 'app.html'
@@ -32,21 +26,14 @@ export class MyApp {
     splashScreen: SplashScreen,
     private screenOrientation: ScreenOrientation,
     public storageProvider: StorageProvider,
-    public storage: Storage,
-    public googlePlus: GooglePlus
-    // public navCtrl: NavController
+    public storage: Storage
   ) {
 
 
     platform.ready().then(() => {
       this.screenOrientation.lock(screenOrientation.ORIENTATIONS.PORTRAIT);
       statusBar.styleDefault();
-      splashScreen.hide();
-
-      
-      // this.googlePlus.trySilentLogin({}).then(
-      //   () => this.rootPage = PrincipalPage
-      // ).catch(res => this.rootPage = LoginPage);
+      splashScreen.hide(); 
     });
 
   }

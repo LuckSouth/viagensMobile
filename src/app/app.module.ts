@@ -3,21 +3,16 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { ScreenOrientation } from '@ionic-native/screen-orientation';
-
+import { ScreenOrientation } from '@ionic-native/screen-orientation'; 
 
 import { FormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation';
 
+import { MyApp } from './app.component'; 
 
-import { MyApp } from './app.component';
-
-import { InicioPage } from '../pages/inicio/inicio';
-import { HomePage } from '../pages/modulo-viagens/home/home/home';
 import { PrincipalPage } from '../pages/principal/principal/principal';
 import { ViagensPage } from '../pages/modulo-viagens/viagens/viagens';
 import { ReceitasFornecedorPage } from '../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor';
-import { ReceitasQntPage } from '../pages/modulo-viagens/receitas/receitas-qnt/receitas-qnt';
 import { ReceitasFotoPage } from '../pages/modulo-viagens/receitas/receitas-foto/receitas-foto';
 
 import { GeralPage } from '../pages/modulo-viagens/geral/geral-page/geral-page';
@@ -52,30 +47,21 @@ import { FotoServicoProvider } from '../providers/foto-servico/foto-servico';
 import { IonicStorageModule } from '@ionic/storage';
 import { StorageProvider } from '../providers/storage/storage'
 import { DadosProvider } from '../providers/dados/dados';
-import { HttpClient, HttpClientModule } from "@angular/common/http";
-// import {  Network} from "@ionic-native/network";
+import { HttpClient, HttpClientModule } from "@angular/common/http"; 
 
-import { LoginPage } from '../pages/login/login';
-import { GooglePlus } from '@ionic-native/google-plus';
-import { NavParams } from 'ionic-angular/navigation/nav-params';
-import { NavController } from 'ionic-angular/navigation/nav-controller';
+import { LoginPage } from '../pages/login/login'; 
 import { EnviarProvider } from '../providers/enviar/enviar';
 
 import { BrMaskerModule } from 'brmasker-ionic-3';
 
 
 
-
-
-
 @NgModule({
   declarations: [
-    MyApp,
-    LoginPage,
+    MyApp, 
     PrincipalPage,
     ViagensPage,
-    ReceitasFornecedorPage,
-    ReceitasQntPage,
+    ReceitasFornecedorPage, 
     ReceitasFotoPage,
     DespesasPage,
     GeralPage,
@@ -97,9 +83,13 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
+<<<<<<< HEAD
     AbastecimentoRelatoriosPage,
     InicioPage,
     FotoarlaPage
+=======
+    AbastecimentoRelatoriosPage 
+>>>>>>> 304f9981d93e20dd77cb86930ccaef9953229c65
   ],
   imports: [
     BrowserModule,
@@ -113,12 +103,10 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    LoginPage,
+    MyApp, 
     PrincipalPage,
     ViagensPage,
-    ReceitasFornecedorPage,
-    ReceitasQntPage,
+    ReceitasFornecedorPage, 
     ReceitasFotoPage,
     DespesasPage,
     GeralPage,
@@ -140,9 +128,13 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
+<<<<<<< HEAD
     AbastecimentoRelatoriosPage,
     InicioPage,
     FotoarlaPage
+=======
+    AbastecimentoRelatoriosPage
+>>>>>>> 304f9981d93e20dd77cb86930ccaef9953229c65
   ],
   providers: [
     StatusBar,
@@ -153,8 +145,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ScreenOrientation,
     StorageProvider,
     DadosProvider,
-    HttpClient,
-    GooglePlus,
+    HttpClient, 
     EnviarProvider
   ]
 })

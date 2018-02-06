@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { MyApp } from '../../app/app.component';
-import { PrincipalPage } from '../../pages/principal/principal/principal';
+import { MyApp } from '../../app/app.component'; 
 
 @Injectable()
 export class StorageProvider {
