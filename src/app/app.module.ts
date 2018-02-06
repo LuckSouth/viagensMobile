@@ -21,11 +21,9 @@ import { GeralDadosMotoristaPage } from '../pages/modulo-viagens/geral/geral-dad
 import { DespesasPage } from '../pages/modulo-viagens/despesas/despesas/despesas';
 
 import { AbastecimentoPagamentoPage } from '../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento';
-import { AbastecimentoOdometroPage } from '../pages/modulo-viagens/abastecimento/abastecimento-odometro/abastecimento-odometro';
 import { AbastecimentoBomba1Page } from '../pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1';
 import { AbastecimentoBomba2Page } from '../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2';
 import { RotasAbastecimentoPage } from '../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento';
-import { AbastecimentoFotoBomba_1Page } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-1/abastecimento-foto-bomba-1';
 import { AbastecimentoFotoBomba_2Page } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2';
 import { AbastecimentoFotoOdometroPage } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro';
 
@@ -64,8 +62,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ReceitasFotoPage,
     DespesasPage,
     GeralPage,
-    AbastecimentoPagamentoPage,
-    AbastecimentoOdometroPage,
+    AbastecimentoPagamentoPage, 
     AbastecimentoBomba1Page,
     AbastecimentoBomba2Page,
     RotasAbastecimentoPage,
@@ -74,8 +71,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
     ArlaPagPage,
-    ArlaPostoPage,
-    AbastecimentoFotoBomba_1Page,
+    ArlaPostoPage, 
     AbastecimentoFotoBomba_2Page,
     AbastecimentoFotoOdometroPage,
     RelatoriosPage,
@@ -104,8 +100,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ReceitasFotoPage,
     DespesasPage,
     GeralPage,
-    AbastecimentoPagamentoPage,
-    AbastecimentoOdometroPage,
+    AbastecimentoPagamentoPage, 
     AbastecimentoBomba1Page,
     RotasAbastecimentoPage,
     AbastecimentoBomba2Page,
@@ -114,8 +109,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
     ArlaPagPage,
-    ArlaPostoPage,
-    AbastecimentoFotoBomba_1Page,
+    ArlaPostoPage, 
     AbastecimentoFotoBomba_2Page,
     AbastecimentoFotoOdometroPage,
     RelatoriosPage,
