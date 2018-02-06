@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { Slides } from 'ionic-angular';
 import { FotoServicoProvider } from '../../../../providers/foto-servico/foto-servico'
 import { AbastecimentoPagamentoPage } from '../abastecimento-pagamento/abastecimento-pagamento'; 
-import { AbastecimentoBomba1Page } from '../abastecimento-bomba-1/abastecimento-bomba-1';
 import { AbastecimentoBomba2Page } from '../abastecimento-bomba-2/abastecimento-bomba-2';
 import { StorageProvider } from '../../../../providers/storage/storage';
 import { DadosProvider } from "../../../../providers/dados/dados";
@@ -14,8 +13,7 @@ import { DadosProvider } from "../../../../providers/dados/dados";
 })
 export class RotasAbastecimentoPage {
   @ViewChild(Slides) slides: Slides;
-  @ViewChild(AbastecimentoPagamentoPage) abastecimentoPagamento: AbastecimentoPagamentoPage; 
-  @ViewChild(AbastecimentoBomba1Page) abastecimentoBomba1: AbastecimentoBomba1Page;
+  @ViewChild(AbastecimentoPagamentoPage) abastecimentoPagamento: AbastecimentoPagamentoPage;  
   @ViewChild(AbastecimentoBomba2Page) abastecimentoBomba2: AbastecimentoBomba2Page;
 
 
@@ -71,11 +69,7 @@ export class RotasAbastecimentoPage {
       if (this.fotoOdometro != undefined) {
         return true;
       }
-    }
-
-    if (this.contador == 4) {
-      return this.abastecimentoBomba1.valida();
-    }
+    } 
 
     if (this.contador == 5) {
       if (this.fotoBomba1 != undefined) {

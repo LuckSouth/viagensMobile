@@ -1,6 +1,60 @@
-webpackJsonp([26],{
+webpackJsonp([24],{
 
-/***/ 10:
+/***/ 100:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FotoServicoProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_camera__ = __webpack_require__(199);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FotoServicoProvider = (function () {
+    function FotoServicoProvider(camera) {
+        this.camera = camera;
+    }
+    FotoServicoProvider.prototype.getFoto = function (type) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var options = {
+                quality: 100,
+                destinationType: _this.camera.DestinationType.DATA_URL,
+                encodingType: _this.camera.EncodingType.JPEG,
+                mediaType: _this.camera.MediaType.PICTURE,
+                sourceType: type == "picture" ? _this.camera.PictureSourceType.CAMERA : _this.camera.PictureSourceType.SAVEDPHOTOALBUM,
+                correctOrientation: true
+            };
+            _this.exibirImagem = true;
+            console.log(Date());
+            _this.camera.getPicture(options).then(function (imageData) {
+                _this.ultimaFoto = 'data:image/jpeg;base64,' + imageData;
+                resolve(_this.ultimaFoto);
+            }, function (err) {
+                reject(err);
+            });
+        });
+    };
+    return FotoServicoProvider;
+}());
+FotoServicoProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_native_camera__["a" /* Camera */]])
+], FotoServicoProvider);
+
+//# sourceMappingURL=foto-servico.js.map
+
+/***/ }),
+
+/***/ 11:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -290,69 +344,15 @@ StorageProvider = __decorate([
 
 /***/ }),
 
-/***/ 100:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FotoServicoProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_camera__ = __webpack_require__(200);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var FotoServicoProvider = (function () {
-    function FotoServicoProvider(camera) {
-        this.camera = camera;
-    }
-    FotoServicoProvider.prototype.getFoto = function (type) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            var options = {
-                quality: 100,
-                destinationType: _this.camera.DestinationType.DATA_URL,
-                encodingType: _this.camera.EncodingType.JPEG,
-                mediaType: _this.camera.MediaType.PICTURE,
-                sourceType: type == "picture" ? _this.camera.PictureSourceType.CAMERA : _this.camera.PictureSourceType.SAVEDPHOTOALBUM,
-                correctOrientation: true
-            };
-            _this.exibirImagem = true;
-            console.log(Date());
-            _this.camera.getPicture(options).then(function (imageData) {
-                _this.ultimaFoto = 'data:image/jpeg;base64,' + imageData;
-                resolve(_this.ultimaFoto);
-            }, function (err) {
-                reject(err);
-            });
-        });
-    };
-    return FotoServicoProvider;
-}());
-FotoServicoProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_native_camera__["a" /* Camera */]])
-], FotoServicoProvider);
-
-//# sourceMappingURL=foto-servico.js.map
-
-/***/ }),
-
 /***/ 130:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrincipalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modulo_viagens_viagens_viagens__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -404,13 +404,12 @@ PrincipalPage = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RotasAbastecimentoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_foto_servico_foto_servico__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__abastecimento_pagamento_abastecimento_pagamento__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__abastecimento_bomba_1_abastecimento_bomba_1__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__abastecimento_bomba_2_abastecimento_bomba_2__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_dados_dados__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__abastecimento_bomba_2_abastecimento_bomba_2__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_storage_storage__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_dados_dados__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -420,7 +419,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -456,9 +454,6 @@ var RotasAbastecimentoPage = (function () {
             if (this.fotoOdometro != undefined) {
                 return true;
             }
-        }
-        if (this.contador == 4) {
-            return this.abastecimentoBomba1.valida();
         }
         if (this.contador == 5) {
             if (this.fotoBomba1 != undefined) {
@@ -533,32 +528,24 @@ var RotasAbastecimentoPage = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */]) === "function" && _a || Object)
 ], RotasAbastecimentoPage.prototype, "slides", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__abastecimento_pagamento_abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__abastecimento_pagamento_abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */])
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__abastecimento_pagamento_abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__abastecimento_pagamento_abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */]) === "function" && _b || Object)
 ], RotasAbastecimentoPage.prototype, "abastecimentoPagamento", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4__abastecimento_bomba_1_abastecimento_bomba_1__["a" /* AbastecimentoBomba1Page */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4__abastecimento_bomba_1_abastecimento_bomba_1__["a" /* AbastecimentoBomba1Page */])
-], RotasAbastecimentoPage.prototype, "abastecimentoBomba1", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_5__abastecimento_bomba_2_abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_5__abastecimento_bomba_2_abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */])
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4__abastecimento_bomba_2_abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */]),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__abastecimento_bomba_2_abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__abastecimento_bomba_2_abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */]) === "function" && _c || Object)
 ], RotasAbastecimentoPage.prototype, "abastecimentoBomba2", void 0);
 RotasAbastecimentoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-rotas-abastecimento',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.html"*/'<ion-content>\n\n    <div class="fixed-content">\n\n        <!-- Início de slides -->\n        <ion-slides>\n\n            <ion-slide>\n                <page-abastecimento-pagamento class="a"></page-abastecimento-pagamento>\n            </ion-slide>\n  \n            <ion-slide>\n                <page-abastecimento-bomba-2></page-abastecimento-bomba-2>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-foto-bomba-2></page-abastecimento-foto-bomba-2>\n                <div class="img3">\n                    <img class="image" src="{{fotoBomba2}}" /> \n                </div>\n            </ion-slide>\n        </ion-slides>\n        <!-- fim de slides -->\n\n\n        <!-- Botão passar -->\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()">\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <!-- Botão câmera -->\n        <ion-fab>\n            <button *ngIf="cameraButton" class="button-camera" color = "tijuca" ion-button outline>\n                <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <!-- Botão voltar -->\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n    </div>\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_foto_servico_foto_servico__["a" /* FotoServicoProvider */],
-        __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__["a" /* StorageProvider */],
-        __WEBPACK_IMPORTED_MODULE_7__providers_dados_dados__["a" /* DadosProvider */]])
+    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__providers_foto_servico_foto_servico__["a" /* FotoServicoProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_foto_servico_foto_servico__["a" /* FotoServicoProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_5__providers_storage_storage__["a" /* StorageProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_storage_storage__["a" /* StorageProvider */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_6__providers_dados_dados__["a" /* DadosProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_dados_dados__["a" /* DadosProvider */]) === "function" && _j || Object])
 ], RotasAbastecimentoPage);
 
+var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=rotas-abastecimento.js.map
 
 /***/ }),
@@ -569,8 +556,8 @@ RotasAbastecimentoPage = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AbastecimentoPagamentoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -600,7 +587,7 @@ var AbastecimentoPagamentoPage = (function () {
 }());
 AbastecimentoPagamentoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-pagamento',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/'<ion-header>\n  <ion-toolbar color="tijuca">\n    <ion-title padding>Pagamento</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-item>\n  <ion-label>Tipo</ion-label>\n  <ion-select [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()">\n    <ion-option value="externo">Externo</ion-option>\n    <ion-option value="int">Interno</ion-option>\n  </ion-select>\n</ion-item>\n\n<ion-item>\n  <ion-label select>Posto</ion-label>\n  <ion-select [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (ngModelChange)="valida()">\n    <ion-option value="externo">Ipiranga</ion-option>\n    <ion-option value="externo">BR</ion-option>\n    <ion-option value="externo">Clementina</ion-option>\n  </ion-select>\n</ion-item>\n\n<ion-item>\n  <ion-label>Tipo de pagamento</ion-label>\n  <ion-select [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()">\n    <ion-option value="Dinheiro">Dinheiro</ion-option>\n    <ion-option value="crédito">Crédito</ion-option>\n    <ion-option value="Débito"> Débito</ion-option>\n    <ion-option value="Cheque">Cheque</ion-option>\n  </ion-select>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n</ion-item> '/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/,
+        selector: 'page-abastecimento-pagamento',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/'<ion-header>\n  <ion-toolbar color="tijuca">\n    <ion-title padding>Pagamento</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-item>\n  <ion-label>Tipo</ion-label>\n  <ion-select [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()">\n    <ion-option value="externo">Externo</ion-option>\n    <ion-option value="int">Interno</ion-option>\n  </ion-select>\n</ion-item>\n\n<ion-item>\n  <ion-label select>Posto</ion-label>\n  <ion-select [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (ngModelChange)="valida()">\n    <ion-option value="externo">Ipiranga</ion-option>\n    <ion-option value="externo">BR</ion-option>\n    <ion-option value="externo">Clementina</ion-option>\n  </ion-select>\n</ion-item>\n\n<ion-item>\n  <ion-label>Tipo de pagamento</ion-label>\n  <ion-select [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()">\n    <ion-option value="Dinheiro">Dinheiro</ion-option>\n    <ion-option value="crédito">Crédito</ion-option>\n    <ion-option value="Débito"> Débito</ion-option>\n    <ion-option value="Cheque">Cheque</ion-option>\n  </ion-select>\n</ion-item> \n\n\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n  <ion-label stacked> Odometro</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]])
@@ -614,59 +601,10 @@ AbastecimentoPagamentoPage = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AbastecimentoBomba1Page; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var AbastecimentoBomba1Page = (function () {
-    function AbastecimentoBomba1Page(navCtrl, navParams, storageProvider) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.storageProvider = storageProvider;
-    }
-    AbastecimentoBomba1Page.prototype.valida = function () {
-        if (this.storageProvider.abastecimento.precoBomb1 == "" || this.storageProvider.abastecimento.litrosBomb1 == "") {
-            return false;
-        }
-        else {
-            return true;
-        }
-    };
-    return AbastecimentoBomba1Page;
-}());
-AbastecimentoBomba1Page = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-bomba-1',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1.html"*/'<ion-header>\n    <ion-toolbar color = "tijuca">\n        <ion-title padding color = "tijuca">Bomba 1</ion-title>\n    </ion-toolbar>\n</ion-header>\n<ion-item>\n    <ion-label stacked><span class="input">Litros</span></ion-label>\n    <ion-input type="number" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n    <ion-label stacked><span class="input">Preço/L</span></ion-label>\n    <ion-input type="number" min = "0"[(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]])
-], AbastecimentoBomba1Page);
-
-//# sourceMappingURL=abastecimento-bomba-1.js.map
-
-/***/ }),
-
-/***/ 134:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AbastecimentoBomba2Page; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -700,7 +638,7 @@ var AbastecimentoBomba2Page = (function () {
 }());
 AbastecimentoBomba2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-bomba-2',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/'<ion-header>\n\n    <ion-toolbar color = "tijuca">\n        <ion-title padding>Bomba 2</ion-title>\n    </ion-toolbar>\n\n</ion-header>\n\n<ion-list>\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n  <ion-label stacked> Odometro</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> '/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/,
+        selector: 'page-abastecimento-bomba-2',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/'<ion-header>\n\n    <ion-toolbar color = "tijuca">\n        <ion-title padding>Bomba 2</ion-title>\n    </ion-toolbar>\n\n</ion-header>\n \n<ion-list>\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n  <ion-label stacked> Odometro</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n</ion-list>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -713,15 +651,15 @@ AbastecimentoBomba2Page = __decorate([
 
 /***/ }),
 
-/***/ 135:
+/***/ 134:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeralPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__geral_dados_viagem_geral_dados_viagem__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__geral_dados_motorista_geral_dados_motorista__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__geral_dados_viagem_geral_dados_viagem__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__geral_dados_motorista_geral_dados_motorista__ = __webpack_require__(136);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -758,13 +696,13 @@ GeralPage = __decorate([
 
 /***/ }),
 
-/***/ 136:
+/***/ 135:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeralDadosViagemPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -794,13 +732,13 @@ GeralDadosViagemPage = __decorate([
 
 /***/ }),
 
-/***/ 137:
+/***/ 136:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeralDadosMotoristaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -830,14 +768,14 @@ GeralDadosMotoristaPage = __decorate([
 
 /***/ }),
 
-/***/ 138:
+/***/ 137:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DespesasPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_dados_dados__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__viagens_viagens__ = __webpack_require__(72);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -907,16 +845,16 @@ DespesasPage = __decorate([
 
 /***/ }),
 
-/***/ 139:
+/***/ 138:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RotasArlaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__arla_pag_arla_pag__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__arla_posto_arla_posto__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__arla_pag_arla_pag__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__arla_posto_arla_posto__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_storage_storage__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_dados_dados__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1029,14 +967,14 @@ RotasArlaPage = __decorate([
 
 /***/ }),
 
-/***/ 140:
+/***/ 139:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArlaPagPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1089,14 +1027,14 @@ ArlaPagPage = __decorate([
 
 /***/ }),
 
-/***/ 141:
+/***/ 140:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArlaPostoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1137,17 +1075,17 @@ ArlaPostoPage = __decorate([
 
 /***/ }),
 
-/***/ 142:
+/***/ 141:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RotasReceitasPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_foto_servico_foto_servico__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__receita_fornecedor_receita_fornecedor__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__receitas_foto_receitas_foto__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__receita_fornecedor_receita_fornecedor__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__receitas_foto_receitas_foto__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_storage_storage__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_dados_dados__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1271,14 +1209,14 @@ RotasReceitasPage = __decorate([
 
 /***/ }),
 
-/***/ 143:
+/***/ 142:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReceitasFornecedorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1320,13 +1258,13 @@ ReceitasFornecedorPage = __decorate([
 
 /***/ }),
 
-/***/ 144:
+/***/ 143:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReceitasFotoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1366,17 +1304,17 @@ ReceitasFotoPage = __decorate([
 
 /***/ }),
 
-/***/ 145:
+/***/ 144:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RelatoriosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__despesas_relatorios_despesas_relatorios__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__receitas_relatorios_receitas_relatorios__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__arla_relatorios_arla_relatorios__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__abastecimento_relatorios_abastecimento_relatorios__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__despesas_relatorios_despesas_relatorios__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__receitas_relatorios_receitas_relatorios__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__arla_relatorios_arla_relatorios__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__abastecimento_relatorios_abastecimento_relatorios__ = __webpack_require__(148);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1415,14 +1353,14 @@ RelatoriosPage = __decorate([
 
 /***/ }),
 
-/***/ 146:
+/***/ 145:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DespesasRelatoriosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1463,14 +1401,14 @@ DespesasRelatoriosPage = __decorate([
 
 /***/ }),
 
-/***/ 147:
+/***/ 146:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReceitasRelatoriosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1509,14 +1447,14 @@ ReceitasRelatoriosPage = __decorate([
 
 /***/ }),
 
-/***/ 148:
+/***/ 147:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArlaRelatoriosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1555,14 +1493,14 @@ ArlaRelatoriosPage = __decorate([
 
 /***/ }),
 
-/***/ 149:
+/***/ 148:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AbastecimentoRelatoriosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1601,7 +1539,7 @@ AbastecimentoRelatoriosPage = __decorate([
 
 /***/ }),
 
-/***/ 158:
+/***/ 157:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -1614,116 +1552,108 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 158;
+webpackEmptyAsyncContext.id = 157;
 
 /***/ }),
 
-/***/ 199:
+/***/ 198:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/inicio/inicio.module": [
-		460,
+		458,
 		1
 	],
 	"../pages/login/login.module": [
-		461,
+		459,
 		0
 	],
-	"../pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1.module": [
-		462,
-		25
-	],
 	"../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.module": [
-		463,
-		24
-	],
-	"../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.module": [
-		464,
+		460,
 		23
 	],
-	"../pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro.module": [
-		465,
+	"../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.module": [
+		461,
 		22
 	],
 	"../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.module": [
-		466,
+		462,
 		21
 	],
 	"../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.module": [
-		467,
+		463,
 		20
 	],
 	"../pages/modulo-viagens/arla-32/arla-pag/arla-pag.module": [
-		468,
+		464,
 		19
 	],
 	"../pages/modulo-viagens/arla-32/arla-posto/arla-posto.module": [
-		469,
+		465,
 		18
 	],
 	"../pages/modulo-viagens/arla-32/fotoarla/fotoarla.module": [
-		470,
+		466,
 		17
 	],
 	"../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.module": [
-		471,
+		467,
 		16
 	],
 	"../pages/modulo-viagens/despesas/despesas/despesas.module": [
-		472,
+		468,
 		15
 	],
 	"../pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.module": [
-		473,
+		469,
 		14
 	],
 	"../pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.module": [
-		474,
+		470,
 		13
 	],
 	"../pages/modulo-viagens/geral/geral-page/geral-page.module": [
-		475,
+		471,
 		12
 	],
 	"../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.module": [
-		476,
+		472,
 		11
 	],
 	"../pages/modulo-viagens/receitas/receitas-foto/receitas-foto.module": [
-		477,
+		473,
 		10
 	],
 	"../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.module": [
-		478,
+		474,
 		9
 	],
 	"../pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.module": [
-		479,
+		475,
 		8
 	],
 	"../pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.module": [
-		480,
+		476,
 		7
 	],
 	"../pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.module": [
-		481,
+		477,
 		6
 	],
 	"../pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.module": [
-		482,
+		478,
 		5
 	],
 	"../pages/modulo-viagens/relatorios/relatorios-page/relatorios.module": [
-		483,
+		479,
 		4
 	],
 	"../pages/modulo-viagens/viagens/viagens.module": [
-		484,
+		480,
 		3
 	],
 	"../pages/principal/principal/principal.module": [
-		485,
+		481,
 		2
 	]
 };
@@ -1738,18 +1668,18 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 199;
+webpackAsyncContext.id = 198;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 203:
+/***/ 202:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EnviarProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_storage_storage__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dados_dados__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1824,13 +1754,13 @@ EnviarProvider = __decorate([
 
 /***/ }),
 
-/***/ 290:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AbastecimentoFotoBomba_2Page; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1863,52 +1793,13 @@ AbastecimentoFotoBomba_2Page = __decorate([
 
 /***/ }),
 
-/***/ 291:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AbastecimentoFotoOdometroPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var AbastecimentoFotoOdometroPage = (function () {
-    function AbastecimentoFotoOdometroPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    AbastecimentoFotoOdometroPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AbastecimentoFotoOdometroPage');
-    };
-    return AbastecimentoFotoOdometroPage;
-}());
-AbastecimentoFotoOdometroPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-foto-odometro',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title>Foto</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], AbastecimentoFotoOdometroPage);
-
-//# sourceMappingURL=abastecimento-foto-odometro.js.map
-
-/***/ }),
-
-/***/ 292:
+/***/ 290:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FotoarlaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1941,17 +1832,220 @@ FotoarlaPage = __decorate([
 
 /***/ }),
 
-/***/ 293:
+/***/ 291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(309);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 309:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_validation__ = __webpack_require__(364);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_validation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_validation__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(454);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_principal_principal_principal__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_modulo_viagens_viagens_viagens__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_modulo_viagens_receitas_receita_fornecedor_receita_fornecedor__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_modulo_viagens_receitas_receitas_foto_receitas_foto__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_modulo_viagens_geral_geral_page_geral_page__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_modulo_viagens_geral_geral_dados_viagem_geral_dados_viagem__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_modulo_viagens_geral_geral_dados_motorista_geral_dados_motorista__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_modulo_viagens_despesas_despesas_despesas__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_modulo_viagens_abastecimento_abastecimento_pagamento_abastecimento_pagamento__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_modulo_viagens_abastecimento_abastecimento_bomba_2_abastecimento_bomba_2__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_modulo_viagens_abastecimento_rotas_abastecimento_rotas_abastecimento__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_modulo_viagens_abastecimento_abastecimento_foto_bomba_2_abastecimento_foto_bomba_2__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_modulo_viagens_arla_32_rotas_arla_rotas_arla__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_modulo_viagens_receitas_rotas_receitas_rotas_receitas__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_modulo_viagens_relatorios_relatorios_page_relatorios__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_modulo_viagens_relatorios_receitas_relatorios_receitas_relatorios__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_modulo_viagens_relatorios_despesas_relatorios_despesas_relatorios__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_modulo_viagens_relatorios_abastecimento_relatorios_abastecimento_relatorios__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_modulo_viagens_relatorios_arla_relatorios_arla_relatorios__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_modulo_viagens_arla_32_arla_pag_arla_pag__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_modulo_viagens_arla_32_arla_posto_arla_posto__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_modulo_viagens_arla_32_fotoarla_fotoarla__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ionic_native_camera__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_foto_servico_foto_servico__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_storage__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__providers_storage_storage__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__providers_dados_dados__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__angular_common_http__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__providers_enviar_enviar__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38_brmasker_ionic_3__ = __webpack_require__(455);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_principal_principal_principal__["a" /* PrincipalPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_modulo_viagens_viagens_viagens__["a" /* ViagensPage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_modulo_viagens_receitas_receita_fornecedor_receita_fornecedor__["a" /* ReceitasFornecedorPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_modulo_viagens_receitas_receitas_foto_receitas_foto__["a" /* ReceitasFotoPage */],
+            __WEBPACK_IMPORTED_MODULE_16__pages_modulo_viagens_despesas_despesas_despesas__["a" /* DespesasPage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_modulo_viagens_geral_geral_page_geral_page__["a" /* GeralPage */],
+            __WEBPACK_IMPORTED_MODULE_17__pages_modulo_viagens_abastecimento_abastecimento_pagamento_abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */],
+            __WEBPACK_IMPORTED_MODULE_18__pages_modulo_viagens_abastecimento_abastecimento_bomba_2_abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */],
+            __WEBPACK_IMPORTED_MODULE_19__pages_modulo_viagens_abastecimento_rotas_abastecimento_rotas_abastecimento__["a" /* RotasAbastecimentoPage */],
+            __WEBPACK_IMPORTED_MODULE_21__pages_modulo_viagens_arla_32_rotas_arla_rotas_arla__["a" /* RotasArlaPage */],
+            __WEBPACK_IMPORTED_MODULE_22__pages_modulo_viagens_receitas_rotas_receitas_rotas_receitas__["a" /* RotasReceitasPage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_modulo_viagens_geral_geral_dados_viagem_geral_dados_viagem__["a" /* GeralDadosViagemPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_modulo_viagens_geral_geral_dados_motorista_geral_dados_motorista__["a" /* GeralDadosMotoristaPage */],
+            __WEBPACK_IMPORTED_MODULE_28__pages_modulo_viagens_arla_32_arla_pag_arla_pag__["a" /* ArlaPagPage */],
+            __WEBPACK_IMPORTED_MODULE_29__pages_modulo_viagens_arla_32_arla_posto_arla_posto__["a" /* ArlaPostoPage */],
+            __WEBPACK_IMPORTED_MODULE_20__pages_modulo_viagens_abastecimento_abastecimento_foto_bomba_2_abastecimento_foto_bomba_2__["a" /* AbastecimentoFotoBomba_2Page */],
+            __WEBPACK_IMPORTED_MODULE_23__pages_modulo_viagens_relatorios_relatorios_page_relatorios__["a" /* RelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_25__pages_modulo_viagens_relatorios_despesas_relatorios_despesas_relatorios__["a" /* DespesasRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_24__pages_modulo_viagens_relatorios_receitas_relatorios_receitas_relatorios__["a" /* ReceitasRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_27__pages_modulo_viagens_relatorios_arla_relatorios_arla_relatorios__["a" /* ArlaRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_26__pages_modulo_viagens_relatorios_abastecimento_relatorios_abastecimento_relatorios__["a" /* AbastecimentoRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_30__pages_modulo_viagens_arla_32_fotoarla_fotoarla__["a" /* FotoarlaPage */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */], {}, {
+                links: [
+                    { loadChildren: '../pages/inicio/inicio.module#InicioPageModule', name: 'InicioPage', segment: 'inicio', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.module#AbastecimentoBomba2PageModule', name: 'AbastecimentoBomba2Page', segment: 'abastecimento-bomba-2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.module#AbastecimentoFotoBomba_2PageModule', name: 'AbastecimentoFotoBomba_2Page', segment: 'abastecimento-foto-bomba-2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.module#AbastecimentoPagamentoPageModule', name: 'AbastecimentoPagamentoPage', segment: 'abastecimento-pagamento', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.module#RotasAbastecimentoPageModule', name: 'RotasAbastecimentoPage', segment: 'rotas-abastecimento', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/arla-32/arla-pag/arla-pag.module#ArlaPagModule', name: 'ArlaPagPage', segment: 'arla-pag', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/arla-32/arla-posto/arla-posto.module#ArlaPostoModule', name: 'ArlaPostoPage', segment: 'arla-posto', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/arla-32/fotoarla/fotoarla.module#FotoarlaPageModule', name: 'FotoarlaPage', segment: 'fotoarla', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.module#RotasArlaPageModule', name: 'RotasArlaPage', segment: 'rotas-arla', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/despesas/despesas/despesas.module#DespesasPageModule', name: 'DespesasPage', segment: 'despesas', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.module#GeralDadosMotoristaModule', name: 'GeralDadosMotoristaPage', segment: 'geral-dados-motorista', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.module#GeralDadosViagemModule', name: 'GeralDadosViagemPage', segment: 'geral-dados-viagem', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/geral/geral-page/geral-page.module#GeralPageModule', name: 'GeralPage', segment: 'geral-page', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.module#ReceitasFornecedorPageModule', name: 'ReceitasFornecedorPage', segment: 'receita-fornecedor', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/receitas/receitas-foto/receitas-foto.module#ReceitasFotoPageModule', name: 'ReceitasFotoPage', segment: 'receitas-foto', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.module#RotasReceitasPageModule', name: 'RotasReceitasPage', segment: 'rotas-receitas', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.module#AbastecimentoRelatoriosPageModule', name: 'AbastecimentoRelatoriosPage', segment: 'abastecimento-relatorios', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.module#ArlaRelatoriosPageModule', name: 'ArlaRelatoriosPage', segment: 'arla-relatorios', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.module#DespesasRelatoriosPageModule', name: 'DespesasRelatoriosPage', segment: 'despesas-relatorios', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.module#ReceitasRelatoriosPageModule', name: 'ReceitasRelatoriosPage', segment: 'receitas-relatorios', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/relatorios/relatorios-page/relatorios.module#RelatoriosPageModule', name: 'RelatoriosPage', segment: 'relatorios', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/viagens/viagens.module#ViagensPageModule', name: 'ViagensPage', segment: 'viagens', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/principal/principal/principal.module#PrincipalPageModule', name: 'PrincipalPage', segment: 'principal', priority: 'low', defaultHistory: [] }
+                ]
+            }),
+            __WEBPACK_IMPORTED_MODULE_7_ng2_validation__["CustomFormsModule"],
+            __WEBPACK_IMPORTED_MODULE_6__angular_forms__["FormsModule"],
+            __WEBPACK_IMPORTED_MODULE_33__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_36__angular_common_http__["b" /* HttpClientModule */],
+            __WEBPACK_IMPORTED_MODULE_38_brmasker_ionic_3__["a" /* BrMaskerModule */]
+        ],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+        entryComponents: [
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_principal_principal_principal__["a" /* PrincipalPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_modulo_viagens_viagens_viagens__["a" /* ViagensPage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_modulo_viagens_receitas_receita_fornecedor_receita_fornecedor__["a" /* ReceitasFornecedorPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_modulo_viagens_receitas_receitas_foto_receitas_foto__["a" /* ReceitasFotoPage */],
+            __WEBPACK_IMPORTED_MODULE_16__pages_modulo_viagens_despesas_despesas_despesas__["a" /* DespesasPage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_modulo_viagens_geral_geral_page_geral_page__["a" /* GeralPage */],
+            __WEBPACK_IMPORTED_MODULE_17__pages_modulo_viagens_abastecimento_abastecimento_pagamento_abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */],
+            __WEBPACK_IMPORTED_MODULE_19__pages_modulo_viagens_abastecimento_rotas_abastecimento_rotas_abastecimento__["a" /* RotasAbastecimentoPage */],
+            __WEBPACK_IMPORTED_MODULE_18__pages_modulo_viagens_abastecimento_abastecimento_bomba_2_abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */],
+            __WEBPACK_IMPORTED_MODULE_22__pages_modulo_viagens_receitas_rotas_receitas_rotas_receitas__["a" /* RotasReceitasPage */],
+            __WEBPACK_IMPORTED_MODULE_21__pages_modulo_viagens_arla_32_rotas_arla_rotas_arla__["a" /* RotasArlaPage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_modulo_viagens_geral_geral_dados_viagem_geral_dados_viagem__["a" /* GeralDadosViagemPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_modulo_viagens_geral_geral_dados_motorista_geral_dados_motorista__["a" /* GeralDadosMotoristaPage */],
+            __WEBPACK_IMPORTED_MODULE_28__pages_modulo_viagens_arla_32_arla_pag_arla_pag__["a" /* ArlaPagPage */],
+            __WEBPACK_IMPORTED_MODULE_29__pages_modulo_viagens_arla_32_arla_posto_arla_posto__["a" /* ArlaPostoPage */],
+            __WEBPACK_IMPORTED_MODULE_20__pages_modulo_viagens_abastecimento_abastecimento_foto_bomba_2_abastecimento_foto_bomba_2__["a" /* AbastecimentoFotoBomba_2Page */],
+            __WEBPACK_IMPORTED_MODULE_23__pages_modulo_viagens_relatorios_relatorios_page_relatorios__["a" /* RelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_25__pages_modulo_viagens_relatorios_despesas_relatorios_despesas_relatorios__["a" /* DespesasRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_24__pages_modulo_viagens_relatorios_receitas_relatorios_receitas_relatorios__["a" /* ReceitasRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_27__pages_modulo_viagens_relatorios_arla_relatorios_arla_relatorios__["a" /* ArlaRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_26__pages_modulo_viagens_relatorios_abastecimento_relatorios_abastecimento_relatorios__["a" /* AbastecimentoRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_30__pages_modulo_viagens_arla_32_fotoarla_fotoarla__["a" /* FotoarlaPage */]
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_31__ionic_native_camera__["a" /* Camera */],
+            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
+            __WEBPACK_IMPORTED_MODULE_32__providers_foto_servico_foto_servico__["a" /* FotoServicoProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__["a" /* ScreenOrientation */],
+            __WEBPACK_IMPORTED_MODULE_34__providers_storage_storage__["a" /* StorageProvider */],
+            __WEBPACK_IMPORTED_MODULE_35__providers_dados_dados__["a" /* DadosProvider */],
+            __WEBPACK_IMPORTED_MODULE_36__angular_common_http__["a" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_37__providers_enviar_enviar__["a" /* EnviarProvider */]
+        ]
+    })
+], AppModule);
+
+//# sourceMappingURL=app.module.js.map
 
 /***/ }),
 
@@ -1961,10 +2055,10 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DadosProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(342);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_storage_storage__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2127,230 +2221,17 @@ DadosProvider = __decorate([
 
 /***/ }),
 
-/***/ 311:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(243);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__ = __webpack_require__(245);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_validation__ = __webpack_require__(366);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_validation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_validation__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(456);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_principal_principal_principal__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_modulo_viagens_viagens_viagens__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_modulo_viagens_receitas_receita_fornecedor_receita_fornecedor__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_modulo_viagens_receitas_receitas_foto_receitas_foto__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_modulo_viagens_geral_geral_page_geral_page__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_modulo_viagens_geral_geral_dados_viagem_geral_dados_viagem__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_modulo_viagens_geral_geral_dados_motorista_geral_dados_motorista__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_modulo_viagens_despesas_despesas_despesas__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_modulo_viagens_abastecimento_abastecimento_pagamento_abastecimento_pagamento__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_modulo_viagens_abastecimento_abastecimento_bomba_1_abastecimento_bomba_1__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_modulo_viagens_abastecimento_abastecimento_bomba_2_abastecimento_bomba_2__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_modulo_viagens_abastecimento_rotas_abastecimento_rotas_abastecimento__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_modulo_viagens_abastecimento_abastecimento_foto_bomba_2_abastecimento_foto_bomba_2__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_modulo_viagens_arla_32_rotas_arla_rotas_arla__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_modulo_viagens_receitas_rotas_receitas_rotas_receitas__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_modulo_viagens_relatorios_relatorios_page_relatorios__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_modulo_viagens_relatorios_receitas_relatorios_receitas_relatorios__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_modulo_viagens_relatorios_despesas_relatorios_despesas_relatorios__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_modulo_viagens_relatorios_abastecimento_relatorios_abastecimento_relatorios__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_modulo_viagens_relatorios_arla_relatorios_arla_relatorios__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_modulo_viagens_arla_32_arla_pag_arla_pag__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_modulo_viagens_arla_32_arla_posto_arla_posto__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_modulo_viagens_arla_32_fotoarla_fotoarla__ = __webpack_require__(292);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_camera__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__providers_foto_servico_foto_servico__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__ionic_storage__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__providers_storage_storage__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__providers_dados_dados__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__angular_common_http__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__providers_enviar_enviar__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39_brmasker_ionic_3__ = __webpack_require__(457);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_modulo_viagens_abastecimento_abastecimento_foto_odometro_abastecimento_foto_odometro__ = __webpack_require__(291);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var AppModule = (function () {
-    function AppModule() {
-    }
-    return AppModule;
-}());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_principal_principal_principal__["a" /* PrincipalPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_modulo_viagens_viagens_viagens__["a" /* ViagensPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_modulo_viagens_receitas_receita_fornecedor_receita_fornecedor__["a" /* ReceitasFornecedorPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_modulo_viagens_receitas_receitas_foto_receitas_foto__["a" /* ReceitasFotoPage */],
-            __WEBPACK_IMPORTED_MODULE_16__pages_modulo_viagens_despesas_despesas_despesas__["a" /* DespesasPage */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_modulo_viagens_geral_geral_page_geral_page__["a" /* GeralPage */],
-            __WEBPACK_IMPORTED_MODULE_17__pages_modulo_viagens_abastecimento_abastecimento_pagamento_abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */],
-            __WEBPACK_IMPORTED_MODULE_18__pages_modulo_viagens_abastecimento_abastecimento_bomba_1_abastecimento_bomba_1__["a" /* AbastecimentoBomba1Page */],
-            __WEBPACK_IMPORTED_MODULE_19__pages_modulo_viagens_abastecimento_abastecimento_bomba_2_abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */],
-            __WEBPACK_IMPORTED_MODULE_20__pages_modulo_viagens_abastecimento_rotas_abastecimento_rotas_abastecimento__["a" /* RotasAbastecimentoPage */],
-            __WEBPACK_IMPORTED_MODULE_22__pages_modulo_viagens_arla_32_rotas_arla_rotas_arla__["a" /* RotasArlaPage */],
-            __WEBPACK_IMPORTED_MODULE_23__pages_modulo_viagens_receitas_rotas_receitas_rotas_receitas__["a" /* RotasReceitasPage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_modulo_viagens_geral_geral_dados_viagem_geral_dados_viagem__["a" /* GeralDadosViagemPage */],
-            __WEBPACK_IMPORTED_MODULE_15__pages_modulo_viagens_geral_geral_dados_motorista_geral_dados_motorista__["a" /* GeralDadosMotoristaPage */],
-            __WEBPACK_IMPORTED_MODULE_29__pages_modulo_viagens_arla_32_arla_pag_arla_pag__["a" /* ArlaPagPage */],
-            __WEBPACK_IMPORTED_MODULE_30__pages_modulo_viagens_arla_32_arla_posto_arla_posto__["a" /* ArlaPostoPage */],
-            __WEBPACK_IMPORTED_MODULE_21__pages_modulo_viagens_abastecimento_abastecimento_foto_bomba_2_abastecimento_foto_bomba_2__["a" /* AbastecimentoFotoBomba_2Page */],
-            __WEBPACK_IMPORTED_MODULE_40__pages_modulo_viagens_abastecimento_abastecimento_foto_odometro_abastecimento_foto_odometro__["a" /* AbastecimentoFotoOdometroPage */],
-            __WEBPACK_IMPORTED_MODULE_24__pages_modulo_viagens_relatorios_relatorios_page_relatorios__["a" /* RelatoriosPage */],
-            __WEBPACK_IMPORTED_MODULE_26__pages_modulo_viagens_relatorios_despesas_relatorios_despesas_relatorios__["a" /* DespesasRelatoriosPage */],
-            __WEBPACK_IMPORTED_MODULE_25__pages_modulo_viagens_relatorios_receitas_relatorios_receitas_relatorios__["a" /* ReceitasRelatoriosPage */],
-            __WEBPACK_IMPORTED_MODULE_28__pages_modulo_viagens_relatorios_arla_relatorios_arla_relatorios__["a" /* ArlaRelatoriosPage */],
-            __WEBPACK_IMPORTED_MODULE_27__pages_modulo_viagens_relatorios_abastecimento_relatorios_abastecimento_relatorios__["a" /* AbastecimentoRelatoriosPage */],
-            __WEBPACK_IMPORTED_MODULE_31__pages_modulo_viagens_arla_32_fotoarla_fotoarla__["a" /* FotoarlaPage */]
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */], {}, {
-                links: [
-                    { loadChildren: '../pages/inicio/inicio.module#InicioPageModule', name: 'InicioPage', segment: 'inicio', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1.module#AbastecimentoBomba1PageModule', name: 'AbastecimentoBomba1Page', segment: 'abastecimento-bomba-1', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.module#AbastecimentoBomba2PageModule', name: 'AbastecimentoBomba2Page', segment: 'abastecimento-bomba-2', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.module#AbastecimentoFotoBomba_2PageModule', name: 'AbastecimentoFotoBomba_2Page', segment: 'abastecimento-foto-bomba-2', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro.module#AbastecimentoFotoOdometroPageModule', name: 'AbastecimentoFotoOdometroPage', segment: 'abastecimento-foto-odometro', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.module#AbastecimentoPagamentoPageModule', name: 'AbastecimentoPagamentoPage', segment: 'abastecimento-pagamento', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.module#RotasAbastecimentoPageModule', name: 'RotasAbastecimentoPage', segment: 'rotas-abastecimento', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/arla-32/arla-pag/arla-pag.module#ArlaPagModule', name: 'ArlaPagPage', segment: 'arla-pag', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/arla-32/arla-posto/arla-posto.module#ArlaPostoModule', name: 'ArlaPostoPage', segment: 'arla-posto', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/arla-32/fotoarla/fotoarla.module#FotoarlaPageModule', name: 'FotoarlaPage', segment: 'fotoarla', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.module#RotasArlaPageModule', name: 'RotasArlaPage', segment: 'rotas-arla', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/despesas/despesas/despesas.module#DespesasPageModule', name: 'DespesasPage', segment: 'despesas', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.module#GeralDadosMotoristaModule', name: 'GeralDadosMotoristaPage', segment: 'geral-dados-motorista', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.module#GeralDadosViagemModule', name: 'GeralDadosViagemPage', segment: 'geral-dados-viagem', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/geral/geral-page/geral-page.module#GeralPageModule', name: 'GeralPage', segment: 'geral-page', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.module#ReceitasFornecedorPageModule', name: 'ReceitasFornecedorPage', segment: 'receita-fornecedor', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/receitas/receitas-foto/receitas-foto.module#ReceitasFotoPageModule', name: 'ReceitasFotoPage', segment: 'receitas-foto', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.module#RotasReceitasPageModule', name: 'RotasReceitasPage', segment: 'rotas-receitas', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.module#AbastecimentoRelatoriosPageModule', name: 'AbastecimentoRelatoriosPage', segment: 'abastecimento-relatorios', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.module#ArlaRelatoriosPageModule', name: 'ArlaRelatoriosPage', segment: 'arla-relatorios', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.module#DespesasRelatoriosPageModule', name: 'DespesasRelatoriosPage', segment: 'despesas-relatorios', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.module#ReceitasRelatoriosPageModule', name: 'ReceitasRelatoriosPage', segment: 'receitas-relatorios', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/relatorios/relatorios-page/relatorios.module#RelatoriosPageModule', name: 'RelatoriosPage', segment: 'relatorios', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/viagens/viagens.module#ViagensPageModule', name: 'ViagensPage', segment: 'viagens', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/principal/principal/principal.module#PrincipalPageModule', name: 'PrincipalPage', segment: 'principal', priority: 'low', defaultHistory: [] }
-                ]
-            }),
-            __WEBPACK_IMPORTED_MODULE_7_ng2_validation__["CustomFormsModule"],
-            __WEBPACK_IMPORTED_MODULE_6__angular_forms__["FormsModule"],
-            __WEBPACK_IMPORTED_MODULE_34__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_37__angular_common_http__["b" /* HttpClientModule */],
-            __WEBPACK_IMPORTED_MODULE_39_brmasker_ionic_3__["a" /* BrMaskerModule */]
-        ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
-        entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_principal_principal_principal__["a" /* PrincipalPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_modulo_viagens_viagens_viagens__["a" /* ViagensPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_modulo_viagens_receitas_receita_fornecedor_receita_fornecedor__["a" /* ReceitasFornecedorPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_modulo_viagens_receitas_receitas_foto_receitas_foto__["a" /* ReceitasFotoPage */],
-            __WEBPACK_IMPORTED_MODULE_16__pages_modulo_viagens_despesas_despesas_despesas__["a" /* DespesasPage */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_modulo_viagens_geral_geral_page_geral_page__["a" /* GeralPage */],
-            __WEBPACK_IMPORTED_MODULE_17__pages_modulo_viagens_abastecimento_abastecimento_pagamento_abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */],
-            __WEBPACK_IMPORTED_MODULE_18__pages_modulo_viagens_abastecimento_abastecimento_bomba_1_abastecimento_bomba_1__["a" /* AbastecimentoBomba1Page */],
-            __WEBPACK_IMPORTED_MODULE_20__pages_modulo_viagens_abastecimento_rotas_abastecimento_rotas_abastecimento__["a" /* RotasAbastecimentoPage */],
-            __WEBPACK_IMPORTED_MODULE_19__pages_modulo_viagens_abastecimento_abastecimento_bomba_2_abastecimento_bomba_2__["a" /* AbastecimentoBomba2Page */],
-            __WEBPACK_IMPORTED_MODULE_23__pages_modulo_viagens_receitas_rotas_receitas_rotas_receitas__["a" /* RotasReceitasPage */],
-            __WEBPACK_IMPORTED_MODULE_22__pages_modulo_viagens_arla_32_rotas_arla_rotas_arla__["a" /* RotasArlaPage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_modulo_viagens_geral_geral_dados_viagem_geral_dados_viagem__["a" /* GeralDadosViagemPage */],
-            __WEBPACK_IMPORTED_MODULE_15__pages_modulo_viagens_geral_geral_dados_motorista_geral_dados_motorista__["a" /* GeralDadosMotoristaPage */],
-            __WEBPACK_IMPORTED_MODULE_29__pages_modulo_viagens_arla_32_arla_pag_arla_pag__["a" /* ArlaPagPage */],
-            __WEBPACK_IMPORTED_MODULE_30__pages_modulo_viagens_arla_32_arla_posto_arla_posto__["a" /* ArlaPostoPage */],
-            __WEBPACK_IMPORTED_MODULE_21__pages_modulo_viagens_abastecimento_abastecimento_foto_bomba_2_abastecimento_foto_bomba_2__["a" /* AbastecimentoFotoBomba_2Page */],
-            __WEBPACK_IMPORTED_MODULE_40__pages_modulo_viagens_abastecimento_abastecimento_foto_odometro_abastecimento_foto_odometro__["a" /* AbastecimentoFotoOdometroPage */],
-            __WEBPACK_IMPORTED_MODULE_24__pages_modulo_viagens_relatorios_relatorios_page_relatorios__["a" /* RelatoriosPage */],
-            __WEBPACK_IMPORTED_MODULE_26__pages_modulo_viagens_relatorios_despesas_relatorios_despesas_relatorios__["a" /* DespesasRelatoriosPage */],
-            __WEBPACK_IMPORTED_MODULE_25__pages_modulo_viagens_relatorios_receitas_relatorios_receitas_relatorios__["a" /* ReceitasRelatoriosPage */],
-            __WEBPACK_IMPORTED_MODULE_28__pages_modulo_viagens_relatorios_arla_relatorios_arla_relatorios__["a" /* ArlaRelatoriosPage */],
-            __WEBPACK_IMPORTED_MODULE_27__pages_modulo_viagens_relatorios_abastecimento_relatorios_abastecimento_relatorios__["a" /* AbastecimentoRelatoriosPage */],
-            __WEBPACK_IMPORTED_MODULE_31__pages_modulo_viagens_arla_32_fotoarla_fotoarla__["a" /* FotoarlaPage */]
-        ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_32__ionic_native_camera__["a" /* Camera */],
-            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_33__providers_foto_servico_foto_servico__["a" /* FotoServicoProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__ionic_native_screen_orientation__["a" /* ScreenOrientation */],
-            __WEBPACK_IMPORTED_MODULE_35__providers_storage_storage__["a" /* StorageProvider */],
-            __WEBPACK_IMPORTED_MODULE_36__providers_dados_dados__["a" /* DadosProvider */],
-            __WEBPACK_IMPORTED_MODULE_37__angular_common_http__["a" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_38__providers_enviar_enviar__["a" /* EnviarProvider */]
-        ]
-    })
-], AppModule);
-
-//# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ 456:
+/***/ 454:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(243);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_screen_orientation__ = __webpack_require__(245);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_storage_storage__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_screen_orientation__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_storage_storage__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_principal_principal_principal__ = __webpack_require__(130);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2408,17 +2289,17 @@ MyApp = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViagensPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abastecimento_rotas_abastecimento_rotas_abastecimento__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__geral_geral_page_geral_page__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__despesas_despesas_despesas__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__arla_32_rotas_arla_rotas_arla__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__receitas_rotas_receitas_rotas_receitas__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__geral_geral_page_geral_page__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__despesas_despesas_despesas__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__arla_32_rotas_arla_rotas_arla__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__receitas_rotas_receitas_rotas_receitas__ = __webpack_require__(141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_dados_dados__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_storage_storage__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__relatorios_relatorios_page_relatorios__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_enviar_enviar__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_storage_storage__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__relatorios_relatorios_page_relatorios__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_enviar_enviar__ = __webpack_require__(202);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2510,5 +2391,5 @@ ViagensPage = __decorate([
 
 /***/ })
 
-},[293]);
+},[291]);
 //# sourceMappingURL=main.js.map

@@ -21,7 +21,6 @@ import { GeralDadosMotoristaPage } from '../pages/modulo-viagens/geral/geral-dad
 import { DespesasPage } from '../pages/modulo-viagens/despesas/despesas/despesas';
 
 import { AbastecimentoPagamentoPage } from '../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento';
-import { AbastecimentoBomba1Page } from '../pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1';
 import { AbastecimentoBomba2Page } from '../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2';
 import { RotasAbastecimentoPage } from '../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento';
 import { AbastecimentoFotoBomba_2Page } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2';
@@ -48,10 +47,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
  
 import { EnviarProvider } from '../providers/enviar/enviar';
 
-import { BrMaskerModule } from 'brmasker-ionic-3';
-import { AbastecimentoFotoOdometroPage } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro';
-
-
+import { BrMaskerModule } from 'brmasker-ionic-3'; 
 
 @NgModule({
   declarations: [
@@ -62,8 +58,7 @@ import { AbastecimentoFotoOdometroPage } from '../pages/modulo-viagens/abastecim
     ReceitasFotoPage,
     DespesasPage,
     GeralPage,
-    AbastecimentoPagamentoPage, 
-    AbastecimentoBomba1Page,
+    AbastecimentoPagamentoPage,  
     AbastecimentoBomba2Page,
     RotasAbastecimentoPage,
     RotasArlaPage,
@@ -72,8 +67,7 @@ import { AbastecimentoFotoOdometroPage } from '../pages/modulo-viagens/abastecim
     GeralDadosMotoristaPage,
     ArlaPagPage,
     ArlaPostoPage, 
-    AbastecimentoFotoBomba_2Page,
-    AbastecimentoFotoOdometroPage,
+    AbastecimentoFotoBomba_2Page, 
     RelatoriosPage,
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
@@ -100,8 +94,7 @@ import { AbastecimentoFotoOdometroPage } from '../pages/modulo-viagens/abastecim
     ReceitasFotoPage,
     DespesasPage,
     GeralPage,
-    AbastecimentoPagamentoPage, 
-    AbastecimentoBomba1Page,
+    AbastecimentoPagamentoPage,  
     RotasAbastecimentoPage,
     AbastecimentoBomba2Page,
     RotasReceitasPage,
@@ -110,8 +103,7 @@ import { AbastecimentoFotoOdometroPage } from '../pages/modulo-viagens/abastecim
     GeralDadosMotoristaPage,
     ArlaPagPage,
     ArlaPostoPage, 
-    AbastecimentoFotoBomba_2Page,
-    AbastecimentoFotoOdometroPage,
+    AbastecimentoFotoBomba_2Page, 
     RelatoriosPage,
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
