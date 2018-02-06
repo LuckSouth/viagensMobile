@@ -1,7 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { Injectable } from '@angular/core'; 
+import 'rxjs/add/operator/map'; 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { StorageProvider } from "../../providers/storage/storage";
 

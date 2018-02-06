@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { MyApp } from '../../app/app.component';
-import { PrincipalPage } from '../../pages/principal/principal/principal';
+import { MyApp } from '../../app/app.component'; 
 
 @Injectable()
 export class StorageProvider {
@@ -16,7 +15,7 @@ export class StorageProvider {
   login = {
     isLoggedIn: false,
     name: "",
-    email:""
+    email: ""
   }
 
   //Dados despesas
@@ -275,9 +274,53 @@ export class StorageProvider {
   //   }
   // }
 
-    delete(id){
-        return this.storage.remove(id).
-        then(()=> true)
+  delete(id) {
+    return this.storage.remove(id).
+      then(() => true)
+  }
+
+
+
+
+  //Máscara dos valores
+  private n: any;
+  private len: any;
+
+  detectAmount(v): string {
+    if (v) {
+      this.n = v[v.length - 1];
+      if (isNaN(this.n)) {
+        v = v.substring(0, v.length - 1);
+        console.log(v)
+        return v;
+      }
+      v = this.fixAmount(v);
+      return v;
     }
+  }
+
+  private fixAmount(a): string {
+    let period = a.indexOf(".");
+    // console.log(a)
+    if (period > -1) {
+      a = a.substring(0, period) + a.substring(period + 1);
+    }
+    this.len = a.length;
+    while (this.len < 3) {
+      a = "0" + a;
+      this.len = a.length;
+    }
+    a = a.substring(0, this.len - 2) + "." + a.substring(this.len - 2, this.len);
+    while (a.length > 4 && (a[0] == '0')) {
+      a = a.substring(1)
+    }
+    if (a[0] == ".") {
+      a = "0" + a;
+    }
+    return (a);
+  }
+
+
+
 
 }

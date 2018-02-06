@@ -8,8 +8,7 @@
   <ion-list>
     
       <ion-item>
-        <ion-label floating>Despesas</ion-label>
-        <ion-select [(ngModel)]="storageProvider.despesas.despesas" required #iptDespesa="ngModel">
+        <ion-select placeholder="Despesas" [(ngModel)]="storageProvider.despesas.despesas" required #iptDespesa="ngModel">
           <ion-option value="Lanche">Lanche</ion-option>
           <ion-option value="Almoço">Almoço</ion-option>
           <ion-option value="Jantar">Jantar</ion-option>
@@ -24,12 +23,10 @@
       </ion-item>
     
   <ion-item>
-        <ion-label>Data</ion-label>
-        <ion-input type="date" [(ngModel)]="storageProvider.despesas.dataDespesas" required #iptData="ngModel"></ion-input>
+        <ion-input type="date" placeholder="Data" [(ngModel)]="storageProvider.despesas.dataDespesas" required #iptData="ngModel"></ion-input>
       </ion-item> 
       <ion-item>
-        <ion-label floating>Valor</ion-label>
-        <ion-input type="float" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>
+        <ion-input type="float" placeholder="0,00" [brmasker]="{money: true}" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>
       </ion-item> 
   </ion-list> 
   <button ion-button full (click)="salvar()" [disabled]="!valida()" color = "tijuca" >Adicionar</button>

@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 483:
+/***/ 486:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DespesasRelatoriosPageModule", function() { return DespesasRelatoriosPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RelatoriosPageModule", function() { return RelatoriosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__despesas_relatorios__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__relatorios__ = __webpack_require__(146);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DespesasRelatoriosPageModule = (function () {
-    function DespesasRelatoriosPageModule() {
+var RelatoriosPageModule = (function () {
+    function RelatoriosPageModule() {
     }
-    return DespesasRelatoriosPageModule;
+    return RelatoriosPageModule;
 }());
-DespesasRelatoriosPageModule = __decorate([
+RelatoriosPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__despesas_relatorios__["a" /* DespesasRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_2__relatorios__["a" /* RelatoriosPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__despesas_relatorios__["a" /* DespesasRelatoriosPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__relatorios__["a" /* RelatoriosPage */]),
         ],
     })
-], DespesasRelatoriosPageModule);
+], RelatoriosPageModule);
 
-//# sourceMappingURL=despesas-relatorios.module.js.map
+//# sourceMappingURL=relatorios.module.js.map
 
 /***/ })
 

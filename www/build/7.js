@@ -1,14 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 480:
+/***/ 484:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RotasReceitasPageModule", function() { return RotasReceitasPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArlaRelatoriosPageModule", function() { return ArlaRelatoriosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rotas_receitas__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__arla_relatorios__ = __webpack_require__(149);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RotasReceitasPageModule = (function () {
-    function RotasReceitasPageModule() {
+var ArlaRelatoriosPageModule = (function () {
+    function ArlaRelatoriosPageModule() {
     }
-    return RotasReceitasPageModule;
+    return ArlaRelatoriosPageModule;
 }());
-RotasReceitasPageModule = __decorate([
+ArlaRelatoriosPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__rotas_receitas__["a" /* RotasReceitasPage */],
+            __WEBPACK_IMPORTED_MODULE_2__arla_relatorios__["a" /* ArlaRelatoriosPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rotas_receitas__["a" /* RotasReceitasPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__arla_relatorios__["a" /* ArlaRelatoriosPage */]),
         ],
     })
-], RotasReceitasPageModule);
+], ArlaRelatoriosPageModule);
 
-//# sourceMappingURL=rotas-receitas.module.js.map
+//# sourceMappingURL=arla-relatorios.module.js.map
 
 /***/ })
 

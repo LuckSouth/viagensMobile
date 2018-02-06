@@ -6,15 +6,24 @@ import { DadosProvider } from "../../../../providers/dados/dados";
 import { ViagensPage } from "../../viagens/viagens";
 
 
+
+
+
 @IonicPage()
 @Component({
   selector: 'page-despesas',
   templateUrl: 'despesas.html',
 })
-export class DespesasPage {
 
-  despesa="";
-  motorista = "bino"
+
+export class DespesasPage {
+    
+
+
+  despesa = "";
+  motorista = "bino";
+
+
 
 
   constructor(public navCtrl: NavController,
@@ -29,13 +38,18 @@ export class DespesasPage {
     this.navCtrl.push(ViagensPage);
   }
 
+  amountChange() {
+    this.storageProvider.despesas.valorDespesas = this.storageProvider.detectAmount(this.storageProvider.despesas.valorDespesas);
+  }
+
+
   valida() {
     if (this.storageProvider.despesas.despesas == "" || this.storageProvider.despesas.dataDespesas == "" || this.storageProvider.despesas.valorDespesas == "") {
-        return false
-      } else {
-        return true
-      }
+      return false
+    } else {
+      return true
     }
+  }
 
 
   showAlert() {
@@ -50,8 +64,8 @@ export class DespesasPage {
   }
 
 
-  salvar(){
-    this.dados.despesa(this.storageProvider.despesas.motorista,this.storageProvider.despesas.despesas,this.storageProvider.despesas.dataDespesas, this.storageProvider.despesas.valorDespesas);
+  salvar() {
+    this.dados.despesa(this.storageProvider.despesas.motorista, this.storageProvider.despesas.despesas, this.storageProvider.despesas.dataDespesas, this.storageProvider.despesas.valorDespesas);
     this.navCtrl.pop();
 
   }

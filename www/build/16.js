@@ -1,14 +1,14 @@
 webpackJsonp([16],{
 
-/***/ 471:
+/***/ 481:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArlaPostoModule", function() { return ArlaPostoModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RotasArlaPageModule", function() { return RotasArlaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__arla_posto__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rotas_arla__ = __webpack_require__(140);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ArlaPostoModule = (function () {
-    function ArlaPostoModule() {
+var RotasArlaPageModule = (function () {
+    function RotasArlaPageModule() {
     }
-    return ArlaPostoModule;
+    return RotasArlaPageModule;
 }());
-ArlaPostoModule = __decorate([
+RotasArlaPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__arla_posto__["a" /* ArlaPostoPage */],
+            __WEBPACK_IMPORTED_MODULE_2__rotas_arla__["a" /* RotasArlaPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__arla_posto__["a" /* ArlaPostoPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rotas_arla__["a" /* RotasArlaPage */]),
         ],
     })
-], ArlaPostoModule);
+], RotasArlaPageModule);
 
-//# sourceMappingURL=arla-posto.module.js.map
+//# sourceMappingURL=rotas-arla.module.js.map
 
 /***/ })
 

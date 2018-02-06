@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 484:
+/***/ 488:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReceitasRelatoriosPageModule", function() { return ReceitasRelatoriosPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViagensPageModule", function() { return ViagensPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__receitas_relatorios__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__viagens__ = __webpack_require__(72);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ReceitasRelatoriosPageModule = (function () {
-    function ReceitasRelatoriosPageModule() {
+var ViagensPageModule = (function () {
+    function ViagensPageModule() {
     }
-    return ReceitasRelatoriosPageModule;
+    return ViagensPageModule;
 }());
-ReceitasRelatoriosPageModule = __decorate([
+ViagensPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__receitas_relatorios__["a" /* ReceitasRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_2__viagens__["a" /* ViagensPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__receitas_relatorios__["a" /* ReceitasRelatoriosPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__viagens__["a" /* ViagensPage */]),
         ],
     })
-], ReceitasRelatoriosPageModule);
+], ViagensPageModule);
 
-//# sourceMappingURL=receitas-relatorios.module.js.map
+//# sourceMappingURL=viagens.module.js.map
 
 /***/ })
 
