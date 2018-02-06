@@ -4,7 +4,6 @@ import { FotoServicoProvider } from '../../../../providers/foto-servico/foto-ser
 
 import { ReceitasFornecedorPage } from '../receita-fornecedor/receita-fornecedor';
 import { ReceitasFotoPage } from '../receitas-foto/receitas-foto';
-import { ReceitasQntPage } from '../receitas-qnt/receitas-qnt';
 import { StorageProvider } from '../../../../providers/storage/storage';
 import { DadosProvider } from "../../../../providers/dados/dados";
 
@@ -18,7 +17,6 @@ export class RotasReceitasPage {
   @ViewChild(Slides) slides: Slides;
   @ViewChild(ReceitasFornecedorPage) ReceitasFornecedor: ReceitasFornecedorPage;
   @ViewChild(ReceitasFotoPage) ReceitasFoto: ReceitasFotoPage;
-  @ViewChild(ReceitasQntPage) ReceitasQnt: ReceitasQntPage;
   // @ViewChild(Receitas) receitas: Receitas;
 
   contador: number = 1;

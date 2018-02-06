@@ -83,13 +83,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
-<<<<<<< HEAD
     AbastecimentoRelatoriosPage,
-    InicioPage,
     FotoarlaPage
-=======
-    AbastecimentoRelatoriosPage 
->>>>>>> 304f9981d93e20dd77cb86930ccaef9953229c65
   ],
   imports: [
     BrowserModule,
@@ -128,13 +123,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
-<<<<<<< HEAD
     AbastecimentoRelatoriosPage,
-    InicioPage,
     FotoarlaPage
-=======
-    AbastecimentoRelatoriosPage
->>>>>>> 304f9981d93e20dd77cb86930ccaef9953229c65
   ],
   providers: [
     StatusBar,
