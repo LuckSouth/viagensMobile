@@ -4,10 +4,10 @@
     </ion-toolbar>
 </ion-header>
 <ion-item>
-    <ion-label floating>Litros</ion-label>
+    <ion-label stacked><span class="input">Litros</span></ion-label>
     <ion-input type="number" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>
 </ion-item>
 <ion-item>
-    <ion-label floating>Preço/L</ion-label>
+    <ion-label stacked><span class="input">Preço/L</span></ion-label>
     <ion-input type="number" min = "0"[(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>
 </ion-item>

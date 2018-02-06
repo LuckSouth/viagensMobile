@@ -45,7 +45,7 @@ export class MyApp {
 
       
       this.googlePlus.trySilentLogin({}).then(
-        () => this.rootPage = PrincipalPage
+        () => this.rootPage = LoginPage
       ).catch(res => this.rootPage = LoginPage);
     });
 

@@ -27810,6 +27810,21 @@ ion-navbar {
   text-align: center;
 }
 
+.input {
+  color: black;
+  font-size: 2vh;
+}
+
+page-login img {
+  margin: 0;
+  margin-top: 7vh;
+  position: relative;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 page-rotas-abastecimento .button-camera {
   margin-top: -16vh;
   margin-left: 44vw;

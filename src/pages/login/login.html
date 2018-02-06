@@ -1,14 +1,26 @@
-<!-- <ion-header>
-
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-
-</ion-header> -->
+<ion-header>
+  <ion-navbar color="tijuca">
+    <ion-title padding>Login</ion-title>
+  </ion-navbar>
+</ion-header>
 
 
 <ion-content padding>
-  <button ion-button (click)="logout()">Logout Gmail</button>
 
-  <button ion-button (click)="login()">Login Gmail</button>
+  
+  <img src="../assets/images/tijuca-logo.png" class="img">
+  <br>
+  <ion-item>
+    <ion-label stacked><span class="input">Usuário</span></ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked><span class="input">Senha</span></ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <br>
+
+  <button ion-button full color="tijuca">Login</button>
+
 </ion-content>

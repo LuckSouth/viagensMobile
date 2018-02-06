@@ -13,9 +13,8 @@ export class DadosProvider {
     console.log('Hello DadosProvider Provider');
   }
 
-  private baseURI: string = "http://earhbstfdjygt.tk/";
+  private baseURI: string = "http://192.168.10.160/";
   public hideForm: boolean = false;
-
 
   despesa(motorista: string, despesa: string, data: string, valor: string, opcional?: boolean): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),

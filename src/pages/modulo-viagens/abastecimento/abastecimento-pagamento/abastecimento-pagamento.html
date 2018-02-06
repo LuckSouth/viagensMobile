@@ -15,17 +15,17 @@
   </ion-item>
 
   <ion-item>
-    <ion-label floating>Posto</ion-label>
+    <ion-label stacked><span class="input">Posto</span></ion-label>
     <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (ngModelChange)="valida()"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label>Data</ion-label>
+    <ion-label stacked><span class="input">Data</span></ion-label>
     <ion-input type="date" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label>Tipo de pagamento</ion-label>
+    <ion-label stacked><span class="input">Tipo de pagamento</span></ion-label>
     <ion-select [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()">
       <ion-option value="Dinheiro">Dinheiro</ion-option>
       <ion-option value="crédito">Crédito</ion-option>
