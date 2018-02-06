@@ -48,8 +48,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { StorageProvider } from '../providers/storage/storage'
 import { DadosProvider } from '../providers/dados/dados';
 import { HttpClient, HttpClientModule } from "@angular/common/http"; 
-
-import { LoginPage } from '../pages/login/login'; 
+ 
 import { EnviarProvider } from '../providers/enviar/enviar';
 
 import { BrMaskerModule } from 'brmasker-ionic-3';

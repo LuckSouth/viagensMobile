@@ -5,34 +5,46 @@
 </ion-header>
 
 
-<ion-list>
-  <ion-item>
-    <ion-label>Tipo</ion-label>
-    <ion-select [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()">
-      <ion-option value="externo">Externo</ion-option>
-      <ion-option value="int">Interno</ion-option>
-    </ion-select>
-  </ion-item>
+<ion-item>
+  <ion-label>Tipo</ion-label>
+  <ion-select [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()">
+    <ion-option value="externo">Externo</ion-option>
+    <ion-option value="int">Interno</ion-option>
+  </ion-select>
+</ion-item>
 
-  <ion-item>
-    <ion-label floating>Posto</ion-label>
-    <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (ngModelChange)="valida()"></ion-input>
-  </ion-item>
+<ion-item>
+  <ion-label select>Posto</ion-label>
+  <ion-select [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (ngModelChange)="valida()">
+    <ion-option value="externo">Ipiranga</ion-option>
+    <ion-option value="externo">BR</ion-option>
+    <ion-option value="externo">Clementina</ion-option>
+  </ion-select>
+</ion-item>
 
-  <ion-item>
-    <ion-label>Data</ion-label>
-    <ion-input type="date" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>
-  </ion-item>
+<ion-item>
+  <ion-label>Tipo de pagamento</ion-label>
+  <ion-select [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()">
+    <ion-option value="Dinheiro">Dinheiro</ion-option>
+    <ion-option value="crédito">Crédito</ion-option>
+    <ion-option value="Débito"> Débito</ion-option>
+    <ion-option value="Cheque">Cheque</ion-option>
+  </ion-select>
+</ion-item>
 
-  <ion-item>
-    <ion-label>Tipo de pagamento</ion-label>
-    <ion-select [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()">
-      <ion-option value="Dinheiro">Dinheiro</ion-option>
-      <ion-option value="crédito">Crédito</ion-option>
-      <ion-option value="Débito"> Débito</ion-option>
-      <ion-option value="Cheque">Cheque</ion-option>
-    </ion-select>
-  </ion-item>
-
-
-</ion-list>
+<ion-item>
+  <ion-label stacked>Data</ion-label>
+  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked> Odometro</ion-label>
+  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked>Litros</ion-label>
+  <ion-input type="number" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked>Preço/L</ion-label>
+  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>
+</ion-item>
