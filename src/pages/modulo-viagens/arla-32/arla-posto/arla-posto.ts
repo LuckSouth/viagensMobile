@@ -14,8 +14,10 @@ export class ArlaPostoPage {
     public navParams: NavParams,
     public storageProvider: StorageProvider) {
   }
-  valida() {
 
+  Data: string = new Date().toISOString();
+  valida() {
+    this.storageProvider.arla.dataArla = this.Data;
     if (this.storageProvider.arla.precoArla == "" || this.storageProvider.arla.pagArla == "" || this.storageProvider.arla.tipoArla == "" || this.storageProvider.arla.dataArla == "" || this.storageProvider.arla.postoArla == "") {
     } else {
       return true;

@@ -5,10 +5,10 @@ webpackJsonp([5],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReceitasRelatoriosPageModule", function() { return ReceitasRelatoriosPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DespesasRelatoriosPageModule", function() { return DespesasRelatoriosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__receitas_relatorios__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__despesas_relatorios__ = __webpack_require__(145);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ReceitasRelatoriosPageModule = (function () {
-    function ReceitasRelatoriosPageModule() {
+var DespesasRelatoriosPageModule = (function () {
+    function DespesasRelatoriosPageModule() {
     }
-    return ReceitasRelatoriosPageModule;
+    return DespesasRelatoriosPageModule;
 }());
-ReceitasRelatoriosPageModule = __decorate([
+DespesasRelatoriosPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__receitas_relatorios__["a" /* ReceitasRelatoriosPage */],
+            __WEBPACK_IMPORTED_MODULE_2__despesas_relatorios__["a" /* DespesasRelatoriosPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__receitas_relatorios__["a" /* ReceitasRelatoriosPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__despesas_relatorios__["a" /* DespesasRelatoriosPage */]),
         ],
     })
-], ReceitasRelatoriosPageModule);
+], DespesasRelatoriosPageModule);
 
-//# sourceMappingURL=receitas-relatorios.module.js.map
+//# sourceMappingURL=despesas-relatorios.module.js.map
 
 /***/ })
 

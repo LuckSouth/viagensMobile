@@ -5,10 +5,10 @@ webpackJsonp([21],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbastecimentoPagamentoPageModule", function() { return AbastecimentoPagamentoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbastecimentoFotoBomba_2PageModule", function() { return AbastecimentoFotoBomba_2PageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abastecimento_pagamento__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abastecimento_foto_bomba_2__ = __webpack_require__(290);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AbastecimentoPagamentoPageModule = (function () {
-    function AbastecimentoPagamentoPageModule() {
+var AbastecimentoFotoBomba_2PageModule = (function () {
+    function AbastecimentoFotoBomba_2PageModule() {
     }
-    return AbastecimentoPagamentoPageModule;
+    return AbastecimentoFotoBomba_2PageModule;
 }());
-AbastecimentoPagamentoPageModule = __decorate([
+AbastecimentoFotoBomba_2PageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */],
+            __WEBPACK_IMPORTED_MODULE_2__abastecimento_foto_bomba_2__["a" /* AbastecimentoFotoBomba_2Page */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__abastecimento_foto_bomba_2__["a" /* AbastecimentoFotoBomba_2Page */]),
         ],
     })
-], AbastecimentoPagamentoPageModule);
+], AbastecimentoFotoBomba_2PageModule);
 
-//# sourceMappingURL=abastecimento-pagamento.module.js.map
+//# sourceMappingURL=abastecimento-foto-bomba-2.module.js.map
 
 /***/ })
 

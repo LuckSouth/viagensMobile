@@ -6,15 +6,15 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 import { StorageProvider } from '../providers/storage/storage';  
 import { Storage } from '@ionic/storage';  
-import { PrincipalPage } from '../pages/principal/principal/principal';
-import { LoginPage } from '../pages/login/login';
+import { PrincipalPage } from '../pages/principal/principal/principal'; 
+import { ViagensPage } from '../pages/modulo-viagens/viagens/viagens';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
-  rootPage: any = LoginPage;
+  rootPage: any = ViagensPage; 
   storages: any;
   listaAuth;
   chaveAuth: string = "Auth";
@@ -23,7 +23,7 @@ export class MyApp {
 
   constructor(
     platform: Platform,
-    statusBar: StatusBar,
+    statusBar: StatusBar, 
     splashScreen: SplashScreen,
     private screenOrientation: ScreenOrientation,
     public storageProvider: StorageProvider,

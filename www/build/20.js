@@ -5,10 +5,10 @@ webpackJsonp([20],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RotasAbastecimentoPageModule", function() { return RotasAbastecimentoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbastecimentoPagamentoPageModule", function() { return AbastecimentoPagamentoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rotas_abastecimento__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__abastecimento_pagamento__ = __webpack_require__(132);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RotasAbastecimentoPageModule = (function () {
-    function RotasAbastecimentoPageModule() {
+var AbastecimentoPagamentoPageModule = (function () {
+    function AbastecimentoPagamentoPageModule() {
     }
-    return RotasAbastecimentoPageModule;
+    return AbastecimentoPagamentoPageModule;
 }());
-RotasAbastecimentoPageModule = __decorate([
+AbastecimentoPagamentoPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__rotas_abastecimento__["a" /* RotasAbastecimentoPage */],
+            __WEBPACK_IMPORTED_MODULE_2__abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__rotas_abastecimento__["a" /* RotasAbastecimentoPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__abastecimento_pagamento__["a" /* AbastecimentoPagamentoPage */]),
         ],
     })
-], RotasAbastecimentoPageModule);
+], AbastecimentoPagamentoPageModule);
 
-//# sourceMappingURL=rotas-abastecimento.module.js.map
+//# sourceMappingURL=abastecimento-pagamento.module.js.map
 
 /***/ })
 

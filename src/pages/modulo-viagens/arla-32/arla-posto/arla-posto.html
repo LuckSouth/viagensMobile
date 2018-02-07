@@ -6,29 +6,29 @@
   
   <div class="slideTop">
   <ion-item>
-    <ion-label stacked>Tipo</ion-label>
+    <ion-label stacked><span class="input">Tipo</span></ion-label>
     <ion-input type="text" [(ngModel)]="storageProvider.arla.tipoArla" (click)="valida()"></ion-input>
   </ion-item>
   
   <ion-item>
-      <ion-label stacked>Posto</ion-label>
+      <ion-label stacked><span class="input">Posto</span></ion-label>
     <ion-input type="text" [(ngModel)]="storageProvider.arla.postoArla" (click)="valida()"></ion-input>
   </ion-item>
   
   <ion-item>
-      <ion-label stacked>Pagamento</ion-label>
+      <ion-label stacked><span class="input">Pagamento</span></ion-label>
       <ion-input type="text" [(ngModel)]="storageProvider.arla.pagArla" (click)="valida()"></ion-input>
-    </ion-item>
+    </ion-item> 
   
-  <ion-item>
-    <ion-label stacked>Data</ion-label>
-    <ion-input type="text" [(ngModel)]="storageProvider.arla.dataArla" (ngModelChange)="valida()"></ion-input>
-  </ion-item>
+<ion-item>
+  <ion-label stacked><span class="input">Preço/L</span></ion-label>
+  <ion-input type="float" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.arla.precoArla" (click)="valida()"></ion-input>
+</ion-item>
   
-  <ion-item>
-      <ion-label stacked>Preço/L</ion-label>
-      <ion-input type="number" min="0" [(ngModel)]="storageProvider.arla.precoArla" (ngModelChange)="valida()"></ion-input>
-    </ion-item>
+    <ion-item>
+        <ion-label stacked><span class="input">Data</span></ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Data"></ion-datetime>
+      </ion-item>
   </div>
   
   

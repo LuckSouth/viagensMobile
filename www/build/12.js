@@ -5,10 +5,10 @@ webpackJsonp([12],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GeralPageModule", function() { return GeralPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GeralDadosViagemModule", function() { return GeralDadosViagemModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__geral_page__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__geral_dados_viagem__ = __webpack_require__(135);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var GeralPageModule = (function () {
-    function GeralPageModule() {
+var GeralDadosViagemModule = (function () {
+    function GeralDadosViagemModule() {
     }
-    return GeralPageModule;
+    return GeralDadosViagemModule;
 }());
-GeralPageModule = __decorate([
+GeralDadosViagemModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__geral_page__["a" /* GeralPage */],
+            __WEBPACK_IMPORTED_MODULE_2__geral_dados_viagem__["a" /* GeralDadosViagemPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__geral_page__["a" /* GeralPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__geral_dados_viagem__["a" /* GeralDadosViagemPage */]),
         ],
     })
-], GeralPageModule);
+], GeralDadosViagemModule);
 
-//# sourceMappingURL=geral-page.module.js.map
+//# sourceMappingURL=geral-dados-viagem.module.js.map
 
 /***/ })
 

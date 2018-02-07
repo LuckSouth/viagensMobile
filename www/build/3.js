@@ -1,18 +1,14 @@
 webpackJsonp([3],{
 
-<<<<<<< HEAD
-/***/ 479:
-=======
 /***/ 480:
->>>>>>> b100415a0c7424c473890c5fc4c0acab7669d893
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViagensPageModule", function() { return ViagensPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RelatoriosPageModule", function() { return RelatoriosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__viagens__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__relatorios__ = __webpack_require__(144);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ViagensPageModule = (function () {
-    function ViagensPageModule() {
+var RelatoriosPageModule = (function () {
+    function RelatoriosPageModule() {
     }
-    return ViagensPageModule;
+    return RelatoriosPageModule;
 }());
-ViagensPageModule = __decorate([
+RelatoriosPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__viagens__["a" /* ViagensPage */],
+            __WEBPACK_IMPORTED_MODULE_2__relatorios__["a" /* RelatoriosPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__viagens__["a" /* ViagensPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__relatorios__["a" /* RelatoriosPage */]),
         ],
     })
-], ViagensPageModule);
+], RelatoriosPageModule);
 
-//# sourceMappingURL=viagens.module.js.map
+//# sourceMappingURL=relatorios.module.js.map
 
 /***/ })
 
