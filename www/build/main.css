@@ -27825,9 +27825,14 @@ page-login img {
   transform: translate(-50%, -50%);
 }
 
+page-abastecimento-bomba-2 .slideTop {
+  width: 96vw;
+  margin-top: -37.5vh;
+}
+
 page-abastecimento-pagamento .slideTop {
   width: 96vw;
-  margin-top: -20vh;
+  margin-top: -30vh;
 }
 
 page-rotas-abastecimento .button-camera {
