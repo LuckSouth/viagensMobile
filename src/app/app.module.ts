@@ -84,7 +84,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
     AbastecimentoRelatoriosPage,
-    FotoarlaPage
+    FotoarlaPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -124,7 +125,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
     AbastecimentoRelatoriosPage,
-    FotoarlaPage
+    FotoarlaPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

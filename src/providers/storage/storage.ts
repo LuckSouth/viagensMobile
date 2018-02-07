@@ -15,7 +15,6 @@ export class StorageProvider {
   login = {
     isLoggedIn: false,
     name: "",
-    email: ""
   }
 
   //Dados despesas
@@ -164,7 +163,6 @@ export class StorageProvider {
   listarReceitas() {
     return this.listaReceitas;
   }
-
 
   tamanhoAbastecimento() {
     this.arrayAbastecimento = this.listar()
@@ -319,8 +317,5 @@ export class StorageProvider {
     }
     return (a);
   }
-
-
-
 
 }
