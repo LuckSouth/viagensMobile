@@ -48,6 +48,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { EnviarProvider } from '../providers/enviar/enviar';
 
 import { BrMaskerModule } from 'brmasker-ionic-3'; 
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
     AbastecimentoRelatoriosPage,
-    FotoarlaPage
+    FotoarlaPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -109,7 +111,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
     AbastecimentoRelatoriosPage,
-    FotoarlaPage
+    FotoarlaPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

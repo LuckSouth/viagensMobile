@@ -20,9 +20,10 @@ export class AbastecimentoBomba2Page {
     public storageProvider: StorageProvider) {
   }
 
-  valida() {
+ 
+  valida() { 
     
-        if (this.storageProvider.abastecimento.litrosBomb2 == "" || this.storageProvider.abastecimento.precoBomb2 == "") {
+        if ( this.storageProvider.abastecimento.litrosBomb1 == "" || this.storageProvider.abastecimento.odometro == "" || this.storageProvider.abastecimento.litrosBomb2 == "" ){
           return false;
         }else{
           return true;
