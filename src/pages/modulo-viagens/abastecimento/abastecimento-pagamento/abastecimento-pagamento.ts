@@ -17,9 +17,12 @@ export class AbastecimentoPagamentoPage {
 
   }
 
+  today = Date.now();
+  
+
   valida() {
 
-    if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "") {
+    if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "" || this.storageProvider.abastecimento.odometro == "" || this.storageProvider.abastecimento.precoBomb1 == "") {
       return false;
     } else {
       return true;
