@@ -27815,6 +27815,11 @@ ion-navbar {
   font-size: 2vh;
 }
 
+.slideTop {
+  width: 96vw;
+  margin-top: -30vh;
+}
+
 page-login img {
   margin: 0;
   margin-top: 7vh;

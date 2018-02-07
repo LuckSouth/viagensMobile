@@ -6,8 +6,6 @@ import { HttpClient } from '@angular/common/http';
 
 import { PrincipalPage } from '../principal/principal/principal';
 import { StorageProvider } from '../../providers/storage/storage';
-import { HttpClient } from '@angular/common/http';
-
 
 @IonicPage()
 @Component({

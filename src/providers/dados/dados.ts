@@ -8,7 +8,7 @@ export class DadosProvider {
 
   constructor(public http: HttpClient,
     public storage: StorageProvider) {
-    console.log('Hello DadosProvider Provider');
+    console.log('Hello DadosProvider Provider'); 
   }
 
   private baseURI: string = "http://192.168.10.160/";

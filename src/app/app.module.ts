@@ -21,13 +21,9 @@ import { GeralDadosMotoristaPage } from '../pages/modulo-viagens/geral/geral-dad
 import { DespesasPage } from '../pages/modulo-viagens/despesas/despesas/despesas';
 
 import { AbastecimentoPagamentoPage } from '../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento';
-import { AbastecimentoOdometroPage } from '../pages/modulo-viagens/abastecimento/abastecimento-odometro/abastecimento-odometro';
-import { AbastecimentoBomba1Page } from '../pages/modulo-viagens/abastecimento/abastecimento-bomba-1/abastecimento-bomba-1';
 import { AbastecimentoBomba2Page } from '../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2';
 import { RotasAbastecimentoPage } from '../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento';
-import { AbastecimentoFotoBomba_1Page } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-1/abastecimento-foto-bomba-1';
 import { AbastecimentoFotoBomba_2Page } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2';
-import { AbastecimentoFotoOdometroPage } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-odometro/abastecimento-foto-odometro';
 
 import { RotasArlaPage } from '../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla';
 import { RotasReceitasPage } from '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas';
@@ -48,13 +44,11 @@ import { IonicStorageModule } from '@ionic/storage';
 import { StorageProvider } from '../providers/storage/storage'
 import { DadosProvider } from '../providers/dados/dados';
 import { HttpClient, HttpClientModule } from "@angular/common/http"; 
-
-import { LoginPage } from '../pages/login/login'; 
+ 
 import { EnviarProvider } from '../providers/enviar/enviar';
 
-import { BrMaskerModule } from 'brmasker-ionic-3';
-
-
+import { BrMaskerModule } from 'brmasker-ionic-3'; 
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -65,9 +59,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ReceitasFotoPage,
     DespesasPage,
     GeralPage,
-    AbastecimentoPagamentoPage,
-    AbastecimentoOdometroPage,
-    AbastecimentoBomba1Page,
+    AbastecimentoPagamentoPage,  
     AbastecimentoBomba2Page,
     RotasAbastecimentoPage,
     RotasArlaPage,
@@ -75,10 +67,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
     ArlaPagPage,
-    ArlaPostoPage,
-    AbastecimentoFotoBomba_1Page,
-    AbastecimentoFotoBomba_2Page,
-    AbastecimentoFotoOdometroPage,
+    ArlaPostoPage, 
+    AbastecimentoFotoBomba_2Page, 
     RelatoriosPage,
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
@@ -106,9 +96,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     ReceitasFotoPage,
     DespesasPage,
     GeralPage,
-    AbastecimentoPagamentoPage,
-    AbastecimentoOdometroPage,
-    AbastecimentoBomba1Page,
+    AbastecimentoPagamentoPage,  
     RotasAbastecimentoPage,
     AbastecimentoBomba2Page,
     RotasReceitasPage,
@@ -116,10 +104,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
     ArlaPagPage,
-    ArlaPostoPage,
-    AbastecimentoFotoBomba_1Page,
-    AbastecimentoFotoBomba_2Page,
-    AbastecimentoFotoOdometroPage,
+    ArlaPostoPage, 
+    AbastecimentoFotoBomba_2Page, 
     RelatoriosPage,
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
