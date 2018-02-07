@@ -18,6 +18,7 @@ $opt = array(
 $pdo = new PDO($dsn, $un, $pwd, $opt);
 $data = array();
 
+
 // Attempt to query database table and retrieve data
 try {
     $stmt = $pdo->query("SELECT `senha` FROM `usuarios` WHERE `login` = 'estagiario'");
