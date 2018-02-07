@@ -22,9 +22,10 @@
 
 <ion-item>
   <ion-label stacked>Data</ion-label>
-  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>
+  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"> <p>{{today | date: 'ddMMyyyy'}}</p></ion-input>
 </ion-item>
- 
+
+{{today | date: 'ddMMyyyy'}}
 <ion-item>
   <ion-label stacked> Odometro</ion-label>
   <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>
@@ -32,16 +33,6 @@
 
 <ion-item> 
   <ion-label stacked >Preço/L</ion-label>
-  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>
-  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>
-</ion-item> 
-
-<ion-item>
-  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>
-  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>
+  <ion-input type="float" min="0" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>
 </ion-item> 
 </div>

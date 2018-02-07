@@ -578,9 +578,10 @@ var AbastecimentoPagamentoPage = (function () {
     function AbastecimentoPagamentoPage(navCtrl, storageProvider) {
         this.navCtrl = navCtrl;
         this.storageProvider = storageProvider;
+        this.today = Date.now();
     }
     AbastecimentoPagamentoPage.prototype.valida = function () {
-        if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "") {
+        if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "" || this.storageProvider.abastecimento.odometro == "" || this.storageProvider.abastecimento.precoBomb1 == "") {
             return false;
         }
         else {
@@ -591,12 +592,12 @@ var AbastecimentoPagamentoPage = (function () {
 }());
 AbastecimentoPagamentoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-pagamento',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/'<ion-header>\n  <ion-toolbar color="tijuca">\n    <ion-title padding>Pagamento</ion-title>\n  </ion-toolbar>\n</ion-header>\n \n<div class="slideTop">\n<ion-item>\n  <ion-label stacked>Tipo</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Posto</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Pagamento</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n \n<ion-item>\n  <ion-label stacked> Odometro</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n</div>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/,
+        selector: 'page-abastecimento-pagamento',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/'<ion-header>\n  <ion-toolbar color="tijuca">\n    <ion-title padding>Pagamento</ion-title>\n  </ion-toolbar>\n</ion-header>\n \n<div class="slideTop">\n<ion-item>\n  <ion-label stacked>Tipo</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Posto</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Pagamento</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"> <p>{{today | date: \'ddMMyyyy\'}}</p></ion-input>\n</ion-item>\n\n{{today | date: \'ddMMyyyy\'}}\n<ion-item>\n  <ion-label stacked> Odometro</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="float" min="0" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n</div>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]) === "function" && _b || Object])
 ], AbastecimentoPagamentoPage);
 
+var _a, _b;
 //# sourceMappingURL=abastecimento-pagamento.js.map
 
 /***/ }),
@@ -642,7 +643,7 @@ var AbastecimentoBomba2Page = (function () {
 }());
 AbastecimentoBomba2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-bomba-2',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/'<ion-header>\n\n    <ion-toolbar color = "tijuca">\n        <ion-title padding>Bomba 2</ion-title>\n    </ion-toolbar>\n\n</ion-header>\n \n<ion-list>\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n</ion-list>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/,
+        selector: 'page-abastecimento-bomba-2',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/'<ion-header>\n\n    <ion-toolbar color = "tijuca">\n        <ion-title padding>Bomba 2</ion-title>\n    </ion-toolbar>\n\n</ion-header>\n \n<ion-list>\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n\n\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n</ion-list>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1569,63 +1570,63 @@ var map = {
 		1
 	],
 	"../pages/login/login.module": [
-		459,
+		473,
 		0
 	],
 	"../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.module": [
-		460,
+		459,
 		23
 	],
 	"../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.module": [
-		461,
+		460,
 		22
 	],
 	"../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.module": [
-		462,
+		461,
 		21
 	],
 	"../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.module": [
-		463,
+		462,
 		20
 	],
 	"../pages/modulo-viagens/arla-32/arla-pag/arla-pag.module": [
-		464,
+		463,
 		19
 	],
 	"../pages/modulo-viagens/arla-32/arla-posto/arla-posto.module": [
-		465,
+		464,
 		18
 	],
 	"../pages/modulo-viagens/arla-32/fotoarla/fotoarla.module": [
-		466,
+		465,
 		17
 	],
 	"../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.module": [
-		467,
+		466,
 		16
 	],
 	"../pages/modulo-viagens/despesas/despesas/despesas.module": [
-		468,
+		467,
 		15
 	],
 	"../pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.module": [
-		469,
+		468,
 		14
 	],
 	"../pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.module": [
-		470,
+		469,
 		13
 	],
 	"../pages/modulo-viagens/geral/geral-page/geral-page.module": [
-		471,
+		470,
 		12
 	],
 	"../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.module": [
-		472,
+		471,
 		11
 	],
 	"../pages/modulo-viagens/receitas/receitas-foto/receitas-foto.module": [
-		473,
+		472,
 		10
 	],
 	"../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.module": [
@@ -1645,15 +1646,15 @@ var map = {
 		6
 	],
 	"../pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.module": [
-		478,
+		479,
 		5
 	],
 	"../pages/modulo-viagens/relatorios/relatorios-page/relatorios.module": [
-		479,
+		480,
 		4
 	],
 	"../pages/modulo-viagens/viagens/viagens.module": [
-		480,
+		478,
 		3
 	],
 	"../pages/principal/principal/principal.module": [
@@ -1977,7 +1978,6 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/inicio/inicio.module#InicioPageModule', name: 'InicioPage', segment: 'inicio', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.module#AbastecimentoBomba2PageModule', name: 'AbastecimentoBomba2Page', segment: 'abastecimento-bomba-2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.module#AbastecimentoFotoBomba_2PageModule', name: 'AbastecimentoFotoBomba_2Page', segment: 'abastecimento-foto-bomba-2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.module#AbastecimentoPagamentoPageModule', name: 'AbastecimentoPagamentoPage', segment: 'abastecimento-pagamento', priority: 'low', defaultHistory: [] },
@@ -1992,13 +1992,14 @@ AppModule = __decorate([
                     { loadChildren: '../pages/modulo-viagens/geral/geral-page/geral-page.module#GeralPageModule', name: 'GeralPage', segment: 'geral-page', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.module#ReceitasFornecedorPageModule', name: 'ReceitasFornecedorPage', segment: 'receita-fornecedor', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/receitas/receitas-foto/receitas-foto.module#ReceitasFotoPageModule', name: 'ReceitasFotoPage', segment: 'receitas-foto', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.module#RotasReceitasPageModule', name: 'RotasReceitasPage', segment: 'rotas-receitas', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.module#AbastecimentoRelatoriosPageModule', name: 'AbastecimentoRelatoriosPage', segment: 'abastecimento-relatorios', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.module#ArlaRelatoriosPageModule', name: 'ArlaRelatoriosPage', segment: 'arla-relatorios', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.module#DespesasRelatoriosPageModule', name: 'DespesasRelatoriosPage', segment: 'despesas-relatorios', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/viagens/viagens.module#ViagensPageModule', name: 'ViagensPage', segment: 'viagens', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.module#ReceitasRelatoriosPageModule', name: 'ReceitasRelatoriosPage', segment: 'receitas-relatorios', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/relatorios/relatorios-page/relatorios.module#RelatoriosPageModule', name: 'RelatoriosPage', segment: 'relatorios', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/viagens/viagens.module#ViagensPageModule', name: 'ViagensPage', segment: 'viagens', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/principal/principal/principal.module#PrincipalPageModule', name: 'PrincipalPage', segment: 'principal', priority: 'low', defaultHistory: [] }
                 ]
             }),
