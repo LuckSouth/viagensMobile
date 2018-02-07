@@ -55,7 +55,8 @@ export class StorageProvider {
     km: "",
     litrosArla: "",
     litrosPrecoArla: "",
-    selectArla: "",
+    pagArla: "",
+    precoArla:""
   }
 
 

@@ -55,7 +55,7 @@ export class RotasArlaPage {
     this.slides.lockSwipes(true);
 
     if (this.contador == 1) {
-      return this.arlaPagPage.valida();
+      return this.arlaPostoPage.valida();
     }
 
     if (this.contador == 2) {
@@ -65,7 +65,7 @@ export class RotasArlaPage {
     }
 
     if (this.contador == 3) {
-      return this.arlaPostoPage.valida();
+      return this.arlaPagPage.valida();
     }
   }
 

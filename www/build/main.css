@@ -28211,6 +28211,10 @@ page-principal .interna {
   margin-left: 4%;
 }
 
+page-principal #disabled {
+  background: #585858;
+}
+
 ion-navbar {
   text-align: center;
 }

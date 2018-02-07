@@ -119,7 +119,8 @@ var StorageProvider = (function () {
             km: "",
             litrosArla: "",
             litrosPrecoArla: "",
-            selectArla: "",
+            pagArla: "",
+            precoArla: ""
         };
         //Dados abastecimento
         this.abastecimento = {
@@ -337,9 +338,10 @@ var StorageProvider = (function () {
 }());
 StorageProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */]) === "function" && _a || Object])
 ], StorageProvider);
 
+var _a;
 //# sourceMappingURL=storage.js.map
 
 /***/ }),
@@ -387,7 +389,7 @@ var PrincipalPage = (function () {
 }());
 PrincipalPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-principal',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/principal/principal/principal.html"*/'<!-- <page-login></page-login> -->\n\n<span>\n\n  <ion-header>\n\n    <ion-toolbar color="tijuca">\n      <ion-title style="text-align: center">Principal</ion-title>\n    </ion-toolbar>\n\n  </ion-header>\n  <div class="fixed-content">\n    <ion-content class="card-background-page">\n\n      <div class="grid">\n        <div class="row">\n          <div class="column" (click)="linkViagens()">Viagens\n            <div class="interna">\n              <img src="assets/images/frotas.png" />\n            </div>\n          </div>\n          <div class="column">Caixa\n            <div class="interna">\n              <img src="assets/images/caixa.png" />\n            </div>\n          </div>\n        </div>\n        <div class="row">\n          <div class="column">Vendas\n            <div class="interna">\n              <img class="imagem" src="assets/images/vendas.png" />\n            </div>\n          </div>\n          <div class="column">Cheque\n            <div class="interna">\n              <img class="imagem" src="assets/images/cheque.png" />\n            </div>\n          </div>\n        </div>\n        <div class="row">\n          <div class="column">Fábrica\n            <div class="interna">\n              <img class="imagem" src="assets/images/fabrica.png" />\n            </div>\n          </div>\n          <div class="column">Suporte\n            <div class="interna">\n              <img class="imagem" src="assets/images/suporte.png" />\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <button ion-button color="tijuca" full (click)="logout()">Logout</button>\n    </ion-content>\n  </div>\n\n  Nome: {{name}} Email: {{email}} Family Name: {{familyName}} Given Name: {{givenName}} User ID: {{userId}}\n\n</span>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/principal/principal/principal.html"*/,
+        selector: 'page-principal',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/principal/principal/principal.html"*/'<!-- <page-login></page-login> -->\n\n<span>\n\n  <ion-header>\n\n    <ion-toolbar color="tijuca">\n      <ion-title style="text-align: center">Principal</ion-title>\n    </ion-toolbar>\n\n  </ion-header>\n  <div class="fixed-content">\n    <ion-content class="card-background-page">\n\n      <div class="grid">\n        <div class="row">\n          <div class="column" (click)="linkViagens()">Viagens\n            <div class="interna">\n              <img src="assets/images/frotas.png" />\n            </div>\n          </div>\n          <div class="column" id="disabled">Caixa\n            <div class="interna">\n              <img src="assets/images/caixa.png" />\n            </div>\n          </div>\n        </div>\n        <div class="row">\n          <div class="column" id="disabled">Vendas\n            <div class="interna">\n              <img class="imagem" src="assets/images/vendas.png" />\n            </div>\n          </div>\n          <div class="column" id="disabled">Cheque\n            <div class="interna">\n              <img class="imagem" src="assets/images/cheque.png" />\n            </div>\n          </div>\n        </div>\n        <div class="row">\n          <div class="column" id="disabled">Fábrica\n            <div class="interna">\n              <img class="imagem" src="assets/images/fabrica.png" />\n            </div>\n          </div>\n          <div class="column" id="disabled">Suporte\n            <div class="interna">\n              <img class="imagem" src="assets/images/suporte.png" />\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <button ion-button color="tijuca" full (click)="logout()">Logout</button>\n    </ion-content>\n  </div>\n\n  Nome: {{name}} Email: {{email}} Family Name: {{familyName}} Given Name: {{givenName}} User ID: {{userId}}\n\n</span>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/principal/principal/principal.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -540,7 +542,7 @@ __decorate([
 ], RotasAbastecimentoPage.prototype, "abastecimentoBomba2", void 0);
 RotasAbastecimentoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-rotas-abastecimento',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.html"*/'<ion-content>\n\n    <div class="fixed-content">\n\n        <!-- Início de slides -->\n        <ion-slides>\n\n            <ion-slide>\n                <page-abastecimento-pagamento class="a"></page-abastecimento-pagamento>\n            </ion-slide>\n  \n            <ion-slide>\n                <page-abastecimento-bomba-2></page-abastecimento-bomba-2>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-foto-bomba-2></page-abastecimento-foto-bomba-2>\n                <div class="img3">\n                    <img class="image" src="{{fotoBomba2}}" /> \n                </div>\n            </ion-slide>\n        </ion-slides>\n        <!-- fim de slides -->\n\n\n        <!-- Botão passar -->\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()">\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <!-- Botão câmera -->\n        <ion-fab>\n            <button *ngIf="cameraButton" class="button-camera" color = "tijuca" ion-button outline>\n                <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <!-- Botão voltar -->\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n    </div>\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.html"*/,
+        selector: 'page-rotas-abastecimento',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.html"*/'<ion-content>\n\n    <div class="fixed-content">\n\n        <!-- Início de slides -->\n        <ion-slides>\n\n            <ion-slide>\n                <page-abastecimento-pagamento class="a"></page-abastecimento-pagamento>\n            </ion-slide>\n  \n            <ion-slide>\n                <page-abastecimento-bomba-2></page-abastecimento-bomba-2>\n            </ion-slide>\n\n            <ion-slide>\n                <page-abastecimento-foto-bomba-2></page-abastecimento-foto-bomba-2>\n                <div class="img3">\n                    <img class="image" src="{{fotoBomba2}}" /> \n                </div>\n            </ion-slide>\n        </ion-slides>\n        <!-- fim de slides -->\n\n\n        <!-- Botão passar -->\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()">\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <!-- Botão câmera -->\n        <ion-fab>\n            <button *ngIf="cameraButton" class="button-camera" color = "tijuca" ion-button outline>\n                <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <!-- Botão voltar -->\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n    </div>\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -592,12 +594,12 @@ var AbastecimentoPagamentoPage = (function () {
 }());
 AbastecimentoPagamentoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-pagamento',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/'<ion-header>\n  <ion-toolbar color="tijuca">\n    <ion-title padding>Pagamento</ion-title>\n  </ion-toolbar>\n</ion-header>\n \n<div class="slideTop">\n<ion-item>\n  <ion-label stacked>Tipo</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Posto</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Pagamento</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"> <p>{{today | date: \'ddMMyyyy\'}}</p></ion-input>\n</ion-item>\n\n{{today | date: \'ddMMyyyy\'}}\n<ion-item>\n  <ion-label stacked> Odometro</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="float" min="0" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n</div>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/,
+        selector: 'page-abastecimento-pagamento',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/'<ion-header>\n  <ion-toolbar color="tijuca">\n    <ion-title padding>Pagamento</ion-title>\n  </ion-toolbar>\n</ion-header>\n \n<div class="slideTop">\n<ion-item>\n  <ion-label stacked>Tipo</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Posto</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Pagamento</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"> <p>{{today | date: \'ddMMyyyy\'}}</p></ion-input>\n</ion-item>\n\n{{today | date: \'ddMMyyyy\'}}\n<ion-item>\n  <ion-label stacked> Odometro</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="float" min="0" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n</div>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]])
 ], AbastecimentoPagamentoPage);
 
-var _a, _b;
 //# sourceMappingURL=abastecimento-pagamento.js.map
 
 /***/ }),
@@ -643,7 +645,7 @@ var AbastecimentoBomba2Page = (function () {
 }());
 AbastecimentoBomba2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-bomba-2',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/'<ion-header>\n\n    <ion-toolbar color = "tijuca">\n        <ion-title padding>Bomba 2</ion-title>\n    </ion-toolbar>\n\n</ion-header>\n \n<ion-list>\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n\n\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n</ion-list>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/,
+        selector: 'page-abastecimento-bomba-2',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/'<ion-header>\n\n    <ion-toolbar color = "tijuca">\n        <ion-title padding>Bomba 2</ion-title>\n    </ion-toolbar>\n\n</ion-header>\n \n<ion-list>\n<ion-item>\n  <ion-label stacked>Data</ion-label>\n  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"></ion-input>\n</ion-item>\n<ion-item> \n  <ion-label stacked >Preço/L</ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item>\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n\n\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 1 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb1" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n\n<ion-item>\n  <ion-label stacked ><span class="input">Litros na bomba 2 </span></ion-label>\n  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.litrosBomb2" (ngModelChange)="valida()"></ion-input>\n</ion-item> \n</ion-list>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -690,7 +692,7 @@ var GeralPage = (function () {
 }());
 GeralPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'geral-page',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/geral/geral-page/geral-page.html"*/'<ion-header>\n  <ion-navbar color = "tijuca"> \n      <ion-title>\n        Dados Gerais \n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-tabs  color = "tijuca">\n    <ion-tab [root]="geralDadosViagem" tabTitle="Viagem" tabIcon="ios-compass"></ion-tab>\n    <ion-tab [root]="geralDadosMotorista" tabTitle="Motorista" tabIcon="ios-contact"></ion-tab>\n  </ion-tabs>\n\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/geral/geral-page/geral-page.html"*/,
+        selector: 'geral-page',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/geral/geral-page/geral-page.html"*/'<ion-header>\n  <ion-navbar color = "tijuca"> \n      <ion-title>\n        Dados Gerais \n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-tabs  color = "tijuca">\n    <ion-tab [root]="geralDadosViagem" tabTitle="Viagem" tabIcon="ios-compass"></ion-tab>\n    <ion-tab [root]="geralDadosMotorista" tabTitle="Motorista" tabIcon="ios-contact"></ion-tab>\n  </ion-tabs>\n\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/geral/geral-page/geral-page.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -728,7 +730,7 @@ var GeralDadosViagemPage = (function () {
 }());
 GeralDadosViagemPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'geral-dados-viagem',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.html"*/'<ion-content padding>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Veículo principal</ion-label>\n      <ion-input type="text" [(ngModel)]="vei" disabled="" value="AFG-3301"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>N. da Viagem</ion-label>\n      <ion-input type="number" [(ngModel)]="via" disabled="" value="1"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Km Saída</ion-label>\n      <ion-input type="text" [(ngModel)]="km" disabled="" value="12560 Km"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Data Saída</ion-label>\n      <ion-input type="date" [(ngModel)]="data" disabled="" value="0"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Observações</ion-label>\n      <ion-input type="text" [(ngModel)]="obs" disabled=""></ion-input>\n    </ion-item>\n\n    \n  </ion-list>\n  \n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.html"*/,
+        selector: 'geral-dados-viagem',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.html"*/'<ion-content padding>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Veículo principal</ion-label>\n      <ion-input type="text" [(ngModel)]="vei" disabled="" value="AFG-3301"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>N. da Viagem</ion-label>\n      <ion-input type="number" [(ngModel)]="via" disabled="" value="1"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Km Saída</ion-label>\n      <ion-input type="text" [(ngModel)]="km" disabled="" value="12560 Km"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Data Saída</ion-label>\n      <ion-input type="date" [(ngModel)]="data" disabled="" value="0"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Observações</ion-label>\n      <ion-input type="text" [(ngModel)]="obs" disabled=""></ion-input>\n    </ion-item>\n\n    \n  </ion-list>\n  \n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], GeralDadosViagemPage);
@@ -764,7 +766,7 @@ var GeralDadosMotoristaPage = (function () {
 }());
 GeralDadosMotoristaPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'geral-dados-motorista',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.html"*/'<ion-content padding>\n    <ion-list>\n\n  <ion-item>\n    <ion-label floating>Motorista</ion-label>\n    <ion-input type="text" [(ngModel)]="mot" disabled="" value="Cleber"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Receitas R$</ion-label>\n    <ion-input type="text" [(ngModel)]="outr" disabled="" value="R$ 100"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Despesas R$</ion-label>\n    <ion-input type="text" [(ngModel)]="out" disabled="" value="R$ 1000"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Adiantamento Comissão</ion-label>\n    <ion-input type="text" [(ngModel)]="adi" disabled="" value="R$ 1000"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Comissão Gerencial</ion-label>\n    <ion-input type="text" [(ngModel)]="com" disabled="" value="10%"></ion-input>\n  </ion-item>\n  \n  <ion-item>\n    <ion-label floating>Valor do Vale</ion-label>\n    <ion-input type="text" [(ngModel)]="val" disabled="" value="R$ 150"></ion-input>\n  </ion-item>\n\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.html"*/,
+        selector: 'geral-dados-motorista',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.html"*/'<ion-content padding>\n    <ion-list>\n\n  <ion-item>\n    <ion-label floating>Motorista</ion-label>\n    <ion-input type="text" [(ngModel)]="mot" disabled="" value="Cleber"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Receitas R$</ion-label>\n    <ion-input type="text" [(ngModel)]="outr" disabled="" value="R$ 100"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Despesas R$</ion-label>\n    <ion-input type="text" [(ngModel)]="out" disabled="" value="R$ 1000"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Adiantamento Comissão</ion-label>\n    <ion-input type="text" [(ngModel)]="adi" disabled="" value="R$ 1000"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Comissão Gerencial</ion-label>\n    <ion-input type="text" [(ngModel)]="com" disabled="" value="10%"></ion-input>\n  </ion-item>\n  \n  <ion-item>\n    <ion-label floating>Valor do Vale</ion-label>\n    <ion-input type="text" [(ngModel)]="val" disabled="" value="R$ 150"></ion-input>\n  </ion-item>\n\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], GeralDadosMotoristaPage);
@@ -837,7 +839,7 @@ var DespesasPage = (function () {
 }());
 DespesasPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-despesas',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/despesas/despesas/despesas.html"*/'<ion-header>\n  <ion-navbar color = "tijuca">\n    <ion-title>Despesas da Viagem</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    \n      <ion-item>\n        <ion-select placeholder="Despesas" [(ngModel)]="storageProvider.despesas.despesas" required #iptDespesa="ngModel">\n          <ion-option value="Lanche">Lanche</ion-option>\n          <ion-option value="Almoço">Almoço</ion-option>\n          <ion-option value="Jantar">Jantar</ion-option>\n          <!-- <ion-option value="4">Almoçado</ion-option> \n          <ion-option value="5">Borracharia</ion-option>\n          <ion-option value="6">Corrente</ion-option>\n          <ion-option value="7">Lavagem de veículos</ion-option>\n          <ion-option value="8">Conserto de pneu</ion-option>\n          <ion-option value="9">Carga/Descarga</ion-option>\n          <ion-option value="10">Moto taxi</ion-option> -->\n        </ion-select>\n      </ion-item>\n    \n  <ion-item>\n        <ion-input type="date" placeholder="Data" [(ngModel)]="storageProvider.despesas.dataDespesas" required #iptData="ngModel"></ion-input>\n      </ion-item> \n      <ion-item>\n        <ion-input type="float" placeholder="0,00" [brmasker]="{money: true}" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>\n      </ion-item> \n  </ion-list> \n  <button ion-button full (click)="salvar()" [disabled]="!valida()" color = "tijuca" >Adicionar</button>\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/despesas/despesas/despesas.html"*/,
+        selector: 'page-despesas',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/despesas/despesas/despesas.html"*/'<ion-header>\n  <ion-navbar color = "tijuca">\n    <ion-title>Despesas da Viagem</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    \n      <ion-item>\n        <ion-select placeholder="Despesas" [(ngModel)]="storageProvider.despesas.despesas" required #iptDespesa="ngModel">\n          <ion-option value="Lanche">Lanche</ion-option>\n          <ion-option value="Almoço">Almoço</ion-option>\n          <ion-option value="Jantar">Jantar</ion-option>\n          <!-- <ion-option value="4">Almoçado</ion-option> \n          <ion-option value="5">Borracharia</ion-option>\n          <ion-option value="6">Corrente</ion-option>\n          <ion-option value="7">Lavagem de veículos</ion-option>\n          <ion-option value="8">Conserto de pneu</ion-option>\n          <ion-option value="9">Carga/Descarga</ion-option>\n          <ion-option value="10">Moto taxi</ion-option> -->\n        </ion-select>\n      </ion-item>\n    \n  <ion-item>\n        <ion-input type="date" placeholder="Data" [(ngModel)]="storageProvider.despesas.dataDespesas" required #iptData="ngModel"></ion-input>\n      </ion-item> \n      <ion-item>\n        <ion-input type="float" placeholder="0,00" [brmasker]="{money: true}" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>\n      </ion-item> \n  </ion-list> \n  <button ion-button full (click)="salvar()" [disabled]="!valida()" color = "tijuca" >Adicionar</button>\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/despesas/despesas/despesas.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -894,7 +896,7 @@ var RotasArlaPage = (function () {
     RotasArlaPage.prototype.ngAfterViewInit = function () {
         this.slides.lockSwipes(true);
         if (this.contador == 1) {
-            return this.arlaPagPage.valida();
+            return this.arlaPostoPage.valida();
         }
         if (this.contador == 2) {
             if (this.fotoArla != undefined) {
@@ -902,7 +904,7 @@ var RotasArlaPage = (function () {
             }
         }
         if (this.contador == 3) {
-            return this.arlaPostoPage.valida();
+            return this.arlaPagPage.valida();
         }
     };
     RotasArlaPage.prototype.toBack = function () {
@@ -947,27 +949,24 @@ var RotasArlaPage = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */]) === "function" && _a || Object)
 ], RotasArlaPage.prototype, "slides", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__arla_pag_arla_pag__["a" /* ArlaPagPage */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__arla_pag_arla_pag__["a" /* ArlaPagPage */])
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__arla_pag_arla_pag__["a" /* ArlaPagPage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__arla_pag_arla_pag__["a" /* ArlaPagPage */]) === "function" && _b || Object)
 ], RotasArlaPage.prototype, "arlaPagPage", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__arla_posto_arla_posto__["a" /* ArlaPostoPage */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__arla_posto_arla_posto__["a" /* ArlaPostoPage */])
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__arla_posto_arla_posto__["a" /* ArlaPostoPage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__arla_posto_arla_posto__["a" /* ArlaPostoPage */]) === "function" && _c || Object)
 ], RotasArlaPage.prototype, "arlaPostoPage", void 0);
 RotasArlaPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-rotas-arla',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.html"*/'<ion-content>\n    <div class="fixed-content">\n\n        <ion-slides pager>\n            <ion-slide>\n                <arla-pag-page></arla-pag-page>\n            </ion-slide>\n            <ion-slide>\n                <page-fotoarla></page-fotoarla>\n                <div class="img">\n                    <img class="image" src="{{fotoReceitas}}" />\n                </div>\n            </ion-slide>\n            <ion-slide>\n                <arla-posto-page></arla-posto-page>\n            </ion-slide>\n        </ion-slides>\n\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" (click)="toGo()" [disabled]="!ngAfterViewInit()">\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <ion-fab>\n            <button *ngIf="cameraButton" class="button-camera" ion-button outline color="tijuca">\n                <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n\n    </div>\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.html"*/,
+        selector: 'page-rotas-arla',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.html"*/'<ion-content>\n    <div class="fixed-content">\n\n        <ion-slides pager>\n            <ion-slide>\n                <arla-posto-page></arla-posto-page>\n            </ion-slide>\n            <ion-slide>\n                <page-fotoarla></page-fotoarla>\n                <div class="img">\n                    <img class="image" src="{{fotoReceitas}}" />\n                </div>\n            </ion-slide>\n            <ion-slide>\n                <arla-pag-page></arla-pag-page>\n            </ion-slide>\n        </ion-slides>\n\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" (click)="toGo()" [disabled]="!ngAfterViewInit()">\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <ion-fab>\n            <button *ngIf="cameraButton" class="button-camera" ion-button outline color="tijuca">\n                <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n            </button>\n        </ion-fab>\n\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n\n    </div>\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */],
-        __WEBPACK_IMPORTED_MODULE_4__providers_storage_storage__["a" /* StorageProvider */],
-        __WEBPACK_IMPORTED_MODULE_5__providers_dados_dados__["a" /* DadosProvider */]])
+    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_4__providers_storage_storage__["a" /* StorageProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_storage_storage__["a" /* StorageProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_5__providers_dados_dados__["a" /* DadosProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_dados_dados__["a" /* DadosProvider */]) === "function" && _h || Object])
 ], RotasArlaPage);
 
+var _a, _b, _c, _d, _e, _f, _g, _h;
 //# sourceMappingURL=rotas-arla.js.map
 
 /***/ }),
@@ -1020,7 +1019,7 @@ var ArlaPagPage = (function () {
 }());
 ArlaPagPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'arla-pag-page',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/arla-32/arla-pag/arla-pag.html"*/'<ion-header>\n  <ion-toolbar color = "tijuca">\n    <ion-title padding>Dados</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-list>\n\n  <ion-item>\n    <ion-input type="number0" placeholder="Litros" min="0" [(ngModel)]="storageProvider.arla.litrosArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-input type="number" placeholder="Litro(R$)" [(ngModel)]="storageProvider.arla.litrosPrecoArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-input type="number" [brmasker]="{money: true}" placeholder="Total(R$)" disabled=""></ion-input><!-- [(ngModel)]="total" (ngModelChange)="valida()" -->\n  </ion-item>\n\n  <ion-item>\n    <ion-select placeholder="Forma Pagamento" [(ngModel)]="storageProvider.arla.selectArla" (click)="valida()">\n      <ion-option value="ext">Boleto Bancário</ion-option>\n      <ion-option value="cre">Cartão de Crédito</ion-option>\n      <ion-option value="deb">Cartão de Débito</ion-option>\n      <ion-option value="che">Cheque</ion-option>\n<!--  <ion-option value="ter">Cheque Terceiro</ion-option> -->\n<!--  <ion-option value="cob">Cobrança em Carteira</ion-option> \n      <ion-option value="dep">Depósito Bancário</ion-option>\n      <ion-option value="des">Despesa</ion-option>\n      <ion-option value="desv">Despesav</ion-option>-->\n      <ion-option value="din">Dinheiro</ion-option>\n<!--  <ion-option value="moe">Moedas</ion-option> -->\n    </ion-select>\n  </ion-item>\n</ion-list>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/arla-32/arla-pag/arla-pag.html"*/,
+        selector: 'arla-pag-page',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/arla-32/arla-pag/arla-pag.html"*/'<ion-header>\n    <ion-toolbar color = "tijuca">\n      <ion-title padding>Dados</ion-title>\n    </ion-toolbar>\n  </ion-header>\n    <ion-item>\n        <ion-label stacked ><span class="input">Litros</span></ion-label>\n      <ion-input type="number" min="0" [(ngModel)]="storageProvider.arla.litrosArla" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n  \n    <ion-item>\n        <ion-label stacked ><span class="input">Litros(R$)</span></ion-label>\n      <ion-input type="number" [(ngModel)]="storageProvider.arla.litrosPrecoArla" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n  \n    \n  '/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/arla-32/arla-pag/arla-pag.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1059,7 +1058,7 @@ var ArlaPostoPage = (function () {
         this.storageProvider = storageProvider;
     }
     ArlaPostoPage.prototype.valida = function () {
-        if (this.storageProvider.arla.km == "" || this.storageProvider.arla.dataArla == "" || this.storageProvider.arla.postoArla == "") {
+        if (this.storageProvider.arla.precoArla == "" || this.storageProvider.arla.pagArla == "" || this.storageProvider.arla.tipoArla == "" || this.storageProvider.arla.dataArla == "" || this.storageProvider.arla.postoArla == "") {
         }
         else {
             return true;
@@ -1069,13 +1068,12 @@ var ArlaPostoPage = (function () {
 }());
 ArlaPostoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'arla-posto-page',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/arla-32/arla-posto/arla-posto.html"*/'<ion-header>\n  <ion-toolbar color = "tijuca">\n    <ion-title padding>Arla 32</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-list>\n\n  <ion-item>\n        <ion-select palceholder="Tipo Abastecimento" [(ngModel)]="storageProvider.arla.tipoArla" (ngModelChange)="valida()">\n      <ion-option value="ext">Externo</ion-option>\n      <ion-option value="int">Interno</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-item>\n    <ion-input type="text" placeholder="Posto Combustivel" [(ngModel)]="storageProvider.arla.postoArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-input type="date" placeholder="Data" [(ngModel)]="storageProvider.arla.dataArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n  \n  <ion-item>\n    <ion-input type="number" min="0" placeholder="Kilometragem"  [(ngModel)]="storageProvider.arla.km" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n\n</ion-list>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/arla-32/arla-posto/arla-posto.html"*/,
+        selector: 'arla-posto-page',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/arla-32/arla-posto/arla-posto.html"*/'<ion-header>\n    <ion-toolbar color="tijuca">\n      <ion-title padding>Arla 32</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  \n  <div class="slideTop">\n  <ion-item>\n    <ion-label stacked>Tipo</ion-label>\n    <ion-input type="text" [(ngModel)]="storageProvider.arla.tipoArla" (click)="valida()"></ion-input>\n  </ion-item>\n  \n  <ion-item>\n      <ion-label stacked>Posto</ion-label>\n    <ion-input type="text" [(ngModel)]="storageProvider.arla.postoArla" (click)="valida()"></ion-input>\n  </ion-item>\n  \n  <ion-item>\n      <ion-label stacked>Pagamento</ion-label>\n      <ion-input type="text" [(ngModel)]="storageProvider.arla.pagArla" (click)="valida()"></ion-input>\n    </ion-item>\n  \n  <ion-item>\n    <ion-label stacked>Data</ion-label>\n    <ion-input type="text" [(ngModel)]="storageProvider.arla.dataArla" (ngModelChange)="valida()"></ion-input>\n  </ion-item>\n  \n  <ion-item>\n      <ion-label stacked>Preço/L</ion-label>\n      <ion-input type="number" min="0" [(ngModel)]="storageProvider.arla.precoArla" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n  </div>\n  \n  '/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/arla-32/arla-posto/arla-posto.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]) === "function" && _c || Object])
 ], ArlaPostoPage);
 
+var _a, _b, _c;
 //# sourceMappingURL=arla-posto.js.map
 
 /***/ }),
@@ -1200,7 +1198,7 @@ __decorate([
 ], RotasReceitasPage.prototype, "ReceitasFoto", void 0);
 RotasReceitasPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-rotas-receitas',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.html"*/'<ion-content>\n    <div class="fixed-content">\n\n        <ion-slides>\n            <ion-slide>\n                <page-receita-fornecedor></page-receita-fornecedor>\n            </ion-slide>\n            <ion-slide>\n                <page-receitas-foto></page-receitas-foto>\n                <div class="img">\n                    <img class="image" src="{{fotoReceitas}}" />\n                </div>\n            </ion-slide> \n        </ion-slides>\n\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()">\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n        <ion-fab>\n            <button *ngIf="cameraButton" class="button-camera" ion-button outline color="tijuca">\n                <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n            </button>\n        </ion-fab>\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n    </div>\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.html"*/,
+        selector: 'page-rotas-receitas',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.html"*/'<ion-content>\n    <div class="fixed-content">\n\n        <ion-slides>\n            <ion-slide>\n                <page-receita-fornecedor></page-receita-fornecedor>\n            </ion-slide>\n            <ion-slide>\n                <page-receitas-foto></page-receitas-foto>\n                <div class="img">\n                    <img class="image" src="{{fotoReceitas}}" />\n                </div>\n            </ion-slide> \n        </ion-slides>\n\n        <ion-fab right bottom>\n            <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()">\n                <ion-icon name="ios-arrow-forward"></ion-icon>\n            </button>\n        </ion-fab>\n        <ion-fab>\n            <button *ngIf="cameraButton" class="button-camera" ion-button outline color="tijuca">\n                <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>\n            </button>\n        </ion-fab>\n        <ion-fab left bottom>\n            <button ion-fab color="tijuca" (click)="toBack()">\n                <ion-icon color="warning" name="ios-arrow-back"></ion-icon>\n            </button>\n        </ion-fab>\n    </div>\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1252,7 +1250,7 @@ var ReceitasFornecedorPage = (function () {
 }());
 ReceitasFornecedorPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-receita-fornecedor',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.html"*/'<ion-header color = "tijuca">\n  \n  <ion-toolbar color = "tijuca">\n    <ion-title padding color = "tijuca">Fornecedor</ion-title>\n</ion-toolbar>\n\n\n</ion-header>\n\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating>Fornecedor / Origem</ion-label>\n      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Fornecedor / Destino</ion-label>\n      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorDestino" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Produto</ion-label>\n      <ion-input type="text" name="produto" [(ngModel)]="storageProvider.receitas.produto" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Tipo de Pagamento</ion-label>\n      <ion-select [(ngModel)]="storageProvider.receitas.tipoPagmt" (click)="valida()">\n        <ion-option value="proprio">Próprio</ion-option>\n        <ion-option value="tercerizado">Tercerizado</ion-option>\n        <ion-option value="quarterizado">Quarterizado</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.html"*/,
+        selector: 'page-receita-fornecedor',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.html"*/'<ion-header color = "tijuca">\n  \n  <ion-toolbar color = "tijuca">\n    <ion-title padding color = "tijuca">Fornecedor</ion-title>\n</ion-toolbar>\n\n\n</ion-header>\n\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating>Fornecedor / Origem</ion-label>\n      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Fornecedor / Destino</ion-label>\n      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorDestino" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Produto</ion-label>\n      <ion-input type="text" name="produto" [(ngModel)]="storageProvider.receitas.produto" (ngModelChange)="valida()"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Tipo de Pagamento</ion-label>\n      <ion-select [(ngModel)]="storageProvider.receitas.tipoPagmt" (click)="valida()">\n        <ion-option value="proprio">Próprio</ion-option>\n        <ion-option value="tercerizado">Tercerizado</ion-option>\n        <ion-option value="quarterizado">Quarterizado</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1299,7 +1297,7 @@ var ReceitasFotoPage = (function () {
 }());
 ReceitasFotoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-receitas-foto',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/receitas/receitas-foto/receitas-foto.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title padding color = "tijuca">Foto</ion-title>\n</ion-toolbar>\n</ion-header>\n '/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/receitas/receitas-foto/receitas-foto.html"*/,
+        selector: 'page-receitas-foto',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/receitas/receitas-foto/receitas-foto.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title padding color = "tijuca">Foto</ion-title>\n</ion-toolbar>\n</ion-header>\n '/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/receitas/receitas-foto/receitas-foto.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
@@ -1348,7 +1346,7 @@ var RelatoriosPage = (function () {
 }());
 RelatoriosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-relatorios',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/relatorios/relatorios-page/relatorios.html"*/'<ion-header>\n\n  <ion-navbar color="tijuca">\n    <ion-title>Relatórios</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n\n  <ion-tabs color="tijuca">\n    <ion-tab [root]="relatoriosDespesas" tabTitle="Despesas" tabIcon="md-cash"></ion-tab>\n    <ion-tab [root]="relatoriosReceitas" tabTitle="Receitas" tabIcon="md-clipboard"></ion-tab>\n    <ion-tab [root]="relatoriosArla" tabTitle="Arla" tabIcon="ios-leaf"></ion-tab>\n    <ion-tab [root]="relatoriosAbastecimento" tabTitle="Abastecimento" tabIcon="ios-water"></ion-tab>\n  </ion-tabs>\n\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/relatorios/relatorios-page/relatorios.html"*/,
+        selector: 'page-relatorios',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/relatorios/relatorios-page/relatorios.html"*/'<ion-header>\n\n  <ion-navbar color="tijuca">\n    <ion-title>Relatórios</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n\n  <ion-tabs color="tijuca">\n    <ion-tab [root]="relatoriosDespesas" tabTitle="Despesas" tabIcon="md-cash"></ion-tab>\n    <ion-tab [root]="relatoriosReceitas" tabTitle="Receitas" tabIcon="md-clipboard"></ion-tab>\n    <ion-tab [root]="relatoriosArla" tabTitle="Arla" tabIcon="ios-leaf"></ion-tab>\n    <ion-tab [root]="relatoriosAbastecimento" tabTitle="Abastecimento" tabIcon="ios-water"></ion-tab>\n  </ion-tabs>\n\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/relatorios/relatorios-page/relatorios.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -1395,7 +1393,7 @@ var DespesasRelatoriosPage = (function () {
 }());
 DespesasRelatoriosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-despesas-relatorios',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.html"*/'<ion-content padding>\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n  \n    <ion-card *ngFor="let storage of storages">\n        <ion-card-header>\n          <span id="titulo">Despesas</span>\n          <br>\n  \n        </ion-card-header>\n  \n        <ion-card-content>\n          <span id="local">{{storage.despesas}}</span>\n          <br>\n          <span id="valor">{{storage.dataDespesas}}</span>\n          <br>\n          <span id="horario">{{storage.valorDespesas}}</span>\n          <br>\n         \n        </ion-card-content>\n    </ion-card>\n  \n  </ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.html"*/,
+        selector: 'page-despesas-relatorios',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.html"*/'<ion-content padding>\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n  \n    <ion-card *ngFor="let storage of storages">\n        <ion-card-header>\n          <span id="titulo">Despesas</span>\n          <br>\n  \n        </ion-card-header>\n  \n        <ion-card-content>\n          <span id="local">{{storage.despesas}}</span>\n          <br>\n          <span id="valor">{{storage.dataDespesas}}</span>\n          <br>\n          <span id="horario">{{storage.valorDespesas}}</span>\n          <br>\n         \n        </ion-card-content>\n    </ion-card>\n  \n  </ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1441,7 +1439,7 @@ var ReceitasRelatoriosPage = (function () {
 }());
 ReceitasRelatoriosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-receitas-relatorios',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.html"*/'<ion-content padding>\n\n  <span *ngIf="tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n\n\n  <ion-card *ngFor="let storage of storages">\n    <ion-card-header>\n      <span id="titulo">Receitas</span>\n      <br>\n\n    </ion-card-header>\n\n    <ion-card-content>\n      <span id="local">{{storage.fornecedorOrigem}}</span>\n      <br>\n      <span id="valor">{{storage.fornecedorDestino}} </span>\n      <br>\n      <span id="horario">{{storage.produto}}</span>\n      <br>\n      <span id="local">{{storage.tipoPagmt}}</span>\n      <br>\n      <span id="valor">{{storage.idUnidadeMedida}} </span>\n      <br>\n      <span id="horario">{{storage.idUnidadeBandeja}}</span>\n      <br>\n      <span id="local">{{storage.caixa}}</span>\n      <br>\n      <span id="valor">{{storage.qntFaturado}} </span>\n      <br>\n      <span id="horario">{{storage.qntDescarregado}}</span>\n      <br>\n      <span id="local">{{storage.valorUnitario}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.html"*/,
+        selector: 'page-receitas-relatorios',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.html"*/'<ion-content padding>\n\n  <span *ngIf="tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n\n\n  <ion-card *ngFor="let storage of storages">\n    <ion-card-header>\n      <span id="titulo">Receitas</span>\n      <br>\n\n    </ion-card-header>\n\n    <ion-card-content>\n      <span id="local">{{storage.fornecedorOrigem}}</span>\n      <br>\n      <span id="valor">{{storage.fornecedorDestino}} </span>\n      <br>\n      <span id="horario">{{storage.produto}}</span>\n      <br>\n      <span id="local">{{storage.tipoPagmt}}</span>\n      <br>\n      <span id="valor">{{storage.idUnidadeMedida}} </span>\n      <br>\n      <span id="horario">{{storage.idUnidadeBandeja}}</span>\n      <br>\n      <span id="local">{{storage.caixa}}</span>\n      <br>\n      <span id="valor">{{storage.qntFaturado}} </span>\n      <br>\n      <span id="horario">{{storage.qntDescarregado}}</span>\n      <br>\n      <span id="local">{{storage.valorUnitario}}</span>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1487,7 +1485,7 @@ var ArlaRelatoriosPage = (function () {
 }());
 ArlaRelatoriosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-arla-relatorios',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.html"*/'<ion-content padding>\n\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n\n      <ion-card *ngFor="let storage of storages">\n      <ion-card-header>\n        <span id="titulo">Arla</span>\n        <br>\n\n        </ion-card-header>\n\n\n        <ion-card-content>\n          <span id="local">{{storage.dataArla}}</span>\n          <br>\n          <span id="valor">{{storage.postoArla}} </span>\n          <br>\n          <span id="horario">{{storage.tipoArla}}</span>\n          <br>\n          <span id="local">{{storage.km}}</span>\n          <br>\n          <span id="valor">{{storage.litrosArla}} </span>\n          <br>\n          <span id="horario">{{storage.litrosPrecoArla}}</span>\n          <br>\n          <span id="horario">{{storage.selectArla}}</span>\n          <br>\n        </ion-card-content>\n      </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.html"*/,
+        selector: 'page-arla-relatorios',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.html"*/'<ion-content padding>\n\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n\n      <ion-card *ngFor="let storage of storages">\n      <ion-card-header>\n        <span id="titulo">Arla</span>\n        <br>\n\n        </ion-card-header>\n\n\n        <ion-card-content>\n          <span id="local">{{storage.dataArla}}</span>\n          <br>\n          <span id="valor">{{storage.postoArla}} </span>\n          <br>\n          <span id="horario">{{storage.tipoArla}}</span>\n          <br>\n          <span id="local">{{storage.km}}</span>\n          <br>\n          <span id="valor">{{storage.litrosArla}} </span>\n          <br>\n          <span id="horario">{{storage.litrosPrecoArla}}</span>\n          <br>\n          <span id="horario">{{storage.pagtArla}}</span>\n          <br>\n          <span id="horario">{{storage.precoArla}}</span>\n        </ion-card-content>\n      </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1533,7 +1531,7 @@ var AbastecimentoRelatoriosPage = (function () {
 }());
 AbastecimentoRelatoriosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-relatorios',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.html"*/'<ion-content padding>\n\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n  \n\n  <ion-card *ngFor="let storage of storages">\n      <ion-card-header>\n        <span id="titulo">Abastecimento</span>\n        <br>\n\n      </ion-card-header>\n\n\n      <ion-card-content>\n        <span id="local">{{storage.tipoAbastecimento}}</span>\n        <br>\n        <span id="valor">{{storage.postoAbastecimento}} </span>\n        <br>\n        <span id="horario">{{storage.dataAbastecimento}}</span>\n        <br>\n        <span id="local">{{storage.tipoPagmtAbastecimento}}</span>\n        <br>\n        <span id="valor">{{storage.odometro}} </span>\n        <br>\n        <span id="horario">{{storage.litrosBomb1}}</span>\n        <br>\n        <span id="horario">{{storage.precoBomb1}}</span>\n        <br>\n        <span id="horario">{{storage.litrosBomb2}}</span>\n        <br>\n        <span id="horario">{{storage.precoBomb2}}</span>\n        <br>\n      </ion-card-content>\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.html"*/,
+        selector: 'page-abastecimento-relatorios',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.html"*/'<ion-content padding>\n\n\n  <span *ngIf= "tamanho < 1" class="vazio"> Nenhum dado encontrado</span>\n  \n\n  <ion-card *ngFor="let storage of storages">\n      <ion-card-header>\n        <span id="titulo">Abastecimento</span>\n        <br>\n\n      </ion-card-header>\n\n\n      <ion-card-content>\n        <span id="local">{{storage.tipoAbastecimento}}</span>\n        <br>\n        <span id="valor">{{storage.postoAbastecimento}} </span>\n        <br>\n        <span id="horario">{{storage.dataAbastecimento}}</span>\n        <br>\n        <span id="local">{{storage.tipoPagmtAbastecimento}}</span>\n        <br>\n        <span id="valor">{{storage.odometro}} </span>\n        <br>\n        <span id="horario">{{storage.litrosBomb1}}</span>\n        <br>\n        <span id="horario">{{storage.precoBomb1}}</span>\n        <br>\n        <span id="horario">{{storage.litrosBomb2}}</span>\n        <br>\n        <span id="horario">{{storage.precoBomb2}}</span>\n        <br>\n      </ion-card-content>\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -1570,67 +1568,67 @@ var map = {
 		1
 	],
 	"../pages/login/login.module": [
-		473,
+		459,
 		0
 	],
 	"../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.module": [
-		459,
+		460,
 		23
 	],
 	"../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.module": [
-		460,
+		461,
 		22
 	],
 	"../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.module": [
-		461,
+		462,
 		21
 	],
 	"../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento.module": [
-		462,
+		463,
 		20
 	],
 	"../pages/modulo-viagens/arla-32/arla-pag/arla-pag.module": [
-		463,
+		464,
 		19
 	],
 	"../pages/modulo-viagens/arla-32/arla-posto/arla-posto.module": [
-		464,
+		465,
 		18
 	],
 	"../pages/modulo-viagens/arla-32/fotoarla/fotoarla.module": [
-		465,
+		466,
 		17
 	],
 	"../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla.module": [
-		466,
+		467,
 		16
 	],
 	"../pages/modulo-viagens/despesas/despesas/despesas.module": [
-		467,
+		468,
 		15
 	],
 	"../pages/modulo-viagens/geral/geral-dados-motorista/geral-dados-motorista.module": [
-		468,
+		469,
 		14
 	],
 	"../pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.module": [
-		469,
+		470,
 		13
 	],
 	"../pages/modulo-viagens/geral/geral-page/geral-page.module": [
-		470,
+		471,
 		12
 	],
 	"../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.module": [
-		471,
+		472,
 		11
 	],
 	"../pages/modulo-viagens/receitas/receitas-foto/receitas-foto.module": [
-		472,
+		474,
 		10
 	],
 	"../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.module": [
-		474,
+		473,
 		9
 	],
 	"../pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.module": [
@@ -1646,19 +1644,19 @@ var map = {
 		6
 	],
 	"../pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.module": [
-		479,
+		478,
 		5
 	],
 	"../pages/modulo-viagens/relatorios/relatorios-page/relatorios.module": [
-		480,
+		481,
 		4
 	],
 	"../pages/modulo-viagens/viagens/viagens.module": [
-		478,
+		479,
 		3
 	],
 	"../pages/principal/principal/principal.module": [
-		481,
+		480,
 		2
 	]
 };
@@ -1789,7 +1787,7 @@ var AbastecimentoFotoBomba_2Page = (function () {
 }());
 AbastecimentoFotoBomba_2Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-abastecimento-foto-bomba-2',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title>Foto</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.html"*/,
+        selector: 'page-abastecimento-foto-bomba-2',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title>Foto</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], AbastecimentoFotoBomba_2Page);
@@ -1828,7 +1826,7 @@ var FotoarlaPage = (function () {
 }());
 FotoarlaPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-fotoarla',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/arla-32/fotoarla/fotoarla.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title padding color = "tijuca">Foto</ion-title>\n</ion-toolbar>\n</ion-header>\n '/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/arla-32/fotoarla/fotoarla.html"*/,
+        selector: 'page-fotoarla',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/arla-32/fotoarla/fotoarla.html"*/'<ion-header>\n\n  <ion-toolbar color = "tijuca">\n    <ion-title padding color = "tijuca">Foto</ion-title>\n</ion-toolbar>\n</ion-header>\n '/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/arla-32/fotoarla/fotoarla.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], FotoarlaPage);
@@ -1978,6 +1976,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/inicio/inicio.module#InicioPageModule', name: 'InicioPage', segment: 'inicio', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2.module#AbastecimentoBomba2PageModule', name: 'AbastecimentoBomba2Page', segment: 'abastecimento-bomba-2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2.module#AbastecimentoFotoBomba_2PageModule', name: 'AbastecimentoFotoBomba_2Page', segment: 'abastecimento-foto-bomba-2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento.module#AbastecimentoPagamentoPageModule', name: 'AbastecimentoPagamentoPage', segment: 'abastecimento-pagamento', priority: 'low', defaultHistory: [] },
@@ -1991,16 +1990,15 @@ AppModule = __decorate([
                     { loadChildren: '../pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem.module#GeralDadosViagemModule', name: 'GeralDadosViagemPage', segment: 'geral-dados-viagem', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/geral/geral-page/geral-page.module#GeralPageModule', name: 'GeralPage', segment: 'geral-page', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor.module#ReceitasFornecedorPageModule', name: 'ReceitasFornecedorPage', segment: 'receita-fornecedor', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/receitas/receitas-foto/receitas-foto.module#ReceitasFotoPageModule', name: 'ReceitasFotoPage', segment: 'receitas-foto', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas.module#RotasReceitasPageModule', name: 'RotasReceitasPage', segment: 'rotas-receitas', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/receitas/receitas-foto/receitas-foto.module#ReceitasFotoPageModule', name: 'ReceitasFotoPage', segment: 'receitas-foto', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios.module#AbastecimentoRelatoriosPageModule', name: 'AbastecimentoRelatoriosPage', segment: 'abastecimento-relatorios', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios.module#ArlaRelatoriosPageModule', name: 'ArlaRelatoriosPage', segment: 'arla-relatorios', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios.module#DespesasRelatoriosPageModule', name: 'DespesasRelatoriosPage', segment: 'despesas-relatorios', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/viagens/viagens.module#ViagensPageModule', name: 'ViagensPage', segment: 'viagens', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios.module#ReceitasRelatoriosPageModule', name: 'ReceitasRelatoriosPage', segment: 'receitas-relatorios', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modulo-viagens/relatorios/relatorios-page/relatorios.module#RelatoriosPageModule', name: 'RelatoriosPage', segment: 'relatorios', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/principal/principal/principal.module#PrincipalPageModule', name: 'PrincipalPage', segment: 'principal', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/modulo-viagens/viagens/viagens.module#ViagensPageModule', name: 'ViagensPage', segment: 'viagens', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/principal/principal/principal.module#PrincipalPageModule', name: 'PrincipalPage', segment: 'principal', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/modulo-viagens/relatorios/relatorios-page/relatorios.module#RelatoriosPageModule', name: 'RelatoriosPage', segment: 'relatorios', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_7_ng2_validation__["CustomFormsModule"],
@@ -2274,7 +2272,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/arthur/viagensMobile/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/arthur/viagensMobile/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
         __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
@@ -2382,7 +2380,7 @@ var ViagensPage = (function () {
 }());
 ViagensPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-viagens',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/modulo-viagens/viagens/viagens.html"*/'<ion-header>\n\n  <ion-navbar color="tijuca">\n    <ion-title>Viagens</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<div class="fixed-content">\n\n  <ion-content class="card-background-page">\n    <div class="grid">\n\n      <div class="row">\n        <div class="column" (click)="linkAbastecimento()">Abastecer\n          <button ion-fab class="fab" *ngIf = "abastecimentoPendente > 0">{{abastecimentoPendente}}</button>\n          <img class="imagem" src="assets/images/abastecimento.svg" />\n        </div>\n\n        <div class="column" (click)="linkGeral()">Geral\n          <img class="imagem" src="assets/images/geral.svg" />\n        </div>\n      </div>\n\n      <div class="row">\n        <div class="column" (click)="linkArla32()">Arla 32\n          <button ion-fab class="fab" *ngIf = "arlaPendente > 0">{{arlaPendente}}</button>\n          <img class="imagem" src="assets/images/arla.svg" />\n        </div>\n\n        <div class="column" (click)="linkDespesas()">Gastos\n          <button ion-fab class="fab" *ngIf = "despesasPendente > 0">{{despesasPendente}}</button>\n          <img class="imagem" src="assets/images/gastos.svg" />\n        </div>\n\n      </div>\n\n\n      <div class="row">\n        <div class="column" (click)="linkReceitas()">Receitas\n          <button ion-fab class="fab" *ngIf = "receitasPendente > 0">{{receitasPendente}}</button>\n          <img class="imagem" src="assets/images/receitas.svg" />\n        </div>\n\n        <div class="column" (click)="linkRelatorios()">Relatórios\n          <img class="imagem" src="assets/images/relatorios.svg" />\n        </div>\n\n      </div>\n\n    </div>\n\n\n  </ion-content>\n</div>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/modulo-viagens/viagens/viagens.html"*/,
+        selector: 'page-viagens',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/viagens/viagens.html"*/'<ion-header>\n\n  <ion-navbar color="tijuca">\n    <ion-title>Viagens</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<div class="fixed-content">\n\n  <ion-content class="card-background-page">\n    <div class="grid">\n\n      <div class="row">\n        <div class="column" (click)="linkAbastecimento()">Abastecer\n          <button ion-fab class="fab" *ngIf = "abastecimentoPendente > 0">{{abastecimentoPendente}}</button>\n          <img class="imagem" src="assets/images/abastecimento.svg" />\n        </div>\n\n        <div class="column" (click)="linkGeral()">Geral\n          <img class="imagem" src="assets/images/geral.svg" />\n        </div>\n      </div>\n\n      <div class="row">\n        <div class="column" (click)="linkArla32()">Arla 32\n          <button ion-fab class="fab" *ngIf = "arlaPendente > 0">{{arlaPendente}}</button>\n          <img class="imagem" src="assets/images/arla.svg" />\n        </div>\n\n        <div class="column" (click)="linkDespesas()">Gastos\n          <button ion-fab class="fab" *ngIf = "despesasPendente > 0">{{despesasPendente}}</button>\n          <img class="imagem" src="assets/images/gastos.svg" />\n        </div>\n\n      </div>\n\n\n      <div class="row">\n        <div class="column" (click)="linkReceitas()">Receitas\n          <button ion-fab class="fab" *ngIf = "receitasPendente > 0">{{receitasPendente}}</button>\n          <img class="imagem" src="assets/images/receitas.svg" />\n        </div>\n\n        <div class="column" (click)="linkRelatorios()">Relatórios\n          <img class="imagem" src="assets/images/relatorios.svg" />\n        </div>\n\n      </div>\n\n    </div>\n\n\n  </ion-content>\n</div>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/modulo-viagens/viagens/viagens.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],

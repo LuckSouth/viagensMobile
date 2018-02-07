@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 473:
+/***/ 459:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -122,7 +122,7 @@ var LoginPage = LoginPage_1 = (function () {
 }());
 LoginPage = LoginPage_1 = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-login',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar color="tijuca">\n    <ion-title padding>Login</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n  \n  <img src="../assets/images/tijuca-logo.png" class="img">\n  <br>\n  <ion-item>\n    <ion-label stacked><span class="input">Usuário</span></ion-label>\n    <ion-input type="text"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label stacked><span class="input">Senha</span></ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n  <br>\n\n  \n  <button ion-button full color="tijuca">Login</button>\n\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/login/login.html"*/
+        selector: 'page-login',template:/*ion-inline-start:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar color="tijuca">\n    <ion-title padding>Login</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n  \n  <img src="../assets/images/tijuca-logo.png" class="img">\n  <br>\n  <ion-item>\n    <ion-label stacked><span class="input">Usuário</span></ion-label>\n    <ion-input type="text"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label stacked><span class="input">Senha</span></ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n  <br>\n\n  \n  <button ion-button full color="tijuca">Login</button>\n\n</ion-content>'/*ion-inline-end:"/home/lucas/Área de Trabalho/viagensMobile/src/pages/login/login.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_nav_controller__["a" /* NavController */],

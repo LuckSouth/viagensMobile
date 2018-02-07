@@ -16,7 +16,7 @@ export class ArlaPostoPage {
   }
   valida() {
 
-    if (this.storageProvider.arla.km == "" || this.storageProvider.arla.dataArla == "" || this.storageProvider.arla.postoArla == "") {
+    if (this.storageProvider.arla.precoArla == "" || this.storageProvider.arla.pagArla == "" || this.storageProvider.arla.tipoArla == "" || this.storageProvider.arla.dataArla == "" || this.storageProvider.arla.postoArla == "") {
     } else {
       return true;
     }
