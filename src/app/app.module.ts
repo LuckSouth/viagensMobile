@@ -21,9 +21,8 @@ import { GeralDadosMotoristaPage } from '../pages/modulo-viagens/geral/geral-dad
 import { DespesasPage } from '../pages/modulo-viagens/despesas/despesas/despesas';
 
 import { AbastecimentoPagamentoPage } from '../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento';
-import { AbastecimentoBomba2Page } from '../pages/modulo-viagens/abastecimento/abastecimento-bomba-2/abastecimento-bomba-2';
+import { AbastecimentoBombasPage } from '../pages/modulo-viagens/abastecimento/abastecimento-bombas/abastecimento-bombas';
 import { RotasAbastecimentoPage } from '../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento';
-import { AbastecimentoFotoBomba_2Page } from '../pages/modulo-viagens/abastecimento/abastecimento-foto-bomba-2/abastecimento-foto-bomba-2';
 
 import { RotasArlaPage } from '../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla';
 import { RotasReceitasPage } from '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas';
@@ -60,15 +59,14 @@ import { LoginPage } from '../pages/login/login';
     DespesasPage,
     GeralPage,
     AbastecimentoPagamentoPage,  
-    AbastecimentoBomba2Page,
+    AbastecimentoBombasPage,
     RotasAbastecimentoPage,
     RotasArlaPage,
     RotasReceitasPage,
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
     ArlaPagPage,
-    ArlaPostoPage, 
-    AbastecimentoFotoBomba_2Page, 
+    ArlaPostoPage,  
     RelatoriosPage,
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
@@ -98,14 +96,13 @@ import { LoginPage } from '../pages/login/login';
     GeralPage,
     AbastecimentoPagamentoPage,  
     RotasAbastecimentoPage,
-    AbastecimentoBomba2Page,
+    AbastecimentoBombasPage,
     RotasReceitasPage,
     RotasArlaPage,
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
     ArlaPagPage,
-    ArlaPostoPage, 
-    AbastecimentoFotoBomba_2Page, 
+    ArlaPostoPage,  
     RelatoriosPage,
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,

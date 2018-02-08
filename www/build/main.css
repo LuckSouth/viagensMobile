@@ -27825,9 +27825,19 @@ page-login img {
   transform: translate(-50%, -50%);
 }
 
-page-abastecimento-bomba-2 .slideTop {
-  width: 96vw;
+page-abastecimento-bombas .slideTop {
+  width: 85vw;
   margin-top: -37.5vh;
+}
+
+page-abastecimento-bombas ion-icon {
+  z-index: 1;
+  font-size: 5vh;
+  margin-top: -5vh;
+  margin-left: 45vw;
+  width: 10vw;
+  color: #306B98;
+  position: absolute;
 }
 
 page-abastecimento-pagamento .slideTop {

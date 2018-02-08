@@ -10,15 +10,8 @@
             </ion-slide>
   
             <ion-slide>
-                <page-abastecimento-bomba-2></page-abastecimento-bomba-2>
-            </ion-slide>
-
-            <ion-slide>
-                <page-abastecimento-foto-bomba-2></page-abastecimento-foto-bomba-2>
-                <div class="img3">
-                    <img class="image" src="{{fotoBomba2}}" /> 
-                </div>
-            </ion-slide>
+                <page-abastecimento-bombas></page-abastecimento-bombas>
+            </ion-slide> 
         </ion-slides>
         <!-- fim de slides -->
 
@@ -27,13 +20,6 @@
         <ion-fab right bottom>
             <button ion-fab color="tijuca" [disabled]="!ngAfterViewInit()" (click)="toGo()">
                 <ion-icon name="ios-arrow-forward"></ion-icon>
-            </button>
-        </ion-fab>
-
-        <!-- Botão câmera -->
-        <ion-fab>
-            <button *ngIf="cameraButton" class="button-camera" color = "tijuca" ion-button outline>
-                <ion-icon name="ios-camera" (click)="mostrar()"></ion-icon>
             </button>
         </ion-fab>
 
