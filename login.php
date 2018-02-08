@@ -1,34 +1,45 @@
 <?php
 
-// Define database connection parameters
-$hn = '192.168.10.8:81';
-$un = 'root';
-$pwd = 'estagiario123';
-$db = 'viagensMobile';
-$cs = 'utf8';
+// // Define database connection parameters
+// $hn = '192.168.10.8:81';
+// $un = 'root';
+// $pwd = 'estagiario123';
+// $db = 'viagensMobile';
+// $cs = 'utf8';
 
-// Set up the PDO parameters
-$dsn = "mysql:host=" . $hn . ";port=3306;dbname=" . $db . ";charset=" . $cs;
-$opt = array(
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
-    PDO::ATTR_EMULATE_PREPARES => false,
-);
-// Create a PDO instance (connect to the database)
-$pdo = new PDO($dsn, $un, $pwd, $opt);
-$data = array();
+// // Set up the PDO parameters
+// $dsn = "mysql:host=" . $hn . ";port=3306;dbname=" . $db . ";charset=" . $cs;
+// $opt = array(
+//     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+//     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+//     PDO::ATTR_EMULATE_PREPARES => false,
+// );
+// // Create a PDO instance (connect to the database)
+// $pdo = new PDO($dsn, $un, $pwd, $opt);
+// $data = array();
 
 
-// Attempt to query database table and retrieve data
-try {
-    $stmt = $pdo->query("SELECT `senha` FROM `usuarios` WHERE `login` = 'estagiario'");
-    while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
-        // Assign each row of data to associative array
-        $data[] = $row;
-    }
+// // Attempt to query database table and retrieve data
+// try {
+//     $stmt = $pdo->query("SELECT `senha` FROM `usuarios` WHERE `login` = 'estagiario'");
+//     while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
+//         // Assign each row of data to associative array
+//         $data[] = $row;
+//     }
 
-    // Return data as JSON
-    echo json_encode($data);
-} catch (PDOException $e) {
-    echo $e->getMessage();
-}
+//     // Return data as JSON
+//     echo json_encode($data);
+// } catch (PDOException $e) {
+//     echo $e->getMessage();
+// }
+
+
+
+	
+$mysqli = new mysqli("192.168.10.8:81","root","estagiario123","viagensMobile");
+$row = $mysqli->query ("SELECT `senha` FROM `usuarios` WHERE `login` = 'estagiario'")->fetch_object()-> senha;
+echo $row->senha;
+
+
+
+?>
