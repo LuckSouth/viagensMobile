@@ -15,14 +15,13 @@ export class AbastecimentoPagamentoPage {
   constructor(public navCtrl: NavController,
     public storageProvider: StorageProvider) {
 
-  }
+  } 
 
-  today = Date.now();
-  
-
+  Data: string = new Date().toISOString();
   valida() {
-
-    if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "" || this.storageProvider.abastecimento.odometro == "" || this.storageProvider.abastecimento.precoBomb1 == "") {
+    this.storageProvider.abastecimento.dataAbastecimento = this.Data;
+    
+    if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == ""  ) {
       return false;
     } else {
       return true;

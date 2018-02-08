@@ -6,33 +6,28 @@
  
 <div class="slideTop">
 <ion-item>
-  <ion-label stacked>Tipo</ion-label>
+  <ion-label stacked><span class="input">Tipo</span></ion-label>
   <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label stacked>Posto</ion-label>
+  <ion-label stacked><span class="input">Posto</span></ion-label>
   <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (click)="valida()"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label stacked>Pagamento</ion-label>
+  <ion-label stacked><span class="input">Pagamento</span></ion-label>
   <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()"></ion-input>
 </ion-item>
 
-<ion-item>
-  <ion-label stacked>Data</ion-label>
-  <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.dataAbastecimento" (click)="valida()"> <p>{{today | date: 'ddMMyyyy'}}</p></ion-input>
-</ion-item>
 
-{{today | date: 'ddMMyyyy'}}
 <ion-item>
-  <ion-label stacked> Odometro</ion-label>
-  <ion-input type="number" min="0" [(ngModel)]="storageProvider.abastecimento.odometro" (ngModelChange)="valida()"></ion-input>
+  <ion-label stacked><span class="input">Preço/L</span></ion-label>
+  <ion-input type="float" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.abastecimento.precoAbastecimento" (click)="valida()"></ion-input>
 </ion-item>
-
-<ion-item> 
-  <ion-label stacked >Preço/L</ion-label>
-  <ion-input type="float" min="0" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.abastecimento.precoBomb1" (ngModelChange)="valida()"></ion-input>
-</ion-item> 
+  
+<ion-item>
+    <ion-label stacked><span class="input">Data</span></ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Data"></ion-datetime>
+  </ion-item>
 </div>

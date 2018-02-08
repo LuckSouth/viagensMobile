@@ -40,7 +40,7 @@ export class RotasArlaPage {
       this.arlaPagPage.storageProvider.arla.motorista,
       this.arlaPagPage.storageProvider.arla.litrosArla,
       this.arlaPagPage.storageProvider.arla.litrosPrecoArla,
-      this.arlaPagPage.storageProvider.arla.selectArla,
+      this.arlaPagPage.storageProvider.arla.precoArla,
       this.arlaPagPage.storageProvider.arla.tipoArla,
       this.arlaPagPage.storageProvider.arla.postoArla,
       this.arlaPagPage.storageProvider.arla.dataArla,
@@ -55,7 +55,7 @@ export class RotasArlaPage {
     this.slides.lockSwipes(true);
 
     if (this.contador == 1) {
-      return this.arlaPagPage.valida();
+      return this.arlaPostoPage.valida();
     }
 
     if (this.contador == 2) {
@@ -65,7 +65,7 @@ export class RotasArlaPage {
     }
 
     if (this.contador == 3) {
-      return this.arlaPostoPage.valida();
+      return this.arlaPagPage.valida();
     }
   }
 

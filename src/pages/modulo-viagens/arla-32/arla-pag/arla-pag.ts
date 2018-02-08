@@ -20,7 +20,7 @@ export class ArlaPagPage {
 
   valida() {
 
-    if (this.storageProvider.arla.litrosArla == "" || this.storageProvider.arla.litrosPrecoArla == "" || this.storageProvider.arla.selectArla == "") {
+    if (this.storageProvider.arla.litrosArla == "" || this.storageProvider.arla.litrosPrecoArla == "") {
       return false;
     } else {
       return true;

@@ -1,27 +1,34 @@
 <ion-header>
-  <ion-toolbar color = "tijuca">
-    <ion-title padding>Arla 32</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-list>
-
+    <ion-toolbar color="tijuca">
+      <ion-title padding>Arla 32</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div class="slideTop">
   <ion-item>
-        <ion-select palceholder="Tipo Abastecimento" [(ngModel)]="storageProvider.arla.tipoArla" (ngModelChange)="valida()">
-      <ion-option value="ext">Externo</ion-option>
-      <ion-option value="int">Interno</ion-option>
-    </ion-select>
-  </ion-item>
-
-  <ion-item>
-    <ion-input type="text" placeholder="Posto Combustivel" [(ngModel)]="storageProvider.arla.postoArla" (ngModelChange)="valida()"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-input type="date" placeholder="Data" [(ngModel)]="storageProvider.arla.dataArla" (ngModelChange)="valida()"></ion-input>
+    <ion-label stacked><span class="input">Tipo</span></ion-label>
+    <ion-input type="text" [(ngModel)]="storageProvider.arla.tipoArla" (click)="valida()"></ion-input>
   </ion-item>
   
   <ion-item>
-    <ion-input type="number" min="0" placeholder="Kilometragem"  [(ngModel)]="storageProvider.arla.km" (ngModelChange)="valida()"></ion-input>
+      <ion-label stacked><span class="input">Posto</span></ion-label>
+    <ion-input type="text" [(ngModel)]="storageProvider.arla.postoArla" (click)="valida()"></ion-input>
   </ion-item>
-
-</ion-list>
+  
+  <ion-item>
+      <ion-label stacked><span class="input">Pagamento</span></ion-label>
+      <ion-input type="text" [(ngModel)]="storageProvider.arla.pagArla" (click)="valida()"></ion-input>
+    </ion-item> 
+  
+<ion-item>
+  <ion-label stacked><span class="input">Preço/L</span></ion-label>
+  <ion-input type="float" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.arla.precoArla" (click)="valida()"></ion-input>
+</ion-item>
+  
+    <ion-item>
+        <ion-label stacked><span class="input">Data</span></ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Data"></ion-datetime>
+      </ion-item>
+  </div>
+  
+  

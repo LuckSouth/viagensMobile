@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { Slides } from 'ionic-angular';
 import { FotoServicoProvider } from '../../../../providers/foto-servico/foto-servico'
 import { AbastecimentoPagamentoPage } from '../abastecimento-pagamento/abastecimento-pagamento'; 
-import { AbastecimentoBomba2Page } from '../abastecimento-bomba-2/abastecimento-bomba-2';
+import { AbastecimentoBombasPage } from '../abastecimento-bombas/abastecimento-bombas';
 import { StorageProvider } from '../../../../providers/storage/storage';
 import { DadosProvider } from "../../../../providers/dados/dados";
 @IonicPage()
@@ -14,7 +14,7 @@ import { DadosProvider } from "../../../../providers/dados/dados";
 export class RotasAbastecimentoPage {
   @ViewChild(Slides) slides: Slides;
   @ViewChild(AbastecimentoPagamentoPage) abastecimentoPagamento: AbastecimentoPagamentoPage;  
-  @ViewChild(AbastecimentoBomba2Page) abastecimentoBomba2: AbastecimentoBomba2Page;
+  @ViewChild(AbastecimentoBombasPage) abastecimentoBombas: AbastecimentoBombasPage;
 
 
 
@@ -78,7 +78,7 @@ export class RotasAbastecimentoPage {
     }
 
     if (this.contador == 6) {
-      return this.abastecimentoBomba2.valida();
+      return this.abastecimentoBombas.valida();
     }
 
     if (this.contador == 7) {
@@ -110,7 +110,7 @@ export class RotasAbastecimentoPage {
     this.slides.lockSwipes(false);
     this.slides.slideTo(this.contador, 400)
     this.contador += 1;
-    if (this.contador == 8) {
+    if (this.contador == 3) {
       this.salvar()
       // this.storageProvider.adicionarAbastecimento();
 
@@ -123,7 +123,7 @@ export class RotasAbastecimentoPage {
 
     }
 
-    if (this.contador == 3 || this.contador == 5 || this.contador == 7) {
+    if (this.contador == 3 || this.contador == 5 ) {
       this.cameraButton = true;
     } else {
       this.cameraButton = false;
@@ -132,26 +132,16 @@ export class RotasAbastecimentoPage {
   }
 
   mostrar() {
-
     this.foto.getFoto('picture')
-      .then(responses => {
-
-        if (this.contador == 3) {
-          this.fotoOdometro = this.foto.ultimaFoto;
-          console.log(this.fotoOdometro);
-        }
-
-        if (this.contador == 5) {
-          this.fotoBomba1 = this.foto.ultimaFoto;
-          console.log(this.fotoBomba1);
-        }
-
-        if (this.contador == 7) {
-          this.fotoBomba2 = this.foto.ultimaFoto;
-          console.log(this.fotoBomba2);
-        }
-      })
-
+      .then(responses => {this.fotoOdometro = this.foto.ultimaFoto; })
+  }
+  mostrar2() {
+    this.foto.getFoto('picture')
+      .then(responses => {this.fotoBomba1 = this.foto.ultimaFoto; })
+  }
+  mostrar3() {
+    this.foto.getFoto('picture')
+      .then(responses => {this.fotoBomba2 = this.foto.ultimaFoto; })
   }
 }
 
