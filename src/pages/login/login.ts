@@ -73,22 +73,22 @@ export class LoginPage {
 
 
 
-  load(): void {
-    this.http
-      .get('http://localhost/login.php')
-      .subscribe((data: any) => {
-        console.dir(data);
-        //  console.dir(data.senha)
-        this.itens = data;
-        console.log(this.itens[0].senha)
-      },
-      (error: any) => {
-        console.dir(error);
-      });
-  }
+  // load(): void {
+  //   this.http
+  //     .get('http://localhost/login.php')
+  //     .subscribe((data: any) => {
+  //       console.dir(data);
+  //       //  console.dir(data.senha)
+  //       this.itens = data;
+  //       console.log(this.itens[0].senha)
+  //     },
+  //     (error: any) => {
+  //       console.dir(error);
+  //     });
+  // }
 
   ionViewWillEnter(): void {
-    this.load();
+    // this.load();
   }
 
 
