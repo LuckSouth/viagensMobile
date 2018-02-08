@@ -27904,6 +27904,16 @@ page-rotas-abastecimento .img3 {
   background: url("{{fotoBomba2}}");
 }
 
+arla-pag-page .slideTop {
+  width: 96vw;
+  margin-top: -40vh;
+}
+
+arla-posto-page .slideTop {
+  width: 96vw;
+  margin-top: -30vh;
+}
+
 page-rotas-arla .button-camera {
   margin-top: -16vh;
   margin-left: 44vw;

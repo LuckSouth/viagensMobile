@@ -55,7 +55,8 @@ export class StorageProvider {
     litrosArla: "",
     litrosPrecoArla: "",
     pagArla: "",
-    precoArla:""
+    precoArla:"",
+    odometroArla: "",
   }
 
 
@@ -74,6 +75,7 @@ export class StorageProvider {
     precoBomb1: "",
     litrosBomb2: "",
     precoBomb2: "",
+    precoAbastecimento: "",
   }
 
 

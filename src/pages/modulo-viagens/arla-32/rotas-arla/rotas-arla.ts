@@ -40,7 +40,7 @@ export class RotasArlaPage {
       this.arlaPagPage.storageProvider.arla.motorista,
       this.arlaPagPage.storageProvider.arla.litrosArla,
       this.arlaPagPage.storageProvider.arla.litrosPrecoArla,
-      this.arlaPagPage.storageProvider.arla.selectArla,
+      this.arlaPagPage.storageProvider.arla.precoArla,
       this.arlaPagPage.storageProvider.arla.tipoArla,
       this.arlaPagPage.storageProvider.arla.postoArla,
       this.arlaPagPage.storageProvider.arla.dataArla,

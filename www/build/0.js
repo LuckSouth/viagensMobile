@@ -46,7 +46,7 @@ InicioPageModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__principal_principal_principal__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__principal_principal_principal__ = __webpack_require__(288);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -77,7 +77,7 @@ var InicioPage = (function () {
 }());
 InicioPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-inicio',template:/*ion-inline-start:"/home/arthur/viagensMobile/src/pages/inicio/inicio.html"*/'<ion-content padding>\n  <!-- <page-login></page-login> -->\n  <!-- <page-principal></page-principal> -->\n</ion-content>'/*ion-inline-end:"/home/arthur/viagensMobile/src/pages/inicio/inicio.html"*/,
+        selector: 'page-inicio',template:/*ion-inline-start:"/home/lucas/viagensMobile/src/pages/inicio/inicio.html"*/'<ion-content padding>\n  <!-- <page-login></page-login> -->\n  <!-- <page-principal></page-principal> -->\n</ion-content>'/*ion-inline-end:"/home/lucas/viagensMobile/src/pages/inicio/inicio.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
