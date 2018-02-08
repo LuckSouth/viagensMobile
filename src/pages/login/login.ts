@@ -34,6 +34,7 @@ export class LoginPage {
 
   //enviar dados pro php
   public hideForm: boolean = false;
+  private baseURI: string = "http://192.168.10.160/";
 
 
 
@@ -43,8 +44,7 @@ export class LoginPage {
         "login": login,
         "senha": senha
       },
-      url: any = "localhost/login.php";
-
+      url: any = this.baseURI + "login.php";
 
     try {
       console.log
