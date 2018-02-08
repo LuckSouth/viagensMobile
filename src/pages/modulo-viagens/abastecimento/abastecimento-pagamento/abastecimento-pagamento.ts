@@ -21,7 +21,7 @@ export class AbastecimentoPagamentoPage {
   valida() {
     this.storageProvider.abastecimento.dataAbastecimento = this.Data;
     
-    if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == "" || this.storageProvider.abastecimento.precoAbastecimento == ""  ) {
+    if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == ""  ) {
       return false;
     } else {
       return true;

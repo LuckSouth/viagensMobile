@@ -5,8 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ScreenOrientation } from '@ionic-native/screen-orientation'; 
 
 import { StorageProvider } from '../providers/storage/storage';  
-import { Storage } from '@ionic/storage';  
-import { PrincipalPage } from '../pages/principal/principal/principal'; 
+import { Storage } from '@ionic/storage';   
 import { ViagensPage } from '../pages/modulo-viagens/viagens/viagens';
 
 @Component({
