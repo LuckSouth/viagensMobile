@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-import { AlertController } from 'ionic-angular'; 
-
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular'; 
 import { StorageProvider } from '../../../../providers/storage/storage';
 
 
@@ -14,13 +12,12 @@ export class AbastecimentoBombasPage {
  
 
   constructor(public navCtrl: NavController,
-    public navParams: NavParams,
-    public alertCtrl: AlertController,
+    public navParams: NavParams, 
     public viewCtrl: ViewController,
     public storageProvider: StorageProvider) {
   }
 
- 
+ /* Verifica se o usuário inseriu os dados a todos os campos */ 
   valida() { 
     
         if ( this.storageProvider.abastecimento.litrosBomb1 == "" || this.storageProvider.abastecimento.odometro == "" || this.storageProvider.abastecimento.litrosBomb2 == "" ){

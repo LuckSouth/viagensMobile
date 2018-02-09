@@ -85,15 +85,13 @@
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-sqlite-storage" spec="^2.1.4" />
     <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
-    <engine name="android" spec="^6.4.0" />
-    <engine name="browser" spec="~5.0.3" />
     <plugin name="cordova-plugin-googleplus" spec="^5.2.1">
         <variable name="REVERSED_CLIENT_ID" value="myreversedclientid" />
     </plugin>
     <plugin name="cordova-plugin-googleplus" spec="^5.1.1">
         <variable name="REVERSED_CLIENT_ID" value="myreversedclientid" />
     </plugin>
+    <plugin name="cordova-plugin-network-information" spec="~2.0.1" />
     <engine name="android" spec="^6.4.0" />
     <engine name="browser" spec="~5.0.3" />
-    <plugin name="cordova-plugin-network-information" spec="~2.0.1" />
 </widget>

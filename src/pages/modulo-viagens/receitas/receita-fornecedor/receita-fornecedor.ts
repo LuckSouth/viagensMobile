@@ -15,7 +15,9 @@ export class ReceitasFornecedorPage {
     public storageProvider: StorageProvider) {
 
   }
- 
+  
+   /* Verifica se o usuário inseriu os dados a todos os campos */
+
 valida() {
     if (this.storageProvider.receitas.fornecedorOrigem == "" || this.storageProvider.receitas.fornecedorDestino == "" || this.storageProvider.receitas.produto == "" || this.storageProvider.receitas.tipoPagmt == "") {
       return false;

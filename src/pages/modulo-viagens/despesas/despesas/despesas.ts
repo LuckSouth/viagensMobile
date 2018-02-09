@@ -2,12 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 import { StorageProvider } from '../../../../providers/storage/storage';
-import { DadosProvider } from "../../../../providers/dados/dados";
-import { ViagensPage } from "../../viagens/viagens";
-
-
-
-
+import { DadosProvider } from "../../../../providers/dados/dados"; 
 
 @IonicPage()
 @Component({
@@ -17,14 +12,9 @@ import { ViagensPage } from "../../viagens/viagens";
 
 
 export class DespesasPage {
-    
-
-
+  
   despesa = "";
   motorista = "bino";
-
-
-
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -32,41 +22,36 @@ export class DespesasPage {
     public storageProvider: StorageProvider,
     public dados: DadosProvider) {
 
-  }
+  } 
 
-  viagens() {
-    this.navCtrl.push(ViagensPage);
-  }
-
-  amountChange() {
-    this.storageProvider.despesas.valorDespesas = this.storageProvider.detectAmount(this.storageProvider.despesas.valorDespesas);
-  }
-
-
+  /* Verifica se o usuário inseriu os dados a todos os campos */
+  
   valida() {
-    if (this.storageProvider.despesas.despesas == "" || this.storageProvider.despesas.dataDespesas == "" || this.storageProvider.despesas.valorDespesas == "") {
+    if (
+    this.storageProvider.despesas.despesas == "" || 
+    this.storageProvider.despesas.dataDespesas == "" || 
+    this.storageProvider.despesas.valorDespesas == ""  ) {
       return false
     } else {
       return true
     }
   }
+ 
 
-
-  showAlert() {
+    /* Envia os dados para o provider para serem tratados */
+  salvar() {
+    this.dados.despesa(
+    this.storageProvider.despesas.motorista, 
+    this.storageProvider.despesas.despesas, 
+    this.storageProvider.despesas.dataDespesas, 
+    this.storageProvider.despesas.valorDespesas
+  );
+    this.navCtrl.pop();
 
     let toast = this.toastCtrl.create({
       message: 'Gastos adicionado com sucesso',
       duration: 2000
     });
     toast.present();
-
-    this.navCtrl.pop();
-  }
-
-
-  salvar() {
-    this.dados.despesa(this.storageProvider.despesas.motorista, this.storageProvider.despesas.despesas, this.storageProvider.despesas.dataDespesas, this.storageProvider.despesas.valorDespesas);
-    this.navCtrl.pop();
-
   }
 }

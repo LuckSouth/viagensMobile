@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="tijuca">
-    <ion-title padding>Dados</ion-title>
+    <ion-title padding>Arla 32</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,13 +10,13 @@
     <ion-label stacked>
       <span class="input">Odometro</span>
     </ion-label>
+
+    
     <ion-input type="number" min="0" placeholder="195463 Km" [(ngModel)]="storageProvider.arla.odometroArla" (ngModelChange)="valida()">
     </ion-input>
   </ion-item>
+  <ion-icon ios="ios-camera" md="md-camera" (click)="mostrar()" ></ion-icon>  
 
-  <ion-item>
-    <ion-icon ios="ios-camera" md="md-camera"></ion-icon>
-  </ion-item>
 
   <ion-item>
     <ion-label stacked>
@@ -25,11 +25,6 @@
     <ion-input type="number" min="0" [(ngModel)]="storageProvider.arla.litrosArla" (ngModelChange)="valida()"></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label stacked>
-      <span class="input">Litros(R$)</span>
-    </ion-label>
-    <ion-input type="number" [(ngModel)]="storageProvider.arla.litrosPrecoArla" (ngModelChange)="valida()"></ion-input>
-  </ion-item>
-
+  <ion-icon ios="ios-camera" md="md-camera" (click)="mostrar()" ></ion-icon>   
+  <button ion-button full (click)="salvar()" [disabled]="!valida()" color = "tijuca" >Adicionar</button>
 </div>

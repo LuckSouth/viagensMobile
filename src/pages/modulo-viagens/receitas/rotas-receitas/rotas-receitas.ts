@@ -31,6 +31,7 @@ export class RotasReceitasPage {
 
   }
 
+  /* Envia os dados para o provider para serem tratados */
 
   salvar() {
  

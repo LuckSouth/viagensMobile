@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
-import { FotoServicoProvider } from '../../../../providers/foto-servico/foto-servico'
-import { AbastecimentoPagamentoPage } from '../abastecimento-pagamento/abastecimento-pagamento'; 
+import { FotoServicoProvider } from '../../../../providers/foto-servico/foto-servico';
+import { AbastecimentoPagamentoPage } from '../abastecimento-pagamento/abastecimento-pagamento';
 import { AbastecimentoBombasPage } from '../abastecimento-bombas/abastecimento-bombas';
 import { StorageProvider } from '../../../../providers/storage/storage';
 import { DadosProvider } from "../../../../providers/dados/dados";
@@ -11,14 +11,16 @@ import { DadosProvider } from "../../../../providers/dados/dados";
   selector: 'page-rotas-abastecimento',
   templateUrl: 'rotas-abastecimento.html',
 })
-export class RotasAbastecimentoPage {
+export class RotasAbastecimentoPage { 
+  /* Acesso ao valor de cada propriedade ou método */
   @ViewChild(Slides) slides: Slides;
-  @ViewChild(AbastecimentoPagamentoPage) abastecimentoPagamento: AbastecimentoPagamentoPage;  
+  @ViewChild(AbastecimentoPagamentoPage) abastecimentoPagamento: AbastecimentoPagamentoPage;
   @ViewChild(AbastecimentoBombasPage) abastecimentoBombas: AbastecimentoBombasPage;
 
 
-
-  public contador: number = 1;
+  /* Recupera os valores das variáveis de outras páginas */
+  /* A variavel 'contador' indica em que slide o usuário está */
+  public contador: number = 1; 
   cameraButton: boolean;
   fotoBomba1: string = "asda";
   fotoBomba2: string = "asda";
@@ -39,7 +41,7 @@ export class RotasAbastecimentoPage {
   }
 
 
-
+  /* Envia os dados para o Storage Provider */
   salvar() {
     this.dados.abastecimento(
       this.abastecimentoPagamento.storageProvider.abastecimento.motorista,
@@ -51,97 +53,54 @@ export class RotasAbastecimentoPage {
       this.abastecimentoPagamento.storageProvider.abastecimento.litrosBomb1,
       this.abastecimentoPagamento.storageProvider.abastecimento.precoBomb1,
       this.abastecimentoPagamento.storageProvider.abastecimento.litrosBomb2,
-      this.abastecimentoPagamento.storageProvider.abastecimento.precoBomb2,
-    
+      this.abastecimentoPagamento.storageProvider.abastecimento.precoBomb2
     )
-    console.log("salvar chamado")
-
   }
 
+  /* 'ngAfterViewInit' Método que executa a todo instante */
   ngAfterViewInit() {
+    /* Bloqueia a passagem do slide com deslize */
     this.slides.lockSwipes(true);
 
     if (this.contador == 1) {
       return this.abastecimentoPagamento.valida();
     }
- 
     if (this.contador == 2) {
-      if (this.fotoOdometro != undefined) {
-        return true;
-      }
-    } 
-
-    if (this.contador == 5) {
-      if (this.fotoBomba1 != undefined) {
-        return true;
-      }
-    }
-
-    if (this.contador == 6) {
       return this.abastecimentoBombas.valida();
     }
-
-    if (this.contador == 7) {
-      if (this.fotoBomba2 != undefined) {
-        return true;
-      }
-    }
-
   }
-
+  /* Retorna o slide */
   toBack() {
     this.slides.lockSwipes(false);
     this.contador -= 1;
     this.slides.slidePrev(400)
     if (this.contador == 0) {
       this.navCtrl.pop();
-
-    }
-
-    if (this.contador == 3 || this.contador == 5 || this.contador == 7) {
-      this.cameraButton = true;
-    } else {
-      this.cameraButton = false;
     }
     this.slides.lockSwipes(true);
   }
 
+  /* Avança o slide */
   toGo() {
     this.slides.lockSwipes(false);
     this.slides.slideTo(this.contador, 400)
     this.contador += 1;
+    /* Salva os dados no último slide */
     if (this.contador == 3) {
       this.salvar()
-      // this.storageProvider.adicionarAbastecimento();
-
       let toast = this.toastCtrl.create({
         message: 'Abastecimento adicionada com sucesso',
         duration: 2000
       });
       toast.present();
-      this.navCtrl.pop();
+      this.navCtrl.pop(); 
 
-    }
-
-    if (this.contador == 3 || this.contador == 5 ) {
-      this.cameraButton = true;
-    } else {
-      this.cameraButton = false;
     }
     this.slides.lockSwipes(true);
   }
-
+  /* Executa a função de Fotografar */
   mostrar() {
-    this.foto.getFoto('picture')
-      .then(responses => {this.fotoOdometro = this.foto.ultimaFoto; })
-  }
-  mostrar2() {
-    this.foto.getFoto('picture')
-      .then(responses => {this.fotoBomba1 = this.foto.ultimaFoto; })
-  }
-  mostrar3() {
-    this.foto.getFoto('picture')
-      .then(responses => {this.fotoBomba2 = this.foto.ultimaFoto; })
+    this.foto.getFoto('picture');
   }
 }
 

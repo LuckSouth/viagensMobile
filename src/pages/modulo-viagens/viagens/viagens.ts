@@ -3,15 +3,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { RotasAbastecimentoPage } from '../abastecimento/rotas-abastecimento/rotas-abastecimento';
 import { GeralPage } from '../geral/geral-page/geral-page';
-import { DespesasPage } from '../despesas/despesas/despesas';
-import { RotasArlaPage } from '../arla-32/rotas-arla/rotas-arla';
+import { DespesasPage } from '../despesas/despesas/despesas'; 
 import { RotasReceitasPage } from '../receitas/rotas-receitas/rotas-receitas';
-import { DadosProvider } from "../../../providers/dados/dados";
-// import { Network } from "@ionic-native/network";
+import { DadosProvider } from "../../../providers/dados/dados"; 
 import { Storage } from "@ionic/storage";
 import { StorageProvider } from "../../../providers/storage/storage";
 import { RelatoriosPage } from "../relatorios/relatorios-page/relatorios";
 import { EnviarProvider } from "../../../providers/enviar/enviar";
+import { ArlaPagamentoPage } from '../arla-32/arla-pagamento/arla-pagamento';
 @IonicPage()
 @Component({
   selector: 'page-viagens',
@@ -24,17 +23,15 @@ export class ViagensPage {
   despesasPendente;
   receitasPendente;
 
-  storages;
-
-
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public dados: DadosProvider,
-    // public network: Network,
+    public dados: DadosProvider, 
     public storage: Storage,
     public storageProvider: StorageProvider,
     public enviar: EnviarProvider) {
   }
+
+  /* Funções de link para outras páginas */
 
   linkAbastecimento() {
     this.navCtrl.push(RotasAbastecimentoPage);
@@ -49,7 +46,7 @@ export class ViagensPage {
   }
 
   linkArla32() {
-    this.navCtrl.push(RotasArlaPage);
+    this.navCtrl.push(ArlaPagamentoPage);
   }
 
   linkGeral() {
@@ -59,10 +56,7 @@ export class ViagensPage {
   linkRelatorios() {
     this.navCtrl.push(RelatoriosPage);
   }
-  ionViewDidEnter() {
-    // this.naoEnviadas = this.provider.recuperaTamanho();
-    // return this.provider.recuperaTamanho();
-
+  ionViewDidEnter() { 
     this.arlaPendente = this.storageProvider.tamanhoArla();
     this.abastecimentoPendente = this.storageProvider.tamanhoAbastecimento();
     this.despesasPendente = this.storageProvider.tamanhoDespesas();
@@ -71,26 +65,4 @@ export class ViagensPage {
     this.enviar.enviar();
 
   }
-
-  ngAfterViewInit() {
-
-    // this.arlaPendente = this.provider.tamanhoArla();
-    // this.abastecimentoPendente = this.provider.tamanhoAbastecimento();
-    // this.despesasPendente = this.provider.tamanhoDespesas();
-    // this.receitasPendente = this.provider.tamanhoReceitas();   
-
-
-    // this.network.onConnect().subscribe(data => {
-    //   console.log(data)
-    // }, error => console.error(error));
-
-    // this.network.onDisconnect().subscribe(data => {
-    //   console.log(data)
-    // }, error => console.error(error));
-
-    // console.log(this.network.type)
-  }
-
-
-
 }

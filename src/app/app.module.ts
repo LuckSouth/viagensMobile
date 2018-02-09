@@ -23,20 +23,16 @@ import { DespesasPage } from '../pages/modulo-viagens/despesas/despesas/despesas
 import { AbastecimentoPagamentoPage } from '../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento';
 import { AbastecimentoBombasPage } from '../pages/modulo-viagens/abastecimento/abastecimento-bombas/abastecimento-bombas';
 import { RotasAbastecimentoPage } from '../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento';
-
-import { RotasArlaPage } from '../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla';
-import { RotasReceitasPage } from '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas';
-
+ 
 import { RelatoriosPage } from '../pages/modulo-viagens/relatorios/relatorios-page/relatorios';
 import { ReceitasRelatoriosPage } from '../pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios';
 import { DespesasRelatoriosPage } from '../pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios';
 import { AbastecimentoRelatoriosPage } from '../pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios';
 import { ArlaRelatoriosPage } from '../pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios';
 
-import { ArlaPagPage } from '../pages/modulo-viagens/arla-32/arla-pag/arla-pag';
-import { ArlaPostoPage } from '../pages/modulo-viagens/arla-32/arla-posto/arla-posto';
-import { FotoarlaPage } from '../pages/modulo-viagens/arla-32/fotoarla/fotoarla';
- 
+import { ArlaPagamentoPage } from '../pages/modulo-viagens/arla-32/arla-pagamento/arla-pagamento'; 
+import { RotasReceitasPage } from '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas';
+
 import { Camera } from "@ionic-native/camera";
 import { FotoServicoProvider } from '../providers/foto-servico/foto-servico';
 import { IonicStorageModule } from '@ionic/storage';
@@ -61,18 +57,15 @@ import { LoginPage } from '../pages/login/login';
     AbastecimentoPagamentoPage,  
     AbastecimentoBombasPage,
     RotasAbastecimentoPage,
-    RotasArlaPage,
     RotasReceitasPage,
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
-    ArlaPagPage,
-    ArlaPostoPage,  
+    ArlaPagamentoPage,
     RelatoriosPage,
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
-    AbastecimentoRelatoriosPage,
-    FotoarlaPage,
+    AbastecimentoRelatoriosPage, 
     LoginPage
   ],
   imports: [
@@ -97,18 +90,15 @@ import { LoginPage } from '../pages/login/login';
     AbastecimentoPagamentoPage,  
     RotasAbastecimentoPage,
     AbastecimentoBombasPage,
-    RotasReceitasPage,
-    RotasArlaPage,
+    RotasReceitasPage, 
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
-    ArlaPagPage,
-    ArlaPostoPage,  
+    ArlaPagamentoPage,
     RelatoriosPage,
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
-    AbastecimentoRelatoriosPage,
-    FotoarlaPage,
+    AbastecimentoRelatoriosPage, 
     LoginPage
   ],
   providers: [
