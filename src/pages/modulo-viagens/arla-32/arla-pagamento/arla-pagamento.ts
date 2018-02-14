@@ -26,9 +26,15 @@ export class ArlaPagamentoPage {
   valida() {
 
     if (
-    this.storageProvider.arla.litrosArla == "" || 
-    this.storageProvider.arla.litrosPrecoArla == "") {
-      return true;
+    this.storageProvider.arla.tipoArla == "" || 
+    this.storageProvider.arla.postoArla == "" || 
+    this.storageProvider.arla.pagArla == "" || 
+    this.storageProvider.arla.precoArla == "" || 
+    this.storageProvider.arla.odometroArla == "" || 
+    this.storageProvider.arla.litrosArla == ""
+    //this.storageProvider.arla.Data == ""
+  ) {
+      return false;
     } else {
       return true;
     }
