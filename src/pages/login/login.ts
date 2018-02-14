@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavParams } from 'ionic-angular';
 import { NavController } from 'ionic-angular/navigation/nav-controller';
-import { Storage } from '@ionic/storage/es2015/storage';
-
-import { PrincipalPage } from '../principal/principal/principal';
+import { Storage } from '@ionic/storage/es2015/storage'; 
 import { StorageProvider } from '../../providers/storage/storage';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
