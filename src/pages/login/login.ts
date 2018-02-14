@@ -2,9 +2,13 @@ import { Component } from '@angular/core';
 import { IonicPage, NavParams } from 'ionic-angular';
 import { NavController } from 'ionic-angular/navigation/nav-controller';
 import { Storage } from '@ionic/storage/es2015/storage';
-import { HttpClient } from '@angular/common/http';
- 
+
+import { PrincipalPage } from '../principal/principal/principal';
 import { StorageProvider } from '../../providers/storage/storage';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+
+
 
 @IonicPage()
 @Component({
@@ -14,8 +18,10 @@ import { StorageProvider } from '../../providers/storage/storage';
 
 export class LoginPage {
 
-  public items: Array<any> = [];
- 
+
+  public itens: Array<any> = [];
+
+
   constructor(
     public navParams: NavParams,
     public navCtrl: NavController,
@@ -25,23 +31,40 @@ export class LoginPage {
   ) { }
 
 
-  /* Executa a função 'login' assim que abre a página */ 
-  ionViewWillEnter(): void {
-    this.login();
-  }
-  /* A função 'login' recupera os dados do usuário */
-  login(): void {
-    this.http
-      .get('http://192.168.10.8:81/viagensMobile/login.php')
-      .subscribe((data: any) => {
-        console.dir(data);
-        this.items = data;
+
+  //enviar dados pro php
+  public hideForm: boolean = false;
+  private baseURI: string = "http://192.168.10.160/";
+
+
+
+  enviar(login: string, senha: string): void {
+    let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+      options: any = {
+        "login": login,
+        "senha": senha
       },
-      (error: any) => {
-        console.dir(error);
-      });
+      url: any = this.baseURI + "login.php";
+
+    try {
+      console.log
+      this.http.post(url, JSON.stringify(options), headers)
+        .subscribe((data: any) => {
+          console.log(data)
+          // If the request was successful notify the user
+          // console.log(data)
+          this.hideForm = true;
+
+
+        },
+        (error: any) => {
+          console.log(error);
+
+        });
+    } catch (error) {
+      console.log('catch')
+    }
+
   }
-
-
 }
 

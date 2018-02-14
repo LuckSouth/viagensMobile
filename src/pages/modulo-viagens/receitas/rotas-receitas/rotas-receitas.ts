@@ -89,7 +89,7 @@ export class RotasReceitasPage {
     this.slides.lockSwipes(false);
     this.slides.slideTo(this.contador, 400)
     this.contador += 1;
-    if (this.contador == 4) {
+    if (this.contador == 3) {
 
       this.salvar();
 

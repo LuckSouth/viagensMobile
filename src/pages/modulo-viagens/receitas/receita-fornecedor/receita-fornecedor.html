@@ -1,34 +1,40 @@
-<ion-header color = "tijuca">
-  
-  <ion-toolbar color = "tijuca">
-    <ion-title padding color = "tijuca">Fornecedor</ion-title>
-</ion-toolbar>
+<ion-header color="tijuca">
+
+  <ion-toolbar color="tijuca">
+    <ion-title padding color="tijuca">Fornecedor</ion-title>
+  </ion-toolbar>
 
 
 </ion-header>
 
-  <ion-list>
+<div class="slideTop">
+<ion-list>
 
-    <ion-item>
-      <ion-label floating>Fornecedor / Origem</ion-label>
-      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (ngModelChange)="valida()"></ion-input>
-    </ion-item>
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Fornecedor / Origem</span>
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (click)="valida()"></ion-input>
+  </ion-item>
 
-    <ion-item>
-      <ion-label floating>Fornecedor / Destino</ion-label>
-      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorDestino" (ngModelChange)="valida()"></ion-input>
-    </ion-item>
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Fornecedor / Destino</span>
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorDestino" (click)="valida()"></ion-input>
+  </ion-item>
 
-    <ion-item>
-      <ion-label floating>Produto</ion-label>
-      <ion-input type="text" name="produto" [(ngModel)]="storageProvider.receitas.produto" (ngModelChange)="valida()"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Tipo de Pagamento</ion-label>
-      <ion-select [(ngModel)]="storageProvider.receitas.tipoPagmt" (click)="valida()">
-        <ion-option value="proprio">Próprio</ion-option>
-        <ion-option value="tercerizado">Tercerizado</ion-option>
-        <ion-option value="quarterizado">Quarterizado</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Produto</span>
+    </ion-label>
+    <ion-input type="text" name="produto" [(ngModel)]="storageProvider.receitas.produto" (click)="valida()"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Tipo de Pagamento</span>
+    </ion-label>
+    <ion-input [(ngModel)]="storageProvider.receitas.tipoPagmt" (click)="valida()"></ion-input>
+  </ion-item>
+</ion-list>
+</div>

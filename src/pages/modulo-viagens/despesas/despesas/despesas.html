@@ -1,33 +1,27 @@
 <ion-header>
-  <ion-navbar color = "tijuca">
+  <ion-navbar color="tijuca">
     <ion-title>Despesas da Viagem</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-    
-      <ion-item>
-        <ion-select placeholder="Despesas" [(ngModel)]="storageProvider.despesas.despesas" required #iptDespesa="ngModel">
-          <ion-option value="Lanche">Lanche</ion-option>
-          <ion-option value="Almoço">Almoço</ion-option>
-          <ion-option value="Jantar">Jantar</ion-option>
-          <!-- <ion-option value="4">Almoçado</ion-option> 
-          <ion-option value="5">Borracharia</ion-option>
-          <ion-option value="6">Corrente</ion-option>
-          <ion-option value="7">Lavagem de veículos</ion-option>
-          <ion-option value="8">Conserto de pneu</ion-option>
-          <ion-option value="9">Carga/Descarga</ion-option>
-          <ion-option value="10">Moto taxi</ion-option> -->
-        </ion-select>
-      </ion-item>
-    
+<ion-content panger>
   <ion-item>
-        <ion-input type="date" placeholder="Data" [(ngModel)]="storageProvider.despesas.dataDespesas" required #iptData="ngModel"></ion-input>
-      </ion-item> 
-      <ion-item>
-        <ion-input type="float" placeholder="0,00" [brmasker]="{money: true}" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>
-      </ion-item> 
-  </ion-list> 
-  <button ion-button full (click)="salvar()" [disabled]="!valida()" color = "tijuca" >Adicionar</button>
+    <ion-label stacked>
+      <span class="input">Despesas</span>
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="storageProvider.despesas.despesas"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Data</span>
+    </ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Data"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="float" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>
+  </ion-item>
+
+  <button ion-button full (click)="salvar()" [disabled]="!valida()" color="tijuca">Adicionar</button>
 </ion-content>

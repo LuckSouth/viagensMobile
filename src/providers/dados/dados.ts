@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core'; 
-import 'rxjs/add/operator/map'; 
+import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/map';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { StorageProvider } from "../../providers/storage/storage";
 
@@ -8,7 +8,6 @@ export class DadosProvider {
 
   constructor(public http: HttpClient,
     public storage: StorageProvider) {
-    console.log('Hello DadosProvider Provider'); 
   }
 
   private baseURI: string = "http://192.168.10.160/";
@@ -20,12 +19,14 @@ export class DadosProvider {
       url: any = this.baseURI + "manage-data.php";
 
 
-    try {
+    try { console.log
       this.http.post(url, JSON.stringify(options), headers)
         .subscribe((data: any) => {
           console.log(data)
           // Se a requisição for um sucesso notifique o usuário
           this.hideForm = true;
+         
+
         },
         (error: any) => { 
 

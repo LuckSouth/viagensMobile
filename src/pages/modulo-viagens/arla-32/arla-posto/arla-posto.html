@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="tijuca">
-    <ion-title padding>Pagamento</ion-title>
+    <ion-title padding>Arla 32</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,29 +9,28 @@
     <ion-label stacked>
       <span class="input">Tipo</span>
     </ion-label>
-    <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()"></ion-input>
+    <ion-input type="text" [(ngModel)]="storageProvider.arla.tipoArla" (click)="valida()"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label stacked>
       <span class="input">Posto</span>
     </ion-label>
-    <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (click)="valida()"></ion-input>
+    <ion-input type="text" [(ngModel)]="storageProvider.arla.postoArla" (click)="valida()"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label stacked>
       <span class="input">Pagamento</span>
     </ion-label>
-    <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoPagmtAbastecimento" (click)="valida()"></ion-input>
+    <ion-input type="text" [(ngModel)]="storageProvider.arla.pagArla" (click)="valida()"></ion-input>
   </ion-item>
-
 
   <ion-item>
     <ion-label stacked>
       <span class="input">Preço/L</span>
     </ion-label>
-    <ion-input type="float" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.abastecimento.precoAbastecimento"
+    <ion-input type="float" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.arla.precoArla"
       (click)="valida()"></ion-input>
   </ion-item>
 
