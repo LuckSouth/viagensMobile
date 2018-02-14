@@ -4,12 +4,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content panger>
+<div class="slideTop"> 
   <ion-item>
     <ion-label stacked>
-      <span class="input">Despesas</span>
+      <span class="input">Despesa</span>
     </ion-label>
     <ion-input type="text" [(ngModel)]="storageProvider.despesas.despesas"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Valor</span>
+    </ion-label>
+    <ion-input type="float" placeholder="R$ 0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>
   </ion-item>
 
   <ion-item>
@@ -19,9 +26,5 @@
     <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Data"></ion-datetime>
   </ion-item>
 
-  <ion-item>
-    <ion-input type="float" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.despesas.valorDespesas"></ion-input>
-  </ion-item>
-
-  <button ion-button full (click)="salvar()" [disabled]="!valida()" color="tijuca">Adicionar</button>
-</ion-content>
+  <button ion-button block (click)="salvar()" [disabled]="!valida()" color="tijuca" class="botao">Adicionar</button>
+</div>

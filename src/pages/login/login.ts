@@ -8,8 +8,6 @@ import { StorageProvider } from '../../providers/storage/storage';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
-
-
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -36,8 +34,6 @@ export class LoginPage {
   public hideForm: boolean = false;
   private baseURI: string = "http://192.168.10.160/";
 
-
-
   enviar(login: string, senha: string): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
@@ -52,7 +48,7 @@ export class LoginPage {
         .subscribe((data: any) => {
           console.log(data)
           // If the request was successful notify the user
-          // console.log(data)
+          console.log(data[0])
           this.hideForm = true;
 
 

@@ -2,12 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 import { StorageProvider } from '../../../../providers/storage/storage';
-<<<<<<< HEAD
 import { DadosProvider } from "../../../../providers/dados/dados"; 
-=======
-import { DadosProvider } from "../../../../providers/dados/dados";
-import { ViagensPage } from "../../viagens/viagens";
->>>>>>> 4c89df6990101d29caffa9503e27c8aa0b5385d0
 
 @IonicPage()
 @Component({
@@ -32,8 +27,7 @@ export class DespesasPage {
   
   valida() {
     if (
-    this.storageProvider.despesas.despesas == "" || 
-    this.storageProvider.despesas.dataDespesas == "" || 
+    this.storageProvider.despesas.despesas == "" ||  
     this.storageProvider.despesas.valorDespesas == ""  ) {
       return false
     } else {

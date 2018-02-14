@@ -12,8 +12,7 @@ import { MyApp } from './app.component';
 
 import { PrincipalPage } from '../pages/principal/principal/principal';
 import { ViagensPage } from '../pages/modulo-viagens/viagens/viagens';
-import { ReceitasFornecedorPage } from '../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor';
-import { ReceitasFotoPage } from '../pages/modulo-viagens/receitas/receitas-foto/receitas-foto';
+import { ReceitasPage } from '../pages/modulo-viagens/receitas/receitas/receitas';
 
 import { GeralPage } from '../pages/modulo-viagens/geral/geral-page/geral-page';
 import { GeralDadosViagemPage } from '../pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem';
@@ -31,8 +30,7 @@ import { AbastecimentoRelatoriosPage } from '../pages/modulo-viagens/relatorios/
 import { ArlaRelatoriosPage } from '../pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios';
 
 import { ArlaPagamentoPage } from '../pages/modulo-viagens/arla-32/arla-pagamento/arla-pagamento'; 
-import { RotasReceitasPage } from '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas';
-
+ 
 import { Camera } from "@ionic-native/camera";
 import { FotoServicoProvider } from '../providers/foto-servico/foto-servico';
 import { IonicStorageModule } from '@ionic/storage';
@@ -50,14 +48,12 @@ import { LoginPage } from '../pages/login/login';
     MyApp, 
     PrincipalPage,
     ViagensPage,
-    ReceitasFornecedorPage, 
-    ReceitasFotoPage,
+    ReceitasPage,  
     DespesasPage,
     GeralPage,
     AbastecimentoPagamentoPage,  
     AbastecimentoBombasPage,
-    RotasAbastecimentoPage,
-    RotasReceitasPage,
+    RotasAbastecimentoPage, 
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
     ArlaPagamentoPage,
@@ -83,14 +79,12 @@ import { LoginPage } from '../pages/login/login';
     MyApp, 
     PrincipalPage,
     ViagensPage,
-    ReceitasFornecedorPage, 
-    ReceitasFotoPage,
+    ReceitasPage,  
     DespesasPage,
     GeralPage,
     AbastecimentoPagamentoPage,  
     RotasAbastecimentoPage,
-    AbastecimentoBombasPage,
-    RotasReceitasPage, 
+    AbastecimentoBombasPage, 
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
     ArlaPagamentoPage,

@@ -1,14 +1,10 @@
-<ion-header color="tijuca">
-
-  <ion-toolbar color="tijuca">
-    <ion-title padding color="tijuca">Fornecedor</ion-title>
-  </ion-toolbar>
-
-
+<ion-header>
+  <ion-navbar color="tijuca">
+    <ion-title>Receitas</ion-title>
+  </ion-navbar>
 </ion-header>
 
-<div class="slideTop">
-<ion-list>
+<div class="slideTop"> 
 
   <ion-item>
     <ion-label stacked>
@@ -35,6 +31,7 @@
       <span class="input">Tipo de Pagamento</span>
     </ion-label>
     <ion-input [(ngModel)]="storageProvider.receitas.tipoPagmt" (click)="valida()"></ion-input>
-  </ion-item>
-</ion-list>
+  </ion-item> 
+  <button ion-button block (click)="salvar()" [disabled]="!valida()" color="tijuca" class="botao">Adicionar</button>
+
 </div>
