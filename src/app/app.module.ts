@@ -12,8 +12,7 @@ import { MyApp } from './app.component';
 
 import { PrincipalPage } from '../pages/principal/principal/principal';
 import { ViagensPage } from '../pages/modulo-viagens/viagens/viagens';
-import { ReceitasFornecedorPage } from '../pages/modulo-viagens/receitas/receita-fornecedor/receita-fornecedor';
-import { ReceitasFotoPage } from '../pages/modulo-viagens/receitas/receitas-foto/receitas-foto';
+import { ReceitasPage } from '../pages/modulo-viagens/receitas/receitas/receitas';
 
 import { GeralPage } from '../pages/modulo-viagens/geral/geral-page/geral-page';
 import { GeralDadosViagemPage } from '../pages/modulo-viagens/geral/geral-dados-viagem/geral-dados-viagem';
@@ -23,19 +22,14 @@ import { DespesasPage } from '../pages/modulo-viagens/despesas/despesas/despesas
 import { AbastecimentoPagamentoPage } from '../pages/modulo-viagens/abastecimento/abastecimento-pagamento/abastecimento-pagamento';
 import { AbastecimentoBombasPage } from '../pages/modulo-viagens/abastecimento/abastecimento-bombas/abastecimento-bombas';
 import { RotasAbastecimentoPage } from '../pages/modulo-viagens/abastecimento/rotas-abastecimento/rotas-abastecimento';
-
-import { RotasArlaPage } from '../pages/modulo-viagens/arla-32/rotas-arla/rotas-arla';
-import { RotasReceitasPage } from '../pages/modulo-viagens/receitas/rotas-receitas/rotas-receitas';
-
+ 
 import { RelatoriosPage } from '../pages/modulo-viagens/relatorios/relatorios-page/relatorios';
 import { ReceitasRelatoriosPage } from '../pages/modulo-viagens/relatorios/receitas-relatorios/receitas-relatorios';
 import { DespesasRelatoriosPage } from '../pages/modulo-viagens/relatorios/despesas-relatorios/despesas-relatorios';
 import { AbastecimentoRelatoriosPage } from '../pages/modulo-viagens/relatorios/abastecimento-relatorios/abastecimento-relatorios';
 import { ArlaRelatoriosPage } from '../pages/modulo-viagens/relatorios/arla-relatorios/arla-relatorios';
 
-import { ArlaPagPage } from '../pages/modulo-viagens/arla-32/arla-pag/arla-pag';
-import { ArlaPostoPage } from '../pages/modulo-viagens/arla-32/arla-posto/arla-posto';
-import { FotoarlaPage } from '../pages/modulo-viagens/arla-32/fotoarla/fotoarla';
+import { ArlaPagamentoPage } from '../pages/modulo-viagens/arla-32/arla-pagamento/arla-pagamento'; 
  
 import { Camera } from "@ionic-native/camera";
 import { FotoServicoProvider } from '../providers/foto-servico/foto-servico';
@@ -55,25 +49,20 @@ import { RecuperarDadosProvider } from '../providers/recuperar-dados/recuperar-d
     MyApp, 
     PrincipalPage,
     ViagensPage,
-    ReceitasFornecedorPage, 
-    ReceitasFotoPage,
+    ReceitasPage,  
     DespesasPage,
     GeralPage,
     AbastecimentoPagamentoPage,  
     AbastecimentoBombasPage,
-    RotasAbastecimentoPage,
-    RotasArlaPage,
-    RotasReceitasPage,
+    RotasAbastecimentoPage, 
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
-    ArlaPagPage,
-    ArlaPostoPage,  
+    ArlaPagamentoPage,
     RelatoriosPage,
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
-    AbastecimentoRelatoriosPage,
-    FotoarlaPage,
+    AbastecimentoRelatoriosPage, 
     LoginPage
   ],
   imports: [
@@ -91,25 +80,20 @@ import { RecuperarDadosProvider } from '../providers/recuperar-dados/recuperar-d
     MyApp, 
     PrincipalPage,
     ViagensPage,
-    ReceitasFornecedorPage, 
-    ReceitasFotoPage,
+    ReceitasPage,  
     DespesasPage,
     GeralPage,
     AbastecimentoPagamentoPage,  
     RotasAbastecimentoPage,
-    AbastecimentoBombasPage,
-    RotasReceitasPage,
-    RotasArlaPage,
+    AbastecimentoBombasPage, 
     GeralDadosViagemPage,
     GeralDadosMotoristaPage,
-    ArlaPagPage,
-    ArlaPostoPage,  
+    ArlaPagamentoPage,
     RelatoriosPage,
     DespesasRelatoriosPage,
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
-    AbastecimentoRelatoriosPage,
-    FotoarlaPage,
+    AbastecimentoRelatoriosPage, 
     LoginPage
   ],
   providers: [

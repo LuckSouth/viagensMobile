@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar color="tijuca">
+    <ion-title class="titulo">Arla 32</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<div class="slideTop">
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Tipo</span>
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="storageProvider.arla.tipoArla" (click)="valida()"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Posto</span>
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="storageProvider.arla.postoArla" (click)="valida()"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Pagamento</span>
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="storageProvider.arla.pagArla" (click)="valida()"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Preço/L</span>
+    </ion-label>
+    <ion-input type="float" placeholder="R$ 0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.arla.precoArla"
+      (click)="valida()"></ion-input>
+  </ion-item>
+
+  <ion-item class="camera" >
+    <ion-label stacked>
+      <span class="input">Odometro</span>
+    </ion-label>
+
+    <ion-input type="number" min="0" placeholder="195463 Km" [(ngModel)]="storageProvider.arla.odometroArla" (ngModelChange)="valida()">
+    </ion-input>
+  </ion-item>
+  <ion-icon ios="ios-camera" md="md-camera" (click)="mostrar()" class="iconcamera"></ion-icon>  
+
+  <ion-item class="camera"> 
+    <ion-label stacked>
+      <span class="input">Litros</span>
+    </ion-label>
+    <ion-input type="number" min="0" [(ngModel)]="storageProvider.arla.litrosArla" (ngModelChange)="valida()"></ion-input>
+  </ion-item>
+  <ion-icon ios="ios-camera" md="md-camera" (click)="mostrar()" class="iconcamera"></ion-icon>   
+
+  <ion-item>
+    <ion-label stacked>
+      <span class="input">Data</span>
+    </ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Data"></ion-datetime>
+  </ion-item> 
+  <button ion-button block (click)="salvar()" [disabled]="!valida()" color = "tijuca" class="botao" >Adicionar</button>
+</div>

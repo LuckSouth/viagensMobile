@@ -17,11 +17,16 @@ export class AbastecimentoPagamentoPage {
 
   } 
 
+  /* Recupera a data atual e converte para o tipo string */
+
   Data: string = new Date().toISOString();
+
+  /* Verifica se o usuário inseriu os dados a todos os campos */
+
   valida() {
     this.storageProvider.abastecimento.dataAbastecimento = this.Data;
     
-    if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == ""  ) {
+    if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == "" || this.storageProvider.abastecimento.precoAbastecimento == "" ) {
       return false;
     } else {
       return true;

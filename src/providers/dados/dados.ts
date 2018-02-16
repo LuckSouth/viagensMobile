@@ -23,14 +23,12 @@ export class DadosProvider {
       this.http.post(url, JSON.stringify(options), headers)
         .subscribe((data: any) => {
           console.log(data)
-          // If the request was successful notify the user
-          // console.log(data)
+          // Se a requisição for um sucesso notifique o usuário
           this.hideForm = true;
          
 
         },
-        (error: any) => {
-         console.log(error);
+        (error: any) => { 
 
           if (error.statusText == "OK") {
             console.log("fazer nada")
@@ -84,7 +82,7 @@ export class DadosProvider {
     this.http.post(url, JSON.stringify(options), headers)
       .subscribe((data: any) => {
         console.log(data)
-        // If the request was successful notify the user
+        // Se a requisição for um sucesso notifique o usuário
         console.log(data)
         this.hideForm = true;
       },
@@ -132,7 +130,7 @@ export class DadosProvider {
     this.http.post(url, JSON.stringify(options), headers)
       .subscribe((data: any) => {
         console.log(data)
-        // If the request was successful notify the user
+        // Se a requisição for um sucesso notifique o usuário
         console.log(data)
         this.hideForm = true;
       },
@@ -184,7 +182,7 @@ export class DadosProvider {
     this.http.post(url, JSON.stringify(options), headers)
       .subscribe((data: any) => {
         console.log(data)
-        // If the request was successful notify the user
+        // Se a requisição for um sucesso notifique o usuário
         console.log(data)
         this.hideForm = true;
       },

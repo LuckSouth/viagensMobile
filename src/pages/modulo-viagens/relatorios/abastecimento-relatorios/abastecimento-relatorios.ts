@@ -14,8 +14,6 @@ export class AbastecimentoRelatoriosPage {
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     public storageProvider: StorageProvider) {
-      // this.storages = this.storageProvider.listar();
-
   }
 
   ionViewDidEnter() {

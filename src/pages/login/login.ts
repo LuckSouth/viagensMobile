@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavParams } from 'ionic-angular';
 import { NavController } from 'ionic-angular/navigation/nav-controller';
-import { Storage } from '@ionic/storage/es2015/storage';
-
-import { PrincipalPage } from '../principal/principal/principal';
+import { Storage } from '@ionic/storage/es2015/storage'; 
 import { StorageProvider } from '../../providers/storage/storage';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
-
 
 
 @IonicPage()
@@ -36,8 +32,6 @@ export class LoginPage {
   public hideForm: boolean = false;
   private baseURI: string = "http://192.168.10.160/";
 
-
-
   enviar(login: string, senha: string): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
@@ -52,7 +46,7 @@ export class LoginPage {
         .subscribe((data: any) => {
           console.log(data)
           // If the request was successful notify the user
-          // console.log(data)
+          console.log(data[0])
           this.hideForm = true;
 
 
@@ -66,32 +60,5 @@ export class LoginPage {
     }
 
   }
-
-
-
-
-
-
-
-  // load(): void {
-  //   this.http
-  //     .get('http://localhost/login.php')
-  //     .subscribe((data: any) => {
-  //       console.dir(data);
-  //       //  console.dir(data.senha)
-  //       this.itens = data;
-  //       console.log(this.itens[0].senha)
-  //     },
-  //     (error: any) => {
-  //       console.dir(error);
-  //     });
-  // }
-
-  ionViewWillEnter(): void {
-    // this.load();
-  }
-
-
-
 }
 

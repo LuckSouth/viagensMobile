@@ -16,9 +16,7 @@ export class ArlaRelatoriosPage {
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public storageProvider: StorageProvider) {
-    // this.storages = this.storageProvider.listar();
-
+    public storageProvider: StorageProvider) { 
   }
 
   ionViewDidEnter() {
