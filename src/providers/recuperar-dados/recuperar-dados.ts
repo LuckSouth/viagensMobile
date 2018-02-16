@@ -17,29 +17,29 @@ export class RecuperarDadosProvider {
   }
 
 
-  postosAbastecimento(): void {
-    let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = { 
-      },
-      url: any = this.baseURI + "postos-combustiveis.php";
+  // postosAbastecimento(): void {
+  //   let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+  //     options: any = { 
+  //     },
+  //     url: any = this.baseURI + "postos-combustiveis.php";
 
-    try {
-      console.log
-      this.http.post(url, JSON.stringify(options), headers)
-        .subscribe((data: any) => {
-          console.log(data)
-          this.storageProvider.atualizarFornecedores(data); 
-          this.hideForm = true; 
-        },
-        (error: any) => {
-          console.log(error);
+  //   try {
+  //     console.log
+  //     this.http.post(url, JSON.stringify(options), headers)
+  //       .subscribe((data: any) => {
+  //         console.log(data)
+  //         this.storageProvider.atualizarFornecedores(data); 
+  //         this.hideForm = true; 
+  //       },
+  //       (error: any) => {
+  //         console.log(error);
 
-        });
-    } catch (error) {
-      console.log('catch')
-    }
+  //       });
+  //   } catch (error) {
+  //     console.log('catch')
+  //   }
 
-  }
+  // }
 
 
   fornecedores(atributo:string, tabela:string,): void {
@@ -47,6 +47,7 @@ export class RecuperarDadosProvider {
       options: any = { 
       },
       url: any = this.baseURI + "fonecedores.php";
+
 
     try {
       console.log
