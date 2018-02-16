@@ -10,8 +10,14 @@
   <ion-list>
 
     <ion-item>
-      <ion-label floating>Fornecedor / Origem</ion-label>
-      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (ngModelChange)="valida()"></ion-input>
+      <!-- <ion-label floating>Fornecedor / Origem</ion-label>
+      <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (ngModelChange)="valida()"></ion-input> -->
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of items">
+          {{ item }}
+        </ion-item>
+      </ion-list>
     </ion-item>
 
     <ion-item>

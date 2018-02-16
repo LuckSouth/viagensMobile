@@ -48,6 +48,7 @@ import { EnviarProvider } from '../providers/enviar/enviar';
 
 import { BrMaskerModule } from 'brmasker-ionic-3'; 
 import { LoginPage } from '../pages/login/login';
+import { RecuperarDadosProvider } from '../providers/recuperar-dados/recuperar-dados';
 
 @NgModule({
   declarations: [
@@ -121,7 +122,8 @@ import { LoginPage } from '../pages/login/login';
     StorageProvider,
     DadosProvider,
     HttpClient, 
-    EnviarProvider
+    EnviarProvider,
+    RecuperarDadosProvider
   ]
 })
 export class AppModule { }

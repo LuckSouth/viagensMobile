@@ -31,21 +31,9 @@ export class PrincipalPage {
   }
 
 
-   ionViewDidEnter() {
-   
-  }
-
-
-
   linkViagens() {
     // this.storageProvider.login.isLoggedIn = false;
     // this.storageProvider.atualizar("Auth");
     this.navCtrl.push(ViagensPage);
-  }
-
-  logout() {
-
-    this.storageProvider.login.isLoggedIn = false;
-    this.storageProvider.atualizar("Auth");
   }
 }

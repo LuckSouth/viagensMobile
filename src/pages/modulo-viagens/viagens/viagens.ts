@@ -12,6 +12,8 @@ import { Storage } from "@ionic/storage";
 import { StorageProvider } from "../../../providers/storage/storage";
 import { RelatoriosPage } from "../relatorios/relatorios-page/relatorios";
 import { EnviarProvider } from "../../../providers/enviar/enviar";
+
+
 @IonicPage()
 @Component({
   selector: 'page-viagens',
@@ -26,6 +28,7 @@ export class ViagensPage {
 
   storages;
 
+  
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -35,6 +38,8 @@ export class ViagensPage {
     public storageProvider: StorageProvider,
     public enviar: EnviarProvider) {
   }
+
+
 
   linkAbastecimento() {
     this.navCtrl.push(RotasAbastecimentoPage);
@@ -91,6 +96,5 @@ export class ViagensPage {
     // console.log(this.network.type)
   }
 
+  }
 
-
-}
