@@ -13,7 +13,9 @@ import { RecuperarDadosProvider } from '../../../../providers/recuperar-dados/re
 export class ReceitasPage {
 
   searchQuery: string = '';
-  items: string[];
+  itemsFornecedores: string[];
+  itemsProdutos: string[];
+  itemsFormasPagamento: string[];
   fornecedores;
 
 
@@ -27,14 +29,17 @@ export class ReceitasPage {
     this.recuperarDados.fornecedores('nome', 'produtos');
     this.recuperarDados.produtos('nome', 'produtos');
     this.recuperarDados.formasPagamento('nome', 'produtos');
-    
+
+    this.itemsProdutos = this.storageProvider.listarProdutos();
+    // var a = this.itemsProdutos.nome
     this.initializeItems();
-
+    
   }
-
+  
+  //Filter searchbar
   initializeItems() {
-    this.items = this.storageProvider.listarFornecedores();
-    this.fornecedores = this.items;
+    this.itemsFornecedores = this.storageProvider.listarFornecedores();
+    this.fornecedores = this.itemsFornecedores;
   }
 
   getItems(ev: any) { 
