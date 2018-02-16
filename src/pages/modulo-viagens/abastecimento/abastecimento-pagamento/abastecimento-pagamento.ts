@@ -18,14 +18,11 @@ export class AbastecimentoPagamentoPage {
   constructor(public navCtrl: NavController,
     public storageProvider: StorageProvider,
     public recuperarDados: RecuperarDadosProvider) {
-<<<<<<< HEAD
       
       this.recuperarDados.formasPagamento('nome', 'produtos');      
 
-=======
-      this.recuperarDados.postosAbastecimento();
+      // this.recuperarDados.postosAbastecimento();
       this.initializeItems();
->>>>>>> caa71d3c6b173083facc889b9b716b2c4aa153f4
   } 
 
   initializeItems() {
