@@ -19,11 +19,11 @@ export class RecuperarDadosProvider {
 
 
 
-  dadosFornecedor(): void {
-    let nome;
+  dadosFornecedor(atributo:string, tabela:string,): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
-        "nome": nome,
+        "atributo": atributo,
+        "tabela": tabela
       },
       url: any = this.baseURI + "login.php";
 

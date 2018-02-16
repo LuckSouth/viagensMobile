@@ -4,13 +4,21 @@
   </ion-navbar>
 </ion-header>
 
-<div class="slideTop"> 
+<div class="slideTop">
 
   <ion-item>
-    <ion-label stacked>
+    <!-- <ion-label stacked>
       <span class="input">Fornecedor / Origem</span>
     </ion-label>
-    <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (click)="valida()"></ion-input>
+    <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (click)="valida()"></ion-input> -->
+    <ion-item>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of a">
+          {{ item.nome }}
+        </ion-item>
+      </ion-list>
+    </ion-item>
   </ion-item>
 
   <ion-item>
@@ -31,7 +39,7 @@
       <span class="input">Tipo de Pagamento</span>
     </ion-label>
     <ion-input [(ngModel)]="storageProvider.receitas.tipoPagmt" (click)="valida()"></ion-input>
-  </ion-item> 
+  </ion-item>
   <button ion-button block (click)="salvar()" [disabled]="!valida()" color="tijuca" class="botao">Adicionar</button>
 
 </div>
