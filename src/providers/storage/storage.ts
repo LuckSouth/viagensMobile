@@ -187,7 +187,7 @@ export class StorageProvider {
   }
 
   tamanhoAbastecimento() {
-    this.arrayAbastecimento = this.listar()
+    this.arrayAbastecimento = this.listarAbastecimento()
     return this.arrayAbastecimento.length
   }
 
@@ -206,7 +206,7 @@ export class StorageProvider {
 
 
   //  Vai retornar a lista
-  listar() {
+  listarAbastecimento() {
     return this.listaAbastecimento;
   }
 

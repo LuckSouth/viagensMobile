@@ -24,28 +24,19 @@ export class ReceitasPage {
     public dados: DadosProvider,
     public recuperarDados: RecuperarDadosProvider) {
 
-    this.recuperarDados.dadosFornecedor('nome', 'produtos');
+    this.recuperarDados.dadosFornecedor();
     this.initializeItems();
 
   }
 
   initializeItems() {
-    this.items = this.storageProvider.listarFornecedores();
-    // this.items = [
-    //   'zsda',
-    //   'asdfdd'
-    // ]
+    this.items = this.storageProvider.listarFornecedores(); 
     this.a = this.items;
   }
 
-  getItems(ev: any) {
-    // Reset items back to all of the items
-    this.initializeItems();
-
-    // set val to the value of the searchbar
-    let val = ev.target.value;
-
-    // if the value is an empty string don't filter the items
+  getItems(ev: any) { 
+    this.initializeItems(); 
+    let val = ev.target.value; 
     if (val && val.trim() != '') {
       this.a = this.a.filter((item) => {
         return (item.nome.toLowerCase().indexOf(val.toLowerCase()) > -1);

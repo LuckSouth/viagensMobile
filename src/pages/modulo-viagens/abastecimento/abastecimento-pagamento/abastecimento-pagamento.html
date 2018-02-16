@@ -4,20 +4,18 @@
   </ion-toolbar>
 </ion-header>
 
-<div class="slideTop">
+<div class="slideTop">  
+  
   <ion-item>
-    <ion-label stacked>
-      <span class="input">Tipo</span>
-    </ion-label>
-    <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.tipoAbastecimento" (click)="valida()"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label stacked>
-      <span class="input">Posto</span>
-    </ion-label>
-    <ion-input type="text" [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (click)="valida()"></ion-input>
-  </ion-item>
+      <ion-label stacked>
+          <span class="input">Posto</span>
+      </ion-label>
+      <ion-select [(ngModel)]="Posto">
+          <ion-option *ngFor="let item of a"  (ionInput)="getItems()">
+            {{ item.nomePosto }}
+          </ion-option> 
+      </ion-select>
+    </ion-item>
 
   <ion-item>
     <ion-label stacked>
@@ -31,7 +29,8 @@
     <ion-label stacked>
       <span class="input">Preço/L</span>
     </ion-label>
-    <ion-input type="float" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.abastecimento.precoAbastecimento" (click)="valida()"></ion-input>
+    <ion-input type="float" placeholder="0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.abastecimento.precoAbastecimento"
+      (click)="valida()"></ion-input>
   </ion-item>
 
   <ion-item>

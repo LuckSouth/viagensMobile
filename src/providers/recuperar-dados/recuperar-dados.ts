@@ -9,7 +9,7 @@ import { StorageProvider } from '../../providers/storage/storage';
 export class RecuperarDadosProvider {
   
   public hideForm: boolean = false;
-  private baseURI: string = "http://192.168.10.152/";
+  private baseURI: string = "http://192.168.10.144/html/";
 
   constructor(
     public http: HttpClient,
@@ -17,13 +17,34 @@ export class RecuperarDadosProvider {
   }
 
 
-
-
-  dadosFornecedor(atributo:string, tabela:string,): void {
+  postosAbastecimento(): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = {
-        "atributo": atributo,
-        "tabela": tabela
+      options: any = { 
+      },
+      url: any = this.baseURI + "postos-combustiveis.php";
+
+    try {
+      console.log
+      this.http.post(url, JSON.stringify(options), headers)
+        .subscribe((data: any) => {
+          console.log(data)
+          this.storageProvider.atualizarFornecedores(data) 
+          this.hideForm = true; 
+        },
+        (error: any) => {
+          console.log(error);
+
+        });
+    } catch (error) {
+      console.log('catch')
+    }
+
+  }
+
+
+  dadosFornecedor(): void {
+    let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+      options: any = { 
       },
       url: any = this.baseURI + "login.php";
 
@@ -32,12 +53,8 @@ export class RecuperarDadosProvider {
       this.http.post(url, JSON.stringify(options), headers)
         .subscribe((data: any) => {
           console.log(data)
-          this.storageProvider.atualizarFornecedores(data)
-          // If the request was successful notify the user
-          // console.log(data)
-          this.hideForm = true;
-
-
+          this.storageProvider.atualizarFornecedores(data) 
+          this.hideForm = true; 
         },
         (error: any) => {
           console.log(error);
