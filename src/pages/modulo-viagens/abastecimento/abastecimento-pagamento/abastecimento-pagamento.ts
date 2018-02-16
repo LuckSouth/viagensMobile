@@ -21,24 +21,13 @@ export class AbastecimentoPagamentoPage {
     public recuperarDados: RecuperarDadosProvider) {
       this.recuperarDados.postosAbastecimento();
       this.initializeItems();
-      
-
   } 
 
   initializeItems() {
     this.items = this.storageProvider.listarFornecedores(); 
     this.a = this.items;
   }
-
-  getItems(ev: any) { 
-    this.initializeItems(); 
-    let val = ev.target.value; 
-    if (val && val.trim() != '') {
-      this.a = this.a.filter((item) => {
-        return (item.nome.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })
-    }
-  }
+ 
 
   /* Recupera a data atual e converte para o tipo string */
 

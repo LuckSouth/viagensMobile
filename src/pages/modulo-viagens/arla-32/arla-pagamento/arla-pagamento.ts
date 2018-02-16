@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ToastController } from 'ionic-angular'; 
+import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { StorageProvider } from '../../../../providers/storage/storage';
-import { DadosProvider } from '../../../../providers/dados/dados'; 
+import { DadosProvider } from '../../../../providers/dados/dados';
 import { FotoServicoProvider } from '../../../../providers/foto-servico/foto-servico';
+import { RecuperarDadosProvider } from '../../../../providers/recuperar-dados/recuperar-dados';
 
 
 @IonicPage()
@@ -11,14 +12,25 @@ import { FotoServicoProvider } from '../../../../providers/foto-servico/foto-ser
   templateUrl: 'arla-pagamento.html',
 })
 export class ArlaPagamentoPage {
-
-
+  searchQuery: string = '';
+  items: string[];
+  a;
   constructor(
     public navCtrl: NavController,
     public toastCtrl: ToastController,
     public dados: DadosProvider,
+    public foto: FotoServicoProvider,
     public storageProvider: StorageProvider,
-    public foto: FotoServicoProvider) {
+    public recuperarDados: RecuperarDadosProvider) {
+    this.recuperarDados.postosAbastecimento();
+    this.initializeItems();
+    {
+    }
+  }
+
+  initializeItems() {
+    this.items = this.storageProvider.listarFornecedores();
+    this.a = this.items;
   }
 
   /* Verifica se o usuário inseriu os dados a todos os campos */
@@ -26,19 +38,19 @@ export class ArlaPagamentoPage {
   valida() {
 
     if (
-    this.storageProvider.arla.tipoArla == "" || 
-    this.storageProvider.arla.postoArla == "" || 
-    this.storageProvider.arla.pagArla == "" || 
-    this.storageProvider.arla.precoArla == "" || 
-    this.storageProvider.arla.odometroArla == "" || 
-    this.storageProvider.arla.litrosArla == ""
-    //this.storageProvider.arla.Data == ""
-  ) {
+      this.storageProvider.arla.tipoArla == "" ||
+      this.storageProvider.arla.postoArla == "" ||
+      this.storageProvider.arla.pagArla == "" ||
+      this.storageProvider.arla.precoArla == "" ||
+      this.storageProvider.arla.odometroArla == "" ||
+      this.storageProvider.arla.litrosArla == ""
+      //this.storageProvider.arla.Data == ""
+    ) {
       return false;
     } else {
       return true;
     }
-  } 
+  }
   /* Envia os dados para o provider para serem tratados */
   salvar() {
     this.dados.arla(
@@ -51,7 +63,7 @@ export class ArlaPagamentoPage {
       this.storageProvider.arla.dataArla,
       this.storageProvider.arla.km
     )
-    this.navCtrl.pop(); 
+    this.navCtrl.pop();
     //Armazenar no Storage
     // this.storageProvider.adicionarArla();
 
@@ -59,11 +71,11 @@ export class ArlaPagamentoPage {
       message: 'Arla adicionada com sucesso',
       duration: 2000
     });
-    toast.present(); 
-  } 
+    toast.present();
+  }
   /* Executa a função de Fotografar */
   mostrar() {
     this.foto.getFoto('picture');
   }
- 
+
 }
