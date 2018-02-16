@@ -9,7 +9,7 @@ import { StorageProvider } from '../../../../providers/storage/storage';
 })
 export class AbastecimentoRelatoriosPage {
   tamanho;  
-  storages: any[];
+  storages: string[];
   
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
@@ -17,7 +17,7 @@ export class AbastecimentoRelatoriosPage {
   }
 
   ionViewDidEnter() {
-    this.storages = this.storageProvider.listar();
+    // this.storages = this.storageProvider.listaAbastecimento();
     this.tamanho = this.storageProvider.tamanhoArla()
     
   }

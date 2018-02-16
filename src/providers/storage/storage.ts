@@ -186,20 +186,17 @@ export class StorageProvider {
           this.listaFormasPagameno = [];
         }
       });
-
+      
     });
-
+    
   }
-
-  listarAuth() {
-    // return new Promise((resolve, reject) => {
-    // this.page.rootPage = PrincipalPage
-    return this.listaAuth;
-
-    // })
-  }
+  
+  //  Vai retornar a lista
   listarArla() {
     return this.listaArla;
+  }
+  listarAbastecimento() {
+    return this.listaAbastecimento;
   }
   listarDespesa() {
     return this.listaDespesas;
@@ -218,7 +215,7 @@ export class StorageProvider {
   }
 
   tamanhoAbastecimento() {
-    this.arrayAbastecimento = this.listar()
+    this.arrayAbastecimento = this.listarAbastecimento()
     return this.arrayAbastecimento.length
   }
 
@@ -236,10 +233,6 @@ export class StorageProvider {
   }
 
 
-  //  Vai retornar a lista
-  listar() {
-    return this.listaAbastecimento;
-  }
 
   //Verificação Login
 
