@@ -31,10 +31,6 @@ export class ReceitasPage {
 
   initializeItems() {
     this.items = this.storageProvider.listarFornecedores();
-    // this.items = [
-    //   'zsda',
-    //   'asdfdd'
-    // ]
     this.fornecedores = this.items;
   }
 
