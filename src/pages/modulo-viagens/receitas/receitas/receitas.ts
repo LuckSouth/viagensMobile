@@ -14,7 +14,7 @@ export class ReceitasPage {
 
   searchQuery: string = '';
   items: string[];
-  a;
+  fornecedores;
 
 
   constructor(public navCtrl: NavController,
@@ -35,7 +35,7 @@ export class ReceitasPage {
     //   'zsda',
     //   'asdfdd'
     // ]
-    this.a = this.items;
+    this.fornecedores = this.items;
   }
 
   getItems(ev: any) {
@@ -47,7 +47,7 @@ export class ReceitasPage {
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.a = this.a.filter((item) => {
+      this.fornecedores = this.fornecedores.filter((item) => {
         return (item.nome.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
