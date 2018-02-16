@@ -46,7 +46,7 @@ export class RecuperarDadosProvider {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = { 
       },
-      url: any = this.baseURI + "fonecedores.php";
+      url: any = this.baseURI + "fornecedores.php";
 
 
     try {
