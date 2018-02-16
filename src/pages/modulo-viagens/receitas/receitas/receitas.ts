@@ -24,7 +24,10 @@ export class ReceitasPage {
     public dados: DadosProvider,
     public recuperarDados: RecuperarDadosProvider) {
 
-    this.recuperarDados.dadosFornecedor('nome', 'produtos');
+    this.recuperarDados.fornecedores('nome', 'produtos');
+    this.recuperarDados.produtos('nome', 'produtos');
+    this.recuperarDados.formasPagamento('nome', 'produtos');
+    
     this.initializeItems();
 
   }

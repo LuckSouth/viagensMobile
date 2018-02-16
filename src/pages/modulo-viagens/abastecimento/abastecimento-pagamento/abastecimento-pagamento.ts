@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 
 import { StorageProvider } from '../../../../providers/storage/storage';
+import { RecuperarDadosProvider } from '../../../../providers/recuperar-dados/recuperar-dados';
 
 
 @IonicPage()
@@ -13,7 +14,10 @@ export class AbastecimentoPagamentoPage {
 
 
   constructor(public navCtrl: NavController,
-    public storageProvider: StorageProvider) {
+    public storageProvider: StorageProvider,
+    public recuperarDados: RecuperarDadosProvider) {
+      
+      this.recuperarDados.formasPagamento('nome', 'produtos');      
 
   } 
 

@@ -11,11 +11,11 @@
       <span class="input">Fornecedor / Origem</span>
     </ion-label>
     <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (click)="valida()"></ion-input> -->
-      <!-- <ion-input (ionInput)="getItems($event)"></ion-input> -->
-      <ion-label stacked>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <!-- <ion-label stacked>
         <span class="input">Fornecedor / Origem</span>
       </ion-label>
-      <ion-input type="text" (keyup)="getItems($event)" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (click)="valida()"></ion-input>
+      <ion-input type="text" (keyup)="getItems($event)" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (click)="valida()"></ion-input> -->
       <ion-list>
         <ion-item *ngFor="let item of fornecedores">
           {{ item.nome }}

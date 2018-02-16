@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular'; 
+
 import { StorageProvider } from '../../../../providers/storage/storage';
 import { DadosProvider } from '../../../../providers/dados/dados'; 
 import { FotoServicoProvider } from '../../../../providers/foto-servico/foto-servico';
+import { RecuperarDadosProvider } from '../../../../providers/recuperar-dados/recuperar-dados';
+
 
 
 @IonicPage()
@@ -18,7 +21,11 @@ export class ArlaPagamentoPage {
     public toastCtrl: ToastController,
     public dados: DadosProvider,
     public storageProvider: StorageProvider,
-    public foto: FotoServicoProvider) {
+    public foto: FotoServicoProvider,
+    public recuperarDados: RecuperarDadosProvider) {
+
+      this.recuperarDados.formasPagamento('nome', 'produtos');
+
   }
 
   /* Verifica se o usuário inseriu os dados a todos os campos */

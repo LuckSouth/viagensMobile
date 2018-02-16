@@ -93,8 +93,12 @@ export class StorageProvider {
   
   //Recuperar dados
   listaFornecedores: any[];
-
-  chaveFornecedores: string = "fornecedores"
+  listaProdutos: any[];
+  listaFormasPagameno: any[];
+  
+  chaveFornecedores: string = "fornecedores";
+  chaveProdutos: string = "produtos";
+  chaveFormasPagamento: string = "formas_pagamento"
 
 
   constructor(private storage: Storage) {
@@ -163,6 +167,28 @@ export class StorageProvider {
 
     });
 
+    this.storage.ready().then(() => {
+      this.storage.get(this.chaveProdutos).then((registros) => {
+        if (registros) {
+          this.listaProdutos = registros;
+        } else {
+          this.listaProdutos = [];
+        }
+      });
+
+    });
+
+    this.storage.ready().then(() => {
+      this.storage.get(this.chaveFormasPagamento).then((registros) => {
+        if (registros) {
+          this.listaFormasPagameno = registros;
+        } else {
+          this.listaFormasPagameno = [];
+        }
+      });
+
+    });
+
   }
 
   listarAuth() {
@@ -182,8 +208,13 @@ export class StorageProvider {
     return this.listaReceitas;
   }
 
+  //Recuperar dados
   listarFornecedores() {
     return this.listaFornecedores;
+  }
+
+  listarProdutos() {
+    return this.listaProdutos;
   }
 
   tamanhoAbastecimento() {
@@ -277,12 +308,15 @@ export class StorageProvider {
   // 1º vai ser o "Storage" que quer atualizar -- 2º os "Dados" que vai chegar do formulário
   // Atualizar determinados registros
   atualizarFornecedores(fornecedores) {
-    // for (let chave in this.listaAuth) {
-    //   if (this.listaAuth[chave] == storage) {
-    // this.listaAuth[chave] = dados;
     this.storage.set(this.chaveFornecedores, fornecedores);
-    //   }
-    // }
+  }
+
+  atualizarProdutos(produtos) {
+    this.storage.set(this.chaveProdutos, produtos);
+  }
+
+  atualizarformasPagamento(formasPagamento){
+    this.storage.set(this.chaveFormasPagamento, formasPagamento);
   }
 
   // // Deletar Storage
