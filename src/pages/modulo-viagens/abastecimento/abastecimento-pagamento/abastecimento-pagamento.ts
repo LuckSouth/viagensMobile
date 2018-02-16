@@ -18,25 +18,21 @@ export class AbastecimentoPagamentoPage {
   constructor(public navCtrl: NavController,
     public storageProvider: StorageProvider,
     public recuperarDados: RecuperarDadosProvider) {
+<<<<<<< HEAD
       
       this.recuperarDados.formasPagamento('nome', 'produtos');      
 
+=======
+      this.recuperarDados.postosAbastecimento();
+      this.initializeItems();
+>>>>>>> caa71d3c6b173083facc889b9b716b2c4aa153f4
   } 
 
   initializeItems() {
     this.items = this.storageProvider.listarFornecedores(); 
     this.a = this.items;
   }
-
-  getItems(ev: any) { 
-    this.initializeItems(); 
-    let val = ev.target.value; 
-    if (val && val.trim() != '') {
-      this.a = this.a.filter((item) => {
-        return (item.nome.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })
-    }
-  }
+ 
 
   /* Recupera a data atual e converte para o tipo string */
 
