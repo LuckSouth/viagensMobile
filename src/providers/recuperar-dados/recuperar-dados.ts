@@ -9,7 +9,7 @@ import { StorageProvider } from '../../providers/storage/storage';
 export class RecuperarDadosProvider {
 
   public hideForm: boolean = false;
-  private baseURI: string = "http://192.168.10.152/";
+  private baseURI: string = "http://192.168.10.160/";
 
   constructor(
     public http: HttpClient,
