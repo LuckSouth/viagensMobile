@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular'; 
-
-
+import { RecuperarDadosProvider } from "../../../../providers/recuperar-dados/recuperar-dados";
+import { StorageProvider } from "../../../../providers/storage/storage";
 @IonicPage()
 @Component({
   selector: 'geral-dados-motorista',
@@ -9,7 +9,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GeralDadosMotoristaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public recuperarDados: RecuperarDadosProvider, public storageProvider: StorageProvider) {
+    this.recuperarDados.geral()
+    //console.log(this.storageProvider.listaGeral)
+    this.dados = this.storageProvider.listaGeral
+    console.log(this.dados)
+
+   
+
+    this.nomeMotorista = this.dados[0].nomeMotorista
+    this.idViagem = this.dados[0].idViagem
+  }
+
+  dados: any[] = [];
+  nomeMotorista
+  idViagem;
+  dataSaida
+  kmSaida
+  percentualComissaoGerencial
+  valorValeViagem
+
+  ionViewDidEnter(){
+  
   }
  
 }

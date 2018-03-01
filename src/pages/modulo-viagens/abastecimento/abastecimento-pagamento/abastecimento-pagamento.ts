@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 
 import { StorageProvider } from '../../../../providers/storage/storage';
-import { DadosProvider } from '../../../../providers/dados/dados';
 import { RecuperarDadosProvider } from '../../../../providers/recuperar-dados/recuperar-dados';
 
 @IonicPage()
@@ -14,15 +13,16 @@ export class AbastecimentoPagamentoPage {
 
   searchQuery: string = '';
   items: string[];
+  itemsFormasPagamento: string[];
   a;
   constructor(public navCtrl: NavController,
     public storageProvider: StorageProvider,
     public recuperarDados: RecuperarDadosProvider) {
       
       this.recuperarDados.formasPagamento('nome', 'produtos');      
-
+      this.itemsFormasPagamento = this.storageProvider.listarFormasPagameno();
       // this.recuperarDados.postosAbastecimento();
-      this.initializeItems();
+      // this.initializeItems();
   } 
 
   initializeItems() {

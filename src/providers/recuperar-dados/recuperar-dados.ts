@@ -7,7 +7,7 @@ import { StorageProvider } from '../../providers/storage/storage';
 
 @Injectable()
 export class RecuperarDadosProvider {
-  
+
   public hideForm: boolean = false;
   private baseURI: string = "http://192.168.10.152/";
 
@@ -17,18 +17,17 @@ export class RecuperarDadosProvider {
   }
 
 
-  // postosAbastecimento(): void {
+  // postos(): void {
   //   let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
   //     options: any = { 
   //     },
   //     url: any = this.baseURI + "postos-combustiveis.php";
 
   //   try {
-  //     console.log
   //     this.http.post(url, JSON.stringify(options), headers)
   //       .subscribe((data: any) => {
   //         console.log(data)
-  //         this.storageProvider.atualizarFornecedores(data); 
+  //         this.storageProvider.atualizarPostos(data); 
   //         this.hideForm = true; 
   //       },
   //       (error: any) => {
@@ -42,32 +41,59 @@ export class RecuperarDadosProvider {
   // }
 
 
-  fornecedores(atributo:string, tabela:string,): void {
+  fornecedores(atributo: string, tabela: string, ): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = { 
+      options: any = {
       },
       url: any = this.baseURI + "fornecedores.php";
 
 
     try {
-      console.log
       this.http.post(url, JSON.stringify(options), headers)
         .subscribe((data: any) => {
-          console.log(data)
-          this.storageProvider.atualizarFornecedores(data); 
-          this.hideForm = true; 
+          this.storageProvider.atualizarFornecedores(data);
+          this.hideForm = true;
         },
-        (error: any) => {
-          console.log(error);
+          (error: any) => {
+            console.log(error);
 
-        });
+          });
     } catch (error) {
       console.log('catch')
     }
 
   }
 
-  produtos(atributo:string, tabela:string,): void {
+  dados = [];
+  geral() {
+    let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+      options: any = {
+      },
+      url: any = this.baseURI + "geral.php";
+
+
+    try {
+      this.http.post(url, JSON.stringify(options), headers)
+        .subscribe((data: any) => {
+          //console.log(data)
+          //console.log(this.dados)
+          this.storageProvider.atualizarGeral(data);
+          this.hideForm = true;
+        },
+          (error: any) => {
+            console.log(error);
+
+          });
+    } catch (error) {
+      console.log('catch')
+    }
+  }
+
+
+
+
+
+  produtos(atributo: string, tabela: string, ): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "atributo": atributo,
@@ -76,10 +102,8 @@ export class RecuperarDadosProvider {
       url: any = this.baseURI + "produtos.php";
 
     try {
-      console.log
       this.http.post(url, JSON.stringify(options), headers)
         .subscribe((data: any) => {
-          console.log(data)
           this.storageProvider.atualizarProdutos(data);
           // If the request was successful notify the user
           // console.log(data)
@@ -87,17 +111,17 @@ export class RecuperarDadosProvider {
 
 
         },
-        (error: any) => {
-          console.log(error);
+          (error: any) => {
+            console.log(error);
 
-        });
+          });
     } catch (error) {
       console.log('catch')
     }
 
   }
 
-  formasPagamento(atributo:string, tabela:string,): void {
+  formasPagamento(atributo: string, tabela: string, ): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "atributo": atributo,
@@ -106,10 +130,8 @@ export class RecuperarDadosProvider {
       url: any = this.baseURI + "formas-pagamento.php";
 
     try {
-      console.log
       this.http.post(url, JSON.stringify(options), headers)
         .subscribe((data: any) => {
-          console.log(data)
           this.storageProvider.atualizarformasPagamento(data);
           // If the request was successful notify the user
           // console.log(data)
@@ -117,10 +139,10 @@ export class RecuperarDadosProvider {
 
 
         },
-        (error: any) => {
-          console.log(error);
+          (error: any) => {
+            console.log(error);
 
-        });
+          });
     } catch (error) {
       console.log('catch')
     }

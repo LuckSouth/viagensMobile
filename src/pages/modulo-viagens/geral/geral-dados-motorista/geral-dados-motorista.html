@@ -3,32 +3,32 @@
 
   <ion-item>
     <ion-label floating>Motorista</ion-label>
-    <ion-input type="text" [(ngModel)]="mot" disabled="" value="Cleber"></ion-input>
+    <ion-input type="text" [(ngModel)]="mot" value = {{dados[0].nomeMotorista}}  disabled=""></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label floating>Receitas R$</ion-label>
-    <ion-input type="text" [(ngModel)]="outr" disabled="" value="R$ 100"></ion-input>
+    <ion-input type="text" [(ngModel)]="outr" disabled="" value=R$ value = {{dados[0].outrasReceitas}}></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label floating>Despesas R$</ion-label>
-    <ion-input type="text" [(ngModel)]="out" disabled="" value="R$ 1000"></ion-input>
+    <ion-input type="text" [(ngModel)]="out" disabled="" value=R$ value = {{dados[0].outrasDespesas}}></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label floating>Adiantamento Comissão</ion-label>
-    <ion-input type="text" [(ngModel)]="adi" disabled="" value="R$ 1000"></ion-input>
+    <ion-input type="text" [(ngModel)]="adi" disabled="" value="??????"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label floating>Comissão Gerencial</ion-label>
-    <ion-input type="text" [(ngModel)]="com" disabled="" value="10%"></ion-input>
+    <ion-input type="text" [(ngModel)]="com" disabled="" value = {{dados[0].percentualComissaoGerencial}}%></ion-input>
   </ion-item>
   
   <ion-item>
     <ion-label floating>Valor do Vale</ion-label>
-    <ion-input type="text" [(ngModel)]="val" disabled="" value="R$ 150"></ion-input>
+    <ion-input type="text" [(ngModel)]="val" disabled="" value=R$ value = {{dados[0].valorValeViagem}}></ion-input>
   </ion-item>
 
 </ion-list>

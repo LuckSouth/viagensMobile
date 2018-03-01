@@ -90,15 +90,19 @@ export class StorageProvider {
   chaveArla: string = "arla";
   chaveDespesas: string = "despesas";
   chaveReceitas: string = "receitas";
+  chaveGeral:string = "geral"
   
   //Recuperar dados
   listaFornecedores: any[];
   listaProdutos: any[];
   listaFormasPagameno: any[];
+  listaGeral: any[];
+  // listaPostos: any[];
   
   chaveFornecedores: string = "fornecedores";
   chaveProdutos: string = "produtos";
-  chaveFormasPagamento: string = "formas_pagamento"
+  chaveFormasPagamento: string = "formas_pagamento";
+  // chavePostos: string = "postos";
 
 
   constructor(private storage: Storage) {
@@ -188,12 +192,27 @@ export class StorageProvider {
       });
       
     });
+
+
+    this.storage.ready().then(() => {
+      this.storage.get(this.chaveGeral).then((registros) => {
+        if (registros) {
+          this.listaGeral = registros;
+        } else {
+          this.listaGeral = [];
+        }
+      });
+      
+    });
     
   }
   
   //  Vai retornar a lista
   listarArla() {
     return this.listaArla;
+  }
+  listarGeral() {
+    return this.listaGeral;
   }
   listarAbastecimento() {
     return this.listaAbastecimento;
@@ -212,6 +231,10 @@ export class StorageProvider {
 
   listarProdutos() {
     return this.listaProdutos;
+  }
+
+  listarFormasPagameno(){
+    return this.listaFormasPagameno;
   }
 
   tamanhoAbastecimento() {
@@ -310,6 +333,9 @@ export class StorageProvider {
 
   atualizarformasPagamento(formasPagamento){
     this.storage.set(this.chaveFormasPagamento, formasPagamento);
+  }
+  atualizarGeral(dados) {
+    this.storage.set(this.chaveGeral, dados);
   }
 
   // // Deletar Storage

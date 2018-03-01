@@ -12,9 +12,14 @@ import { RecuperarDadosProvider } from '../../../../providers/recuperar-dados/re
   templateUrl: 'arla-pagamento.html',
 })
 export class ArlaPagamentoPage {
+
   searchQuery: string = '';
-  items: string[];
+
+  itemsPostos: string[];
+  itemsFormasPagamento: string[];
+
   a;
+
   constructor(
     public navCtrl: NavController,
     public toastCtrl: ToastController,
@@ -25,18 +30,21 @@ export class ArlaPagamentoPage {
 
       this.recuperarDados.formasPagamento('nome', 'produtos');
 
+      this.itemsFormasPagamento = this.storageProvider.listarFormasPagameno();
+      // this.itemsFornecedores = this.storageProvider.listarFornecedores();
+
     // this.recuperarDados.postosAbastecimento();
-    this.initializeItems();
+    // this.initializeItems();
     
   }
 
   initializeItems() {
-    this.items = this.storageProvider.listarFornecedores();
-    this.a = this.items;
+    // this.itemsFornecedores = this.storageProvider.listarFornecedores();
+    // this.a = this.itemsFornecedores;
+    console.log(this.storageProvider.listarFormasPagameno());
   }
 
   /* Verifica se o usuário inseriu os dados a todos os campos */
-
   valida() {
 
     if (
@@ -53,6 +61,7 @@ export class ArlaPagamentoPage {
       return true;
     }
   }
+  
   /* Envia os dados para o provider para serem tratados */
   salvar() {
     this.dados.arla(

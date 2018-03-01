@@ -10,6 +10,7 @@ import { RecuperarDadosProvider } from '../../../../providers/recuperar-dados/re
   selector: 'page-receitas',
   templateUrl: 'receitas.html',
 })
+
 export class ReceitasPage {
 
   searchQuery: string = '';
@@ -31,20 +32,21 @@ export class ReceitasPage {
     this.recuperarDados.formasPagamento('nome', 'produtos');
 
     this.itemsProdutos = this.storageProvider.listarProdutos();
+    this.itemsFormasPagamento = this.storageProvider.listarFormasPagameno();
     // var a = this.itemsProdutos.nome
     this.initializeItems();
-    
+
   }
-  
+
   //Filter searchbar
   initializeItems() {
     this.itemsFornecedores = this.storageProvider.listarFornecedores();
     this.fornecedores = this.itemsFornecedores;
   }
 
-  getItems(ev: any) { 
-    this.initializeItems(); 
-    let val = ev.target.value; 
+  getItems(ev: any) {
+    this.initializeItems();
+    let val = ev.target.value;
     if (val && val.trim() != '') {
       this.fornecedores = this.fornecedores.filter((item) => {
         return (item.nome.toLowerCase().indexOf(val.toLowerCase()) > -1);
@@ -78,4 +80,5 @@ export class ReceitasPage {
     });
     toast.present();
   }
+
 }
