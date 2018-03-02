@@ -7,13 +7,14 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { StorageProvider } from '../providers/storage/storage';  
 import { Storage } from '@ionic/storage';   
 import { ViagensPage } from '../pages/modulo-viagens/viagens/viagens';
+import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 
-  rootPage: any = ViagensPage; 
+  rootPage: any = LoginPage; 
   storages: any;
   listaAuth;
   chaveAuth: string = "Auth";

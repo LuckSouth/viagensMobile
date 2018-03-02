@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavParams } from 'ionic-angular';
 import { NavController } from 'ionic-angular/navigation/nav-controller';
-import { Storage } from '@ionic/storage/es2015/storage'; 
+import { Storage } from '@ionic/storage/es2015/storage';
 import { StorageProvider } from '../../providers/storage/storage';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { DadosProvider } from "../../providers/dados/dados";
+import { AlertController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -13,6 +14,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 
 export class LoginPage {
+  data: void;
 
 
   public itens: Array<any> = [];
@@ -23,42 +25,34 @@ export class LoginPage {
     public navCtrl: NavController,
     public storageProvider: StorageProvider,
     public storage: Storage,
-    public http: HttpClient
-  ) { }
+    public http: HttpClient,
+    public dados: DadosProvider,
+    public alert: AlertController
+  ) {
 
-
+  }
 
   //enviar dados pro php
   public hideForm: boolean = false;
   private baseURI: string = "http://192.168.10.160/";
+  usuario;
+  senha;
 
-  enviar(login: string, senha: string): void {
-    let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = {
-        "login": login,
-        "senha": senha
-      },
-      url: any = this.baseURI + "login.php";
-
-    try {
-      console.log
-      this.http.post(url, JSON.stringify(options), headers)
-        .subscribe((data: any) => {
-          console.log(data)
-          // If the request was successful notify the user
-          console.log(data[0])
-          this.hideForm = true;
-
-
-        },
-        (error: any) => {
-          console.log(error);
-
-        });
-    } catch (error) {
-      console.log('catch')
-    }
+  enviar(usuario, senha) {
+    console.log(this.dados.login(this.usuario, this.senha));
 
   }
+
+
+
+  alerta(titulo, subTitulo) {
+    let alert = this.alert.create({
+      title: titulo,
+      subTitle: subTitulo,
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
 }
 

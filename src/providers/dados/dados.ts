@@ -50,6 +50,33 @@ export class DadosProvider {
   }
 
 
+  login(usuario: string, senha: string): void {
+    let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+      options: any = {"usuario": usuario, "senha": senha},
+      url: any = this.baseURI + "login.php";
+
+
+    try { console.log
+      this.http.post(url, JSON.stringify(options), headers)
+        .subscribe((data: any) => {
+          console.log(data)
+          // Se a requisição for um sucesso notifique o usuário
+          this.hideForm = true;
+         
+
+        },
+        (error: any) => { 
+
+          console.log(error)
+
+        });
+    } catch (error) {
+      console.log('catch')
+    }
+
+  }
+
+
   abastecimento(
     motorista: string,
     tipoPosto: string,

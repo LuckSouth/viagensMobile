@@ -12,16 +12,16 @@
   <br>
   <ion-item>
     <ion-label stacked><span class="input">Usuário</span></ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="usuario"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label stacked><span class="input">Senha</span></ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="senha"></ion-input>
   </ion-item>
   <br>
 
   
-  <button ion-button full color="tijuca" (click)= "enviar('bla','bla')">Login</button>
+  <button ion-button full color="tijuca" (click)= "enviar()">Login</button>
 
 </ion-content>
