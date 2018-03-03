@@ -9,7 +9,7 @@ import { StorageProvider } from '../../providers/storage/storage';
 export class RecuperarDadosProvider {
 
   public hideForm: boolean = false;
-  private baseURI: string = "http://192.168.10.160/";
+  private baseURI: string = "http://192.168.10.152/";
 
   constructor(
     public http: HttpClient,
@@ -17,28 +17,28 @@ export class RecuperarDadosProvider {
   }
 
 
-  // postos(): void {
-  //   let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-  //     options: any = { 
-  //     },
-  //     url: any = this.baseURI + "postos-combustiveis.php";
+  postos(): void {
+    let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+      options: any = { 
+      },
+      url: any = this.baseURI + "postos-combustiveis.php";
 
-  //   try {
-  //     this.http.post(url, JSON.stringify(options), headers)
-  //       .subscribe((data: any) => {
-  //         console.log(data)
-  //         this.storageProvider.atualizarPostos(data); 
-  //         this.hideForm = true; 
-  //       },
-  //       (error: any) => {
-  //         console.log(error);
+    try {
+      this.http.post(url, JSON.stringify(options), headers)
+        .subscribe((data: any) => {
+          console.log(data)
+          this.storageProvider.atualizarPostos(data); 
+          this.hideForm = true; 
+        },
+        (error: any) => {
+          console.log(error);
 
-  //       });
-  //   } catch (error) {
-  //     console.log('catch')
-  //   }
+        });
+    } catch (error) {
+      console.log('catch')
+    }
 
-  // }
+  }
 
 
   fornecedores(atributo: string, tabela: string, ): void {

@@ -92,17 +92,17 @@ export class StorageProvider {
   chaveReceitas: string = "receitas";
   chaveGeral:string = "geral"
   
-  //Recuperar dados
+  //Recuperar dados 
   listaFornecedores: any[];
   listaProdutos: any[];
   listaFormasPagameno: any[];
   listaGeral: any[];
-  // listaPostos: any[];
-  
+  listaPostos: any[];
+   
   chaveFornecedores: string = "fornecedores";
   chaveProdutos: string = "produtos";
   chaveFormasPagamento: string = "formas_pagamento";
-  // chavePostos: string = "postos";
+  chavePostos: string = "postos";
 
 
   constructor(private storage: Storage) {
@@ -323,6 +323,12 @@ export class StorageProvider {
 
   // 1º vai ser o "Storage" que quer atualizar -- 2º os "Dados" que vai chegar do formulário
   // Atualizar determinados registros
+
+
+  atualizarPostos(postos) {
+    this.storage.set(this.chavePostos, postos);
+  }
+
   atualizarFornecedores(fornecedores) {
     this.storage.set(this.chaveFornecedores, fornecedores);
   }

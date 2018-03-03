@@ -34,7 +34,7 @@ export class LoginPage {
 
   //enviar dados pro php
   public hideForm: boolean = false;
-  private baseURI: string = "http://192.168.10.160/";
+  private baseURI: string = "http://192.168.10.152/";
   usuario;
   senha;
 

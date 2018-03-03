@@ -10,7 +10,7 @@ export class DadosProvider {
     public storage: StorageProvider) {
   }
 
-  private baseURI: string = "http://192.168.10.160/";
+  private baseURI: string = "http://192.168.10.152/";
   public hideForm: boolean = false;
 
   despesa(motorista: string, despesa: string, data: string, valor: string, opcional?: boolean): void {

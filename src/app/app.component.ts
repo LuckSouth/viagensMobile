@@ -14,7 +14,7 @@ import { LoginPage } from '../pages/login/login';
 })
 export class MyApp {
 
-  rootPage: any = LoginPage; 
+  rootPage: any = ViagensPage; 
   storages: any;
   listaAuth;
   chaveAuth: string = "Auth";
