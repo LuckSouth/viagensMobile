@@ -343,6 +343,7 @@ export class StorageProvider {
   atualizarGeral(dados) {
     this.storage.set(this.chaveGeral, dados);
   }
+  
 
   // // Deletar Storage
   // deletar(storage) {

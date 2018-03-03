@@ -13,22 +13,23 @@ export class DadosProvider {
   private baseURI: string = "http://192.168.10.152/";
   public hideForm: boolean = false;
 
-  despesa(motorista: string, despesa: string, data: string, valor: string, opcional?: boolean): void {
+  despesa(motorista: string, despesa: string, data: string, valor: string, opcional?: boolean){
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = { "key": "despesa", "despesa": despesa, "motorista": motorista, "data": data, "valor": valor },
       url: any = this.baseURI + "manage-data.php";
 
 
-    try { console.log
+    try {
+      console.log
       this.http.post(url, JSON.stringify(options), headers)
         .subscribe((data: any) => {
           console.log(data)
           // Se a requisição for um sucesso notifique o usuário
           this.hideForm = true;
-         
+
 
         },
-        (error: any) => { 
+        (error: any) => {
 
           if (error.statusText == "OK") {
             console.log("fazer nada")
@@ -48,24 +49,24 @@ export class DadosProvider {
     }
 
   }
-
-
-  login(usuario: string, senha: string): void {
+senha:any[] = ["vazio"];
+  login(usuario: string, senha: string) {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = {"usuario": usuario, "senha": senha},
+      options: any = { "usuario": usuario, "senha": senha },
       url: any = this.baseURI + "login.php";
 
 
-    try { console.log
+    try {
+      console.log
       this.http.post(url, JSON.stringify(options), headers)
         .subscribe((data: any) => {
           console.log(data)
           // Se a requisição for um sucesso notifique o usuário
           this.hideForm = true;
-         
-
+          this.senha = data
+                   
         },
-        (error: any) => { 
+        (error: any) => {
 
           console.log(error)
 
@@ -74,8 +75,8 @@ export class DadosProvider {
       console.log('catch')
     }
 
-  }
 
+  }
 
   abastecimento(
     motorista: string,
@@ -90,7 +91,7 @@ export class DadosProvider {
     precoBomba2: string,
     opcional?: boolean
 
-  ): void {
+  ){
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "key": "abastecimento",
@@ -139,7 +140,7 @@ export class DadosProvider {
     preco: string,
     opcional?: boolean
 
-  ): void {
+  ) {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "key": "arla",
