@@ -14,11 +14,11 @@ export class GeralDadosViagemPage {
     this.recuperarDados.geral()
     this.dados = this.storageProvider.listaGeral
     console.log(this.dados)
-
   } 
 
   dados: any[] = [];
-
+  estagiario;
+  senha;
 
   
 

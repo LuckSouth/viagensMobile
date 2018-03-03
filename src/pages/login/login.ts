@@ -38,9 +38,27 @@ export class LoginPage {
   usuario;
   senha;
 
+  a: any[] = ["6"]
   enviar(usuario, senha) {
-    console.log(this.dados.login(this.usuario, this.senha));
 
+    this.dados.login(usuario, senha)
+    this.a = this.dados.senha
+
+    try {
+      if (this.a[0].senha == senha) {
+        console.log('Ok')
+      }
+      if(this.a[0].senha != senha){
+        this.alerta('Erro', 'Senha errada')
+      }
+    } catch (error) {
+      console.log(this.a[0].senha)
+    }
+
+
+    if (this.a[0].senha == undefined || this.a[0].senha == null) {
+      console.log('pera')
+    }
   }
 
 
@@ -53,6 +71,8 @@ export class LoginPage {
     });
     alert.present();
   }
+
+
 
 }
 
