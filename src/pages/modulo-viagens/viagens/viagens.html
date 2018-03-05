@@ -1,8 +1,8 @@
 <ion-header>
 
-  <ion-navbar color="tijuca">
+  <ion-toolbar color="tijuca">
     <ion-title>Viagens</ion-title>
-  </ion-navbar>
+  </ion-toolbar>
 
 </ion-header>
 
@@ -12,7 +12,7 @@
     <div class="grid">
 
       <div class="row">
-        <div class="column" (click)="linkAbastecimento()">Abastecer
+        <div class="column" (click)="alerta()">Abastecer
           <button ion-fab class="fab" *ngIf = "abastecimentoPendente > 0">{{abastecimentoPendente}}</button>
           <img class="imagem" src="assets/images/abastecimento.svg" />
         </div>

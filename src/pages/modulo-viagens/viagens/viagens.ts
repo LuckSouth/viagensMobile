@@ -24,7 +24,7 @@ export class ViagensPage {
   abastecimentoPendente;
   arlaPendente;
   despesasPendente;
-  receitasPendente;
+  receitasPendente; 
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -32,9 +32,9 @@ export class ViagensPage {
     public storage: Storage,
     public storageProvider: StorageProvider,
     public enviar: EnviarProvider, 
-    public http: HttpClient) {
+    public http: HttpClient) { 
   }
-
+   
   /* Funções de link para outras páginas */
 
   linkAbastecimento() {
@@ -60,10 +60,11 @@ export class ViagensPage {
   linkRelatorios() {
     this.navCtrl.push(RelatoriosPage);
   }
+  
 
-
-
-
+  alerta(){
+    alert('Mdswaew');
+  } 
   // //enviar dados pro php
   // public hideForm: boolean = false;
   // private baseURI: string = "http://192.168.10.160/";

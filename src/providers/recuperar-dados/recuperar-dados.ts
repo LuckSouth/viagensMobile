@@ -148,4 +148,33 @@ export class RecuperarDadosProvider {
     }
 
   }
+
+
+  despesa(atributo: string, tabela: string, ): void {
+    let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+      options: any = {
+        "atributo": atributo,
+        "tabela": tabela
+      },
+      url: any = this.baseURI + "despesas.php";
+
+    try {
+      this.http.post(url, JSON.stringify(options), headers)
+        .subscribe((data: any) => {
+          this.storageProvider.atualizarDespesa(data);
+          // If the request was successful notify the user
+          // console.log(data)
+          this.hideForm = true;
+
+
+        },
+          (error: any) => {
+            console.log(error);
+
+          });
+    } catch (error) {
+      console.log('catch')
+    }
+
+  }
 }

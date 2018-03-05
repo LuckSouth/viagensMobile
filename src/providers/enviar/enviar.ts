@@ -11,6 +11,7 @@ export class EnviarProvider {
   abastecimento = []
   arla = []
   receitas = []
+  motorista = []
 
   constructor(public storageProvider: StorageProvider,
     public dados: DadosProvider,
@@ -105,7 +106,7 @@ export class EnviarProvider {
 
     if (this.storageProvider.tamanhoReceitas() > 0) {
 
-      this.arla = this.storageProvider.listaArla
+      this.receitas = this.storageProvider.listaReceitas
 
       for (index = 0; index <= this.storageProvider.tamanhoReceitas(); index++) {
         this.receitas = this.storageProvider.listaReceitas

@@ -6,6 +6,7 @@ import { StorageProvider } from '../../providers/storage/storage';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DadosProvider } from "../../providers/dados/dados";
 import { AlertController } from 'ionic-angular';
+import { ViagensPage } from '../modulo-viagens/viagens/viagens';
 
 @IonicPage()
 @Component({
@@ -14,6 +15,7 @@ import { AlertController } from 'ionic-angular';
 })
 
 export class LoginPage {
+  private films: any;
   data: void;
 
 
@@ -30,48 +32,33 @@ export class LoginPage {
     public alert: AlertController
   ) {
 
+  }   
+  senha = 'a';
+  
+  logado(usuario, senha) {   
+
+    return new Promise((resolve, reject) => {
+    
+      this.dados.login(usuario, senha)
+      this.a = this.dados.senha
+      if (this.a[0].senha == this.senha) {
+        this.viagensPage()
+      }
+      if(this.a[0].senha != this.senha){
+        console.log('Sou um merda')
+      }
+    })
   }
 
+  viagensPage() {
+    this.navCtrl.push(ViagensPage);
+  }
   //enviar dados pro php
   public hideForm: boolean = false;
   private baseURI: string = "http://192.168.10.152/";
-  usuario;
-  senha;
+  usuario; 
 
-  a: any[] = ["6"]
-  enviar(usuario, senha) {
-
-    this.dados.login(usuario, senha)
-    this.a = this.dados.senha
-
-    try {
-      if (this.a[0].senha == senha) {
-        console.log('Ok')
-      }
-      if(this.a[0].senha != senha){
-        this.alerta('Erro', 'Senha errada')
-      }
-    } catch (error) {
-      console.log(this.a[0].senha)
-    }
-
-
-    if (this.a[0].senha == undefined || this.a[0].senha == null) {
-      console.log('pera')
-    }
-  }
-
-
-
-  alerta(titulo, subTitulo) {
-    let alert = this.alert.create({
-      title: titulo,
-      subTitle: subTitulo,
-      buttons: ['OK']
-    });
-    alert.present();
-  }
-
+  a: any[] = [""] 
 
 
 }

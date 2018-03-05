@@ -149,16 +149,28 @@ export class StorageProvider {
       })
     })
 
-    this.storage.ready().then(() => {
-      this.storage.get(this.chaveReceitas).then((registros) => {
-        if (registros) {
-          this.listaReceitas = registros;
-        } else {
-          this.listaReceitas = [];
-        }
-      });
-
+const promise =
+new Promise((resolve, reject) => {  
+    this.storage.get(this.chaveReceitas).then((registros) => {
+      if (registros) {
+        this.listaReceitas = registros;
+      } else {
+        this.listaReceitas = [];
+      }
     });
+
+  })
+.then(
+(data) => {   this.storage.get(this.chaveReceitas).then((registros) => {
+  if (registros) {
+    this.listaReceitas = registros;
+  } else {
+    this.listaReceitas = [];
+  }
+});
+(err) => { console.log(err); }
+}); 
+    
 
     this.storage.ready().then(() => {
       this.storage.get(this.chaveFornecedores).then((registros) => {
@@ -340,6 +352,11 @@ export class StorageProvider {
   atualizarformasPagamento(formasPagamento){
     this.storage.set(this.chaveFormasPagamento, formasPagamento);
   }
+
+  atualizarDespesa(despesa){
+    this.storage.set(this.chaveDespesas, despesa);
+  }
+
   atualizarGeral(dados) {
     this.storage.set(this.chaveGeral, dados);
   }

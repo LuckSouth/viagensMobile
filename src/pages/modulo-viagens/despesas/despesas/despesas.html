@@ -5,11 +5,16 @@
 </ion-header>
 
 <div class="slideTop"> 
+  
   <ion-item>
     <ion-label stacked>
-      <span class="input">Despesa</span>
+      <span class="input">Despesas</span>
     </ion-label>
-    <ion-input type="text" [(ngModel)]="storageProvider.despesas.despesas"></ion-input>
+    <ion-select [(ngModel)]="storageProvider.despesas.despesas" (click)="valida()">
+      <ion-option *ngFor="let item of itemsDespesas">
+        {{item.nome}}
+      </ion-option>
+    </ion-select>
   </ion-item>
 
   <ion-item>
