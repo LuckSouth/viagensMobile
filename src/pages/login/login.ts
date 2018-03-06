@@ -12,7 +12,6 @@ import { DespesasPage } from '../modulo-viagens/despesas/despesas/despesas';
 import { RelatoriosPage } from "../modulo-viagens/relatorios/relatorios-page/relatorios"; 
 import { EnviarProvider } from "../../providers/enviar/enviar";
 import { ArlaPagamentoPage } from '../modulo-viagens/arla-32/arla-pagamento/arla-pagamento'; 
-import { ReceitasPage } from '../modulo-viagens/receitas/receitas/receitas';  
 import { RecuperarDadosProvider } from '../../providers/recuperar-dados/recuperar-dados';
 
 @IonicPage()
@@ -33,6 +32,7 @@ export class LoginPage {
   itemsFornecedores: string[];
   itemsProdutos: string[];
   itemsFormasPagamento: string[];
+  itemsPostos: string[];
   fornecedores;
 
 

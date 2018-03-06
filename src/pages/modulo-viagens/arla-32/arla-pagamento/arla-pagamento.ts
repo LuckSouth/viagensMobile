@@ -28,20 +28,23 @@ export class ArlaPagamentoPage {
     public storageProvider: StorageProvider,
     public recuperarDados: RecuperarDadosProvider) {
  
-      this.itemsFormasPagamento = this.storageProvider.listarFormasPagameno();
+      this.itemsFormasPagamento = this.storageProvider.listarFormasPagamento();
       this.itemsFornecedores = this.storageProvider.listarFornecedores();
 
     this.recuperarDados.postos();
     // this.initializeItems();
     
-  }
+  } 
+  /* Recupera a data atual e converte para o tipo string */
+
+  Data: string = new Date().toISOString();
 
 
   /* Verifica se o usuário inseriu os dados a todos os campos */
   valida() {
 
     if (
-      this.storageProvider.arla.tipoArla == "" ||
+      //this.storageProvider.arla.tipoArla == "" ||
       this.storageProvider.arla.postoArla == "" ||
       this.storageProvider.arla.pagArla == "" ||
       this.storageProvider.arla.precoArla == "" ||

@@ -10,7 +10,7 @@
     <ion-label stacked>
       <span class="input">Posto</span>
     </ion-label>
-    <ion-select [(ngModel)]="Posto">
+    <ion-select [(ngModel)]="storageProvider.arla.postoArla" (click)="valida()">
       <ion-option *ngFor="let item of itemsFornecedores">
         {{ item.nome }}
       </ion-option>

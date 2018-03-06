@@ -14,13 +14,14 @@ export class AbastecimentoPagamentoPage {
   searchQuery: string = '';
   items: string[];
   itemsFormasPagamento: string[];
+  itemsPostos: string[];
   a;
   constructor(public navCtrl: NavController,
     public storageProvider: StorageProvider,
     public recuperarDados: RecuperarDadosProvider) {
          
-      this.itemsFormasPagamento = this.storageProvider.listarFormasPagameno();
-      this.recuperarDados.postos(); 
+      this.itemsFormasPagamento = this.storageProvider.listarFormasPagamento();
+      this.itemsPostos = this.storageProvider.listarAbastecimento(); 
   }  
 
   /* Recupera a data atual e converte para o tipo string */

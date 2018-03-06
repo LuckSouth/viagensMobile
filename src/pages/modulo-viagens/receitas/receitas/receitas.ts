@@ -31,7 +31,7 @@ export class ReceitasPage {
     public dados: DadosProvider) {  
       this.itemsFornecedores = this.storageProvider.listarFornecedores();
       this.itemsProdutos = this.storageProvider.listarProdutos();
-      this.itemsFormasPagamento = this.storageProvider.listarFormasPagameno(); 
+      this.itemsFormasPagamento = this.storageProvider.listarFormasPagamento(); 
   }
  
   /* Verifica se o usuário inseriu os dados a todos os campos */

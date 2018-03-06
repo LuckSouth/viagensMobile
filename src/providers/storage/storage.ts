@@ -248,7 +248,7 @@ new Promise((resolve, reject) => {
     return this.listaProdutos;
   }
 
-  listarFormasPagameno(){
+  listarFormasPagamento(){
     return this.listaFormasPagameno;
   }
 

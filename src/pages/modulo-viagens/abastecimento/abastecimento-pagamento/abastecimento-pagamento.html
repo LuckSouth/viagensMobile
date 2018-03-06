@@ -10,9 +10,9 @@
       <ion-label stacked>
           <span class="input">Posto</span>
       </ion-label>
-      <ion-select [(ngModel)]="Posto">
-          <ion-option *ngFor="let item of a"  (ionInput)="getItems()">
-            {{ item.nomePosto }}
+      <ion-select [(ngModel)]="storageProvider.abastecimento.postoAbastecimento" (click)="valida()">
+          <ion-option *ngFor="let items of itemsPostos">
+            {{ items.nomePosto }}
           </ion-option> 
       </ion-select>
     </ion-item>

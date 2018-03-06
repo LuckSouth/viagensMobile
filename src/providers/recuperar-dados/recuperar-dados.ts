@@ -19,8 +19,7 @@ export class RecuperarDadosProvider {
 
   postos(): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = { 
-      },
+      options: any = {},
       url: any = this.baseURI + "postos-combustiveis.php";
 
     try {

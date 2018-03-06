@@ -35,6 +35,10 @@ export class DespesasPage {
 
   }
 
+  /* Recupera a data atual e converte para o tipo string */
+
+  Data: string = new Date().toISOString();
+
   //Filter searchbar
   initializeItems() {
     this.itemsDespesa = this.storageProvider.listarFornecedores();
