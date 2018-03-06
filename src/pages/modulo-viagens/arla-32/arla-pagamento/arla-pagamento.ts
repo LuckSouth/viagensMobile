@@ -17,7 +17,7 @@ export class ArlaPagamentoPage {
 
   itemsPostos: string[];
   itemsFormasPagamento: string[];
-
+  itemsFornecedores: string[];
   a;
 
   constructor(
@@ -27,22 +27,15 @@ export class ArlaPagamentoPage {
     public foto: FotoServicoProvider,
     public storageProvider: StorageProvider,
     public recuperarDados: RecuperarDadosProvider) {
-
-      this.recuperarDados.formasPagamento('nome', 'produtos');
-
+ 
       this.itemsFormasPagamento = this.storageProvider.listarFormasPagameno();
-      // this.itemsFornecedores = this.storageProvider.listarFornecedores();
+      this.itemsFornecedores = this.storageProvider.listarFornecedores();
 
-    // this.recuperarDados.postosAbastecimento();
+    this.recuperarDados.postos();
     // this.initializeItems();
     
   }
 
-  initializeItems() {
-    // this.itemsFornecedores = this.storageProvider.listarFornecedores();
-    // this.a = this.itemsFornecedores;
-    console.log(this.storageProvider.listarFormasPagameno());
-  }
 
   /* Verifica se o usuário inseriu os dados a todos os campos */
   valida() {
@@ -74,10 +67,7 @@ export class ArlaPagamentoPage {
       this.storageProvider.arla.dataArla,
       this.storageProvider.arla.km
     )
-    this.navCtrl.pop();
-    //Armazenar no Storage
-    // this.storageProvider.adicionarArla();
-
+    this.navCtrl.pop(); 
     let toast = this.toastCtrl.create({
       message: 'Arla adicionada com sucesso',
       duration: 2000

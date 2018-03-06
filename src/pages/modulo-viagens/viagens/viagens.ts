@@ -19,13 +19,8 @@ import { RotasAbastecimentoPage } from '../abastecimento/rotas-abastecimento/rot
   selector: 'page-viagens',
   templateUrl: 'viagens.html',
 })
-export class ViagensPage {
+export class ViagensPage { 
   
-  abastecimentoPendente;
-  arlaPendente;
-  despesasPendente;
-  receitasPendente; 
-
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public dados: DadosProvider, 
@@ -33,6 +28,7 @@ export class ViagensPage {
     public storageProvider: StorageProvider,
     public enviar: EnviarProvider, 
     public http: HttpClient) { 
+
   }
    
   /* Funções de link para outras páginas */
@@ -60,11 +56,7 @@ export class ViagensPage {
   linkRelatorios() {
     this.navCtrl.push(RelatoriosPage);
   }
-  
-
-  alerta(){
-    alert('Mdswaew');
-  } 
+   
   // //enviar dados pro php
   // public hideForm: boolean = false;
   // private baseURI: string = "http://192.168.10.160/";
@@ -94,17 +86,7 @@ export class ViagensPage {
   //   }
   // }
   
-
-
-  ionViewDidEnter() { 
-    this.arlaPendente = this.storageProvider.tamanhoArla();
-    this.abastecimentoPendente = this.storageProvider.tamanhoAbastecimento();
-    this.despesasPendente = this.storageProvider.tamanhoDespesas();
-    this.receitasPendente = this.storageProvider.tamanhoReceitas();
-
-    this.enviar.enviar();
-
-  }
+ 
 
   }
 

@@ -11,7 +11,9 @@ export class StorageProvider {
   arrayArla = [];
   arrayDespesas = [];
   arrayReceitas = [];
+  arrayRelatorio = [[]];
 
+  
   login = {
     isLoggedIn: false,
     name: "",
@@ -106,17 +108,7 @@ export class StorageProvider {
 
 
   constructor(private storage: Storage) {
-    this.storage.ready().then(() => {
-      this.storage.get(this.chaveAbastecimento).then((registros) => {
-        if (registros) {
-          this.listaAbastecimento = registros;
-        } else {
-          this.listaAbastecimento = [];
-        }
-      });
-
-    });
-
+   
     this.storage.ready().then(() => {
       this.storage.get(this.chaveArla).then((registros) => {
         if (registros) {
@@ -212,6 +204,17 @@ new Promise((resolve, reject) => {
           this.listaGeral = registros;
         } else {
           this.listaGeral = [];
+        }
+      });
+      
+    }); 
+
+    this.storage.ready().then(() => {
+      this.storage.get(this.chaveAbastecimento).then((registros) => {
+        if (registros) {
+          this.listaAbastecimento = registros;
+        } else {
+          this.listaAbastecimento = [];
         }
       });
       
@@ -360,23 +363,10 @@ new Promise((resolve, reject) => {
   atualizarGeral(dados) {
     this.storage.set(this.chaveGeral, dados);
   }
-  
-
-  // // Deletar Storage
-  // deletar(storage) {
-  //   for (let chave in this.listaReceitas) {
-  //     if (this.listaReceitas[chave] == storage) {
-  //       this.listaReceitas.splice(parseInt(chave), 1);
-  //       this.storage.set(this.chaveReceitas, this.listaReceitas);
-  //     }
-  //   }
-  // }
-
+   
   delete(id) {
     return this.storage.remove(id).
       then(() => true)
-  }
-
- 
+  } 
 
 }

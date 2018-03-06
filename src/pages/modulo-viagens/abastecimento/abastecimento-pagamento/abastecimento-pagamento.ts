@@ -18,18 +18,10 @@ export class AbastecimentoPagamentoPage {
   constructor(public navCtrl: NavController,
     public storageProvider: StorageProvider,
     public recuperarDados: RecuperarDadosProvider) {
-      
-      this.recuperarDados.formasPagamento('nome', 'produtos');      
+         
       this.itemsFormasPagamento = this.storageProvider.listarFormasPagameno();
-      // this.recuperarDados.postosAbastecimento();
-      // this.initializeItems();
-  } 
-
-  initializeItems() {
-    this.items = this.storageProvider.listarFornecedores(); 
-    this.a = this.items;
-  }
- 
+      this.recuperarDados.postos(); 
+  }  
 
   /* Recupera a data atual e converte para o tipo string */
 
