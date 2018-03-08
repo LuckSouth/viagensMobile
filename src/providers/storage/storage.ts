@@ -140,7 +140,7 @@ export class StorageProvider {
         }
       })
     })
-
+ 
 const promise =
 new Promise((resolve, reject) => {  
     this.storage.get(this.chaveReceitas).then((registros) => {
@@ -356,7 +356,7 @@ new Promise((resolve, reject) => {
     this.storage.set(this.chaveFormasPagamento, formasPagamento);
   }
 
-  atualizarDespesas(Despesas){
+  atualizarDespesas(despesas){
     this.storage.set(this.chaveDespesas, despesas);
   }
 
