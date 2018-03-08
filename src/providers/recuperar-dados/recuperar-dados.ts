@@ -160,7 +160,7 @@ export class RecuperarDadosProvider {
     try {
       this.http.post(url, JSON.stringify(options), headers)
         .subscribe((data: any) => {
-          this.storageProvider.atualizarDespesa(data);
+          this.storageProvider.atualizarDespesas(data);
           // If the request was successful notify the user
           // console.log(data)
           this.hideForm = true;

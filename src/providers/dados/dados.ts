@@ -32,11 +32,11 @@ export class DadosProvider {
         (error: any) => {
 
           if (error.statusText == "OK") {
-            console.log("fazer nada")
+            console.log("Não tá inserindo, seu merda")
             this.storage.delete(this.storage.chaveDespesas);
             this.storage.listaDespesas = [];
           } else {
-            console.log('tratar erros');
+            console.log('Mais tu é burro, óh');
 
             if (opcional != true) {
               this.storage.adicionarDespesas()

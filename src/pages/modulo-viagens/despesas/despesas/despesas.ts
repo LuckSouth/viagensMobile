@@ -21,11 +21,7 @@ export class DespesasPage {
   itemsFornecedores: string[];
   itemsProdutos: string[];
   itemsFormasPagamento: string[];
-  fornecedores;
-  
-  despesas = "";
-  motorista = "bino"; 
-  searchQuery: string = '';
+  fornecedores; 
   itemsDespesa: string[];  
 
 
@@ -48,7 +44,7 @@ export class DespesasPage {
     this.storageProvider.despesas.valorDespesas == ""  ) {
       return false
     } else {
-      return true
+      return true 
     }
   }
 

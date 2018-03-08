@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { StorageProvider } from '../../../../providers/storage/storage';
 import { DadosProvider } from '../../../../providers/dados/dados';
-import { FotoServicoProvider } from '../../../../providers/foto-servico/foto-servico';
-import { RecuperarDadosProvider } from '../../../../providers/recuperar-dados/recuperar-dados';
+import { FotoServicoProvider } from '../../../../providers/foto-servico/foto-servico'; 
 
 
 @IonicPage()
@@ -17,23 +16,18 @@ export class ArlaPagamentoPage {
 
   itemsPostos: string[];
   itemsFormasPagamento: string[];
-  itemsFornecedores: string[];
-  a;
+  itemsFornecedores: string[]; 
 
   constructor(
     public navCtrl: NavController,
     public toastCtrl: ToastController,
     public dados: DadosProvider,
     public foto: FotoServicoProvider,
-    public storageProvider: StorageProvider,
-    public recuperarDados: RecuperarDadosProvider) {
+    public storageProvider: StorageProvider) {
  
       this.itemsFormasPagamento = this.storageProvider.listarFormasPagamento();
       this.itemsFornecedores = this.storageProvider.listarFornecedores();
-
-    this.recuperarDados.postos();
-    // this.initializeItems();
-    
+ 
   } 
   /* Recupera a data atual e converte para o tipo string */
 
