@@ -232,7 +232,7 @@ new Promise((resolve, reject) => {
   listarAbastecimento() {
     return this.listaAbastecimento;
   }
-  listarDespesa() {
+  listarDespesas() {
     return this.listaDespesas;
   }
   listarReceitas() {
@@ -262,7 +262,7 @@ new Promise((resolve, reject) => {
     return this.arrayArla.length
   }
   tamanhoDespesas() {
-    this.arrayDespesas = this.listarDespesa()
+    this.arrayDespesas = this.listarDespesas()
     return this.arrayDespesas.length
   }
   tamanhoReceitas() {
@@ -356,8 +356,8 @@ new Promise((resolve, reject) => {
     this.storage.set(this.chaveFormasPagamento, formasPagamento);
   }
 
-  atualizarDespesa(despesa){
-    this.storage.set(this.chaveDespesas, despesa);
+  atualizarDespesas(Despesas){
+    this.storage.set(this.chaveDespesas, despesas);
   }
 
   atualizarGeral(dados) {

@@ -22,9 +22,9 @@ export class DespesasRelatoriosPage {
     ionViewDidEnter() {
       // this.storages = this.storageProvider.listaDespesas();
       console.log(this.storages);
-      this.storages = this.storageProvider.listarDespesa();
+      this.storages = this.storageProvider.listarDespesas();
       this.tamanho = this.storageProvider.tamanhoArla()
       
     }
-
+    
 }

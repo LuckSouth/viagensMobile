@@ -6,12 +6,11 @@ import { DadosProvider } from '../../../../providers/dados/dados';
 
 @IonicPage()
 @Component({
-  selector: 'page-receitas',
+  selector: 'page-receitas', 
   templateUrl: 'receitas.html',
 })
 
-export class ReceitasPage {
-  private films: any;
+export class ReceitasPage { 
   data: void;
   abastecimentoPendente;
   arlaPendente;
@@ -46,7 +45,7 @@ export class ReceitasPage {
 
   /* Envia os dados para o provider para serem tratados */
   salvar() {
-    this.dados.despesa(
+    this.dados.despesas(
       this.storageProvider.receitas.fornecedorOrigem,
       this.storageProvider.receitas.fornecedorDestino,
       this.storageProvider.receitas.produto,

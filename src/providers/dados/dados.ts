@@ -13,9 +13,9 @@ export class DadosProvider {
   private baseURI: string = "http://192.168.10.152/";
   public hideForm: boolean = false;
 
-  despesa(motorista: string, despesa: string, data: string, valor: string, opcional?: boolean){
+  despesas(motorista: string, despesas: string, data: string, valor: string, opcional?: boolean){
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = { "key": "despesa", "despesa": despesa, "motorista": motorista, "data": data, "valor": valor },
+      options: any = { "key": "despesas", "despesas": despesas, "motorista": motorista, "data": data, "valor": valor },
       url: any = this.baseURI + "manage-data.php";
 
 

@@ -27,7 +27,7 @@ export class EnviarProvider {
         console.log('enviar arquivos no cache');
         this.despesas = this.storageProvider.listaDespesas
 
-        this.dados.despesa(
+        this.dados.despesas(
           this.despesas[index].motorista,
           this.despesas[index].despesas,
           this.despesas[index].dataDespesas,

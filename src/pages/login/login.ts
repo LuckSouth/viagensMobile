@@ -11,7 +11,6 @@ import { ViagensPage } from '../modulo-viagens/viagens/viagens';
 import { DespesasPage } from '../modulo-viagens/despesas/despesas/despesas';  
 import { RelatoriosPage } from "../modulo-viagens/relatorios/relatorios-page/relatorios"; 
 import { EnviarProvider } from "../../providers/enviar/enviar";
-import { ArlaPagamentoPage } from '../modulo-viagens/arla-32/arla-pagamento/arla-pagamento'; 
 import { RecuperarDadosProvider } from '../../providers/recuperar-dados/recuperar-dados';
 
 @IonicPage()
@@ -20,8 +19,7 @@ import { RecuperarDadosProvider } from '../../providers/recuperar-dados/recupera
   templateUrl: 'login.html'
 })
 
-export class LoginPage {
-  private films: any;
+export class LoginPage { 
   data: void;
   abastecimentoPendente;
   arlaPendente;
@@ -54,7 +52,7 @@ export class LoginPage {
     this.recuperarDados.produtos('nome', 'produtos');
     this.recuperarDados.formasPagamento('nome', 'produtos');
     this.recuperarDados.geral();
-    this.recuperarDados.despesa('nome', 'produtos');
+    this.recuperarDados.despesas('nome', 'produtos');
     this.recuperarDados.postos();
   }   
   senha = 'a';

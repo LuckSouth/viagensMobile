@@ -149,7 +149,7 @@ export class RecuperarDadosProvider {
   }
 
 
-  despesa(atributo: string, tabela: string, ): void {
+  despesas(atributo: string, tabela: string, ): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "atributo": atributo,
