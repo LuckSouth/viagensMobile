@@ -13,7 +13,7 @@ export class DadosProvider {
   private baseURI: string = "http://192.168.10.152/";
   public hideForm: boolean = false;
 
-  despesas(motorista: string, despesas: string, data: string, valor: string, opcional?: boolean){
+  despesas(motorista: string, despesas: string, data: string, valor: string, opcional?: boolean) {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = { "key": "despesas", "despesas": despesas, "motorista": motorista, "data": data, "valor": valor },
       url: any = this.baseURI + "manage-data.php";
@@ -49,7 +49,7 @@ export class DadosProvider {
     }
 
   }
-senha:any[] = ["vazio"];
+  senha: any[] = ["vazio"];
   login(usuario: string, senha: string) {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = { "usuario": usuario, "senha": senha },
@@ -64,7 +64,7 @@ senha:any[] = ["vazio"];
           // Se a requisição for um sucesso notifique o usuário
           this.hideForm = true;
           this.senha = data
-                   
+
         },
         (error: any) => {
 
@@ -91,7 +91,7 @@ senha:any[] = ["vazio"];
     precoBomba2: string,
     opcional?: boolean
 
-  ){
+  ) {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "key": "abastecimento",
@@ -168,10 +168,10 @@ senha:any[] = ["vazio"];
           this.storage.delete(this.storage.chaveArla);
           this.storage.listaArla = [];
         } else {
-
-          if (opcional != true) {
+          console.log('rghj')
+          //if (opcional != true) {
             this.storage.adicionarArla()
-          }
+          //}
         }
       });
   }
@@ -179,31 +179,17 @@ senha:any[] = ["vazio"];
 
 
   receitas(
-    motorista: string,
-    fornecedorOrigem: string,
-    fornecedorDestino: string,
-    produto: string,
-    tipoPagmt: string,
-    idUnidadeMedida: string,
-    qntFaturado: string,
-    qntDescarregado: string,
-    valorUnitario: string,
-    idSubUnidade: string,
+    fornecedorDestino,
+    produto,
+    tipoPagmt,
     opcional?: boolean
   ): void {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "key": "receitas",
-        "motorista": motorista,
-        "fornecedorOrigem": fornecedorOrigem,
         "fornecedorDestino": fornecedorDestino,
         "produto": produto,
         "tipoPagmt": tipoPagmt,
-        "qntFaturado": qntFaturado,
-        "qntDescarregado": qntDescarregado,
-        "valorUnitario": valorUnitario,
-        "idSubUnidade": idSubUnidade,
-        "idUnidadeMedida": idUnidadeMedida
       },
       url: any = this.baseURI + "manage-data.php";
 

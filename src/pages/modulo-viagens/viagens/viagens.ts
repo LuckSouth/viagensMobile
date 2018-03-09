@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
- 
+
 import { GeralPage } from '../geral/geral-page/geral-page';
-import { DespesasPage } from '../despesas/despesas/despesas';  
-import { DadosProvider } from "../../../providers/dados/dados"; 
+import { DespesasPage } from '../despesas/despesas/despesas';
+import { DadosProvider } from "../../../providers/dados/dados";
 
 import { Storage } from "@ionic/storage";
 import { StorageProvider } from "../../../providers/storage/storage";
@@ -11,7 +11,7 @@ import { RelatoriosPage } from "../relatorios/relatorios-page/relatorios";
 import { EnviarProvider } from "../../../providers/enviar/enviar";
 import { ArlaPagamentoPage } from '../arla-32/arla-pagamento/arla-pagamento';
 import { HttpClient } from '@angular/common/http';
-import { ReceitasPage } from '../receitas/receitas/receitas'; 
+import { ReceitasPage } from '../receitas/receitas/receitas';
 import { RotasAbastecimentoPage } from '../abastecimento/rotas-abastecimento/rotas-abastecimento';
 
 @IonicPage()
@@ -19,18 +19,28 @@ import { RotasAbastecimentoPage } from '../abastecimento/rotas-abastecimento/rot
   selector: 'page-viagens',
   templateUrl: 'viagens.html',
 })
-export class ViagensPage { 
-  
+export class ViagensPage {
+
+  arlaPendentes;
+  despesasPendentes;
+  abastecimentoPendentes;
+  receitasPendentes;
+
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public dados: DadosProvider, 
+    public dados: DadosProvider,
     public storage: Storage,
     public storageProvider: StorageProvider,
-    public enviar: EnviarProvider, 
-    public http: HttpClient) { 
+    public enviar: EnviarProvider,
+    public http: HttpClient) {
+
+      this.abastecimentoPendentes = this.storageProvider.tamanhoAbastecimento();
+      this.arlaPendentes = this.storageProvider.tamanhoArla();
+      this.receitasPendentes = this.storageProvider.tamanhoReceitas();
+      this.abastecimentoPendentes = this.storageProvider.tamanhoReceitas();
 
   }
-   
+
   /* Funções de link para outras páginas */
 
   linkAbastecimento() {
@@ -56,7 +66,11 @@ export class ViagensPage {
   linkRelatorios() {
     this.navCtrl.push(RelatoriosPage);
   }
-   
+
+
+
+
+
   // //enviar dados pro php
   // public hideForm: boolean = false;
   // private baseURI: string = "http://192.168.10.160/";
@@ -85,8 +99,8 @@ export class ViagensPage {
   //     console.log('catch')
   //   }
   // }
-  
- 
 
-  }
+
+
+}
 

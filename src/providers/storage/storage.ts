@@ -140,7 +140,7 @@ export class StorageProvider {
         }
       })
     })
- 
+
 const promise =
 new Promise((resolve, reject) => {  
     this.storage.get(this.chaveReceitas).then((registros) => {
@@ -323,7 +323,7 @@ new Promise((resolve, reject) => {
   adicionarArla() {
     this.storage.ready().then(() => {
       this.listaArla.push(this.arla);
-      //this.storage.set(this.chaveArla, this.listaArla);
+      this.storage.set(this.chaveArla, this.listaArla);
     });
   }
 
@@ -356,8 +356,8 @@ new Promise((resolve, reject) => {
     this.storage.set(this.chaveFormasPagamento, formasPagamento);
   }
 
-  atualizarDespesas(despesas){
-    this.storage.set(this.chaveDespesas, despesas);
+  atualizarDespesas(Despesas){
+    this.storage.set(this.chaveDespesas, Despesas);
   }
 
   atualizarGeral(dados) {

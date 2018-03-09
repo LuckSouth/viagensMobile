@@ -111,16 +111,9 @@ export class EnviarProvider {
       for (index = 0; index <= this.storageProvider.tamanhoReceitas(); index++) {
         this.receitas = this.storageProvider.listaReceitas
         this.dados.receitas(
-          this.receitas[index].motorista,
-          this.receitas[index].fornecedorOrigem,
           this.receitas[index].fornecedorDestino,
           this.receitas[index].produto,
           this.receitas[index].tipoPagment,
-          this.receitas[index].idUnidadeMedida,
-          this.receitas[index].qntFaturado,
-          this.receitas[index].qntDescarregado,
-          this.receitas[index].valorUnitario,
-          this.receitas[index].idSubUnidade,
           true
 
 

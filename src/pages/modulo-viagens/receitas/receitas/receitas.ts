@@ -45,8 +45,7 @@ export class ReceitasPage {
 
   /* Envia os dados para o provider para serem tratados */
   salvar() {
-    this.dados.despesas(
-      this.storageProvider.receitas.fornecedorOrigem,
+    this.dados.receitas(
       this.storageProvider.receitas.fornecedorDestino,
       this.storageProvider.receitas.produto,
       this.storageProvider.receitas.tipoPagmt
