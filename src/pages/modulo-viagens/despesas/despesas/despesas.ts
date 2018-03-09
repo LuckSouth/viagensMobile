@@ -18,19 +18,18 @@ export class DespesasPage {
   despesasPendente;
   receitasPendente;  
   searchQuery: string = '';
-  itemsFornecedores: string[];
-  itemsProdutos: string[];
+  itemsFornecedores: string[]; 
   itemsFormasPagamento: string[];
-  fornecedores; 
-  itemsDespesa: string[];  
+  fornecedores;    
+  itemsDescricaoDespesa: string[];  
 
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public toastCtrl: ToastController,
     public storageProvider: StorageProvider,
-    public dados: DadosProvider) { 
-      this.itemsDespesa = this.storageProvider.listarDespesas(); 
+    public dados: DadosProvider) {  
+      this.itemsDescricaoDespesa = this.storageProvider.listarDescricaoDespesa(); 
   }
 
   /* Recupera a data atual e converte para o tipo string */

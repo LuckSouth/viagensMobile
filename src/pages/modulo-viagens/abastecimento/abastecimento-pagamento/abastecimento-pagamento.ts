@@ -21,7 +21,7 @@ export class AbastecimentoPagamentoPage {
     public recuperarDados: RecuperarDadosProvider) {
          
       this.itemsFormasPagamento = this.storageProvider.listarFormasPagamento();
-      this.itemsPostos = this.storageProvider.listarAbastecimento(); 
+      this.itemsPostos = this.storageProvider.listarPostos(); 
   }  
 
   /* Recupera a data atual e converte para o tipo string */
@@ -33,7 +33,12 @@ export class AbastecimentoPagamentoPage {
   valida() {
     this.storageProvider.abastecimento.dataAbastecimento = this.Data;
     
-    if (this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || this.storageProvider.abastecimento.postoAbastecimento == "" || this.storageProvider.abastecimento.tipoPagmtAbastecimento == "" || this.storageProvider.abastecimento.dataAbastecimento == "" || this.storageProvider.abastecimento.precoAbastecimento == "" ) {
+    if (
+      //this.storageProvider.abastecimento.tipoAbastecimento.length < 3 || 
+      this.storageProvider.abastecimento.postoAbastecimento == "" ||
+       this.storageProvider.abastecimento.tipoPagmtAbastecimento == "" || 
+       this.storageProvider.abastecimento.dataAbastecimento == "" || 
+       this.storageProvider.abastecimento.precoAbastecimento == "" ) {
       return false;
     } else {
       return true;

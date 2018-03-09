@@ -19,10 +19,9 @@ export class DespesasRelatoriosPage {
     public storageProvider: StorageProvider) { 
   }
 
-    ionViewDidEnter() {
-      // this.storages = this.storageProvider.listaDespesas();
+    ionViewDidEnter() { 
       console.log(this.storages);
-      this.storages = this.storageProvider.listarDespesas();
+      this.storages = this.storageProvider.listarDescricaoDespesa();
       this.tamanho = this.storageProvider.tamanhoArla()
       
     }

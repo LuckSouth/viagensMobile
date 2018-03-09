@@ -16,8 +16,6 @@ export class ArlaPagamentoPage {
 
   itemsPostos: string[];
   itemsFormasPagamento: string[];
-  itemsFornecedores: string[]; 
-
   constructor(
     public navCtrl: NavController,
     public toastCtrl: ToastController,
@@ -26,7 +24,7 @@ export class ArlaPagamentoPage {
     public storageProvider: StorageProvider) {
  
       this.itemsFormasPagamento = this.storageProvider.listarFormasPagamento();
-      this.itemsFornecedores = this.storageProvider.listarFornecedores();
+      this.itemsPostos = this.storageProvider.listarPostos(); 
  
   } 
   /* Recupera a data atual e converte para o tipo string */
