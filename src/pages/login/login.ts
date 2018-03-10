@@ -77,7 +77,7 @@ export class LoginPage {
  
       }
       if(this.a[0].senha != this.senha){
-        console.log('Sou um merda')
+        console.log("Didn't work")
          
     this.arlaPendente = this.storageProvider.tamanhoArla();
     this.abastecimentoPendente = this.storageProvider.tamanhoAbastecimento();

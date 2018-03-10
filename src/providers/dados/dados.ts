@@ -12,10 +12,9 @@ export class DadosProvider {
 
   private baseURI: string = "http://192.168.10.152/";
   public hideForm: boolean = false;
-
   despesas(motorista: string, despesas: string, data: string, valor: string, opcional?: boolean) {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = { "key": "despesas", "despesas": despesas, "motorista": motorista, "data": data, "valor": valor },
+      options: any = { "key": "despesas", "despesas": despesas, "motorista": motorista, "data": "362954", "valor": valor },
       url: any = this.baseURI + "manage-data.php";
 
 
@@ -32,7 +31,8 @@ export class DadosProvider {
         (error: any) => {
 
           if (error.statusText == "OK") {
-            console.log("Não tá inserindo, seu merda")
+            console.log("Tente outra vez")
+            console.log(error)
             this.storage.delete(this.storage.chaveDescricaoDespesa);
             this.storage.listaDescricaoDespesa = [];
           } else {
@@ -79,39 +79,34 @@ export class DadosProvider {
   }
 
   abastecimento(
-    motorista: string,
-    tipoPosto: string,
-    posto: string,
+    motorista: string, 
     data: string,
     tipoPagamento: string,
     odometro: string,
     litrosBomba1: string,
-    precoBomba1: string,
-    litrosBomba2: string,
-    precoBomba2: string,
+    litrosBomba2: string, 
+    posto: string,
+    precoAbastecimento: string,
     opcional?: boolean
 
   ) {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "key": "abastecimento",
-        "motorista": motorista,
-        "tipoPosto": tipoPosto,
+        "motorista": motorista, 
         "data": data,
         "tipoPagamento": tipoPagamento,
         "odometro": odometro,
         "litrosBomba1": litrosBomba1,
-        "precoBomba1": precoBomba1,
-        "litrosBomba2": litrosBomba2,
-        "precoBomba2": precoBomba2
+        "litrosBomba2": litrosBomba2, 
+        "posto": posto,
+        "precoAbastecimento": precoAbastecimento,
       },
       url: any = this.baseURI + "manage-data.php";
 
     this.http.post(url, JSON.stringify(options), headers)
       .subscribe((data: any) => {
-        console.log(data)
-        // Se a requisição for um sucesso notifique o usuário
-        console.log(data)
+        console.log(data) 
         this.hideForm = true;
       },
       (error: any) => {
@@ -119,6 +114,7 @@ export class DadosProvider {
           console.log("Inserido com sucesso")
           this.storage.delete(this.storage.chaveAbastecimento);
           this.storage.listaAbastecimento = [];
+          console.log(error)
         } else {
           console.log('tratar erros');
 

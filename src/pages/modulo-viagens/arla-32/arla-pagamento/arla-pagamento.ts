@@ -25,25 +25,19 @@ export class ArlaPagamentoPage {
  
       this.itemsFormasPagamento = this.storageProvider.listarFormasPagamento();
       this.itemsPostos = this.storageProvider.listarPostos(); 
+      this.storageProvider.arla.dataArla = new Date().toISOString();
+    
  
-  } 
-  /* Recupera a data atual e converte para o tipo string */
-
-  Data: string = new Date().toISOString();
-
-
+  }  
   /* Verifica se o usuário inseriu os dados a todos os campos */
   valida() {
 
-    if (
-      //this.storageProvider.arla.tipoArla == "" ||
-     // this.storageProvider.arla.postoArla == "" ||
-    //  this.storageProvider.arla.pagArla == "" ||
-    //  this.storageProvider.arla.precoArla == "" ||
-     // this.storageProvider.arla.odometroArla == "" ||
-     // this.storageProvider.arla.litrosArla == ""
-      //this.storageProvider.arla.Data == ""
-      true
+    if ( 
+       this.storageProvider.arla.postoArla == "" ||
+       this.storageProvider.arla.pagArla == "" ||
+       this.storageProvider.arla.precoArla == "" || 
+       this.storageProvider.arla.litrosArla == "" ||
+       this.storageProvider.arla.dataArla == "" 
     ) {
       return false;
     } else {

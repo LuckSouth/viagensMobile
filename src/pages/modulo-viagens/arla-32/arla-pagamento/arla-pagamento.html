@@ -58,7 +58,7 @@
     <ion-label stacked>
       <span class="input">Data</span>
     </ion-label>
-    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="this.storageProvider.arla.dataArla"></ion-datetime>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="storageProvider.arla.dataArla"></ion-datetime>
   </ion-item>
-  <button ion-button block (click)="salvar()" [disabled]="valida()" color="tijuca" class="botao">Adicionar</button>
+  <button ion-button block (click)="salvar()" [disabled]="!valida()" color="tijuca" class="botao">Adicionar</button>
 </div>

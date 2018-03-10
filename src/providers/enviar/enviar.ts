@@ -46,27 +46,21 @@ export class EnviarProvider {
     //Abastecimento
 
     if (this.storageProvider.tamanhoAbastecimento() > 0) {
-
       this.abastecimento = this.storageProvider.listaAbastecimento
-
       for (index = 0; index <= this.storageProvider.tamanhoAbastecimento(); index++) {
         console.log('enviar arquivos no cache');
         this.abastecimento = this.storageProvider.listaAbastecimento
-
+ 
         this.dados.abastecimento(
           this.abastecimento[index].motorista,
-          this.abastecimento[index].tipoPosto,
-          this.abastecimento[index].posto,
           this.abastecimento[index].data,
           this.abastecimento[index].tipoPagamento,
           this.abastecimento[index].odometro,
-          this.abastecimento[index].valorLitrosBomba1,
-          this.abastecimento[index].valorPrecoBomba1,
-          this.abastecimento[index].valorPrecoBomba2,
+          this.abastecimento[index].valorLitrosBomba1, 
           this.abastecimento[index].valorLitrosBomba2,
+          this.abastecimento[index].posto,
+          this.abastecimento[index].precoAbastecimento,
           true
-          
-
         )
 
       }

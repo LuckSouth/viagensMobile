@@ -39,7 +39,7 @@ export class DespesasPage {
   /* Verifica se o usuário inseriu os dados a todos os campos */
   valida() {
     if (
-    this.storageProvider.despesas.despesas == "" ||  
+    //this.storageProvider.despesas.despesas == "" ||  
     this.storageProvider.despesas.valorDespesas == ""  ) {
       return false
     } else {

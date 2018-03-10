@@ -51,14 +51,11 @@ export class StorageProvider {
     motorista: "bino",
     id: 3,
     dataArla: "",
-    postoArla: "",
-    tipoArla: "",
+    postoArla: "", 
     km: "",
-    litrosArla: "",
-    litrosPrecoArla: "",
+    litrosArla: "", 
     pagArla: "",
-    precoArla: "",
-    odometroArla: "",
+    precoArla: "", 
   }
 
 
@@ -67,16 +64,13 @@ export class StorageProvider {
   //Dados abastecimento
   abastecimento = {
     motorista: "bino",
-    id: 4,
-    tipoAbastecimento: "",
+    id: 4, 
     postoAbastecimento: "",
     dataAbastecimento: "",
     tipoPagmtAbastecimento: "",
     odometro: "",
-    litrosBomb1: "",
-    precoBomb1: "",
-    litrosBomb2: "",
-    precoBomb2: "",
+    litrosBomb1: "", 
+    litrosBomb2: "", 
     precoAbastecimento: "",
   } 
 
