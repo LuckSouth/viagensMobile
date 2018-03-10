@@ -39,12 +39,13 @@ export class ArlaPagamentoPage {
 
     if (
       //this.storageProvider.arla.tipoArla == "" ||
-      this.storageProvider.arla.postoArla == "" ||
-      this.storageProvider.arla.pagArla == "" ||
-      this.storageProvider.arla.precoArla == "" ||
-      this.storageProvider.arla.odometroArla == "" ||
-      this.storageProvider.arla.litrosArla == ""
+     // this.storageProvider.arla.postoArla == "" ||
+    //  this.storageProvider.arla.pagArla == "" ||
+    //  this.storageProvider.arla.precoArla == "" ||
+     // this.storageProvider.arla.odometroArla == "" ||
+     // this.storageProvider.arla.litrosArla == ""
       //this.storageProvider.arla.Data == ""
+      true
     ) {
       return false;
     } else {
@@ -56,13 +57,12 @@ export class ArlaPagamentoPage {
   salvar() {
     this.dados.arla(
       this.storageProvider.arla.motorista,
-      this.storageProvider.arla.litrosArla,
-      this.storageProvider.arla.litrosPrecoArla,
-      this.storageProvider.arla.precoArla,
-      this.storageProvider.arla.tipoArla,
       this.storageProvider.arla.postoArla,
       this.storageProvider.arla.dataArla,
-      this.storageProvider.arla.km
+      this.storageProvider.arla.km,
+      this.storageProvider.arla.litrosArla,
+      this.storageProvider.arla.precoArla,
+      this.storageProvider.arla.pagArla
     )
     this.navCtrl.pop(); 
     let toast = this.toastCtrl.create({

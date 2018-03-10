@@ -83,13 +83,13 @@ export class EnviarProvider {
         this.abastecimento = this.storageProvider.listaArla
         this.dados.arla(
           this.arla[index].motorista,
-          this.arla[index].tipoPosto,
           this.arla[index].posto,
           this.arla[index].data,
-          this.arla[index].formaPagamento,
           this.arla[index].km,
           this.arla[index].litros,
           this.arla[index].preco,
+          this.arla[index].formaPagamento,   
+          
           true
 
 

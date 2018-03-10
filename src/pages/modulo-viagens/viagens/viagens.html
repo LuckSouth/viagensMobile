@@ -13,7 +13,7 @@
 
       <div class="row">
         <div class="column" (click)="linkAbastecimento()">Abastecer
-          <button ion-fab class="fab" *ngIf = "abastecimentoPendente > 0">{{abastecimentoPendente}}</button>
+          <button ion-fab class="fab" *ngIf = "arlaPendente > 0">{{arlaPendentes}}</button>
           <img class="imagem" src="assets/images/abastecimento.svg" />
         </div>
 
@@ -24,12 +24,12 @@
 
       <div class="row">
         <div class="column" (click)="linkArla32()">Arla 32
-          <button ion-fab class="fab" *ngIf = "arlaPendente > 0">{{arlaPendente}}</button>
+          <button ion-fab class="fab" *ngIf = "arlaPendentes > 0">{{arlaPendentes}}</button>
           <img class="imagem" src="assets/images/arla.svg" />
         </div>
-
+ <!-- *ngIf = "despesasPendente > 0" -->
         <div class="column" (click)="linkDespesas()">Gastos
-          <button ion-fab class="fab" *ngIf = "despesasPendente > 0">{{despesasPendente}}</button>
+          <button ion-fab class="fab" *ngIf = "despesasPendentes > 0">{{gastosPendentes}}</button>
           <img class="imagem" src="assets/images/gastos.svg" />
         </div>
 
@@ -38,7 +38,7 @@
 
       <div class="row">
         <div class="column" (click)="linkReceitas()">Receitas
-          <button ion-fab class="fab" *ngIf = "receitasPendente > 0">{{receitasPendente}}</button>
+          <button ion-fab class="fab" *ngIf = "receitasPendentes > 0">{{receitasPendentes}}</button>
           <img class="imagem" src="assets/images/receitas.svg" />
         </div>
 

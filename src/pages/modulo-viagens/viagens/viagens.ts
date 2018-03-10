@@ -34,10 +34,10 @@ export class ViagensPage {
     public enviar: EnviarProvider,
     public http: HttpClient) {
 
-      this.abastecimentoPendentes = this.storageProvider.tamanhoAbastecimento();
-      this.arlaPendentes = this.storageProvider.tamanhoArla();
-      this.receitasPendentes = this.storageProvider.tamanhoReceitas();
-      this.abastecimentoPendentes = this.storageProvider.tamanhoReceitas();
+      // this.abastecimentoPendentes = this.storageProvider.tamanhoAbastecimento();
+      // this.arlaPendentes = this.storageProvider.tamanhoArla();
+      // this.receitasPendentes = this.storageProvider.tamanhoReceitas();
+      // this.abastecimentoPendentes = this.storageProvider.tamanhoReceitas();
 
   }
 
@@ -100,7 +100,19 @@ export class ViagensPage {
   //   }
   // }
 
+  ionViewDidEnter(){
+    // console.log(this.storageProvider.tamanhoAbastecimento());
+    // console.log(this.storageProvider.tamanhoArla());
+    // console.log(this.storageProvider.tamanhoDespesas());
+    // console.log(this.storageProvider.tamanhoReceitas());
 
+
+    this.abastecimentoPendentes = 3;
+    this.arlaPendentes = this.storageProvider.tamanhoArla();
+    this.receitasPendentes = this.storageProvider.tamanhoReceitas();
+    this.abastecimentoPendentes = this.storageProvider.tamanhoReceitas();
+
+  }
 
 }
 

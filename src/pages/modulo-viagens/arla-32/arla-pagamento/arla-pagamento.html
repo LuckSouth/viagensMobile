@@ -41,7 +41,7 @@
       <span class="input">Odometro</span>
     </ion-label>
 
-    <ion-input type="number" min="0" placeholder="195463 Km" [(ngModel)]="storageProvider.arla.odometroArla" (ngModelChange)="valida()">
+    <ion-input type="number" min="0" placeholder="195463 Km" [(ngModel)]="storageProvider.arla.km" (ngModelChange)="valida()">
     </ion-input>
   </ion-item>
   <ion-icon ios="ios-camera" md="md-camera" (click)="mostrar()" class="iconcamera"></ion-icon>
@@ -58,7 +58,7 @@
     <ion-label stacked>
       <span class="input">Data</span>
     </ion-label>
-    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Data"></ion-datetime>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="this.storageProvider.arla.dataArla"></ion-datetime>
   </ion-item>
-  <button ion-button block (click)="salvar()" [disabled]="!valida()" color="tijuca" class="botao">Adicionar</button>
+  <button ion-button block (click)="salvar()" [disabled]="valida()" color="tijuca" class="botao">Adicionar</button>
 </div>

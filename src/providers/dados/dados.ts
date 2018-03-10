@@ -131,13 +131,12 @@ export class DadosProvider {
 
   arla(
     motorista: string,
-    tipoPosto: string,
     posto: string,
     data: string,
-    formaPagamento: string,
     km: string,
     litros: string,
     preco: string,
+    formaPagamento:string,
     opcional?: boolean
 
   ) {
@@ -145,12 +144,12 @@ export class DadosProvider {
       options: any = {
         "key": "arla",
         "motorista": motorista,
-        "tipoPosto": tipoPosto,
+        "posto": posto, 
         "data": data,
-        "formaPagamento": formaPagamento,
         "km": km,
         "litros": litros,
-        "preco": preco
+        "preco": preco,
+        "formaPagamento": formaPagamento
 
       },
       url: any = this.baseURI + "manage-data.php";
@@ -163,15 +162,15 @@ export class DadosProvider {
         this.hideForm = true;
       },
       (error: any) => {
+        console.log(error)
         if (error.statusText == "OK") {
           console.log("fazer nada")
           this.storage.delete(this.storage.chaveArla);
           this.storage.listaArla = [];
         } else {
-          console.log('rghj')
-          //if (opcional != true) {
+          if (opcional != true) {
             this.storage.adicionarArla()
-          //}
+          }
         }
       });
   }
