@@ -21,11 +21,11 @@ export class EnviarProvider {
   enviar() {
     if (this.storageProvider.tamanhoDespesas() > 0) {
 
-      this.despesas = this.storageProvider.listaDespesas
+      this.despesas = this.storageProvider.listaDescricaoDespesa
 
       for (var index = 0; index <= this.storageProvider.tamanhoDespesas(); index++) {
         console.log('enviar arquivos no cache');
-        this.despesas = this.storageProvider.listaDespesas
+        this.despesas = this.storageProvider.listaDescricaoDespesa
 
         this.dados.despesas(
           this.despesas[index].motorista,

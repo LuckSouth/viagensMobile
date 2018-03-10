@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { MyApp } from '../../app/app.component'; 
+import { MyApp } from '../../app/app.component';
 
 @Injectable()
 export class StorageProvider {
@@ -13,7 +13,7 @@ export class StorageProvider {
   arrayReceitas = [];
   arrayRelatorio = [[]];
 
-  
+
   login = {
     isLoggedIn: false,
     name: "",
@@ -78,150 +78,90 @@ export class StorageProvider {
     litrosBomb2: "",
     precoBomb2: "",
     precoAbastecimento: "",
-  }
+  } 
 
-
+  //Recuperar dados 
   listaAbastecimento: any[];
   listaArla: any[];
-  listaDespesas: any[];
+  listaDescricaoDespesa: any[];
   listaReceitas: any[];
   listaAuth: any[];
+  listaFornecedores: any[];
+  listaProdutos: any[];
+  listaFormasPagamento: any[];
+  listaGeral: any[];
+  listaPostos: any[];
 
   chaveAuth: string = "Auth";
   chaveAbastecimento: string = "abastecimento";
   chaveArla: string = "arla";
-  chaveDespesas: string = "despesas";
+  chaveDescricaoDespesa: string = "despesas";
   chaveReceitas: string = "receitas";
-  chaveGeral:string = "geral"
-  
-  //Recuperar dados 
-  listaFornecedores: any[];
-  listaProdutos: any[];
-  listaFormasPagameno: any[];
-  listaGeral: any[];
-  listaPostos: any[];
-   
+  chaveGeral: string = "geral"
   chaveFornecedores: string = "fornecedores";
   chaveProdutos: string = "produtos";
   chaveFormasPagamento: string = "formas_pagamento";
-  chavePostos: string = "postos";
+  chavePostos: string = "postos"; 
 
 
   constructor(private storage: Storage) {
-   
+
+    this.storage.ready().then(() => {
+      this.storage.get(this.chaveReceitas).then((registros) => {
+        if (registros) { this.listaReceitas = registros; } else { this.listaReceitas = []; }
+      });
+    });
+
+    this.storage.ready().then(() => {
+      this.storage.get(this.chaveDescricaoDespesa).then((registros) => {
+        if (registros) { this.listaDescricaoDespesa = registros; } else { this.listaDescricaoDespesa = []; }
+      });
+    });
+
     this.storage.ready().then(() => {
       this.storage.get(this.chaveArla).then((registros) => {
-        if (registros) {
-          this.listaArla = registros;
-        } else {
-          this.listaArla = [];
-        }
+        if (registros) { this.listaArla = registros; } else { this.listaArla = []; }
       });
-
     });
-
-    this.storage.ready().then(() => {
-      this.storage.get(this.chaveDespesas).then((registros) => {
-        if (registros) {
-          this.listaDespesas = registros;
-        } else {
-          this.listaDespesas = [];
-        }
-      });
-
-    });
-
-    this.storage.ready().then(() => {
-      this.storage.get(this.chaveAuth).then((registros) => {
-        if (registros) {
-          this.listaAuth = registros;
-        } else {
-          this.listaAuth = [];
-        }
-      })
-    })
-
-const promise =
-new Promise((resolve, reject) => {  
-    this.storage.get(this.chaveReceitas).then((registros) => {
-      if (registros) {
-        this.listaReceitas = registros;
-      } else {
-        this.listaReceitas = [];
-      }
-    });
-
-  })
-.then(
-(data) => {   this.storage.get(this.chaveReceitas).then((registros) => {
-  if (registros) {
-    this.listaReceitas = registros;
-  } else {
-    this.listaReceitas = [];
-  }
-});
-(err) => { console.log(err); }
-}); 
-    
 
     this.storage.ready().then(() => {
       this.storage.get(this.chaveFornecedores).then((registros) => {
-        if (registros) {
-          this.listaFornecedores = registros;
-        } else {
-          this.listaFornecedores = [];
-        }
+        if (registros) { this.listaFornecedores = registros; } else { this.listaFornecedores = []; }
       });
-
     });
 
     this.storage.ready().then(() => {
       this.storage.get(this.chaveProdutos).then((registros) => {
-        if (registros) {
-          this.listaProdutos = registros;
-        } else {
-          this.listaProdutos = [];
-        }
+        if (registros) { this.listaProdutos = registros; } else { this.listaProdutos = []; }
       });
-
     });
 
     this.storage.ready().then(() => {
       this.storage.get(this.chaveFormasPagamento).then((registros) => {
-        if (registros) {
-          this.listaFormasPagameno = registros;
-        } else {
-          this.listaFormasPagameno = [];
-        }
+        if (registros) { this.listaFormasPagamento = registros; } else { this.listaFormasPagamento = []; }
       });
-      
     });
 
+    this.storage.ready().then(() => {
+      this.storage.get(this.chavePostos).then((registros) => {
+        if (registros) { this.listaPostos = registros; } else { this.listaPostos = []; }
+      });
+    });
 
     this.storage.ready().then(() => {
       this.storage.get(this.chaveGeral).then((registros) => {
-        if (registros) {
-          this.listaGeral = registros;
-        } else {
-          this.listaGeral = [];
-        }
+        if (registros) { this.listaGeral = registros; } else { this.listaGeral = []; }
       });
-      
-    }); 
+    });
 
     this.storage.ready().then(() => {
       this.storage.get(this.chaveAbastecimento).then((registros) => {
-        if (registros) {
-          this.listaAbastecimento = registros;
-        } else {
-          this.listaAbastecimento = [];
-        }
+        if (registros) { this.listaAbastecimento = registros; } else { this.listaAbastecimento = []; }
       });
-      
     });
-    
+
   }
-  
+
   //  Vai retornar a lista
   listarArla() {
     return this.listaArla;
@@ -231,10 +171,7 @@ new Promise((resolve, reject) => {
   }
   listarAbastecimento() {
     return this.listaAbastecimento;
-  }
-  listarDespesas() {
-    return this.listaDespesas;
-  }
+  } 
   listarReceitas() {
     return this.listaReceitas;
   }
@@ -248,9 +185,21 @@ new Promise((resolve, reject) => {
     return this.listaProdutos;
   }
 
-  listarFormasPagamento(){
-    return this.listaFormasPagameno;
+  listarFormasPagamento() {
+    return this.listaFormasPagamento;
   }
+
+  listarDescricaoDespesa() {
+    return this.listaDescricaoDespesa;
+  }
+
+  listarPostos() {
+    return this.listaPostos;
+  }
+
+
+
+  /* Wrong thinks */
 
   tamanhoAbastecimento() {
     this.arrayAbastecimento = this.listarAbastecimento()
@@ -262,7 +211,7 @@ new Promise((resolve, reject) => {
     return this.arrayArla.length
   }
   tamanhoDespesas() {
-    this.arrayDespesas = this.listarDespesas()
+    this.arrayDespesas = this.listarDescricaoDespesa()
     return this.arrayDespesas.length
   }
   tamanhoReceitas() {
@@ -282,10 +231,6 @@ new Promise((resolve, reject) => {
   }
 
 
-
-
-
-
   recuperaTamanho() {
     this.storage.length().then(result => {
       console.log(result)
@@ -293,21 +238,12 @@ new Promise((resolve, reject) => {
     });
 
   }
-
-  //Verificação Login
-  // loginUser() {
-  //   this.storage.ready().then(() => {
-  //     this.lista.push(this.isLoggedIn);
-  //     this.storage.set(this.chave, this.lista);
-  //   });
-  // }
-
-
+ 
   // Adicionar Despesas
   adicionarDespesas() {
     this.storage.ready().then(() => {
-      this.listaDespesas.push(this.despesas);
-      this.storage.set(this.chaveDespesas, this.listaDespesas);
+      this.listaDescricaoDespesa.push(this.despesas);
+      this.storage.set(this.chaveDescricaoDespesa, this.listaDescricaoDespesa);
     });
 
   }
@@ -352,21 +288,21 @@ new Promise((resolve, reject) => {
     this.storage.set(this.chaveProdutos, produtos);
   }
 
-  atualizarformasPagamento(formasPagamento){
+  atualizarformasPagamento(formasPagamento) {
     this.storage.set(this.chaveFormasPagamento, formasPagamento);
   }
 
-  atualizarDespesas(Despesas){
-    this.storage.set(this.chaveDespesas, Despesas);
+  atualizarDespesas(descricaoDespesas) {
+    this.storage.set(this.chaveDescricaoDespesa, descricaoDespesas);
   }
 
   atualizarGeral(dados) {
     this.storage.set(this.chaveGeral, dados);
   }
-   
+
   delete(id) {
     return this.storage.remove(id).
       then(() => true)
-  } 
+  }
 
 }

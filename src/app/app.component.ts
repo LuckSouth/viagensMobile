@@ -16,11 +16,7 @@ import { PrincipalPage } from '../pages/principal/principal/principal';
 export class MyApp {
 
   rootPage: any = LoginPage; 
-  storages: any;
-  listaAuth;
-  chaveAuth: string = "Auth";
-  listaDespesas = {};
-
+  storages: any; 
 
   constructor(
     platform: Platform,

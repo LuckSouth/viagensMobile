@@ -11,8 +11,8 @@
       <span class="input">Posto</span>
     </ion-label>
     <ion-select [(ngModel)]="storageProvider.arla.postoArla" (click)="valida()">
-      <ion-option *ngFor="let item of itemsFornecedores">
-        {{ item.nome }}
+      <ion-option *ngFor="let item of itemsPostos">
+        {{ item.nomePosto }}
       </ion-option>
     </ion-select>
   </ion-item>

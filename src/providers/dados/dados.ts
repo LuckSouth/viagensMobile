@@ -33,8 +33,8 @@ export class DadosProvider {
 
           if (error.statusText == "OK") {
             console.log("Não tá inserindo, seu merda")
-            this.storage.delete(this.storage.chaveDespesas);
-            this.storage.listaDespesas = [];
+            this.storage.delete(this.storage.chaveDescricaoDespesa);
+            this.storage.listaDescricaoDespesa = [];
           } else {
             console.log('Mais tu é burro, óh');
 
@@ -116,7 +116,7 @@ export class DadosProvider {
       },
       (error: any) => {
         if (error.statusText == "OK") {
-          console.log("fazer nada")
+          console.log("Inserido com sucesso")
           this.storage.delete(this.storage.chaveAbastecimento);
           this.storage.listaAbastecimento = [];
         } else {
@@ -164,7 +164,7 @@ export class DadosProvider {
       (error: any) => {
         console.log(error)
         if (error.statusText == "OK") {
-          console.log("fazer nada")
+          console.log("Inserido com sucesso")
           this.storage.delete(this.storage.chaveArla);
           this.storage.listaArla = [];
         } else {
@@ -201,7 +201,7 @@ export class DadosProvider {
       },
       (error: any) => {
         if (error.statusText == "OK") {
-          console.log("fazer nada")
+          console.log("Inserido com sucesso")
           this.storage.delete(this.storage.chaveReceitas);
           this.storage.listaReceitas = [];
         } else {
