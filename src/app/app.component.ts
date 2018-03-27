@@ -15,7 +15,7 @@ import { PrincipalPage } from '../pages/principal/principal/principal';
 })
 export class MyApp {
 
-  rootPage: any = LoginPage; 
+  rootPage: any = PrincipalPage; 
   storages: any; 
 
   constructor(

@@ -12,7 +12,7 @@
     </ion-label>
     <ion-select [(ngModel)]="storageProvider.despesas.despesas" (click)="valida()">
       <ion-option *ngFor="let item of itemsDescricaoDespesa">
-        {{item.nome}}
+        {{item.descricaoDespesa}}
       </ion-option>
     </ion-select>
   </ion-item>

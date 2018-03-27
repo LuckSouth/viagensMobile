@@ -156,6 +156,7 @@ export class StorageProvider {
       });
     });
 
+  
     this.storage.ready().then(() => {
       this.storage.get(this.chaveDespesa).then((registros) => {
         if (registros) { this.listaDespesa = registros; } else { this.listaDespesa = []; }
@@ -164,7 +165,7 @@ export class StorageProvider {
 
   }
 
-  //  Vai retornar a lista
+  // Retorna a lista
   listarArla() {
     return this.listaArla;
   }
@@ -181,7 +182,7 @@ export class StorageProvider {
     return this.listaDespesa;
   }
 
-  //Recuperar dados
+  // Recuperar dados
   listarFornecedores() {
     return this.listaFornecedores;
   }
@@ -248,13 +249,13 @@ export class StorageProvider {
   // Adicionar Despesas
   adicionarDespesas() {
     this.storage.ready().then(() => {
-      this.listaDescricaoDespesa.push(this.despesas);
+      this.listaDespesa.push(this.despesas);
       this.storage.set(this.chaveDespesa, this.listaDespesa);
     });
 
   }
 
-  // Adicionar o registro á lista, e persistir ela no BD através do método SET
+  // Adicionar o registro à lista, e persistir ela no BD através do método SET
   adicionarReceitas() {
     this.storage.ready().then(() => {
       this.listaReceitas.push(this.receitas);
@@ -268,7 +269,7 @@ export class StorageProvider {
       this.storage.set(this.chaveArla, this.listaArla);
     });
   }
-
+ 
 
   adicionarAbastecimento() {
     this.storage.ready().then(() => {
