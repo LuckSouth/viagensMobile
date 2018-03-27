@@ -78,6 +78,7 @@ export class StorageProvider {
   listaAbastecimento: any[];
   listaArla: any[];
   listaDescricaoDespesa: any[];
+  listaDespesa: any[];
   listaReceitas: any[];
   listaAuth: any[];
   listaFornecedores: any[];
@@ -89,7 +90,8 @@ export class StorageProvider {
   chaveAuth: string = "Auth";
   chaveAbastecimento: string = "abastecimento";
   chaveArla: string = "arla";
-  chaveDescricaoDespesa: string = "despesas";
+  chaveDescricaoDespesa: string = "descricaoDespesas";
+  chaveDespesa: string = "despesas";
   chaveReceitas: string = "receitas";
   chaveGeral: string = "geral"
   chaveFornecedores: string = "fornecedores";
@@ -154,6 +156,12 @@ export class StorageProvider {
       });
     });
 
+    this.storage.ready().then(() => {
+      this.storage.get(this.chaveDespesa).then((registros) => {
+        if (registros) { this.listaDespesa = registros; } else { this.listaDespesa = []; }
+      });
+    });
+
   }
 
   //  Vai retornar a lista
@@ -168,6 +176,9 @@ export class StorageProvider {
   } 
   listarReceitas() {
     return this.listaReceitas;
+  }
+  listarDespesas() {
+    return this.listaDespesa;
   }
 
   //Recuperar dados
@@ -193,7 +204,7 @@ export class StorageProvider {
 
 
 
-  /* Wrong thinks */
+  /*Retorna tamanho do storage para ser exibido na tela inicial */
 
   tamanhoAbastecimento() {
     this.arrayAbastecimento = this.listarAbastecimento()
@@ -205,7 +216,7 @@ export class StorageProvider {
     return this.arrayArla.length
   }
   tamanhoDespesas() {
-    this.arrayDespesas = this.listarDescricaoDespesa()
+    this.arrayDespesas = this.listarDespesas()
     return this.arrayDespesas.length
   }
   tamanhoReceitas() {
@@ -225,6 +236,7 @@ export class StorageProvider {
   }
 
 
+  /* Esse metodo provavelmente nunca é chamado, verficar se está sendo usado, caso contrario excluir */
   recuperaTamanho() {
     this.storage.length().then(result => {
       console.log(result)
@@ -237,7 +249,7 @@ export class StorageProvider {
   adicionarDespesas() {
     this.storage.ready().then(() => {
       this.listaDescricaoDespesa.push(this.despesas);
-      this.storage.set(this.chaveDescricaoDespesa, this.listaDescricaoDespesa);
+      this.storage.set(this.chaveDespesa, this.listaDespesa);
     });
 
   }
@@ -287,7 +299,7 @@ export class StorageProvider {
   }
 
   atualizarDespesas(descricaoDespesas) {
-    this.storage.set(this.chaveDescricaoDespesa, descricaoDespesas);
+    this.storage.set(this.chaveDescricaoDespesa, descricaoDespesas); // Aqui parece está correto
   }
 
   atualizarGeral(dados) {

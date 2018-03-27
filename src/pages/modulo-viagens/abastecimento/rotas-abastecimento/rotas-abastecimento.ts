@@ -45,15 +45,14 @@ export class RotasAbastecimentoPage {
   salvar() {
     this.dados.abastecimento(
       this.abastecimentoPagamento.storageProvider.abastecimento.motorista,
-      this.abastecimentoPagamento.storageProvider.abastecimento.tipoAbastecimento,
       this.abastecimentoPagamento.storageProvider.abastecimento.postoAbastecimento,
       this.abastecimentoPagamento.storageProvider.abastecimento.dataAbastecimento,
       this.abastecimentoPagamento.storageProvider.abastecimento.tipoPagmtAbastecimento,
       this.abastecimentoPagamento.storageProvider.abastecimento.odometro,
       this.abastecimentoPagamento.storageProvider.abastecimento.litrosBomb1,
-      this.abastecimentoPagamento.storageProvider.abastecimento.precoBomb1,
       this.abastecimentoPagamento.storageProvider.abastecimento.litrosBomb2,
-      this.abastecimentoPagamento.storageProvider.abastecimento.precoBomb2
+     this.abastecimentoPagamento.storageProvider.abastecimento.precoAbastecimento,
+
     )
   }
 
