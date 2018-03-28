@@ -11,7 +11,7 @@ import { DadosProvider } from "../../../../providers/dados/dados";
   selector: 'page-rotas-abastecimento',
   templateUrl: 'rotas-abastecimento.html',
 })
-export class RotasAbastecimentoPage { 
+export class RotasAbastecimentoPage {
   /* Acesso ao valor de cada propriedade ou método */
   @ViewChild(Slides) slides: Slides;
   @ViewChild(AbastecimentoPagamentoPage) abastecimentoPagamento: AbastecimentoPagamentoPage;
@@ -20,7 +20,7 @@ export class RotasAbastecimentoPage {
 
   /* Recupera os valores das variáveis de outras páginas */
   /* A variavel 'contador' indica em que slide o usuário está */
-  public contador: number = 1; 
+  public contador: number = 1;
   cameraButton: boolean;
   fotoBomba1: string = "asda";
   fotoBomba2: string = "asda";
@@ -45,13 +45,13 @@ export class RotasAbastecimentoPage {
   salvar() {
     this.dados.abastecimento(
       this.abastecimentoPagamento.storageProvider.abastecimento.motorista,
-      this.abastecimentoPagamento.storageProvider.abastecimento.postoAbastecimento,
       this.abastecimentoPagamento.storageProvider.abastecimento.dataAbastecimento,
       this.abastecimentoPagamento.storageProvider.abastecimento.tipoPagmtAbastecimento,
       this.abastecimentoPagamento.storageProvider.abastecimento.odometro,
       this.abastecimentoPagamento.storageProvider.abastecimento.litrosBomb1,
       this.abastecimentoPagamento.storageProvider.abastecimento.litrosBomb2,
-     this.abastecimentoPagamento.storageProvider.abastecimento.precoAbastecimento,
+      this.abastecimentoPagamento.storageProvider.abastecimento.postoAbastecimento,
+      this.abastecimentoPagamento.storageProvider.abastecimento.precoAbastecimento,
 
     )
   }
@@ -92,7 +92,7 @@ export class RotasAbastecimentoPage {
         duration: 2000
       });
       toast.present();
-      this.navCtrl.pop(); 
+      this.navCtrl.pop();
 
     }
     this.slides.lockSwipes(true);
