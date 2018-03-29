@@ -1,6 +1,6 @@
 <ion-content padding>
 
-  <ion-list>
+  <ion-list class="dadosviagens">
     <ion-item>
       <ion-label floating>Veículo principal</ion-label>
       <ion-input type="text" [(ngModel)]="vei" disabled=""value = {{dados[0].placa}}></ion-input>
@@ -21,8 +21,8 @@
       <ion-label floating>Observações</ion-label>
       <ion-input type="text" [(ngModel)]="obs" disabled="" value = {{dados[0].observacoes}}></ion-input>
     </ion-item>
-
     
+    <ion-item hidden=""> </ion-item> 
   </ion-list>
-  
+ 
 </ion-content>
