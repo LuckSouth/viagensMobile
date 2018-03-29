@@ -47,6 +47,7 @@ export class ReceitasPage {
   salvar() {
     this.dados.receitas(
       this.storageProvider.listaGeral[0].idMotorista,
+      this.storageProvider.listaGeral[0].idViagem,
       this.storageProvider.receitas.fornecedorDestino,
       this.storageProvider.receitas.produto,
       this.storageProvider.receitas.tipoPagmt

@@ -75,7 +75,6 @@ export class ViagensPage {
     this.arlaPendentes = this.storageProvider.tamanhoArla();
     this.receitasPendentes = this.storageProvider.tamanhoReceitas();
     this.abastecimentoPendentes = this.storageProvider.tamanhoReceitas();
-    console.log(this.despesasPendentes)
   }
 
 }

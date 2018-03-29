@@ -92,6 +92,7 @@ export class DadosProvider {
 
   abastecimento(
     motorista: string,
+    idViagem: string,
     data: string,
     tipoPagamento: string,
     odometro: string,
@@ -106,6 +107,7 @@ export class DadosProvider {
       options: any = {
         "key": "abastecimento",
         "motorista": motorista,
+        "idViagem": idViagem,
         "data": data,
         "tipoPagamento": tipoPagamento,
         "odometro": odometro,
@@ -138,6 +140,7 @@ export class DadosProvider {
 
   arla(
     motorista: string,
+    idViagem: string,
     posto: string,
     data: string,
     km: string,
@@ -151,6 +154,7 @@ export class DadosProvider {
       options: any = {
         "key": "arla",
         "motorista": motorista,
+        "idViagem": idViagem,
         "posto": posto,
         "data": data,
         "km": km,
@@ -185,6 +189,7 @@ export class DadosProvider {
 
   receitas(
     motorista,
+    idViagem,
     fornecedorDestino,
     produto,
     tipoPagmt,
@@ -193,6 +198,7 @@ export class DadosProvider {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "key": "receitas",
+        "idViagem": idViagem,
         "motorista": motorista,
         "fornecedorDestino": fornecedorDestino,
         "produto": produto,

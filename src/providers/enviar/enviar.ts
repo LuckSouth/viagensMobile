@@ -29,6 +29,7 @@ export class EnviarProvider {
 
         this.dados.despesas(
           this.despesas[index].motorista,
+          this.despesas[index].idViagem,
           this.despesas[index].despesas,
           this.despesas[index].dataDespesas,
           this.despesas[index].valorDespesas,
@@ -53,6 +54,7 @@ export class EnviarProvider {
  
         this.dados.abastecimento(
           this.abastecimento[index].motorista,
+          this.despesas[index].idViagem,
           this.abastecimento[index].data,
           this.abastecimento[index].tipoPagamento,
           this.abastecimento[index].odometro,
@@ -77,6 +79,7 @@ export class EnviarProvider {
         this.abastecimento = this.storageProvider.listaArla
         this.dados.arla(
           this.arla[index].motorista,
+          this.despesas[index].idViagem,
           this.arla[index].posto,
           this.arla[index].data,
           this.arla[index].km,
@@ -105,6 +108,8 @@ export class EnviarProvider {
       for (index = 0; index <= this.storageProvider.tamanhoReceitas(); index++) {
         this.receitas = this.storageProvider.listaReceitas
         this.dados.receitas(
+          this.receitas[index].motorista,
+          this.receitas[index].idViagem,
           this.receitas[index].fornecedorDestino,
           this.receitas[index].produto,
           this.receitas[index].tipoPagment,
