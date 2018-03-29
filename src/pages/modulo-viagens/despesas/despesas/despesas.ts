@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 import { StorageProvider } from '../../../../providers/storage/storage';
-import { DadosProvider } from '../../../../providers/dados/dados'; 
+import { DadosProvider } from '../../../../providers/dados/dados';
+import { RecuperarDadosProvider } from "../../../../providers/recuperar-dados/recuperar-dados";
 
 @IonicPage()
 @Component({
@@ -16,34 +17,44 @@ export class DespesasPage {
   abastecimentoPendente;
   arlaPendente;
   despesasPendente;
-  receitasPendente;  
+  receitasPendente;
   searchQuery: string = '';
-  itemsFornecedores: string[]; 
+  itemsFornecedores: string[];
   itemsFormasPagamento: string[];
-  fornecedores;    
-  itemsDescricaoDespesa: string[];  
+  fornecedores;
+  itemsDescricaoDespesa: string[];
+
 
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public toastCtrl: ToastController,
     public storageProvider: StorageProvider,
-    public dados: DadosProvider) {  
-      this.itemsDescricaoDespesa = this.storageProvider.listarDescricaoDespesa(); 
+    public dados: DadosProvider,
+    public recuperarDados: RecuperarDadosProvider) {
+    this.itemsDescricaoDespesa = this.storageProvider.listarDescricaoDespesa();
+
+    this.recuperarDados.geral()
+    this.informacoes = this.storageProvider.listaGeral[0].idMotorista
+    console.log(this.informacoes)
+    storageProvider.despesas.dataDespesas = new Date().toISOString();
+
   }
+
+  informacoes: any[] = [];
+
 
   /* Recupera a data atual e converte para o tipo string */
 
-  Data: string = new Date().toISOString(); 
- 
+
   /* Verifica se o usuário inseriu os dados a todos os campos */
   valida() {
     if (
-    //this.storageProvider.despesas.despesas == "" ||  
-    this.storageProvider.despesas.valorDespesas == ""  ) {
+      //this.storageProvider.despesas.despesas == "" ||  
+      this.storageProvider.despesas.valorDespesas == "") {
       return false
     } else {
-      return true 
+      return true
     }
   }
 
@@ -51,11 +62,12 @@ export class DespesasPage {
   /* Envia os dados para o provider para serem tratados */
   salvar() {
     this.dados.despesas(
-    this.storageProvider.despesas.motorista, 
-    this.storageProvider.despesas.despesas, 
-    this.storageProvider.despesas.dataDespesas, 
-    this.storageProvider.despesas.valorDespesas
-  ); 
+      this.storageProvider.listaGeral[0].idMotorista,
+      this.storageProvider.listaGeral[0].idViagem,
+      this.storageProvider.despesas.despesas,
+      this.storageProvider.despesas.dataDespesas,
+      this.storageProvider.despesas.valorDespesas
+    );
     this.navCtrl.pop();
 
     let toast = this.toastCtrl.create({

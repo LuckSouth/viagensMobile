@@ -11,11 +11,8 @@ export class GeralDadosMotoristaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public recuperarDados: RecuperarDadosProvider, public storageProvider: StorageProvider) {
     this.recuperarDados.geral()
-    //console.log(this.storageProvider.listaGeral)
     this.dados = this.storageProvider.listaGeral
-    console.log(this.dados)
-
-   
+ 
 
     this.nomeMotorista = this.dados[0].nomeMotorista
     this.idViagem = this.dados[0].idViagem

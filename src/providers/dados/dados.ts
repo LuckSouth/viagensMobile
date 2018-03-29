@@ -12,9 +12,21 @@ export class DadosProvider {
 
   private baseURI: string = "http://192.168.10.160/";
   public hideForm: boolean = false;
-  despesas(motorista: string, despesas: string, data: string, valor: string, opcional?: boolean) {
+  despesas(motorista: string,
+    idViagem: string,
+    despesas: string,
+    data: string,
+    valor: string,
+    opcional?: boolean) {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = { "key": "despesas", "despesas": despesas, "motorista": motorista, "data": "362954", "valor": valor },
+      options: any = {
+        "key": "despesas",
+        "idViagem": idViagem,
+        "despesas": despesas,
+        "motorista": motorista,
+        "data": data,
+        "valor": valor
+      },
       url: any = this.baseURI + "manage-data.php";
 
 
@@ -79,12 +91,12 @@ export class DadosProvider {
   }
 
   abastecimento(
-    motorista: string, 
+    motorista: string,
     data: string,
     tipoPagamento: string,
     odometro: string,
     litrosBomba1: string,
-    litrosBomba2: string, 
+    litrosBomba2: string,
     posto: string,
     precoAbastecimento: string,
     opcional?: boolean
@@ -93,20 +105,19 @@ export class DadosProvider {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "key": "abastecimento",
-        "motorista": motorista, 
+        "motorista": motorista,
         "data": data,
         "tipoPagamento": tipoPagamento,
         "odometro": odometro,
         "litrosBomba1": litrosBomba1,
-        "litrosBomba2": litrosBomba2, 
+        "litrosBomba2": litrosBomba2,
         "posto": posto,
         "precoAbastecimento": precoAbastecimento,
       },
       url: any = this.baseURI + "manage-data.php";
-
     this.http.post(url, JSON.stringify(options), headers)
       .subscribe((data: any) => {
-        console.log(data) 
+        console.log(data)
         this.hideForm = true;
       },
       (error: any) => {
@@ -132,7 +143,7 @@ export class DadosProvider {
     km: string,
     litros: string,
     preco: string,
-    formaPagamento:string,
+    formaPagamento: string,
     opcional?: boolean
 
   ) {
@@ -140,7 +151,7 @@ export class DadosProvider {
       options: any = {
         "key": "arla",
         "motorista": motorista,
-        "posto": posto, 
+        "posto": posto,
         "data": data,
         "km": km,
         "litros": litros,
@@ -149,7 +160,6 @@ export class DadosProvider {
 
       },
       url: any = this.baseURI + "manage-data.php";
-
     this.http.post(url, JSON.stringify(options), headers)
       .subscribe((data: any) => {
         console.log(data)
@@ -174,6 +184,7 @@ export class DadosProvider {
 
 
   receitas(
+    motorista,
     fornecedorDestino,
     produto,
     tipoPagmt,
@@ -182,6 +193,7 @@ export class DadosProvider {
     let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
       options: any = {
         "key": "receitas",
+        "motorista": motorista,
         "fornecedorDestino": fornecedorDestino,
         "produto": produto,
         "tipoPagmt": tipoPagmt,

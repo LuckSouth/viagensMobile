@@ -46,6 +46,7 @@ export class ReceitasPage {
   /* Envia os dados para o provider para serem tratados */
   salvar() {
     this.dados.receitas(
+      this.storageProvider.listaGeral[0].idMotorista,
       this.storageProvider.receitas.fornecedorDestino,
       this.storageProvider.receitas.produto,
       this.storageProvider.receitas.tipoPagmt

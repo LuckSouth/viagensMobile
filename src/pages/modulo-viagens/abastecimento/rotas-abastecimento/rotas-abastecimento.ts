@@ -44,7 +44,7 @@ export class RotasAbastecimentoPage {
   /* Envia os dados para o Storage Provider */
   salvar() {
     this.dados.abastecimento(
-      this.abastecimentoPagamento.storageProvider.abastecimento.motorista,
+      this.storageProvider.listaGeral[0].idMotorista,
       this.abastecimentoPagamento.storageProvider.abastecimento.dataAbastecimento,
       this.abastecimentoPagamento.storageProvider.abastecimento.tipoPagmtAbastecimento,
       this.abastecimentoPagamento.storageProvider.abastecimento.odometro,

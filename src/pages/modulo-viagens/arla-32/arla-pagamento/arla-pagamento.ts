@@ -48,7 +48,7 @@ export class ArlaPagamentoPage {
   /* Envia os dados para o provider para serem tratados */
   salvar() {
     this.dados.arla(
-      this.storageProvider.arla.motorista,
+      this.storageProvider.listaGeral[0].idMotorista,
       this.storageProvider.arla.postoArla,
       this.storageProvider.arla.dataArla,
       this.storageProvider.arla.km,
