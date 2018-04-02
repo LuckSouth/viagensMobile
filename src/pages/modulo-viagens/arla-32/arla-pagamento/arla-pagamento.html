@@ -11,7 +11,7 @@
       <span class="input">Posto</span>
     </ion-label>
     <ion-select [(ngModel)]="storageProvider.arla.postoArla" (click)="valida()">
-      <ion-option *ngFor="let item of itemsPostos">
+      <ion-option *ngFor="let item of itemsPostos" value = "{{item.idPostoCombustivel}}">
         {{ item.nomePosto }}
       </ion-option>
     </ion-select>
@@ -22,7 +22,7 @@
       <span class="input">Pagamento</span>
     </ion-label>
     <ion-select [(ngModel)]="storageProvider.arla.pagArla" (click)="valida()">
-      <ion-option *ngFor="let items of itemsFormasPagamento">
+      <ion-option *ngFor="let items of itemsFormasPagamento" value = "{{items.id}}">
         {{ items.forma_pagamento }}
       </ion-option>
     </ion-select>

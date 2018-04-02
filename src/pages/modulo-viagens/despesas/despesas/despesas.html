@@ -11,7 +11,7 @@
       <span class="input">Despesas</span>
     </ion-label>
     <ion-select [(ngModel)]="storageProvider.despesas.despesas" (click)="valida()">
-      <ion-option *ngFor="let item of itemsDescricaoDespesa">
+      <ion-option *ngFor="let item of itemsDescricaoDespesa" value = "{{item.idTipoDespesa}}">
         {{item.descricaoDespesa}}
       </ion-option>
     </ion-select>

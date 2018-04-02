@@ -5,53 +5,36 @@
 </ion-header>
 
 <div class="slideTop">
-<!--
+
   <ion-item>
     <ion-label stacked>
-    <span class="input">Fornecedor / Origem</span>
-    </ion-label> 
-    <ion-input type="text" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (click)="valida()"></ion-input>
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-    <ion-label stacked>
-      <span class="input">Fornecedor / Origem</span>
-      </ion-label>
-      <ion-input type="text" (keyup)="getItems($event)" [(ngModel)]="storageProvider.receitas.fornecedorOrigem" (click)="valida()"></ion-input>
-    <ion-list>
-        <ion-item *ngFor="let item of itemsFornecedores">
-          {{ item.nome }}
-        </ion-item>
-      </ion-list>
+      <span class="input">Fornecedor / Destino</span>
+    </ion-label>
+    <ion-select [(ngModel)]="storageProvider.receitas.fornecedorDestino" (click)="valida()">
+      <ion-option *ngFor="let item of itemsFornecedores" value="{{item.id}}">
+        {{item.nome}}
+      </ion-option>
+    </ion-select>
   </ion-item>
---> 
-  <ion-item>
-  <ion-label stacked>
-    <span class="input">Fornecedor / Destino</span>
-  </ion-label>
-  <ion-select [(ngModel)]="storageProvider.receitas.fornecedorDestino" (click)="valida()">
-    <ion-option *ngFor="let item of itemsFornecedores">
-      {{item.nome}}
-    </ion-option>
-  </ion-select>
-</ion-item>
 
   <ion-item>
     <ion-label stacked>
       <span class="input">Produtos</span>
     </ion-label>
     <ion-select [(ngModel)]="storageProvider.receitas.produto" (click)="valida()">
-      <ion-option *ngFor="let item of itemsProdutos">
+      <ion-option *ngFor="let item of itemsProdutos" value ="{{item.id_produto}}">
         {{item.nome}}
       </ion-option>
     </ion-select>
   </ion-item>
-  
+
 
   <ion-item>
     <ion-label stacked>
       <span class="input">Pagamento</span>
     </ion-label>
     <ion-select [(ngModel)]="storageProvider.receitas.tipoPagmt" (click)="valida()">
-      <ion-option *ngFor="let items of itemsFormasPagamento">
+      <ion-option *ngFor="let items of itemsFormasPagamento" value = "{{items.id}}">
         {{ items.forma_pagamento }}
       </ion-option>
     </ion-select>
