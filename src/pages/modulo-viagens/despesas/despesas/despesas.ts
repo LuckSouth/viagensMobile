@@ -38,7 +38,7 @@ export class DespesasPage {
     this.informacoes = this.storageProvider.listaGeral[0].idMotorista
     console.log(this.informacoes)
     storageProvider.despesas.dataDespesas = new Date().toISOString();
-
+      
   }
 
   informacoes: any[] = [];

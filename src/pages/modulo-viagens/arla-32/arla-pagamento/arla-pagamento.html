@@ -32,7 +32,7 @@
     <ion-label stacked>
       <span class="input">Preço/L</span>
     </ion-label>
-    <ion-input type="float" placeholder="R$ 0,00" [brmasker]="{money: true, len:5}" [(ngModel)]="storageProvider.arla.precoArla"
+    <ion-input type="float" placeholder="R$ 0,00" [brmasker]="{money: true, len:6, decimal: 3}" [(ngModel)]="storageProvider.arla.precoArla"
       (click)="valida()"></ion-input>
   </ion-item>
 
