@@ -3,13 +3,13 @@ import { IonicPage, NavParams } from 'ionic-angular';
 import { NavController } from 'ionic-angular/navigation/nav-controller';
 import { Storage } from '@ionic/storage/es2015/storage';
 import { StorageProvider } from '../../providers/storage/storage';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { DadosProvider } from "../../providers/dados/dados";
 import { AlertController } from 'ionic-angular';
 import { ViagensPage } from '../modulo-viagens/viagens/viagens';
    
-import { DespesasPage } from '../modulo-viagens/despesas/despesas/despesas';  
-import { RelatoriosPage } from "../modulo-viagens/relatorios/relatorios-page/relatorios"; 
+//import { DespesasPage } from '../modulo-viagens/despesas/despesas/despesas';  
+//import { RelatoriosPage } from "../modulo-viagens/relatorios/relatorios-page/relatorios"; 
 import { EnviarProvider } from "../../providers/enviar/enviar";
 import { RecuperarDadosProvider } from '../../providers/recuperar-dados/recuperar-dados';
 
@@ -23,7 +23,7 @@ export class LoginPage {
   data: void;
   abastecimentoPendente;
   arlaPendente;
-  despesasPendente;
+  despesasPendente; s
   receitasPendente;  
 
   searchQuery: string = '';
@@ -94,8 +94,8 @@ export class LoginPage {
   }
   //enviar dados pro php
   public hideForm: boolean = false;
-  private baseURI: string = "http://192.168.10.160/";
-  usuario; 
+  //  private baseURI: string = "http://192.168.10.160/";
+   // usuario; 
 
   a: any[] = [""] 
 

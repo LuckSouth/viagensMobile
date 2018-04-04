@@ -74,7 +74,7 @@ export class ViagensPage {
     this.despesasPendentes = this.storageProvider.tamanhoDespesas();
     this.arlaPendentes = this.storageProvider.tamanhoArla();
     this.receitasPendentes = this.storageProvider.tamanhoReceitas();
-    this.abastecimentoPendentes = this.storageProvider.tamanhoReceitas();
+    this.abastecimentoPendentes = this.storageProvider.tamanhoAbastecimento();
   }
 
 }

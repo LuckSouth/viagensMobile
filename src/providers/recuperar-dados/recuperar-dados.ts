@@ -25,7 +25,6 @@ export class RecuperarDadosProvider {
     try {
       this.http.post(url, JSON.stringify(options), headers)
         .subscribe((data: any) => {
-          console.log(data)
           this.storageProvider.atualizarPostos(data); 
           this.hideForm = true; 
         },
