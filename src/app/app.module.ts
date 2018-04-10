@@ -12,6 +12,7 @@ import { MyApp } from './app.component';
 
 import { PrincipalPage } from '../pages/principal/principal/principal';
 import { ViagensPage } from '../pages/modulo-viagens/viagens/viagens';
+import { VendasPage } from '../pages/modulo-vendas/vendas/vendas';
 import { ReceitasPage } from '../pages/modulo-viagens/receitas/receitas/receitas';
 
 import { GeralPage } from '../pages/modulo-viagens/geral/geral-page/geral-page';
@@ -43,12 +44,19 @@ import { EnviarProvider } from '../providers/enviar/enviar';
 import { BrMaskerModule } from 'brmasker-ionic-3'; 
 import { LoginPage } from '../pages/login/login';
 import { RecuperarDadosProvider } from '../providers/recuperar-dados/recuperar-dados';
+import { ClientesPage } from '../pages/modulo-vendas/clientes/clientes';
+import { ProdutosPage } from '../pages/modulo-vendas/produtos/produtos';
+import { PesquisasPage } from '../pages/modulo-vendas/pesquisas/pesquisas';
+import { SincronizarPage } from '../pages/modulo-vendas/sincronizar/sincronizar';
+import { PedidosPage } from '../pages/modulo-vendas/pedidos/pedidos';
+import { TabelasPage } from '../pages/modulo-vendas/tabelas/tabelas';
 
 @NgModule({
   declarations: [
     MyApp, 
     PrincipalPage,
     ViagensPage,
+    VendasPage,
     ReceitasPage,  
     DespesasPage,
     GeralPage,
@@ -63,7 +71,13 @@ import { RecuperarDadosProvider } from '../providers/recuperar-dados/recuperar-d
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
     AbastecimentoRelatoriosPage, 
-    LoginPage
+    LoginPage,
+    ClientesPage, 
+    PedidosPage,
+    PesquisasPage,
+    ProdutosPage, 
+    SincronizarPage, 
+    TabelasPage
   ],
   imports: [
     BrowserModule,
@@ -80,6 +94,7 @@ import { RecuperarDadosProvider } from '../providers/recuperar-dados/recuperar-d
     MyApp, 
     PrincipalPage,
     ViagensPage,
+    VendasPage,
     ReceitasPage,  
     DespesasPage,
     GeralPage,
@@ -94,7 +109,13 @@ import { RecuperarDadosProvider } from '../providers/recuperar-dados/recuperar-d
     ReceitasRelatoriosPage,
     ArlaRelatoriosPage,
     AbastecimentoRelatoriosPage, 
-    LoginPage
+    LoginPage,
+    ClientesPage, 
+    PedidosPage,
+    PesquisasPage,
+    ProdutosPage, 
+    SincronizarPage, 
+    TabelasPage
   ],
   providers: [
     StatusBar,

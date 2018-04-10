@@ -7,15 +7,16 @@ import { HttpClient} from '@angular/common/http';
 import { DadosProvider } from "../../providers/dados/dados";
 import { AlertController } from 'ionic-angular';
 import { ViagensPage } from '../modulo-viagens/viagens/viagens';
+import { VendasPage } from '../modulo-vendas/vendas/vendas';
    
 //import { DespesasPage } from '../modulo-viagens/despesas/despesas/despesas';  
 //import { RelatoriosPage } from "../modulo-viagens/relatorios/relatorios-page/relatorios"; 
 import { EnviarProvider } from "../../providers/enviar/enviar";
 import { RecuperarDadosProvider } from '../../providers/recuperar-dados/recuperar-dados';
 
-@IonicPage()
+@IonicPage() 
 @Component({
-  selector: 'page-login',
+  selector: 'page-login', 
   templateUrl: 'login.html'
 })
 
@@ -23,7 +24,7 @@ export class LoginPage {
   data: void;
   abastecimentoPendente;
   arlaPendente;
-  despesasPendente; s
+  despesasPendente;
   receitasPendente;  
 
   searchQuery: string = '';
@@ -89,9 +90,15 @@ export class LoginPage {
     })
   }
 
+  // viagensPage() {
+  //   this.navCtrl.push(ViagensPage);
+  // }
+
+
   viagensPage() {
-    this.navCtrl.push(ViagensPage);
+    this.navCtrl.push(VendasPage);
   }
+
   //enviar dados pro php
   public hideForm: boolean = false;
   //  private baseURI: string = "http://192.168.10.160/";
@@ -103,3 +110,4 @@ export class LoginPage {
 
 }
 
+ 
