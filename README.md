@@ -1,4 +1,4 @@
-Esse é um projeto da *Tijuca Alimentos* para os viajantes.
+Esse é um projeto da *Tijuca Alimentos* para os viajantes e vendendores.
 
 *Esse trabalho é nosso*. Acesse a [página principal](http://www.tijucaalimentos.com/).
 
@@ -14,8 +14,12 @@ Para usar o aplicativo você deve obter um token (chave de acesso) junto ao seu 
   Arla 32;
   Gastos;
   Receitas;
-  Relatorios.
+  Relatorios;
+  Clientes;
+  Pedidos;
+  Tabelas;
+  Pesquisas.
   
 ```
-Aí vem a versão 1.3.0. Aguarde!
+Aí vem a versão 5.3.0. Aguarde!
 
