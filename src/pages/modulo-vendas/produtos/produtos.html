@@ -6,13 +6,31 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>produtos</ion-title>
-  </ion-navbar>
-
+  <ion-navbar color="tijuca">
+    <ion-title class="titulo">Produtos 
+      <img class="imagem" src="assets/images/sincronizar.svg" (click)="linkSincronizar()"/> 
+    </ion-title>
+  </ion-navbar>  
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+    <ion-list> 
+        <ion-item>
+          <img class="galinha" src="assets/images/galinha.svg" /> 
+          <div class="quadraedo">
+            <span class="nome">A22 - Frango Congelado 1.7 Encaixado</span><br>
+            <span class="preco">R$ 5,00</span><br>
+            <span class="quantidade">200 KG</span>
+          </div>
+        </ion-item> 
+        <ion-item>
+          <img class="galinha" src="assets/images/galinha.svg" />
+          <div class="quadraedo">
+          <span class="nome">A02 - File de Peito de Frango Congelado</span><br>
+            <span class="preco">R$ 8,79</span><br>
+            <span class="quantidade">200 KG</span>
+          </div>
+        </ion-item>
+    </ion-list>
 </ion-content>

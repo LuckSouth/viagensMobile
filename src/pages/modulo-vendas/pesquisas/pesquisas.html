@@ -6,13 +6,20 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>pesquisas</ion-title>
+  <ion-navbar color="tijuca">
+    <ion-title class="titulo">Pesquisas
+      <img class="imagem" src="assets/images/sincronizar.svg" (click)="linkSincronizar()"/> 
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="botoes">
+  <button ion-button full class="botao">OVOS</button>
+  <button ion-button full class="botao">FRANGO</button>
+  <button ion-button full class="botao">QUEIJO</button>
+  <button ion-button full class="botao">GALINHA</button>
+  </div>
 </ion-content>

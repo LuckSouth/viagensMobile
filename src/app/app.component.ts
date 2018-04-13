@@ -7,8 +7,8 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { StorageProvider } from '../providers/storage/storage';  
 import { Storage } from '@ionic/storage';    
 import { LoginPage } from '../pages/login/login';
-import { ViagensPage } from '../pages/modulo-viagens/viagens/viagens';
-import { PrincipalPage } from '../pages/principal/principal/principal';
+// import { ViagensPage } from '../pages/modulo-viagens/viagens/viagens';
+// import { PrincipalPage } from '../pages/principal/principal/principal';
 
 @Component({
   templateUrl: 'app.html'
