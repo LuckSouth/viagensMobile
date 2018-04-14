@@ -28,7 +28,8 @@ export class EnviarProvider {
         this.despesas = this.storageProvider.listaDescricaoDespesa
 
         this.dados.despesas(
-          this.despesas[index].motorista,
+          //  this.despesas[index].motorista,
+          "bino",
           this.despesas[index].idViagem,
           this.despesas[index].despesas,
           this.despesas[index].dataDespesas,
@@ -51,14 +52,15 @@ export class EnviarProvider {
       for (index = 0; index <= this.storageProvider.tamanhoAbastecimento(); index++) {
         console.log('enviar arquivos no cache');
         this.abastecimento = this.storageProvider.listaAbastecimento
- 
+
         this.dados.abastecimento(
-          this.abastecimento[index].motorista,
+          //this.abastecimento[index].motorista,
+          "bino",
           this.despesas[index].idViagem,
           this.abastecimento[index].data,
           this.abastecimento[index].tipoPagamento,
           this.abastecimento[index].odometro,
-          this.abastecimento[index].valorLitrosBomba1, 
+          this.abastecimento[index].valorLitrosBomba1,
           this.abastecimento[index].valorLitrosBomba2,
           this.abastecimento[index].posto,
           this.abastecimento[index].precoAbastecimento,
@@ -78,15 +80,16 @@ export class EnviarProvider {
       for (index = 0; index <= this.storageProvider.tamanhoArla(); index++) {
         this.abastecimento = this.storageProvider.listaArla
         this.dados.arla(
-          this.arla[index].motorista,
+          //this.arla[index].motorista,
+          "bino",
           this.despesas[index].idViagem,
           this.arla[index].posto,
           this.arla[index].data,
           this.arla[index].km,
           this.arla[index].litros,
           this.arla[index].preco,
-          this.arla[index].formaPagamento,   
-          
+          this.arla[index].formaPagamento,
+
           true
 
 
@@ -108,7 +111,8 @@ export class EnviarProvider {
       for (index = 0; index <= this.storageProvider.tamanhoReceitas(); index++) {
         this.receitas = this.storageProvider.listaReceitas
         this.dados.receitas(
-          this.receitas[index].motorista,
+          //this.receitas[index].motorista,
+          "bino",
           this.receitas[index].idViagem,
           this.receitas[index].fornecedorDestino,
           this.receitas[index].produto,
