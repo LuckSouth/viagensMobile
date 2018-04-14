@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the QueijoPage page.
+ * Generated class for the SubprodutosPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-queijo',
-  templateUrl: 'queijo.html',
+  selector: 'page-subprodutos',
+  templateUrl: 'subprodutos.html',
 })
-export class QueijoPage {
+export class SubprodutosPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad QueijoPage');
+    console.log('ionViewDidLoad SubprodutosPage');
   }
 
 }

@@ -49,8 +49,9 @@ import { ProdutosPage } from '../pages/modulo-vendas/produtos/produtos';
 import { PesquisasPage } from '../pages/modulo-vendas/pesquisas/pesquisas';
 import { SincronizarPage } from '../pages/modulo-vendas/sincronizar/sincronizar';
 import { PedidosPage } from '../pages/modulo-vendas/pedidos/pedidos';
+import { SubprodutosPage } from '../pages/modulo-vendas/pesquisas/subpesquisas/subprodutos/subprodutos';
 import { TabelasPage } from '../pages/modulo-vendas/tabelas/tabelas';
-
+ 
 @NgModule({
   declarations: [
     MyApp, 
@@ -77,6 +78,7 @@ import { TabelasPage } from '../pages/modulo-vendas/tabelas/tabelas';
     PesquisasPage,
     ProdutosPage, 
     SincronizarPage, 
+    SubprodutosPage,
     TabelasPage
   ],
   imports: [
@@ -115,6 +117,7 @@ import { TabelasPage } from '../pages/modulo-vendas/tabelas/tabelas';
     PesquisasPage,
     ProdutosPage, 
     SincronizarPage, 
+    SubprodutosPage,
     TabelasPage
   ],
   providers: [

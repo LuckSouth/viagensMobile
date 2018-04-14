@@ -1,3 +1,14 @@
 page-clientes {
+    ion-card{  
+        width: 100vw;
+    }
+    .cod{
+        margin-left:30vw; 
+    }
 
+    .refresh{
+        position: absolute; 
+        margin-top: -0.5vh;
+        margin-left: 35vw;
+    }
 }

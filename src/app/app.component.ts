@@ -22,7 +22,7 @@ export class MyApp {
     platform: Platform,
     statusBar: StatusBar, 
     splashScreen: SplashScreen,
-    private screenOrientation: ScreenOrientation,
+    //private screenOrientation: ScreenOrientation,
     public storageProvider: StorageProvider,
     public storage: Storage
   ) {

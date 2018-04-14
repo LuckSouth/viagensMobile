@@ -5,19 +5,43 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>clientes</ion-title>
-  </ion-navbar>
-
+ 
+  <ion-navbar color="tijuca">
+      <ion-title class="titulo">Clientes 
+          <ion-icon name="refresh" (click)="linkSincronizar()" class="refresh"></ion-icon>
+      </ion-title>
+    </ion-navbar>  
 </ion-header>
 
 
-<ion-content padding>
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      {{ item }}<br> 
-    </ion-item>
-  </ion-list>
+<ion-content padding> 
+
+
+    <ion-card>
+        <ion-card-header>
+          Arthur Silva
+        </ion-card-header>
+        <ion-card-content>
+          <span class="cnpj">12.248.420/4521-60</span>  <span class="cod">32650</span>
+        </ion-card-content>
+      </ion-card>
+
+
+  <ion-card style="background-color:#D7F12C;">
+    <ion-card-header>
+      Arthur Moreira Batista
+    </ion-card-header>
+    <ion-card-content>
+      <span class="cnpj">43.148.448/0001-60</span>  <span class="cod">32651</span>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+      <ion-card-header>
+        Arthur Batista
+      </ion-card-header>
+      <ion-card-content>
+        <span class="cnpj">12.148.420/0001-60</span>  <span class="cod">32652</span>
+      </ion-card-content>
+    </ion-card>
 </ion-content>

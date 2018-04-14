@@ -6,7 +6,7 @@ import { StorageProvider } from '../../providers/storage/storage';
 import { HttpClient} from '@angular/common/http';
 import { DadosProvider } from "../../providers/dados/dados";
 import { AlertController } from 'ionic-angular';
-import { ViagensPage } from '../modulo-viagens/viagens/viagens';
+//import { ViagensPage } from '../modulo-viagens/viagens/viagens';
 import { VendasPage } from '../modulo-vendas/vendas/vendas';
    
 //import { DespesasPage } from '../modulo-viagens/despesas/despesas/despesas';  
