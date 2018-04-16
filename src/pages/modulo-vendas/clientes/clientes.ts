@@ -11,49 +11,69 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-clientes',
-  templateUrl: 'clientes.html' 
+  templateUrl: 'clientes.html'
 })
- 
+
 export class ClientesPage {
 
   searchQuery: string = '';
-  items: string[];
+  items: any[];
   cnpj: string[];
   id: string[];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.initializeItems();
   }
 
+
   initializeItems() {
-  
-    this.items = [ 
-      'Bogota',
-      'criaano'
-    ];
-    this.cnpj = [ 
-      '6541',
-      '534757854', 
-      '5347544',
-    ];
-    this.id = [
-      '1',
-      '2',
-      '3'
-    ];
+    this.items = [{
+      "nome_cliente": "Filipe Felipe Pinto",
+      "cnpj": "44.417.978/0001-29",
+      "limite": 500,
+      "id_cliente": "1"
+    },
+    {
+      "nome_cliente": "Kevin Tomás da Rosa ",
+      "cnpj": "93.378.768/0001-84",
+      "limite": 1500,
+      "id_cliente": "3"
+    }, {
+      "nome_cliente": "Elias Benício Kevin dos Santos ",
+      "cnpj": "98.269.715/0001-49",
+      "limite": 700,
+      "id_cliente": "2"
+    },
+   ]
   }
+
+  e(item) {
+    console.log(item)
+
+  }
+
 
   getItems(ev: any) {
     // Reset items back to all of the items
     this.initializeItems();
-
     // set val to the value of the searchbar
     let val = ev.target.value;
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.items = this.items.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      }) 
+      this.items = this.items.filter((items) => {
+        if (items.nome_cliente.toLowerCase().indexOf(val.toLowerCase()) > -1) {
+          return (items.nome_cliente.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        }
+        if (items.cnpj.toLowerCase().indexOf(val.toLowerCase()) > -1) {
+          return (items.cnpj.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        }
+        if (items.id_cliente.toLowerCase().indexOf(val.toLowerCase()) > -1) {
+          return (items.id_cliente.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        }
+
+      })
+
     }
-  } 
+  }
+
 }
